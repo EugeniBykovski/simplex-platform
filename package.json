@@ -15,6 +15,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "check:i18n": "node scripts/check-i18n.mjs",
+    "smoke:404": "node scripts/smoke-404.mjs",
     "validate:docs": "node scripts/validate-docs.mjs",
     "verify": "pnpm typecheck && pnpm lint && pnpm check:i18n && pnpm validate:docs && pnpm build"
   },

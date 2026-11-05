@@ -95,7 +95,7 @@ The kit's specimen classes (`.is-hover`, `.is-focus`, `.is-pressed`, `.is-disabl
 | Cookie preferences | Cookie policy | Toggle, saved | Client, `role=switch` |
 | Application | Job | Idle, form, errors, sending, done | [contact-and-email.md](../architecture/contact-and-email.md) |
 | Enquiry | Contact | Five states | [contact-and-email.md](../architecture/contact-and-email.md) |
-| Scheduler | Contact | Pick, confirm, booked | **Mock only** (GAP-F01) |
+| Scheduler | Contact | Pick, confirm, booked | **Not built** (GAP-F01) |
 
 ## Reduced motion
 

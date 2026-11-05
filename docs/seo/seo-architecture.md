@@ -6,14 +6,36 @@ Page-level data: [page-seo-matrix.md](page-seo-matrix.md). Routes: [route-matrix
 
 International B2B search visibility for software engineering services. The design defines **no metadata, structured data or social images**, so this document supplies them as proposals, for owner approval.
 
+## Status
+
+SF-153 implements and verifies this specification. Today:
+
+| Item | State |
+|---|---|
+| Metadata API per page, through `buildPageMetadata` | Helper implemented, used only by the placeholder home |
+| Canonical URLs | Implemented in the helper |
+| Open Graph | Text fields implemented. No images (GAP-A02) |
+| Twitter metadata | **Not implemented** |
+| hreflang | Implemented in the helper, emits nothing until a Russian family is approved |
+| Environment indexing gate | Implemented: `SITE_INDEXABLE` |
+| Russian `noindex` | Implemented through translation status |
+| 404 status and `noindex` | Implemented and tested: `pnpm smoke:404` |
+| Sitemap, robots | **Specified, not implemented** |
+| Structured data | **Specified, not implemented** |
+| Breadcrumbs | **Specified, not implemented** |
+| Redirects | `/en/*` only. Rest specified |
+| Internal linking, alt text, CWV | Specified, verified per page |
+
 ## The launch blocker
 
 Most of the site's trust content is placeholder or illustrative. Publishing demonstration case studies and sample jobs under real URLs would risk misleading search users and would create thin pages. So indexing is decided per route, and many routes start `noindex`:
 
 | Tier | Routes | Rule |
 |---|---|---|
-| Index at launch, once claims are cleared | Home, Agent, Services + 12, Packages, Industries + 6, Work, How We Work, About, Technologies, Careers, Insights, Contact | Blockers in the matrix must close first |
-| `noindex` until real | `/work/*` (demonstrations), `/careers/[slug]` (samples), `/insights/[slug]` (samples), legal pages until counsel approves | Flip per item when the content is real |
+| Index at launch, once claims are cleared | Home, Services + 12, Packages, Industries + 6, How We Work, About, Technologies, Insights, Contact | Blockers in the matrix must close first |
+| `noindex` until real | `/work` and `/work/*` (demonstrations, never as client success stories), `/agent` (until capabilities are verified), `/careers` and `/careers/[slug]` (samples), `/insights/[slug]` (samples) | Flip per item when the content is real |
+| Not published until approved | Legal pages | Owner and legal approval |
+| `noindex` until reviewed | All `/ru` URLs | Translation reviewed and approved |
 | Always `noindex` | `/contact/thank-you`, 404 | Permanent |
 
 `buildPageMetadata` in `src/lib/seo/metadata.ts` already supports the `noindex` override.
@@ -28,7 +50,7 @@ Every page exports `generateMetadata` through `buildPageMetadata`. Exists today,
 | Description | Unique per page, 70 to 160 characters. Copy in the matrix is a starting point |
 | Canonical | Absolute on `NEXT_PUBLIC_SITE_URL`, no query string |
 | Open Graph | Title, description, URL, `siteName`, locale, image (GAP-A02) |
-| Twitter | `summary_large_image`, inherited from Open Graph |
+| Twitter | `summary_large_image`. Planned for SF-153: not in the helper yet |
 | `metadataBase` | From `siteConfig.url` |
 
 Remaining work: root defaults, image handling, and localised metadata per page.
@@ -101,8 +123,8 @@ Lowercase, hyphenated, English, stable. Slugs in the design: 12 services, 6 indu
 |---|---|
 | Moved content | Permanent redirect in `next.config.ts`, one hop |
 | Removed content, with no successor | Consider 410 through the proxy. Otherwise 404 |
-| Unknown path | 404 through `[...rest]`. Verified |
-| Unknown slug under a known route | `dynamicParams = false`, so unbuilt slugs 404 |
+| Unknown path | Real 404 through `src/app/global-not-found.tsx`, `noindex`, no canonical. Verified without JavaScript |
+| Unknown slug under a known route | `dynamicParams = false`, so unknown slugs reach the same page. Verified |
 | Demonstration case retired | 404. It was never indexed, so no redirect is needed |
 
 There is no legacy site to migrate on this domain as far as this repository shows. `EugeniBykovski/simplex-web` is an older, separate SimpleX project: **ask the owner whether it is live** (GAP-S02), because if it is, it needs a redirect plan.

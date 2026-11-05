@@ -2,7 +2,7 @@
 
 Playwright, no Storybook. Owner: SF-155, with each page ticket adding its own route tests. Visual comparison: [visual-regression-strategy.md](visual-regression-strategy.md).
 
-The foundation has only `pnpm verify`: typecheck, lint, i18n parity, docs validation and build. Playwright is planned and not yet installed.
+The foundation has `pnpm verify` (typecheck, lint, i18n parity, docs validation, build) and `pnpm smoke:404`. Playwright is planned and not yet installed.
 
 ## Suite overview
 
@@ -27,7 +27,7 @@ Every route is tested at the extended viewport set. The second column shows whic
 | Route | Boarded | Interactions to test | Expected indexing |
 |---|---|---|---|
 | `/` | 1440, 768, 390 | Tech tabs (8), industry show-more, estimator (type, platforms, stage, pace → roles, team size, model; no price computed), pinned hero, stacked cards, scroll story | index at launch |
-| `/agent` | 1440, 390 | Stack picker tabs (5 stacks), ROI estimator (3 range inputs → hours, FTE, EUR/month), FAQ accordions | index at launch |
+| `/agent` | 1440, 390 | Stack picker tabs (5 stacks), ROI estimator (3 range inputs → hours, FTE, EUR/month), FAQ accordions | noindex until capabilities are verified |
 | `/services` | 1440, 390 | Card hovers, lifecycle matrix, vs-alternatives table | index at launch |
 | `/services/custom-software-development` | 1440 | Use-case accordion, hero visual by slug (code, arch, device, desktop, graph, pipeline, team), light or dark theme by slug | index at launch |
 | `/services/enterprise-software` | 1440 | Use-case accordion, hero visual by slug (code, arch, device, desktop, graph, pipeline, team), light or dark theme by slug | index at launch |
@@ -49,22 +49,22 @@ Every route is tested at the extended viewport set. The second column shows whic
 | `/industries/saas` | 1440 | Scenario tabs (3 per slug), slug-driven compliance grid | index at launch |
 | `/industries/enterprise` | 1440 | Scenario tabs (3 per slug), slug-driven compliance grid | index at launch |
 | `/industries/logistics` | 1440 | Scenario tabs (3 per slug), slug-driven compliance grid | index at launch |
-| `/work` | 1440, 768, 390 | Industry filter + service filter (aria-pressed), result count (aria-live), empty state with clear action | index at launch |
-| `/work/ledgerline` | 1440, 390 | Layouts A/B/C by slug, sticky TOC (layout B), before/after range slider, next-project nav | noindex while demonstration content |
-| `/work/carepath` | 1440 | Layouts A/B/C by slug, sticky TOC (layout B), before/after range slider, next-project nav | noindex while demonstration content |
-| `/work/routewise` | 1440 | Layouts A/B/C by slug, sticky TOC (layout B), before/after range slider, next-project nav | noindex while demonstration content |
+| `/work` | 1440, 768, 390 | Industry filter + service filter (aria-pressed), result count (aria-live), empty state with clear action | noindex until verified client work exists |
+| `/work/ledgerline` | 1440, 390 | Layouts A/B/C by slug, sticky TOC (layout B), before/after range slider, next-project nav | noindex: demonstration, never a client success story |
+| `/work/carepath` | 1440 | Layouts A/B/C by slug, sticky TOC (layout B), before/after range slider, next-project nav | noindex: demonstration, never a client success story |
+| `/work/routewise` | 1440 | Layouts A/B/C by slug, sticky TOC (layout B), before/after range slider, next-project nav | noindex: demonstration, never a client success story |
 | `/how-we-work` | 1440, 390 | Scroll story, FAQ accordions | index at launch |
 | `/about` | 1440, 390 | None beyond link and hover states | index at launch |
 | `/technologies` | 1440, 390 | Search + category filter + empty state, radar ring tabs (adopt, trial, assess, hold) | index at launch |
-| `/careers` | 1440, 390 | Team filter with counts, result count (aria-live), empty state | index at launch |
+| `/careers` | 1440, 390 | Team filter with counts, result count (aria-live), empty state | index when live roles exist |
 | `/careers/[slug]` | 1440, 390 | Apply panel: idle → form → validation → sending → done; copy link | noindex while sample; add JobPosting only for live roles |
 | `/insights` | 1440, 390 | Search, category filter, load more with skeleton, empty state, playbook email capture | index at launch |
 | `/insights/[slug]` | 1440, 390 | Reading progress, copy link (1.8 s confirmation), share links, TOC | noindex while sample |
 | `/contact` | 1440, 768, 390 | Lead form: idle, validation, loading, success, network error; scheduler: day, slot, confirm, booked | index at launch |
 | `/contact/thank-you` | 1440, 390 | None beyond link and hover states | noindex |
-| `/privacy-policy` | 1440, 390 | Section TOC, cookie preference switches + save confirmation (cookie slug only) | noindex until counsel approves |
-| `/cookie-policy` | 1440 | Section TOC, cookie preference switches + save confirmation (cookie slug only) | noindex until counsel approves |
-| `/terms` | 1440 | Section TOC, cookie preference switches + save confirmation (cookie slug only) | noindex until counsel approves |
+| `/privacy-policy` | 1440, 390 | Section TOC, cookie preference switches + save confirmation (cookie slug only) | not published until owner and legal approve |
+| `/cookie-policy` | 1440 | Section TOC, cookie preference switches + save confirmation (cookie slug only) | not published until owner and legal approve |
+| `/terms` | 1440 | Section TOC, cookie preference switches + save confirmation (cookie slug only) | not published until owner and legal approve |
 | `/404` | 1440, 390 | Search form (no-op in prototype) | noindex |
 
 ## Viewports
@@ -83,8 +83,8 @@ Assert on every route and width: no horizontal overflow, no clipped text in `.bt
 
 | Area | Check |
 |---|---|
-| Routes | 40 routes return 200 at launch, except 404 ones. `/en/*` redirects. `/ru/*` returns 200 only for available families |
-| Unknown paths | `/nope`, `/ru/nope`, unknown service slug: status 404, localised text after hydration, `noindex` |
+| Routes | Every published route returns 200, and `/404` returns 404. `/en/*` redirects. `/ru/*` returns 200 only for available families |
+| Unknown paths | `/nope`, `/ru/nope`, unknown slugs: status 404, server-rendered localised HTML, `noindex`. **Exists today:** `pnpm smoke:404` |
 | Header | All links resolve. Burger at ≤ 1100. SX tile at ≤ 600. Sticky |
 | Mega menu | Opens on hover and keyboard focus, closes on leaving, hover bridge holds. Hidden ≤ 860 |
 | Mobile menu | `aria-expanded`, `aria-controls`, Escape, focus return, scroll lock |
@@ -98,7 +98,7 @@ Assert on every route and width: no horizontal overflow, no clipped text in `.bt
 | Job form | Open, cancel, validate, send, done. Consent, once added |
 | Cookie preferences | Essential locked, save confirmation, persistence, no analytics before consent |
 | `.proto-bar` | **Absent from production** |
-| Scheduler | Never reports a booking without a real provider response |
+| Scheduler | The fake widget is absent. No page claims a booking |
 | Demo labels | `.tag-demo` present everywhere the design has it, until content is real |
 
 ## Accessibility

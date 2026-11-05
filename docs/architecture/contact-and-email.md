@@ -4,14 +4,14 @@ Implemented in SF-151, except the application form, which ships with SF-149. Not
 
 ## Forms in the design
 
-The design has four capture points, and **three of them promise something that does not exist yet.**
+The design has four capture points. Resend is the approved delivery service, and **fake appointment scheduling will not be built.**
 
 | Form | Route | Fields | Requires | Status |
 |---|---|---|---|---|
 | Project enquiry | `/contact` | See below | Resend | Build |
 | Job application | `/careers/[slug]` | Name, email, CV or LinkedIn URL, notes | Resend | Build, needs consent (GAP-F02) |
 | Playbook request | `/insights` | Work email | Resend, the PDF, a list decision | **Blocked** (GAP-A03) |
-| Call scheduler | `/contact` | Day, time slot | A real calendar provider | **Blocked** (GAP-F01) |
+| Call scheduler | `/contact` | Day, time slot | A real calendar provider | **Not built** (GAP-F01) |
 
 Also not a form: the 404 page's search box (GAP-F05).
 
@@ -148,15 +148,11 @@ Log an event type, a timestamp, a Resend message ID and an error class. **Never 
 
 `Contact.dc.html` shows a day picker, slot grid and "Booked — the invite is on its way", with copy promising "calendar invite sent instantly" and "Times shown in your time zone". The slots are hard-coded, labelled "Sample availability", and fixed to CET.
 
-**This cannot ship as drawn without a real scheduling provider, and it must never claim a booking that did not happen.**
+**Decision: no fake scheduling.** The widget is not built, and no page may claim a booking.
 
-| Option | Fit | Trade-offs |
-|---|---|---|
-| **Cal.com or Calendly, embedded or linked (recommended)** | Real availability, invites, time zones, no backend | External service to approve; embeds load third-party script and may set cookies, so a plain link is lightest |
-| Google or Microsoft calendar API | Keeps the custom UI | OAuth, secrets, slot logic, double-booking handling. Too much for a marketing site |
-| Remove until decided | Honest and simple | Loses the section |
+**What ships:** the section's heading and pitch, with its button linking to the enquiry form. Remove "calendar invite sent instantly" and "Times shown in your time zone", which describe the widget. Check "NDA available before the call" with the other claims. This is a visible departure from the board (GAP-F01).
 
-**Interim recommendation:** ship the section's left column with a link to the provider's page, or replace the widget with the enquiry form anchor. Either is a visible change from the design, so it needs owner approval (GAP-F01).
+If the owner later wants real booking, a hosted provider such as Cal.com or Calendly linked from this section is the lightest route: real availability and invites, no backend. It would be a new external service needing approval and a privacy-policy entry.
 
 ## Playbook lead magnet
 

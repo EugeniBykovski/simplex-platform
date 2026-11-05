@@ -63,7 +63,8 @@ for (const route of registry.routes) {
 
 // Patterns in code, registry and generated routes agree.
 const routesSource = readFileSync("src/config/routes.ts", "utf8");
-const codePatterns = [...routesSource.matchAll(/"(\/[^"]*)"/g)].map((match) => match[1]);
+const familiesSource = routesSource.slice(0, routesSource.indexOf("} as const"));
+const codePatterns = [...familiesSource.matchAll(/"(\/[^"]*)"/g)].map((match) => match[1]);
 const sorted = (list) => [...list].sort().join();
 if (sorted(codePatterns) !== sorted(registry.patterns)) {
   fail("src/config/routes.ts patterns differ from route-registry.json");

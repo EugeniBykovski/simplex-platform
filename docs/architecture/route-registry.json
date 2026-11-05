@@ -93,9 +93,9 @@
         ],
         "indexing": "index at launch",
         "launchBlockers": [
-          "Demonstration projects in Featured work",
-          "GAP-C01 SimpleX Agent claims",
-          "[128]/[24] sample figures"
+          "Featured work stays labelled as demonstrations (GAP-C02)",
+          "SimpleX Agent wording must be verified (GAP-C01)",
+          "Sample figures remain bracketed"
         ]
       },
       "i18n": {
@@ -104,6 +104,7 @@
         "ruStatus": "draft"
       },
       "ownerTicket": "SF-143",
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -137,7 +138,7 @@
       "imagePlaceholders": 0,
       "seo": {
         "title": "SimpleX Agent",
-        "description": "SimpleX Agent connects to your repositories and tooling, understands your frameworks and conventions, and spins up production-ready ecosystems — services, pipelines, infrastructure and features. Every change is reviewed by a SimpleX engineer before it ships.",
+        "description": "[Approved description needed: the design's lead makes unverified production claims]",
         "h1": "An engineering agent that speaks your stack.",
         "intent": "What is the SimpleX engineering agent and how is it deployed?",
         "topic": "AI engineering agent",
@@ -148,9 +149,9 @@
           "Service",
           "FAQPage (markup only, see seo-architecture)"
         ],
-        "indexing": "index at launch",
+        "indexing": "noindex until capabilities are verified",
         "launchBlockers": [
-          "Agent product facts unverified (GAP-C01)"
+          "No production capability may be claimed until verified (GAP-C01)"
         ]
       },
       "i18n": {
@@ -159,6 +160,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-144",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -211,6 +213,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-145",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -265,6 +268,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-145",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -319,6 +323,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-145",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -373,6 +378,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-145",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -427,6 +433,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-145",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -481,6 +488,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-145",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -539,6 +547,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-145",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -593,6 +602,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-145",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -647,6 +657,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-145",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -701,6 +712,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-145",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -755,6 +767,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-145",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -809,6 +822,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-145",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -863,6 +877,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-145",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -907,7 +922,7 @@
         ],
         "indexing": "index at launch",
         "launchBlockers": [
-          "Availability block shows invented data until wired (GAP-F04)",
+          "Availability block removed until real data exists (GAP-F04)",
           "Team sizes and durations are placeholders"
         ]
       },
@@ -917,6 +932,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-146",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -976,6 +992,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-147",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -1032,6 +1049,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-147",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -1092,6 +1110,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-147",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -1148,6 +1167,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-147",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -1204,6 +1224,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-147",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -1260,6 +1281,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-147",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -1316,6 +1338,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-147",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -1366,10 +1389,10 @@
         "schema": [
           "BreadcrumbList"
         ],
-        "indexing": "index at launch",
+        "indexing": "noindex until verified client work exists",
         "launchBlockers": [
-          "All six projects are demonstration content (GAP-C02)",
-          "Client quote and NPS placeholders"
+          "All six projects are demonstrations (GAP-C02)",
+          "Quote and NPS slots hidden until real"
         ]
       },
       "i18n": {
@@ -1378,6 +1401,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-148",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -1422,9 +1446,9 @@
         "schema": [
           "BreadcrumbList"
         ],
-        "indexing": "noindex while demonstration content",
+        "indexing": "noindex: demonstration, never a client success story",
         "launchBlockers": [
-          "Illustrative case study: replace with approved client work (GAP-C02)"
+          "Stays labelled as a demonstration until a verified client exists (GAP-C02)"
         ]
       },
       "i18n": {
@@ -1433,6 +1457,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-148",
+      "implemented": false,
       "instanceNote": null,
       "note": "Layout A"
     },
@@ -1473,9 +1498,9 @@
         "schema": [
           "BreadcrumbList"
         ],
-        "indexing": "noindex while demonstration content",
+        "indexing": "noindex: demonstration, never a client success story",
         "launchBlockers": [
-          "Illustrative case study: replace with approved client work (GAP-C02)"
+          "Stays labelled as a demonstration until a verified client exists (GAP-C02)"
         ]
       },
       "i18n": {
@@ -1484,6 +1509,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-148",
+      "implemented": false,
       "instanceNote": null,
       "note": "Layout B"
     },
@@ -1524,9 +1550,9 @@
         "schema": [
           "BreadcrumbList"
         ],
-        "indexing": "noindex while demonstration content",
+        "indexing": "noindex: demonstration, never a client success story",
         "launchBlockers": [
-          "Illustrative case study: replace with approved client work (GAP-C02)"
+          "Stays labelled as a demonstration until a verified client exists (GAP-C02)"
         ]
       },
       "i18n": {
@@ -1535,6 +1561,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-148",
+      "implemented": false,
       "instanceNote": null,
       "note": "Layout C"
     },
@@ -1587,6 +1614,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-149",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -1641,6 +1669,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-149",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -1692,6 +1721,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-149",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -1731,7 +1761,7 @@
         "schema": [
           "BreadcrumbList"
         ],
-        "indexing": "index at launch",
+        "indexing": "index when live roles exist",
         "launchBlockers": [
           "Sample listings, benefits and locations (GAP-C06)"
         ]
@@ -1742,6 +1772,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-149",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -1791,6 +1822,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-149",
+      "implemented": false,
       "instanceNote": "Design shows one sample (ENG-01). Slug values are not defined in the design.",
       "note": null
     },
@@ -1850,6 +1882,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-150",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -1905,6 +1938,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-150",
+      "implemented": false,
       "instanceNote": "Design shows one written article and nine listed titles. Slug values are not defined in the design.",
       "note": null
     },
@@ -1949,7 +1983,7 @@
         ],
         "indexing": "index at launch",
         "launchBlockers": [
-          "Scheduler needs a real provider (GAP-F01)",
+          "Fake scheduler widget is not built (GAP-F01)",
           "Contact email, SLA, budget bands (GAP-C08)"
         ]
       },
@@ -1959,6 +1993,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-151",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -2006,6 +2041,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-151",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -2044,9 +2080,9 @@
         "schema": [
           "BreadcrumbList"
         ],
-        "indexing": "noindex until counsel approves",
+        "indexing": "not published until owner and legal approve",
         "launchBlockers": [
-          "Text needs counsel review; placeholders present (GAP-C09)"
+          "Owner and legal approval required before production (GAP-C09)"
         ]
       },
       "i18n": {
@@ -2055,6 +2091,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-152",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -2090,9 +2127,9 @@
         "schema": [
           "BreadcrumbList"
         ],
-        "indexing": "noindex until counsel approves",
+        "indexing": "not published until owner and legal approve",
         "launchBlockers": [
-          "Text needs counsel review; placeholders present (GAP-C09)"
+          "Owner and legal approval required before production (GAP-C09)"
         ]
       },
       "i18n": {
@@ -2101,6 +2138,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-152",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -2136,9 +2174,9 @@
         "schema": [
           "BreadcrumbList"
         ],
-        "indexing": "noindex until counsel approves",
+        "indexing": "not published until owner and legal approve",
         "launchBlockers": [
-          "Text needs counsel review; placeholders present (GAP-C09)"
+          "Owner and legal approval required before production (GAP-C09)"
         ]
       },
       "i18n": {
@@ -2147,6 +2185,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-152",
+      "implemented": false,
       "instanceNote": null,
       "note": null
     },
@@ -2194,6 +2233,7 @@
         "ruStatus": "missing"
       },
       "ownerTicket": "SF-152",
+      "implemented": true,
       "instanceNote": null,
       "note": null
     }

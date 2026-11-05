@@ -1,7 +1,14 @@
 {
   "notFound": {
-    "title": "This page took a different route.",
-    "body": "The link may be out of date, or the page has moved.",
-    "home": "Back to home"
+    "eyebrow": "Error 404",
+    "titleStart": "This page took a",
+    "titleAccent": "different route.",
+    "body": "The link may be out of date, or the page has moved. Start from one of these.",
+    "home": "Back to home",
+    "services": "Services",
+    "work": "Our work",
+    "contact": "Contact",
+    "metaTitle": "Page not found — SimpleX",
+    "metaDescription": "The link may be out of date, or the page has moved."
   }
 }

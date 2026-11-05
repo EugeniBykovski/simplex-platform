@@ -14,13 +14,14 @@ cp .env.example .env.local
 pnpm dev
 ```
 
-| Command                    | Purpose                                                         |
-| -------------------------- | --------------------------------------------------------------- |
-| `pnpm dev`                 | Development server                                              |
-| `pnpm build`, `pnpm start` | Production build and server                                     |
-| `pnpm verify`              | Typecheck, lint, i18n parity, docs validation, build            |
-| `pnpm check:i18n`          | Fails on key, ICU or plural drift between languages             |
-| `pnpm validate:docs`       | Fails on invalid JSON, dead links or broken coverage in `docs/` |
+| Command                    | Purpose                                                                                     |
+| -------------------------- | ------------------------------------------------------------------------------------------- |
+| `pnpm dev`                 | Development server                                                                          |
+| `pnpm build`, `pnpm start` | Production build and server                                                                 |
+| `pnpm verify`              | Typecheck, lint, i18n parity, docs validation, build                                        |
+| `pnpm check:i18n`          | Fails on key, ICU or plural drift between languages                                         |
+| `pnpm smoke:404`           | Against a running build, checks 404s are server-rendered in both languages (set `BASE_URL`) |
+| `pnpm validate:docs`       | Fails on invalid JSON, dead links or broken coverage in `docs/`                             |
 
 ## Documentation
 

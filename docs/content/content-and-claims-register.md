@@ -6,6 +6,15 @@ The design handles this responsibly: it brackets most unknowns and labels demons
 
 **Rule for every page ticket:** port `.tag-demo` labels and brackets faithfully, never fill a bracket with a guess, and never remove a demonstration label unless the content has become real.
 
+## Approved product decisions that apply
+
+- Case studies without verified clients stay clearly identified as demonstrations, and are not indexed as client success stories.
+- Statistics, testimonials, certifications and business achievements are never invented.
+- SimpleX Agent must not claim production capabilities that are not verified.
+- Legal pages need owner and legal approval before production.
+
+So anything bracketed below ships as supplied real data or is hidden, never filled in with an estimate.
+
 ## Status legend
 
 | Status | Meaning |
@@ -36,7 +45,7 @@ These read as facts. Most have no bracket, so they are easy to ship by accident.
 
 | Claim | Where | Gap |
 |---|---|---|
-| The SimpleX Agent exists, ships "production-ready features", generates tests, deploys in three models | Agent, Home, Nav, Services | GAP-C01 |
+| The SimpleX Agent exists, ships "production-ready features", generates tests, deploys in three models. **Must not ship unverified** | Agent, Home, Nav mega menu, Services | GAP-C01 |
 | "The repetitive 70%" | Agent | GAP-C10 |
 | "No training on client code" | Agent | Flagged in the design: `[Confirm with legal]` |
 | Launch stacks: TypeScript/Node, Java/Kotlin, .NET, Python, Go, Swift, Kotlin, Flutter, React Native | Agent | Flagged: `[Confirm final list.]` |

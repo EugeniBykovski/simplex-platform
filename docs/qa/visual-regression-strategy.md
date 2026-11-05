@@ -19,7 +19,7 @@ The design's boards are live HTML, which is a great advantage: a reference can b
 
 Freeze the following in both captures: animations off through `reducedMotion: 'reduce'`, `document.fonts.ready` awaited, a fixed locale and time zone, scrollbars hidden, and a device scale factor of 1. The drift backgrounds and scroll timelines are time- or position-dependent, which is why motion is off.
 
-Note the prototype's `.proto-bar` on Contact: mask or remove it from reference captures.
+Mask these in reference captures, because they are deliberately not built: `.proto-bar` and the scheduler widget on Contact, the search box on the 404, and the availability block on Packages.
 
 ## Comparison workflow
 

@@ -1,0 +1,289 @@
+/*
+ * The NotFound composition, copied from simplex.css (design 1793869596-167d) with final cascade
+ * values. SF-142 ports the whole stylesheet and should then delete the shared rules here.
+ */
+.sx {
+  --ink: #070b2b;
+  --on-dark: #fff;
+  --on-dark-2: #bac0dc;
+  --signal-on-dark: #8fb2ff;
+  --line-dark-2: rgba(255, 255, 255, 0.22);
+  --shadow-1: 0 1px 2px rgba(7, 11, 43, 0.06), 0 8px 24px -14px rgba(7, 11, 43, 0.22);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-1: 140ms;
+  --dur-2: 240ms;
+  --dur-3: 420ms;
+  --container: 1320px;
+  --gutter: 64px;
+  container-type: inline-size;
+  container-name: sx;
+  font-size: 16px;
+  line-height: 1.55;
+  overflow-x: clip;
+  font-feature-settings: "ss01", "cv11";
+  text-rendering: optimizeLegibility;
+}
+.sx a:focus-visible {
+  outline: 2px solid var(--signal-on-dark);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.nf-main {
+  min-height: 1100px;
+  padding: 200px 0 120px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.bg-ink {
+  position: relative;
+  background: var(--ink);
+  color: var(--on-dark);
+  isolation: isolate;
+}
+.bg-ink::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    radial-gradient(38% 55% at 102% 4%, rgba(157, 180, 204, 0.3), transparent 70%),
+    radial-gradient(34% 60% at 88% 30%, rgba(90, 120, 150, 0.4), transparent 72%),
+    radial-gradient(40% 60% at 70% 62%, rgba(47, 87, 245, 0.42), transparent 72%);
+  pointer-events: none;
+}
+.wrap {
+  width: 100%;
+  max-width: calc(var(--container) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
+  gap: clamp(40px, 6cqi, 96px);
+  align-items: center;
+}
+.nf-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.nf-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.t-mono {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #9db4cc;
+}
+.t-h1 {
+  font-size: clamp(40px, 5.6cqi, 84px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  font-weight: 600;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+.t-grad {
+  background: linear-gradient(90deg, #8fb2ff, #d6e2ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.t-lead {
+  font-size: clamp(18px, 1.55cqi, 22px);
+  line-height: 1.5;
+  letter-spacing: -0.012em;
+  color: var(--on-dark-2);
+  text-wrap: pretty;
+}
+.btn {
+  --bh: 52px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: var(--bh);
+  padding: 0 24px;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  font-size: 15.5px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    background var(--dur-2) var(--ease-out),
+    color var(--dur-2) var(--ease-out),
+    border-color var(--dur-2) var(--ease-out),
+    transform var(--dur-1) var(--ease-out),
+    box-shadow var(--dur-2) var(--ease-out);
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.btn-light {
+  background: #fff;
+  color: var(--ink);
+  box-shadow: var(--shadow-1);
+}
+.btn-light:hover {
+  background: #eef2ff;
+}
+.btn-ghost {
+  background: transparent;
+  color: #fff;
+  border-color: var(--line-dark-2);
+}
+.btn-ghost:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+.ico {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: currentColor;
+  mask: var(--i) center / contain no-repeat;
+  flex: none;
+  transition: transform var(--dur-3) var(--ease-out);
+}
+.btn:hover .ico {
+  transform: translateX(4px);
+}
+.ico-arrow {
+  --i: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E");
+}
+.nf-art {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.nf-digits {
+  font-size: clamp(160px, 24cqi, 360px);
+  font-weight: 600;
+  letter-spacing: -0.07em;
+  line-height: 0.8;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.22);
+}
+.sx-mark {
+  --m: 150px;
+  --x-accent: #9db4cc;
+  --bg: linear-gradient(160deg, #18216a 0%, #0c1350 45%, #070b2b 100%);
+  --rim: rgba(255, 255, 255, 0.16);
+  position: absolute;
+  isolation: isolate;
+  width: var(--m);
+  height: var(--m);
+  display: inline-grid;
+  place-items: center;
+  filter: drop-shadow(0 30px 50px rgba(157, 180, 204, 0.35));
+}
+.sx-mark::before,
+.sx-mark::after {
+  content: "";
+  position: absolute;
+  inset: 4%;
+  border-radius: 24%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 26% 100%, 0 81%);
+  pointer-events: none;
+}
+.sx-mark::before {
+  z-index: -2;
+  background: var(--bg);
+  box-shadow:
+    inset 0 0 0 max(1px, calc(var(--m) * 0.012)) var(--rim),
+    inset 0 calc(var(--m) * 0.02) 0 rgba(255, 255, 255, 0.12),
+    inset 0 calc(var(--m) * -0.08) calc(var(--m) * 0.16) rgba(0, 0, 0, 0.3);
+}
+.sx-mark::after {
+  z-index: -1;
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.14) 46%,
+    transparent 62%
+  );
+  background-size: 260% 100%;
+  background-position: -40% 0;
+}
+.logo {
+  display: inline-flex;
+  align-items: baseline;
+  font-size: calc(var(--m) * 0.42);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 1;
+  white-space: nowrap;
+  color: #fff;
+}
+.logo-x {
+  height: 0.7em;
+  width: auto;
+  display: inline-block;
+  margin-left: 0.03em;
+  overflow: visible;
+}
+.logo-x path {
+  fill: currentColor;
+}
+.logo-x .x-accent {
+  fill: var(--x-accent);
+}
+@keyframes sx-sheen {
+  0%,
+  60% {
+    background-position: 120% 0;
+  }
+  85%,
+  100% {
+    background-position: -40% 0;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .sx-mark::after {
+    animation: sx-sheen 6s var(--ease-in-out) infinite;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .ico {
+    transition: none;
+  }
+}
+
+/* A container query cannot style its own container, so these must target descendants. */
+@container sx (max-width: 1280px) {
+  .sx * {
+    --gutter: 48px;
+  }
+}
+@container sx (max-width: 1100px) {
+  .split {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+}
+@container sx (max-width: 860px) {
+  .sx * {
+    --gutter: 32px;
+  }
+}
+@container sx (max-width: 600px) {
+  .sx * {
+    --gutter: 20px;
+  }
+}

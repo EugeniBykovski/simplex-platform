@@ -18,3 +18,9 @@ export const routeFamilies = {
 } as const;
 
 export type RouteFamily = keyof typeof routeFamilies;
+
+/**
+ * Routes that have a page today. Each page ticket adds its own. The 404 page offers only these,
+ * so it never links to another 404.
+ */
+export const implementedRoutes: readonly string[] = ["/"];

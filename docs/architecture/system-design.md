@@ -1,6 +1,6 @@
 # System design
 
-The SimpleX website is a statically rendered, bilingual Next.js marketing site with one server-side integration: email through Resend. Related: [component-boundaries.md](component-boundaries.md), [i18n.md](i18n.md), [route-matrix.md](route-matrix.md), [contact-and-email.md](contact-and-email.md).
+The SimpleX website is a statically rendered, bilingual Next.js marketing site with one server-side integration: email through Resend. Approved product decisions are listed in the [gap register](../design/design-gap-register.md). Related: [component-boundaries.md](component-boundaries.md), [i18n.md](i18n.md), [route-matrix.md](route-matrix.md), [contact-and-email.md](contact-and-email.md).
 
 ## Stack
 
@@ -10,7 +10,7 @@ The SimpleX website is a statically rendered, bilingual Next.js marketing site w
 | UI | React, server components by default | 19.3.1 | Approved |
 | Language | TypeScript, strict plus `noUncheckedIndexedAccess` and `exactOptionalPropertyTypes` | 5.9 | Approved |
 | Styling | Tailwind CSS plus ported design CSS | 4.3.4 | Approved |
-| i18n | next-intl | 4.14.9 | **Added at owner request.** A library, not a service |
+| i18n | next-intl | 4.14.9 | Retained by decision 7. A library, not a service |
 | Email | Resend, server only | Not installed; planned for SF-151 | Approved |
 | Tests | Playwright | Not installed; planned for SF-155 | Approved in the ticket |
 
@@ -22,7 +22,8 @@ TypeScript stays on 5.9 although 7.0 is published, to keep the ESLint and Next.j
 
 | Concern | Decision |
 |---|---|
-| Pages | All static. `generateStaticParams` for locales and slugs |
+| Pages | All static. `generateStaticParams` for locales and slugs, with `dynamicParams = false` on slug pages |
+| 404 | Dynamic by design: `global-not-found.tsx` reads the locale per request, and returns full HTML |
 | Components | Server by default. A component becomes client only for state, effects or browser APIs |
 | Data | Local typed modules read at build time. No runtime fetches |
 | Forms | Server Actions with progressive enhancement |
@@ -52,15 +53,17 @@ Exists today:
 
 ```
 src/
-  app/[locale]/        layout.tsx, page.tsx, not-found.tsx, [...rest]/page.tsx
+  app/                 global-not-found.tsx
+  app/[locale]/        layout.tsx, page.tsx, not-found.tsx
   components/i18n/     locale-switcher.tsx
+  components/system/   not-found-view.tsx
   config/              site.ts, routes.ts
   i18n/                routing.ts, navigation.ts, request.ts, translation-status.ts, messages/{en,ru}/
   lib/seo/             metadata.ts
-  styles/              globals.css
+  styles/              globals.css, fonts.ts, not-found.css
   types/               next-intl.d.ts
   proxy.ts
-scripts/               check-i18n.mjs, validate-docs.mjs
+scripts/               check-i18n.mjs, validate-docs.mjs, smoke-404.mjs
 ```
 
 Planned, each created by the ticket that first needs it, never as empty folders:
@@ -126,6 +129,21 @@ Main risks are large `backdrop-filter` areas on low-end phones ([motion spec](..
 
 Secrets stay server-only. Add a security-header set in `next.config.ts` during SF-156: CSP, HSTS, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`. `poweredByHeader` is already off. Form security is in [contact-and-email.md](contact-and-email.md).
 
-## Known framework limitation
+## 404 handling
 
-When `notFound()` runs during server rendering, Next.js 16.4 returns the right 404 status but an empty HTML shell, and the page appears once JavaScript loads. Verified in SF-140 with curl and headless Chrome, in both languages. Crawlers get the correct status. Visitors without JavaScript see a blank page. Tracked as [GAP-R03](../design/design-gap-register.md).
+Next.js 16.4 sends an empty HTML shell, with a correct 404 status, when `notFound()` runs during rendering. Pages then need JavaScript to show anything. Three approaches were tested on production builds:
+
+| Approach | Result |
+|---|---|
+| Catch-all page calling `notFound()` | 404, empty shell |
+| Proxy rewrite to a prerendered page with status 404 | 404, empty shell, and it needs a route table |
+| `global-not-found.tsx` | **404 with full HTML. Adopted** |
+
+The file reads the locale that the proxy already sets, so EN and RU both work with no route table. Rules:
+
+- No catch-all routes.
+- Slug pages set `dynamicParams = false` and list slugs in `generateStaticParams`. Tested: unknown slugs then reach this page as real HTML.
+- Do not throw `notFound()` during render. `[locale]/not-found.tsx` remains as a fallback only.
+- `globalNotFound` is an experimental flag, so run `pnpm smoke:404` on every Next.js upgrade.
+
+Tracked as [GAP-R03](../design/design-gap-register.md).

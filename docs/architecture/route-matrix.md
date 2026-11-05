@@ -14,7 +14,7 @@ Machine-readable twin: [route-registry.json](route-registry.json). Source: desig
 | Route | Status | Render | Template | Boards | Boarded devices | Indexing | Ticket |
 |---|---|---|---|---|---|---|---|
 | `/` | APPROVED | static | Home | 14 | desktop · tablet · mobile | index at launch | SF-143 |
-| `/agent` | APPROVED | static | Agent | 4 | desktop · mobile | index at launch | SF-144 |
+| `/agent` | APPROVED | static | Agent | 4 | desktop · mobile | noindex until capabilities are verified | SF-144 |
 | `/services` | APPROVED | static | Services | 4 | desktop · mobile | index at launch | SF-145 |
 | `/services/custom-software-development` | APPROVED | static | ServicePage `custom-software-development` | 2 | desktop | index at launch | SF-145 |
 | `/services/enterprise-software` | APPROVED | static | ServicePage `enterprise-software` | 2 | desktop | index at launch | SF-145 |
@@ -36,22 +36,22 @@ Machine-readable twin: [route-registry.json](route-registry.json). Source: desig
 | `/industries/saas` | APPROVED | static | IndustryPage `saas` | 1 | desktop | index at launch | SF-147 |
 | `/industries/enterprise` | APPROVED | static | IndustryPage `enterprise` | 1 | desktop | index at launch | SF-147 |
 | `/industries/logistics` | APPROVED | static | IndustryPage `logistics` | 1 | desktop | index at launch | SF-147 |
-| `/work` | APPROVED | static | Work | 4 | desktop · tablet · mobile | index at launch | SF-148 |
-| `/work/ledgerline` | APPROVED | static | CasePage `ledgerline` | 3 | desktop · mobile | noindex while demonstration content | SF-148 |
-| `/work/carepath` | APPROVED | static | CasePage `carepath` | 1 | desktop | noindex while demonstration content | SF-148 |
-| `/work/routewise` | APPROVED | static | CasePage `routewise` | 1 | desktop | noindex while demonstration content | SF-148 |
+| `/work` | APPROVED | static | Work | 4 | desktop · tablet · mobile | noindex until verified client work exists | SF-148 |
+| `/work/ledgerline` | APPROVED | static | CasePage `ledgerline` | 3 | desktop · mobile | noindex: demonstration, never a client success story | SF-148 |
+| `/work/carepath` | APPROVED | static | CasePage `carepath` | 1 | desktop | noindex: demonstration, never a client success story | SF-148 |
+| `/work/routewise` | APPROVED | static | CasePage `routewise` | 1 | desktop | noindex: demonstration, never a client success story | SF-148 |
 | `/how-we-work` | APPROVED | static | HowWeWork | 4 | desktop · mobile | index at launch | SF-149 |
 | `/about` | APPROVED | static | About | 4 | desktop · mobile | index at launch | SF-149 |
 | `/technologies` | APPROVED | static | Technologies | 4 | desktop · mobile | index at launch | SF-149 |
-| `/careers` | APPROVED | static | Careers | 3 | desktop · mobile | index at launch | SF-149 |
+| `/careers` | APPROVED | static | Careers | 3 | desktop · mobile | index when live roles exist | SF-149 |
 | `/careers/[slug]` | APPROVED | static | Job | 2 | desktop · mobile | noindex while sample; add JobPosting only for live roles | SF-149 |
 | `/insights` | APPROVED | static | Insights | 2 | desktop · mobile | index at launch | SF-150 |
 | `/insights/[slug]` | APPROVED | static | Article | 2 | desktop · mobile | noindex while sample | SF-150 |
 | `/contact` | APPROVED | static | Contact | 3 | desktop · tablet · mobile | index at launch | SF-151 |
 | `/contact/thank-you` | APPROVED | static | ThankYou | 2 | desktop · mobile | noindex | SF-151 |
-| `/privacy-policy` | APPROVED | static | LegalPage `privacy` | 2 | desktop · mobile | noindex until counsel approves | SF-152 |
-| `/cookie-policy` | APPROVED | static | LegalPage `cookie` | 1 | desktop | noindex until counsel approves | SF-152 |
-| `/terms` | APPROVED | static | LegalPage `terms` | 1 | desktop | noindex until counsel approves | SF-152 |
+| `/privacy-policy` | APPROVED | static | LegalPage `privacy` | 2 | desktop · mobile | not published until owner and legal approve | SF-152 |
+| `/cookie-policy` | APPROVED | static | LegalPage `cookie` | 1 | desktop | not published until owner and legal approve | SF-152 |
+| `/terms` | APPROVED | static | LegalPage `terms` | 1 | desktop | not published until owner and legal approve | SF-152 |
 | `/404` | APPROVED | static | NotFound | 2 | desktop · mobile | noindex | SF-152 |
 
 Per-route artboards, content source, interactions, asset dependencies and metadata are in the registry JSON. Page-level SEO is in [page-seo-matrix.md](../seo/page-seo-matrix.md).
@@ -81,11 +81,13 @@ src/app/[locale]/                     root layout: <html lang>, fonts, intl prov
   privacy-policy/page.tsx
   cookie-policy/page.tsx
   terms/page.tsx
-  not-found.tsx                       the /404 design
-  [...rest]/page.tsx                  routes unknown paths to not-found
+  not-found.tsx                       fallback for a notFound() thrown while rendering
+src/app/global-not-found.tsx          the /404 design for unmatched URLs, server-rendered
 ```
 
-Only `page.tsx` at the root, `not-found.tsx` and `[...rest]` exist today. The rest are planned, one ticket each.
+Only the root `page.tsx`, `layout.tsx`, `not-found.tsx` and `global-not-found.tsx` exist today. The rest are planned, one ticket each.
+
+**Rules for 404s (GAP-R03, verified on a production build):** do not add a catch-all route. Slug pages set `dynamicParams = false` and list their slugs in `generateStaticParams`, so unknown slugs reach `global-not-found.tsx` as real HTML. Do not call `notFound()` while rendering, because that sends an empty shell that needs JavaScript.
 
 ## Locale URLs
 
@@ -115,4 +117,5 @@ Links in the prototype point at artboard files. These do not map one-to-one, and
 - Every article and job card links to the one sample board (GAP-R01).
 - `Nav` has no `active` value for `/technologies`, `/packages` (uses `services`) or `/contact`. `/technologies` highlights nothing.
 - `/technologies` appears only in the footer: neither the header nor the mobile menu links to it.
+- The 404 board's search box does nothing, so it is omitted (GAP-F05). Its Services, Our work and Contact buttons appear once those routes exist, driven by `implementedRoutes` in `src/config/routes.ts`.
 - The mobile menu lists 8 of the 13 mega-menu service items and no industry sub-links (GAP-R02).

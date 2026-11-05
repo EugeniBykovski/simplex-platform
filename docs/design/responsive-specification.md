@@ -85,7 +85,7 @@ No rule targets a model, and none should. Between 1281 and 1728 the layout is th
 
 `.wrap` max-width is `container + gutter × 2`, so content is centred from about 1448 px up. Background grounds stay full-bleed at every width.
 
-Note: `simplex.css` sets the gutter through `.sx, .sx * { --gutter: … }`, which is unusually broad. Setting it on `.sx` alone should inherit identically and is cheaper. Confirm during the SF-142 port.
+Keep the design's `.sx *` selector when porting these values: a container query cannot style its own container, so setting them on `.sx` alone has no effect.
 
 ## Typography
 
@@ -166,6 +166,23 @@ The handoff requires `env(safe-area-inset-top)` on the sticky header slot, but *
 | Decorative hero chips removed below 860 | `.hero-chip` exists but no page uses it. Beams go at 860; `.float-w` widgets go at 1100 | CSS |
 | Uses `env(safe-area-inset-top)` | Instruction only, not implemented | Add it |
 | Reveal rises 36 px and fades | `sx-rise` is 48 px with no fade | CSS: see [motion spec](motion-interaction-specification.md) |
+
+## Adaptations needing approval
+
+These are proposals, not approved design.
+
+| Adaptation | Why | Ticket |
+|---|---|---|
+| Safe-area padding and `viewport-fit=cover` | Handoff requires it, CSS lacks it | SF-142 |
+| Mobile menu scroll, lock, Escape, focus return | Not on the board | SF-142 |
+| Industry details visible under `hover: none` | Touch tablets above 600 px have no hover | SF-143 |
+| Hero behaviour on short laptops, only if testing shows a problem | No board at that height | SF-143 |
+| Case layouts B and C at mobile widths | No mobile board | SF-148 |
+| Blur cap on low-end devices, only if testing shows a need | Handoff claims it, CSS lacks it | SF-154 |
+| `backdrop-filter` fallback | CSS lacks it | SF-142 |
+| Focusable scroll regions on tables | Keyboard access | SF-142 |
+| 404 without search, until header and footer arrive | Search has no backend | SF-152 |
+| All Russian layouts | No Russian design | Page tickets |
 
 ## Russian
 
