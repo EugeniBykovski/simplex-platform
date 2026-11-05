@@ -19,6 +19,7 @@ Component-level static styling goes directly on the element as Tailwind classes,
 
 | Need | Do this |
 |---|---|
+| Zero | `p-[0]`, `left-[0]`, `min-h-[0]`. **`p-0`, `left-0` and `min-h-0` generate nothing**, because the numeric scale is removed, and fail silently |
 | Exact design value | `min-h-[380px]`, `p-[clamp(28px,5cqi,72px)]`, `[background:linear-gradient(...)]` |
 | Design token | `text-text-3`, `rounded-lg`, `font-mono` |
 | A CSS variable the design reads | `[--gap:16px]`, `[--p:100]`, `[--m:46px]` |
@@ -61,6 +62,7 @@ All exports are under `src/components/`. Evidence, historical at `ddc9e8e`: **P*
 | `Icon` | `ui/icon` | UiKitGlass | 29 glyphs | Sized by `--icon` | Always decorative | P |
 | `Button` | `ui/button` | Components | primary, light, ghost, glass; sm, md, lg; disabled, loading | 52 px, large 56 at ≤ 600 | `aria-busy`, native disabled | P, B |
 | `LinkButton` | `ui/button` | Components | As `Button`, plus route-pending | As `Button` | Disabled link when pending | P |
+| `AnchorButton` | `ui/button` | Agent | As `Button` | As `Button` | Same-page link | P |
 | `IconButton` | `ui/button` | Article | Hover | 44 px | Required label | P |
 | `RouteLink`, `ArrowLink`, `TextLink`, `ExternalLink` | `ui/links` | Components | Route-pending. External adds `noopener noreferrer` | Fixed | Disabled link when pending | P |
 | `Container`, `Section`, `Stack`, `Grid`, `Split`, `VisuallyHidden` | `ui/layout` | System | Section grounds: white, paper, ink, mist, horizon, spectrum, cta, mesh-light, mesh-graphite | Design breakpoints | Semantic section | P |
@@ -104,3 +106,20 @@ Automated tests and the component gallery were removed by owner decision. See [m
 ## Build trap: prefixed blur
 
 The source declares `backdrop-filter` and then `-webkit-backdrop-filter`. The CSS minifier keeps only the last of such a pair, which leaves Chromium with no blur at all. The port removes the prefixed copy, and the minifier regenerates it for Safari. Check glass by eye after changing the stylesheet.
+
+## Agent sections
+
+Added in SF-144, under `src/components/sections/agent/`. Copy lives in `src/content/agent/`.
+
+| Component | Boundary | Reuses |
+|---|---|---|
+| `agent-hero` | Server | `Breadcrumbs`, `Badge`, `DemoTag`, `LinkButton`, `AnchorButton` |
+| `agent-stack` | Server, inside client `Tabs` | `Tabs`, which gained `listClassName` |
+| `agent-how`, `agent-capabilities`, `agent-deployment`, `agent-cta` | Server | Design classes, `Icon`, `DemoTag`, `LinkButton` |
+| `agent-embed` | Server | `DemoTag`, `LinkButton` |
+| `agent-faq` | Server | `Accordion` |
+| `agent-roi` | Server | `LinkButton` |
+| `agent-roi-panel` | **Client**, for the sliders | Design classes |
+| `illustrations` | Server | `SxMark`, `DemoTag`, `Icon`, design widget classes |
+
+`LocaleSwitcher` moved to the header with short codes. `NavLink` gained `className`, so the mobile menu can show the current route.

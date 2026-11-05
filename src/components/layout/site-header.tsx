@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { LocaleSwitcher } from "@/components/i18n/locale-switcher";
 import { MegaMenuItem } from "@/components/layout/mega-menu-item";
 import { MobileMenu } from "@/components/layout/mobile-menu";
 import { NavLink } from "@/components/layout/nav-link";
@@ -31,7 +32,10 @@ const caret = (
   </svg>
 );
 
-/** A top-level item. With no page yet it stays visible and, if it has a menu, can still open it. */
+/**
+ * A top-level item. With no page yet it stays visible. If it has a menu it is still a working
+ * control, because it opens that menu, so only an item with nothing behind it is marked disabled.
+ */
 function TopLink({
   href,
   children,
@@ -50,13 +54,7 @@ function TopLink({
   }
   if (hasMenu) {
     return (
-      <button
-        type="button"
-        className="nav-link"
-        aria-haspopup="true"
-        aria-expanded="false"
-        aria-disabled="true"
-      >
+      <button type="button" className="nav-link" aria-haspopup="true" aria-expanded="false">
         {children}
       </button>
     );
@@ -83,7 +81,7 @@ export async function SiteHeader({ locale, menuOpen }: { locale: Locale; menuOpe
 
   return (
     <div className="header-slot">
-      <nav className="nav" aria-label={t("primaryLabel")}>
+      <nav className="nav backdrop-blur-lg" aria-label={t("primaryLabel")}>
         <Link href="/" className="nav-logo">
           <span className="sr-only">{t("homeLabel")}</span>
           <SxMark variant="on-dark" className="nav-mark [--m:46px]" />
@@ -141,9 +139,12 @@ export async function SiteHeader({ locale, menuOpen }: { locale: Locale; menuOpe
           closeLabel={t("closeMenu")}
           startOpen={menuOpen ?? false}
           cta={
-            <LinkButton href="/contact" variant="light" arrow>
-              {t("letsTalk")}
-            </LinkButton>
+            <>
+              <LocaleSwitcher />
+              <LinkButton href="/contact" variant="light" arrow>
+                {t("letsTalk")}
+              </LinkButton>
+            </>
           }
         >
           <RouteLink href="/services" className="mm-link">
@@ -156,12 +157,12 @@ export async function SiteHeader({ locale, menuOpen }: { locale: Locale; menuOpe
               </RouteLink>
             ))}
           </div>
-          <RouteLink href="/agent" className="mm-link">
+          <NavLink href="/agent" className="mm-link">
             <span className="row gap-2">
               {t("agent")} <Badge isNew>{t("new")}</Badge>
             </span>
             <Icon name="arrow" size="md" />
-          </RouteLink>
+          </NavLink>
           <RouteLink href="/industries" className="mm-link">
             {t("industries")} <Icon name="arrow" size="md" />
           </RouteLink>

@@ -1,5 +1,4 @@
 import { getTranslations } from "next-intl/server";
-import { LocaleSwitcher } from "@/components/i18n/locale-switcher";
 import { Badge } from "@/components/ui/feedback";
 import { ArrowLink, ExternalLink, RouteLink } from "@/components/ui/links";
 import { Lockup, Wordmark } from "@/components/ui/logo";
@@ -82,12 +81,16 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
               </RouteLink>
             ))}
             <RouteLink href="/cookie-policy">{t("legal.cookieSettings")}</RouteLink>
-            <LocaleSwitcher />
           </div>
         </div>
       </div>
-      <div className="footer-mega" aria-hidden="true">
-        <Wordmark />
+      {/*
+        Centred on the whole word and the X, on the viewport. The S has a built-in left bearing of
+        .026em that the X lacks, so the margin centres what is visible rather than the text box.
+        When the word is wider than the screen, it crops evenly on both sides.
+      */}
+      <div className="footer-mega px-[0]" aria-hidden="true">
+        <Wordmark className="relative left-1/2 ml-[-.026em] w-max -translate-x-1/2" />
       </div>
     </footer>
   );

@@ -36,26 +36,201 @@
   opacity: 0.55;
 }
 
-/* Adaptation: a route that has no page yet. Same geometry as the link it stands in for. */
+/*
+ * Adaptation: a route that has no page yet, and a disabled button. Same geometry as the live
+ * element. These never use opacity, which would drop text below AA, and never respond to hover,
+ * so they cannot pass for a working control. See GAP-D14.
+ */
 .is-pending,
-.nav-link[aria-disabled="true"] {
-  opacity: 0.55;
-  cursor: default;
-}
-.is-pending:hover {
-  background: inherit;
-  border-color: inherit;
-  transform: none;
-}
-
-.is-pending-card {
-  cursor: default;
+.is-pending-card,
+.btn[disabled] {
+  cursor: not-allowed;
 }
 .is-pending-card:hover {
   transform: none;
 }
 .is-pending-card:hover .card-arrow {
   transform: none;
+}
+
+/* Text links. A utility such as text-white still wins, by layer. */
+a.is-pending:not(.btn),
+a.is-pending:not(.btn):hover {
+  color: var(--text-2);
+  text-decoration: none;
+}
+a.is-pending:not(.btn):hover {
+  background: transparent;
+}
+:is(.dark, .bg-ink, .nav, .mesh-graphite) a.is-pending:not(.btn),
+:is(.dark, .bg-ink, .nav, .mesh-graphite) a.is-pending:not(.btn):hover {
+  color: var(--on-dark-2);
+}
+.mega-link.is-pending b {
+  color: var(--on-dark-2);
+}
+.is-pending:hover .ico,
+.is-pending:hover .nav-caret {
+  transform: none;
+}
+
+/* Buttons: a dashed edge and a held colour, in every variant. */
+.btn.is-pending,
+.btn[disabled] {
+  border-style: dashed;
+  box-shadow: none;
+  opacity: 1;
+  pointer-events: auto;
+}
+.btn.is-pending:active,
+.btn[disabled]:active {
+  transform: none;
+}
+.btn.is-pending::before,
+.btn[disabled]::before {
+  display: none;
+}
+.btn[aria-busy="true"] {
+  cursor: progress;
+}
+.btn-light:is(.is-pending, [disabled]),
+.btn-light:is(.is-pending, [disabled]):hover,
+.bg-ink .btn-primary:is(.is-pending, [disabled]),
+.bg-ink .btn-primary:is(.is-pending, [disabled]):hover,
+.bg-cta .btn-primary:is(.is-pending, [disabled]),
+.bg-cta .btn-primary:is(.is-pending, [disabled]):hover {
+  background: #e3e7f4;
+  color: var(--ink);
+  border-color: var(--on-dark-3);
+}
+.btn-primary:is(.is-pending, [disabled]),
+.btn-primary:is(.is-pending, [disabled]):hover {
+  background: #2b3058;
+  color: #e3e7f4;
+  border-color: #6e76a8;
+}
+.btn-ghost:is(.is-pending, [disabled]),
+.btn-ghost:is(.is-pending, [disabled]):hover {
+  background: transparent;
+  color: var(--text-2);
+  border-color: var(--on-dark-3);
+}
+.btn-glass:is(.is-pending, [disabled]),
+.btn-glass:is(.is-pending, [disabled]):hover {
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--ink);
+  border-color: var(--on-dark-3);
+}
+:is(.dark, .bg-ink, .nav) .btn-ghost:is(.is-pending, [disabled]),
+:is(.dark, .bg-ink, .nav) .btn-ghost:is(.is-pending, [disabled]):hover,
+:is(.dark, .bg-ink, .nav) .btn-glass:is(.is-pending, [disabled]),
+:is(.dark, .bg-ink, .nav) .btn-glass:is(.is-pending, [disabled]):hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #e3e7f4;
+  border-color: rgba(255, 255, 255, 0.34);
+}
+
+/* Adaptation: live button states the source leaves out or leaves below AA. See GAP-D14. */
+.btn-primary::before {
+  background: linear-gradient(100deg, var(--graphite-700), var(--cobalt) 62%, #2b6be6);
+}
+.bg-cta .btn-primary::before,
+.bg-ink .btn-primary::before {
+  background: linear-gradient(100deg, #2f57f5, #2b6be6);
+}
+.bg-ink .btn-primary {
+  background: #fff;
+  color: var(--ink);
+}
+.bg-ink .btn-primary:hover {
+  color: #fff;
+}
+.bg-ink .btn-glass {
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(12px);
+}
+.bg-ink .btn-glass:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.btn-light:active {
+  background: #dce4ff;
+}
+.btn-ghost:active {
+  background: rgba(7, 11, 43, 0.08);
+}
+:is(.dark, .bg-ink, .nav) .btn-ghost:active,
+.bg-cta .btn-glass:active,
+.bg-ink .btn-glass:active {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/* The source's focus rule squares off every control, so its radius is restored here. */
+.sx .btn:focus-visible {
+  border-radius: 16px;
+}
+.sx .btn-sm:focus-visible {
+  border-radius: 12px;
+}
+.sx .btn-lg:focus-visible {
+  border-radius: 18px;
+}
+.sx .nav-link:focus-visible {
+  border-radius: 12px;
+}
+
+/* Adaptation: stronger navigation on the dark bar, and a truthful state for routes with no page. */
+.nav-link {
+  color: rgba(255, 255, 255, 0.92);
+}
+.nav-link:hover,
+.nav-item:focus-within > .nav-link {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+.nav-link:active {
+  background: rgba(255, 255, 255, 0.16);
+}
+.nav-link.is-active {
+  background: rgba(255, 255, 255, 0.08);
+}
+button.nav-link {
+  cursor: default;
+}
+.nav-link[aria-disabled="true"],
+.nav-link[aria-disabled="true"]:hover,
+.nav-link[aria-disabled="true"]:active {
+  color: rgba(255, 255, 255, 0.72);
+  background: transparent;
+  cursor: not-allowed;
+}
+.mm-link[aria-current="page"] {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/*
+ * Adaptation: the Russian labels are longer, and the bar now also holds the language switch, so
+ * they tighten just above the width where the bar collapses. English keeps the board's geometry.
+ */
+@container sx (max-width: 1240px) {
+  :lang(ru) .nav-link {
+    padding: 0 8px;
+    font-size: 14px;
+  }
+  :lang(ru) .nav-cta .btn .ico {
+    display: none;
+  }
+}
+
+/* Adaptation: the process chips read clearly. They are labels, so they have no hover state. */
+.chain span {
+  color: rgba(255, 255, 255, 0.92);
+  border-color: var(--line-dark-2);
+}
+.chain b {
+  background: rgba(255, 255, 255, 0.34);
 }
 
 /* Adaptation: Escape dismisses a mega menu until the pointer or focus leaves. */

@@ -78,6 +78,14 @@ Implemented on `main`. See [homepage-artboard-matrix.md](../design/homepage-artb
 
 **Open:** native editor for Russian, real iOS pass, and the content blockers listed in the parity record.
 
+## SF-144: SimpleX Agent, and global UI correction
+
+Implemented on `main`. See [agent-artboard-matrix.md](../design/agent-artboard-matrix.md), [agent-claims-register.md](../content/agent-claims-register.md) and [agent-manual-qa.md](../qa/agent-manual-qa.md).
+
+Also changed for every page: pending and disabled states, navbar contrast, the language switch in the header, and the footer wordmark.
+
+**Open:** verified capability list (GAP-C01), the ROI assumption (GAP-F07), published-canvas comparison, native editor for Russian, real iOS and screen-reader pass. Its enquiry CTAs turn on with `/contact` in SF-151.
+
 ## Parallel work
 
 After SF-142, page tickets are largely independent, because each owns its own sections and content.
