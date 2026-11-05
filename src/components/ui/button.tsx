@@ -1,4 +1,4 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { ButtonHTMLAttributes, CSSProperties, ReactNode } from "react";
 import { Link } from "@/i18n/navigation";
 import { isImplementedRoute } from "@/config/routes";
 import { cx } from "./cx";
@@ -66,7 +66,7 @@ export function LinkButton({
   children,
   className,
   ...rest
-}: Common & { href: string; children: ReactNode; className?: string; "data-spec"?: string }) {
+}: Common & { href: string; children: ReactNode; className?: string; style?: CSSProperties }) {
   const classes = buttonClass(variant, size, className);
   if (!isImplementedRoute(href)) {
     return (

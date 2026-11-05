@@ -48,6 +48,16 @@
   transform: none;
 }
 
+.is-pending-card {
+  cursor: default;
+}
+.is-pending-card:hover {
+  transform: none;
+}
+.is-pending-card:hover .card-arrow {
+  transform: none;
+}
+
 /* Adaptation: Escape dismisses a mega menu until the pointer or focus leaves. */
 .nav-item[data-dismissed] > .mega {
   opacity: 0;

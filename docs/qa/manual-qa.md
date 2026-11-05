@@ -47,7 +47,6 @@ Keyboard through the page with visible focus and no traps; one H1 and sensible h
 
 - A `notFound()` thrown while rendering gives an empty 404 shell. Unknown URLs must reach `src/app/global-not-found.tsx`, so slug pages use `dynamicParams = false`. Recheck `/nope` and `/ru/nope` with JavaScript off after any Next.js upgrade, since `globalNotFound` is experimental.
 - The CSS minifier keeps only the last of a prefixed pair, which once removed all blur in Chromium. Check glass surfaces still blur after changing `src/styles/simplex.css`.
-- `/ui`-style test routes no longer exist. Check new components on a real page.
 - Playwright WebKit was never a real Safari check, and no device pass has been done. iOS Safari is **NOT VERIFIED**.
 
 ## Historical record

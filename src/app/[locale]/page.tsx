@@ -1,7 +1,22 @@
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { HomeAgent } from "@/components/sections/home/home-agent";
+import { HomeCta } from "@/components/sections/home/home-cta";
+import { HomeEngagement } from "@/components/sections/home/home-engagement";
+import { HomeEstimator } from "@/components/sections/home/home-estimator";
+import { HomeHero } from "@/components/sections/home/home-hero";
+import { HomeHow } from "@/components/sections/home/home-how";
+import { HomeIndustries } from "@/components/sections/home/home-industries";
+import { HomeInsights } from "@/components/sections/home/home-insights";
+import { HomeModels } from "@/components/sections/home/home-models";
+import { HomePackages } from "@/components/sections/home/home-packages";
+import { HomeTechnology } from "@/components/sections/home/home-technology";
+import { HomeWhatWeDo } from "@/components/sections/home/home-what-we-do";
+import { HomeWhy } from "@/components/sections/home/home-why";
+import { HomeWork } from "@/components/sections/home/home-work";
+import { getHomeContent } from "@/content/home";
 import { routing } from "@/i18n/routing";
 import { isLocaleAvailable } from "@/i18n/translation-status";
 import { buildPageMetadata } from "@/lib/seo/metadata";
@@ -12,30 +27,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) return {};
 
-  const t = await getTranslations({ locale, namespace: "meta.home" });
-  return buildPageMetadata({
-    locale,
-    family: "home",
-    path: "/",
-    title: t("title"),
-    description: t("description"),
-    // The placeholder must never be indexed, even on production. SF-143 removes this.
-    noindex: true,
-  });
+  const { title, description } = getHomeContent(locale).meta;
+  return buildPageMetadata({ locale, family: "home", path: "/", title, description });
 }
 
-/** Foundation placeholder that proves locale routing. SF-143 replaces it with the homepage. */
-export default async function FoundationPage({ params }: Props) {
+/** The section order follows Home.dc.html. */
+export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale) || !isLocaleAvailable("home", locale)) notFound();
   setRequestLocale(locale);
 
-  const t = await getTranslations("foundation");
+  const content = getHomeContent(locale);
 
   return (
-    <main className="mx-auto flex min-h-[70dvh] max-w-text pt-s11 flex-col justify-center gap-s5 px-gutter">
-      <h1 className="text-h2 text-ink">{t("title")}</h1>
-      <p className="text-lead text-text-2">{t("body")}</p>
+    <main>
+      <HomeHero hero={content.hero} statements={content.statements} />
+      <HomeWhatWeDo content={content.whatWeDo} />
+      <HomeAgent content={content.agent} />
+      <HomePackages content={content.packages} />
+      <HomeWhy content={content.why} />
+      <HomeWork content={content.work} />
+      <HomeHow content={content.how} />
+      <HomeIndustries content={content.industries} />
+      <HomeTechnology content={content.technology} />
+      <HomeModels content={content.models} />
+      <HomeEngagement content={content.engagement} />
+      <HomeInsights content={content.insights} />
+      <HomeEstimator content={content.estimator} />
+      <HomeCta content={content.cta} />
     </main>
   );
 }

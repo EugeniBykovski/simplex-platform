@@ -1,4 +1,4 @@
-import type { AnchorHTMLAttributes, ReactNode } from "react";
+import type { AnchorHTMLAttributes, CSSProperties, ReactNode } from "react";
 import { isImplementedRoute } from "@/config/routes";
 import { Link } from "@/i18n/navigation";
 import { cx } from "./cx";
@@ -7,8 +7,11 @@ import { Icon } from "./icon";
 type RouteLinkProps = {
   href: string;
   children: ReactNode;
-  className?: string;
+  className?: string | undefined;
+  style?: CSSProperties | undefined;
   "aria-label"?: string;
+  /** Large cards keep full strength while their route has no page, so they stay readable. */
+  pendingLook?: "dim" | "card";
 };
 
 /**
@@ -16,10 +19,21 @@ type RouteLinkProps = {
  * geometry, so visitors are never sent to a 404. Each page ticket turns its links on by adding the
  * route to implementedRoutes.
  */
-export function RouteLink({ href, children, className, ...rest }: RouteLinkProps) {
+export function RouteLink({
+  href,
+  children,
+  className,
+  pendingLook = "dim",
+  ...rest
+}: RouteLinkProps) {
   if (!isImplementedRoute(href)) {
     return (
-      <a {...rest} role="link" aria-disabled="true" className={cx(className, "is-pending")}>
+      <a
+        {...rest}
+        role="link"
+        aria-disabled="true"
+        className={cx(className, pendingLook === "dim" ? "is-pending" : "is-pending-card")}
+      >
         {children}
       </a>
     );
