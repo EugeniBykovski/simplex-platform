@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { getLocale, getTranslations } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages, getTranslations } from "next-intl/server";
+import { SiteLayout } from "@/components/layout/site-layout";
 import { NotFoundView } from "@/components/system/not-found-view";
 import { fontClassNames } from "@/styles/fonts";
 import "@/styles/globals.css";
@@ -22,13 +24,16 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function GlobalNotFound() {
   const locale = await getLocale();
+  const { common, errors } = await getMessages({ locale });
 
   return (
     <html lang={locale} className={fontClassNames}>
       <body>
-        <div className="sx">
-          <NotFoundView locale={locale} />
-        </div>
+        <NextIntlClientProvider locale={locale} messages={{ common, errors }}>
+          <SiteLayout locale={locale}>
+            <NotFoundView locale={locale} />
+          </SiteLayout>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

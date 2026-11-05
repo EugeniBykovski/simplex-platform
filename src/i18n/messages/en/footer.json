@@ -1,5 +1,8 @@
 {
+  "homeLabel": "SimpleX — home",
+  "new": "New",
   "tagline": "Software engineering and digital product development for startups, scale-ups and established businesses.",
+  "startProject": "Start a project",
   "groups": {
     "services": "Services",
     "industries": "Industries",
@@ -7,10 +10,31 @@
     "connect": "Connect"
   },
   "links": {
+    "agent": "SimpleX Agent",
+    "customSoftware": "Custom Software",
+    "webMobileDesktop": "Web, Mobile & Desktop",
+    "aiEngineering": "AI Engineering",
+    "cloudDevops": "Cloud & DevOps",
+    "productDesign": "Product Design",
+    "architecture": "Architecture",
     "allServices": "All services",
+    "fintech": "FinTech",
+    "healthcare": "Healthcare",
+    "ecommerce": "E-commerce",
+    "saas": "SaaS",
+    "enterprise": "Enterprise",
+    "logistics": "Logistics",
+    "about": "About",
+    "howWeWork": "How We Work",
+    "work": "Our Work",
     "technologies": "Technologies",
+    "insights": "Insights",
     "buildPackages": "Build Packages",
-    "contact": "Contact"
+    "careers": "Careers",
+    "contact": "Contact",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "x": "X / Twitter"
   },
   "legal": {
     "rights": "© {year} SimpleX. All rights reserved.",

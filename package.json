@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:test": "ENABLE_UI_GALLERY=true next build",
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
@@ -18,7 +19,7 @@
     "check:i18n": "node scripts/check-i18n.mjs",
     "smoke:404": "node scripts/smoke-404.mjs",
     "validate:docs": "node scripts/validate-docs.mjs",
-    "test:e2e": "playwright test",
+    "test:e2e": "node scripts/run-e2e.mjs",
     "test:unit": "vitest run",
     "check:bundle": "node scripts/check-client-bundle.mjs",
     "verify": "pnpm format:check && pnpm typecheck && pnpm lint && pnpm test:unit && pnpm check:i18n && pnpm validate:docs && pnpm build && pnpm check:bundle"

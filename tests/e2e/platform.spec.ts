@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-const paths = ["/", "/ru", "/nope"];
+const paths = ["/", "/ru", "/nope", "/ui-gallery"];
 
 for (const path of paths) {
   test(`${path} sends the security headers`, async ({ request }) => {

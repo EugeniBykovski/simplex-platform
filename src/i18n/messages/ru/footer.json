@@ -1,5 +1,8 @@
 {
+  "homeLabel": "SimpleX — на главную",
+  "new": "Новое",
   "tagline": "Разработка программного обеспечения и цифровых продуктов для стартапов, растущих компаний и зрелого бизнеса.",
+  "startProject": "Начать проект",
   "groups": {
     "services": "Услуги",
     "industries": "Отрасли",
@@ -7,10 +10,31 @@
     "connect": "Контакты"
   },
   "links": {
+    "agent": "SimpleX Agent",
+    "customSoftware": "Заказная разработка",
+    "webMobileDesktop": "Веб, мобайл и десктоп",
+    "aiEngineering": "Инженерия ИИ",
+    "cloudDevops": "Облако и DevOps",
+    "productDesign": "Продуктовый дизайн",
+    "architecture": "Архитектура",
     "allServices": "Все услуги",
+    "fintech": "Финтех",
+    "healthcare": "Здравоохранение",
+    "ecommerce": "E-commerce",
+    "saas": "SaaS",
+    "enterprise": "Корпорации",
+    "logistics": "Логистика",
+    "about": "О компании",
+    "howWeWork": "Как мы работаем",
+    "work": "Проекты",
     "technologies": "Технологии",
+    "insights": "Статьи",
     "buildPackages": "Пакеты разработки",
-    "contact": "Связаться с нами"
+    "careers": "Карьера",
+    "contact": "Контакты",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "x": "X / Twitter"
   },
   "legal": {
     "rights": "© {year} SimpleX. Все права защищены.",

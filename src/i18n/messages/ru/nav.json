@@ -1,15 +1,108 @@
 {
   "primaryLabel": "Основная навигация",
   "homeLabel": "SimpleX — на главную",
+  "skipToContent": "Перейти к содержанию",
   "services": "Услуги",
   "agent": "Агент",
   "new": "Новое",
   "industries": "Отрасли",
-  "work": "Наши проекты",
+  "work": "Проекты",
   "howWeWork": "Как мы работаем",
   "about": "О компании",
   "insights": "Статьи",
   "careers": "Карьера",
+  "letsTalk": "Обсудить проект",
   "openMenu": "Открыть меню",
-  "closeMenu": "Закрыть меню"
+  "closeMenu": "Закрыть меню",
+  "groups": {
+    "build": "Разработка",
+    "platforms": "Платформы и интеллект",
+    "advisory": "Консалтинг, команды и пакеты"
+  },
+  "agentFeature": {
+    "label": "SimpleX Agent",
+    "title": "Наш инженерный агент в вашем стеке.",
+    "cta": "Познакомиться с агентом"
+  },
+  "mobile": {
+    "desktopApps": "Десктоп"
+  },
+  "items": {
+    "customSoftware": {
+      "title": "Заказная разработка",
+      "description": "Индивидуальные платформы, рассчитанные на годы"
+    },
+    "enterpriseSoftware": {
+      "title": "Корпоративное ПО",
+      "description": "Ключевые системы масштаба организации"
+    },
+    "webDevelopment": {
+      "title": "Веб-разработка",
+      "description": "Быстрые и доступные веб-приложения"
+    },
+    "mobileDevelopment": {
+      "title": "Мобильная разработка",
+      "description": "iOS, Android, React Native"
+    },
+    "desktopApplications": {
+      "title": "Десктопные приложения",
+      "description": "Windows, macOS и Linux"
+    },
+    "aiEngineering": {
+      "title": "Инженерия ИИ",
+      "description": "Интеллектуальные функции для продакшена"
+    },
+    "cloudDevops": {
+      "title": "Облако и DevOps",
+      "description": "Инфраструктура, конвейеры, надёжность"
+    },
+    "legacyModernization": {
+      "title": "Модернизация legacy",
+      "description": "Развитие систем без их остановки"
+    },
+    "qualityEngineering": {
+      "title": "Инженерия качества",
+      "description": "Автотесты и уверенность в релизах"
+    },
+    "architectureConsulting": {
+      "title": "Архитектура и консалтинг",
+      "description": "Решения, на которые можно опереться"
+    },
+    "productDesign": {
+      "title": "Продуктовый дизайн",
+      "description": "Исследования, UX и интерфейсные системы"
+    },
+    "dedicatedTeams": {
+      "title": "Выделенные команды",
+      "description": "Старшие инженеры в вашей команде"
+    },
+    "buildPackages": {
+      "title": "Пакеты разработки",
+      "description": "Мобильный под · десктоп · полный цикл"
+    },
+    "fintech": {
+      "title": "Финтех",
+      "description": "Платежи, кредитование, казначейство"
+    },
+    "healthcare": {
+      "title": "Здравоохранение",
+      "description": "Клинические и пациентские платформы"
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Торговля в пиковые нагрузки"
+    },
+    "saas": {
+      "title": "SaaS",
+      "description": "Масштабируемые мультиарендные продукты"
+    },
+    "enterprise": {
+      "title": "Корпорации",
+      "description": "Ключевые системы и интеграция"
+    },
+    "logistics": {
+      "title": "Логистика",
+      "description": "Операции в реальном времени"
+    }
+  }
 }

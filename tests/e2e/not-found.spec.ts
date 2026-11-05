@@ -30,12 +30,20 @@ test("an invalid locale prefix is treated as an unknown English path", async ({ 
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
 });
 
+test("the 404 has the shared header and footer without JavaScript", async ({ page }) => {
+  await page.goto("/ru/nope");
+  await expect(page.getByRole("navigation", { name: "Основная навигация" })).toBeAttached();
+  await expect(page.getByRole("contentinfo")).toBeVisible();
+});
+
 test("the 404 has no horizontal overflow at 320 px", async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 800 });
   await page.goto("/ru/nope");
   const box = await page.getByRole("heading", { level: 1 }).boundingBox();
   expect(box && box.x + box.width).toBeLessThanOrEqual(320);
-  await expect(page.getByRole("link", { name: "На главную" })).toBeInViewport({ ratio: 0 });
+  await expect(page.getByRole("main").getByRole("link", { name: "На главную" })).toBeInViewport({
+    ratio: 0,
+  });
   const main = await page.getByRole("main").boundingBox();
   expect(main?.width).toBeLessThanOrEqual(320);
 });

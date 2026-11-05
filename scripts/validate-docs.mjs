@@ -127,6 +127,7 @@ const required = [
   "docs/design/artboard-inventory.json",
   "docs/design/design-system-specification.md",
   "docs/design/component-inventory.md",
+  "docs/design/component-implementation.md",
   "docs/design/responsive-specification.md",
   "docs/design/motion-interaction-specification.md",
   "docs/design/asset-manifest.md",

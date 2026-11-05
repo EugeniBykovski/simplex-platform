@@ -25,6 +25,10 @@ export type RouteFamily = keyof typeof routeFamilies;
  */
 export const implementedRoutes: readonly string[] = ["/"];
 
+export function isImplementedRoute(href: string): boolean {
+  return implementedRoutes.includes(href);
+}
+
 /**
  * Routes approved for search, which feed sitemap.ts. Empty until real pages ship: the placeholder
  * home is deliberately not listed. Each page ticket adds its route when its blockers in

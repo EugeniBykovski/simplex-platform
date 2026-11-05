@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import type { ReactNode } from "react";
+import { SiteLayout } from "@/components/layout/site-layout";
 import { routing } from "@/i18n/routing";
 import { fontClassNames } from "@/styles/fonts";
 import "@/styles/globals.css";
@@ -11,6 +12,8 @@ import "@/styles/globals.css";
 export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
+
+export const viewport: Viewport = { viewportFit: "cover" };
 
 type Props = {
   children: ReactNode;
@@ -33,7 +36,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body>
         {/* Client bundles receive only what client components read; page copy stays on the server. */}
         <NextIntlClientProvider messages={{ common, errors }}>
-          <div className="sx">{children}</div>
+          <SiteLayout locale={locale}>{children}</SiteLayout>
         </NextIntlClientProvider>
       </body>
     </html>

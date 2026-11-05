@@ -149,13 +149,13 @@ Inputs are 56 px tall, 16 px text, which prevents iOS zoom on focus. `.grid-2` f
 
 ### Safe areas
 
-The handoff requires `env(safe-area-inset-top)` on the sticky header slot, but **no rule exists in the CSS** (GAP-V05).
+The handoff requires `env(safe-area-inset-top)` on the sticky header slot, but no rule exists in the source CSS (GAP-V05).
 
-**Adaptation:** add safe-area padding to `.header-slot` top and sides, the open mobile menu's bottom, `.footer-base`, and any fixed cookie banner, plus `viewport-fit=cover` in the viewport metadata. Test in iOS landscape.
+**Adaptation, built in SF-142:** safe-area padding on `.header-slot`, room for it in the mobile menu, and on `.footer`, plus `viewport-fit=cover`. **Not yet tested on a real iOS device.** Add it to any fixed cookie banner.
 
 ### Mobile menu height
 
-**Adaptation.** The design shows the open menu at 390 × 932. Short phones need the panel to scroll internally, with body scroll locked. The board does not specify either, or Escape-to-close and focus return (GAP-R02).
+**Adaptation, built in SF-142.** The design shows the open menu at 390 × 932, with `min-height: 680px`. Short phones now get an internally scrolling panel with the page locked. Escape and focus return are built too (GAP-R02).
 
 ## Handoff claims the CSS does not back
 

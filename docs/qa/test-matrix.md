@@ -8,10 +8,10 @@ Playwright, no Storybook. Owner: SF-155, with each page ticket adding its own ro
 |---|---|
 | `pnpm verify` | Format, types, lint, unit tests, i18n parity, docs, build, client-bundle check |
 | `pnpm test:unit` | `tests/unit/`: environment, SEO, routes, tokens |
-| `pnpm build && pnpm test:e2e` | `tests/e2e/`: locale routing, 404 without JavaScript, security, platform, axe |
+| `pnpm build:test && pnpm test:e2e` | `tests/e2e/` on Chromium, Firefox and WebKit: design parity, navigation, responsive overflow, reduced motion, locale routing, 404 without JavaScript, security, platform, axe |
 | `BASE_URL=… pnpm smoke:404` | Raw-HTML 404 check against any running deployment |
 
-Playwright uses its own browser. Locally, `PW_CHANNEL=chrome` uses installed Chrome instead. It starts a production server on port 3947 and **fails rather than reuse a server it did not start**, so it can never test or disturb another project.
+`scripts/run-e2e.mjs` asks the operating system for a free port on each run and prints it. Playwright starts its own production server there, with `reuseExistingServer: false`, and stops only that server. **Never use `pkill -f` or `killall` in this repository's tooling.**
 
 **Everything below this point is the plan.** Page suites arrive with their tickets and SF-155.
 

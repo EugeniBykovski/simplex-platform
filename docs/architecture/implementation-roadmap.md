@@ -60,14 +60,13 @@ Implemented on `main`. **Do not create a second scaffold.**
 
 ## SF-142: Design system and shell
 
-**This is the critical dependency.** Page work must not start until it lands, or the pages will fork primitives and drift.
+Implemented on `main`. See [component-implementation.md](../design/component-implementation.md).
 
-1. Port tokens and design CSS, resolving the cascade ([system-design.md](system-design.md)). Test GAP-D04. Tokens are done, so port the rest. Delete the rules in `src/styles/system-pages.css` that the port duplicates.
-2. Build `SiteLayout`, `Header`, `MegaMenu`, `MobileMenu`, `Footer`, in both languages. Check header fit in Russian at 1101–1280. Add them to the 404 page.
-3. Build primitives from [component-inventory.md](../design/component-inventory.md).
-4. Use the `sx-*` container variants that already exist in `src/styles/globals.css`.
-5. Add a QA-only specimen route, excluded from production, in place of Storybook.
-6. Set up the reference-capture spike, with SF-155 (GAP-Q01).
+**Done:** tokens, ported stylesheet, Tailwind mapping, logo system, primitives, forms, tabs, accordion, header, mega menus, mobile menu, footer, skip link, EN and RU shell strings, UI gallery, design parity tests, Chromium, Firefox and WebKit runs.
+
+**Handed to page tickets:** page patterns such as `CtaBand`, whose CSS is ready. Add each route to `implementedRoutes` when its page ships, which turns its links on everywhere.
+
+**Open:** real iOS device pass, native editor for Russian, GAP-D07 to GAP-D11 review.
 
 ## Parallel work
 

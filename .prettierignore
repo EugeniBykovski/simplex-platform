@@ -4,3 +4,5 @@ pnpm-lock.yaml
 docs
 playwright-report
 test-results
+src/styles/simplex.css
+tests/fixtures

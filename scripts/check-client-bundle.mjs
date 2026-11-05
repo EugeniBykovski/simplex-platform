@@ -23,6 +23,46 @@ const hits = files.flatMap((path) => {
     .map((value) => `${path}: found a forbidden value (${value === canary ? "canary" : value})`);
 });
 
+// The gallery must only exist in builds that asked for it.
+const manifest = readFileSync(".next/app-path-routes-manifest.json", "utf8");
+if (manifest.includes("ui-gallery") && process.env.ENABLE_UI_GALLERY !== "true") {
+  hits.push("The UI gallery route is in a build without ENABLE_UI_GALLERY=true");
+}
+
+// A Tailwind utility that shares a design class's name silently overrides it. This has happened:
+// Tailwind's gap-5 is 20px, and the design's is 24px.
+const css = files
+  .filter((path) => path.endsWith(".css"))
+  .map((path) => readFileSync(path, "utf8"))
+  .join("");
+const layerStart = css.indexOf("@layer utilities");
+if (layerStart === -1) {
+  hits.push("No Tailwind utilities layer found in the built CSS");
+} else {
+  let depth = 0;
+  let end = css.indexOf("{", layerStart);
+  const open = end;
+  do {
+    if (css[end] === "{") depth += 1;
+    if (css[end] === "}") depth -= 1;
+    end += 1;
+  } while (depth > 0);
+  const classNames = (text) =>
+    new Set([...text.matchAll(/\.(-?[_a-zA-Z][\w-]*)/g)].map((match) => match[1]));
+  const utilities = classNames(css.slice(open, end).replace(/\{[^{}]*\}/g, "{}"));
+  const design = classNames(
+    readFileSync("src/styles/simplex.css", "utf8")
+      .replace(/\/\*[\s\S]*?\*\//g, "")
+      .replace(/url\([^)]*\)/g, ""),
+  );
+  const allowed = new Set(["sr-only"]); // Both define the same thing.
+  for (const name of utilities) {
+    if (design.has(name) && !allowed.has(name)) {
+      hits.push(`Tailwind utility .${name} collides with a design class`);
+    }
+  }
+}
+
 if (hits.length > 0) {
   console.error(hits.join("\n"));
   process.exit(1);

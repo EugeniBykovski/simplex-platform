@@ -1,6 +1,7 @@
 {
   "primaryLabel": "Primary",
   "homeLabel": "SimpleX — home",
+  "skipToContent": "Skip to content",
   "services": "Services",
   "agent": "Agent",
   "new": "New",
@@ -10,6 +11,98 @@
   "about": "About",
   "insights": "Insights",
   "careers": "Careers",
+  "letsTalk": "Let’s Talk",
   "openMenu": "Open menu",
-  "closeMenu": "Close menu"
+  "closeMenu": "Close menu",
+  "groups": {
+    "build": "Build",
+    "platforms": "Platforms & intelligence",
+    "advisory": "Advisory, teams & packages"
+  },
+  "agentFeature": {
+    "label": "SimpleX Agent",
+    "title": "Our engineering agent, inside your stack.",
+    "cta": "Meet the agent"
+  },
+  "mobile": {
+    "desktopApps": "Desktop Apps"
+  },
+  "items": {
+    "customSoftware": {
+      "title": "Custom Software",
+      "description": "Bespoke platforms, built to last"
+    },
+    "enterpriseSoftware": {
+      "title": "Enterprise Software",
+      "description": "Core systems at organisational scale"
+    },
+    "webDevelopment": {
+      "title": "Web Development",
+      "description": "Fast, accessible web applications"
+    },
+    "mobileDevelopment": {
+      "title": "Mobile Development",
+      "description": "iOS, Android, React Native"
+    },
+    "desktopApplications": {
+      "title": "Desktop Applications",
+      "description": "Windows, macOS and Linux"
+    },
+    "aiEngineering": {
+      "title": "AI Engineering",
+      "description": "Production-grade intelligent features"
+    },
+    "cloudDevops": {
+      "title": "Cloud & DevOps",
+      "description": "Infrastructure, pipelines, reliability"
+    },
+    "legacyModernization": {
+      "title": "Legacy Modernization",
+      "description": "Evolve systems without stopping them"
+    },
+    "qualityEngineering": {
+      "title": "Quality Engineering",
+      "description": "Test automation and release confidence"
+    },
+    "architectureConsulting": {
+      "title": "Architecture & Consulting",
+      "description": "Decisions you can build on"
+    },
+    "productDesign": {
+      "title": "Product Design",
+      "description": "Research, UX and interface systems"
+    },
+    "dedicatedTeams": {
+      "title": "Dedicated Teams",
+      "description": "Senior engineers, embedded with you"
+    },
+    "buildPackages": {
+      "title": "Build Packages",
+      "description": "Mobile pod · desktop · full cycle"
+    },
+    "fintech": {
+      "title": "FinTech",
+      "description": "Payments, lending, treasury"
+    },
+    "healthcare": {
+      "title": "Healthcare",
+      "description": "Clinical and patient platforms"
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Commerce at peak load"
+    },
+    "saas": {
+      "title": "SaaS",
+      "description": "Multi-tenant products that scale"
+    },
+    "enterprise": {
+      "title": "Enterprise",
+      "description": "Core systems and integration"
+    },
+    "logistics": {
+      "title": "Logistics",
+      "description": "Real-time operations"
+    }
+  }
 }

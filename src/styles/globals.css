@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "./tokens.css";
-@import "./base.css";
+@import "./simplex.css" layer(components);
+@import "./components.css" layer(components);
+
+/* Design classes that Tailwind would otherwise also generate as utilities, which win over them. */
+@source not inline("ring bg-ink");
 
 /*
  * Tailwind's default palette, scales and breakpoints are removed, so utilities can only express
@@ -81,6 +85,8 @@
   --text-xs: 12.5px;
   --text-xs--line-height: 1.5;
 
+  /* Without this, Tailwind's numeric gap-5 (20px) would override the design's .gap-5 (24px). */
+  --spacing: initial;
   --spacing-s1: var(--s-1);
   --spacing-s2: var(--s-2);
   --spacing-s3: var(--s-3);

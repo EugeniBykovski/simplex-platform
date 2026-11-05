@@ -10,27 +10,20 @@ export function LocaleSwitcher() {
   const pathname = usePathname();
 
   return (
-    <nav aria-label={t("label")}>
-      <ul className="flex gap-s3">
-        {locales.map((locale) => (
-          <li key={locale}>
-            {/*
-              A plain anchor on purpose. The language change replaces <html lang>, so a full
-              document load is correct, and getPathname gives "/" rather than the "/en" redirect
-              that next-intl's Link emits for the default locale.
-            */}
-            <a
-              href={getPathname({ href: pathname, locale })}
-              hrefLang={locale}
-              lang={locale}
-              aria-current={locale === activeLocale ? "true" : undefined}
-              className="inline-flex min-h-11 items-center underline-offset-4 aria-[current]:font-semibold aria-[current]:underline"
-            >
-              {t(locale)}
-            </a>
-          </li>
-        ))}
-      </ul>
+    <nav aria-label={t("label")} className="locale-switcher">
+      {locales.map((locale) => (
+        // A plain anchor on purpose. The language change replaces <html lang>, so a full document
+        // load is correct, and getPathname gives "/" rather than next-intl's "/en" redirect.
+        <a
+          key={locale}
+          href={getPathname({ href: pathname, locale })}
+          hrefLang={locale}
+          lang={locale}
+          aria-current={locale === activeLocale ? "true" : undefined}
+        >
+          {t(locale)}
+        </a>
+      ))}
     </nav>
   );
 }

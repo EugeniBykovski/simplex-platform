@@ -11,8 +11,8 @@ Dependencies point downward only.
 | Routes | `src/app/[locale]/` | Thin pages: metadata, static params, composition | Everything below |
 | Features | `src/features/` (planned) | A capability with its own logic: contact, careers application | `sections`, `layout`, `ui`, `lib` |
 | Sections | `src/components/sections/` (planned) | Editorial page sections | `layout`, `ui`, `lib` |
-| Layout | `src/components/layout/` (planned) | `SiteLayout`, `Header`, `MobileMenu`, `Footer`, `Section` | `ui`, `lib` |
-| UI | `src/components/ui/` (planned) | Design-system primitives with no page knowledge | `lib` |
+| Layout | `src/components/layout/` | `SiteLayout`, `SiteHeader`, `MobileMenu`, `SiteFooter` | `ui`, `lib` |
+| UI | `src/components/ui/` | Design-system primitives with no page knowledge | `lib` |
 | System | `src/components/system/` | 404 view, reused by global and locale boundaries | `lib` |
 | Lib | `src/lib/`, `src/config/`, `src/i18n/` | Helpers, config, no JSX where avoidable | Nothing above |
 

@@ -49,9 +49,9 @@ Applied throughout these documents.
 | ID | Artboard | Gap | Severity | Suggested solution | Owner | Ticket |
 |---|---|---|---|---|---|---|
 | GAP-R01 | Careers, Job, Insights, Article | Patterns approved, but no slug values exist. All cards link to one sample board | High | Slug rule in [seo-architecture.md](../seo/seo-architecture.md). Real slugs arrive with real content | Yes | SF-149, SF-150 |
-| GAP-R02 | Nav, HomeMenuMobile | Mobile menu lists 8 of 13 service items, with different labels ("Desktop Apps" vs "Desktop Applications") and no industry sub-links. Behaviour for Escape, focus trap, scroll lock and short screens is not specified | Medium | Keep as drawn for links, unless owner wants parity. Add standard menu behaviour as an adaptation | Yes | SF-142 |
-| GAP-R03 | NotFound | **RESOLVED.** Unknown URLs now return server-rendered, localised HTML with a 404 through `src/app/global-not-found.tsx`. Remaining limits: it relies on the experimental `globalNotFound` flag, and a `notFound()` thrown while rendering still gives an empty shell, so slug pages must use `dynamicParams = false`. Header and footer arrive with SF-142 | Low | Re-run `pnpm smoke:404` on every Next.js upgrade | No | SF-152 |
-| GAP-R04 | Nav | No `active` state for `/technologies` or `/contact`, and `/technologies` is footer-only | Low | Keep, or add a link if the owner wants it | Yes | SF-142 |
+| GAP-R02 | Nav, HomeMenuMobile | Mobile menu lists 8 of 13 service items, with different labels ("Desktop Apps" vs "Desktop Applications") and no industry sub-links. Built as drawn. **Behaviour RESOLVED as an adaptation:** Escape, focus, inert page, scroll lock and short screens | Low | Owner decides whether to list all items | Yes | SF-142 |
+| GAP-R03 | NotFound | **RESOLVED.** Unknown URLs now return server-rendered, localised HTML with a 404 through `src/app/global-not-found.tsx`, with the shared header and footer. Remaining limits: it relies on the experimental `globalNotFound` flag, and a `notFound()` thrown while rendering still gives an empty shell, so slug pages must use `dynamicParams = false` | Low | Re-run `pnpm smoke:404` on every Next.js upgrade | No | SF-152 |
+| GAP-R04 | Nav | No `active` state for `/technologies` or `/contact`, and `/technologies` is footer-only. Built as drawn | Low | Keep, or add a link if the owner wants it | Yes | SF-142 |
 
 ## Content and claims
 
@@ -86,7 +86,7 @@ Full list: [content-and-claims-register.md](../content/content-and-claims-regist
 | GAP-V02 | case-carepath, case-routewise | Layouts B and C have **no mobile board** and unique markup | High | Implement from CSS rules, label as CSS-derived, get owner review | Yes | SF-148 |
 | GAP-V03 | All | No boards at 320, 1024, 1280, 1920, 2560 | Low | Render the design source at those widths as a reference ([strategy](../qa/visual-regression-strategy.md)) | No | SF-155 |
 | GAP-V04 | All | No Russian design exists, and Russian text can break `.btn` nowrap, line masks, header fit and display floors | High | [i18n.md](../architecture/i18n.md) adaptations, owner reviews on `ru` | Yes | SF-142, page tickets |
-| GAP-V05 | Handoff | Handoff claims safe-area handling and mobile blur caps that the CSS lacks | Medium | Add as adaptations | No | SF-142, SF-154 |
+| GAP-V05 | Handoff | Safe areas **RESOLVED** in `src/styles/components.css`, not yet tested on a real iOS device. The mobile blur cap stays open, pending device testing | Medium | Test in SF-154 | No | SF-142, SF-154 |
 | GAP-V06 | Home | Fixed 960 px sticky hero on short laptops (768 and 900 px tall) is not shown on any board | Medium | Test at 1366 × 768. Change only if it looks wrong, with owner approval | Yes | SF-143 |
 
 ## Motion
@@ -104,11 +104,16 @@ Full list: [content-and-claims-register.md](../content/content-and-claims-regist
 | ID | Artboard | Gap | Severity | Suggested solution | Owner | Ticket |
 |---|---|---|---|---|---|---|
 | GAP-D01 | Foundations | Version labels disagree: 1.0, 1.1, 1.4.0, 1.9 | Low | Pin the artifact version. Treat content as v1.9 | No | SF-142 |
-| GAP-D02 | System, UI Kit | Redefined rules and dead code from accretion: legacy aliases, `.si-glyph`, blob keyframes, unused `.hero-chip`, about 90 kit-only classes | Medium | Resolve the cascade and drop unused rules. Check by rendering, not by assumption | No | SF-142 |
+| GAP-D02 | System, UI Kit | **RESOLVED.** Selectors for classes no page uses are removed, leaving 19 KB gzipped from 25 KB, and later rules still override earlier ones as in the source. Parity tests confirm | Low | None | No | SF-142 |
 | GAP-D03 | Handoff | **CLOSED by decision 9.** Handoff mentions Storybook compatibility. The Technologies page listing Storybook as a skill is unrelated and stays | Low | None | No | SF-142 |
-| GAP-D04 | Global | `.sx` is a size container. Check that `position: fixed` children (banner, menu) resolve against the viewport in all target browsers | Medium | Test early in SF-142 | No | SF-142 |
+| GAP-D04 | Global | **RESOLVED for tested browsers.** The fixed skip link resolves against the viewport inside `.sx` in Chromium, Firefox and WebKit | Low | Retest the cookie banner if built | No | SF-142 |
 | GAP-D06 | Global | No board exists for a runtime error page. `[locale]/error.tsx` adapts the NotFound composition, with drafted copy in both languages | Low | Review the copy and layout | Yes | SF-152 |
-| GAP-D05 | Global | No `backdrop-filter` fallback, and missing arrow-key handling on tabs | Medium | Add `@supports` fallback and keyboard support | No | SF-142 |
+| GAP-D05 | Global | **RESOLVED.** `@supports` fallback and tab arrow keys added. The fallback has not been seen in a browser that lacks blur | Low | None | No |
+| GAP-D07 | Contact, Components | The design's v1.9 `.opt` estimator rule also styles form hints such as "Optional", so they render as bordered 44 px boxes, on the real boards too. It looks accidental. **Built faithfully** | Medium | Owner decides. The fix is one scoped rule | Yes |
+| GAP-D08 | Nav, Footer | Routes with no page render dimmed and unclickable, so the header looks muted until pages ship. A truthful state from the SF-142 brief, not a design | Low | Clears itself as routes are added to `implementedRoutes` | No |
+| GAP-D09 | Footer | The design has no language switcher. It is in the footer base row, so the header stays as boarded | Low | Owner reviews placement | Yes |
+| GAP-D10 | Nav | Removed from the Agent mega-menu card: "Detects your frameworks, scaffolds the ecosystem and ships production-ready features — reviewed by our engineers", under decision 3. Also removed the mobile menu's "Typical reply within one business day · [confirm SLA]" | Low | Restore when verified | Yes |
+| GAP-D11 | Global | Added with no board: skip link | Low | Owner reviews | Yes | SF-142 |
 
 ## Internationalisation
 

@@ -1,6 +1,6 @@
 # Asset manifest
 
-Source: `project/` in design version `1793869596-167d`. **All 93 binary assets were downloaded and hash-checked by the artifact service during SF-140**, so availability is proven rather than assumed. None have been copied into `public/` yet: SF-154 owns that.
+Source: `project/` in design version `1793869596-167d`. **All 93 binary assets were downloaded and hash-checked by the artifact service during SF-140**, so availability is proven rather than assumed. The seven `img/` backgrounds are copied to `public/images/design/`, unoptimised, because the ported CSS references them. SF-154 owns optimisation and the rest.
 
 There are **no videos, no product screenshots and no photographs of real people or work** in the design. Product visuals are drawn in HTML and CSS.
 

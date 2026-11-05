@@ -40,7 +40,7 @@ form-action 'self'; frame-ancestors 'none'
 
 **Limitation:** `script-src` allows `'unsafe-inline'`. Next.js inlines bootstrap scripts, and nonces would force every page to render dynamically, losing static delivery. This reduces, but does not remove, protection against injected scripts, so the main defence stays not rendering untrusted HTML at all. Consider hash-based CSP in SF-156 if the framework's support is mature by then.
 
-**What was tested:** `/`, `/ru` and `/nope` load in Chromium with no violations or console errors. That covers Geist fonts, data-URI icons and hydration. **Not yet tested against the full design**, since those pages do not exist. Each page ticket must keep `tests/e2e/platform.spec.ts` passing for its route. `data:` in `img-src` is needed for the design's masked icons and noise texture.
+**What was tested:** `/`, `/ru`, `/nope` and the UI gallery load with no violations or console errors in Chromium, Firefox and WebKit. That covers Geist fonts, data-URI icons, glass surfaces, background images and hydration. **Not yet tested on full pages**, since those do not exist. Each page ticket must keep `tests/e2e/platform.spec.ts` passing for its route. `data:` in `img-src` is needed for the design's masked icons and noise texture.
 
 A new external service, such as a scheduling embed or analytics, needs an explicit CSP change plus a privacy-policy entry.
 
