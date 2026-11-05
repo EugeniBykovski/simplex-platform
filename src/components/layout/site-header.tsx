@@ -147,9 +147,9 @@ export async function SiteHeader({ locale, menuOpen }: { locale: Locale; menuOpe
             </>
           }
         >
-          <RouteLink href="/services" className="mm-link">
+          <NavLink href="/services" className="mm-link">
             {t("services")} <Icon name="arrow" size="md" />
-          </RouteLink>
+          </NavLink>
           <div className="mm-sub">
             {mobileServiceLinks.map(({ key, href }) => (
               <RouteLink key={key} href={href}>

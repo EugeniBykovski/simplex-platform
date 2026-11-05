@@ -66,6 +66,11 @@ a.is-pending:not(.btn):hover {
 :is(.dark, .bg-ink, .nav, .mesh-graphite) a.is-pending:not(.btn):hover {
   color: var(--on-dark-2);
 }
+/* Inside a sentence, a pending link needs more than colour to read as a link. */
+a.text-link.is-pending {
+  text-decoration: underline dashed;
+  text-underline-offset: 3px;
+}
 .mega-link.is-pending b {
   color: var(--on-dark-2);
 }

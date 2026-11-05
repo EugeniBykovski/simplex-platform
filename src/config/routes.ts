@@ -19,11 +19,34 @@ export const routeFamilies = {
 
 export type RouteFamily = keyof typeof routeFamilies;
 
+/** The twelve service pages in the design. There are no others, and no catch-all route. */
+export const serviceSlugs = [
+  "custom-software-development",
+  "enterprise-software",
+  "web-development",
+  "mobile-development",
+  "desktop-development",
+  "ai-engineering",
+  "cloud-devops",
+  "architecture-consulting",
+  "product-design",
+  "legacy-modernization",
+  "quality-engineering",
+  "dedicated-teams",
+] as const;
+
+export type ServiceSlug = (typeof serviceSlugs)[number];
+
 /**
  * Routes that have a page today. Each page ticket adds its own. The 404 page offers only these,
  * so it never links to another 404.
  */
-export const implementedRoutes: readonly string[] = ["/", "/agent"];
+export const implementedRoutes: readonly string[] = [
+  "/",
+  "/agent",
+  "/services",
+  ...serviceSlugs.map((slug) => `/services/${slug}`),
+];
 
 export function isImplementedRoute(href: string): boolean {
   return implementedRoutes.includes(href);

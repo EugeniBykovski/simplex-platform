@@ -12,7 +12,7 @@ SF-153 implements and verifies this specification. Today:
 
 | Item | State |
 |---|---|
-| Metadata API per page, through `buildPageMetadata` | Helper implemented, used by `/` and `/agent` |
+| Metadata API per page, through `buildPageMetadata` | Helper implemented, used by `/`, `/agent` and the Services pages |
 | Canonical URLs | Implemented in the helper |
 | Open Graph | Text fields implemented. No images (GAP-A02) |
 | Twitter metadata | Text fields implemented. No images |

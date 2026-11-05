@@ -123,3 +123,15 @@ Added in SF-144, under `src/components/sections/agent/`. Copy lives in `src/cont
 | `illustrations` | Server | `SxMark`, `DemoTag`, `Icon`, design widget classes |
 
 `LocaleSwitcher` moved to the header with short codes. `NavLink` gained `className`, so the mobile menu can show the current route.
+
+## Services sections
+
+Added in SF-145, under `src/components/sections/services/`. Copy lives in `src/content/services/`, with per-route structure in `catalog.ts`. All are server components.
+
+| Component | Holds | Reuses |
+|---|---|---|
+| `services-overview` | Hero, groups, matrix, comparison, CTA | `Breadcrumbs`, `Surface`, `CardArrow`, `RouteLink`, `ComparisonTable`, `ComparisonRow`, `LinkButton` |
+| `service-sections` | The nine detail sections | `Breadcrumbs`, `Accordion`, `ArrowLink`, `TextLink`, `SectorGround`, `DemoTag`, `AnchorButton`, `LinkButton` |
+| `service-visuals` | Seven hero illustrations, chosen by slug | Design mock-up classes, `Icon` |
+
+`serviceSlugs` in `config/routes.ts` is the single list of detail routes.

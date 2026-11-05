@@ -206,10 +206,10 @@
       "i18n": {
         "en": "/services",
         "ru": "/ru/services",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-145",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -255,16 +255,16 @@
         "indexing": "index at launch",
         "launchBlockers": [
           "Related case studies are demonstrations (GAP-C02)",
-          "Discovery price placeholder [€ x]"
+          "Discovery sprint offer and price to confirm"
         ]
       },
       "i18n": {
         "en": "/services/custom-software-development",
         "ru": "/ru/services/custom-software-development",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-145",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -310,16 +310,16 @@
         "indexing": "index at launch",
         "launchBlockers": [
           "Related case studies are demonstrations (GAP-C02)",
-          "Discovery price placeholder [€ x]"
+          "Discovery sprint offer and price to confirm"
         ]
       },
       "i18n": {
         "en": "/services/enterprise-software",
         "ru": "/ru/services/enterprise-software",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-145",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -365,16 +365,16 @@
         "indexing": "index at launch",
         "launchBlockers": [
           "Related case studies are demonstrations (GAP-C02)",
-          "Discovery price placeholder [€ x]"
+          "Discovery sprint offer and price to confirm"
         ]
       },
       "i18n": {
         "en": "/services/web-development",
         "ru": "/ru/services/web-development",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-145",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -420,16 +420,16 @@
         "indexing": "index at launch",
         "launchBlockers": [
           "Related case studies are demonstrations (GAP-C02)",
-          "Discovery price placeholder [€ x]"
+          "Discovery sprint offer and price to confirm"
         ]
       },
       "i18n": {
         "en": "/services/mobile-development",
         "ru": "/ru/services/mobile-development",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-145",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -475,16 +475,16 @@
         "indexing": "index at launch",
         "launchBlockers": [
           "Related case studies are demonstrations (GAP-C02)",
-          "Discovery price placeholder [€ x]"
+          "Discovery sprint offer and price to confirm"
         ]
       },
       "i18n": {
         "en": "/services/desktop-development",
         "ru": "/ru/services/desktop-development",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-145",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -534,16 +534,16 @@
         "indexing": "index at launch",
         "launchBlockers": [
           "Related case studies are demonstrations (GAP-C02)",
-          "Discovery price placeholder [€ x]"
+          "Discovery sprint offer and price to confirm"
         ]
       },
       "i18n": {
         "en": "/services/ai-engineering",
         "ru": "/ru/services/ai-engineering",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-145",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -589,16 +589,16 @@
         "indexing": "index at launch",
         "launchBlockers": [
           "Related case studies are demonstrations (GAP-C02)",
-          "Discovery price placeholder [€ x]"
+          "Discovery sprint offer and price to confirm"
         ]
       },
       "i18n": {
         "en": "/services/cloud-devops",
         "ru": "/ru/services/cloud-devops",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-145",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -644,16 +644,16 @@
         "indexing": "index at launch",
         "launchBlockers": [
           "Related case studies are demonstrations (GAP-C02)",
-          "Discovery price placeholder [€ x]"
+          "Discovery sprint offer and price to confirm"
         ]
       },
       "i18n": {
         "en": "/services/architecture-consulting",
         "ru": "/ru/services/architecture-consulting",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-145",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -699,16 +699,16 @@
         "indexing": "index at launch",
         "launchBlockers": [
           "Related case studies are demonstrations (GAP-C02)",
-          "Discovery price placeholder [€ x]"
+          "Discovery sprint offer and price to confirm"
         ]
       },
       "i18n": {
         "en": "/services/product-design",
         "ru": "/ru/services/product-design",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-145",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -754,16 +754,16 @@
         "indexing": "index at launch",
         "launchBlockers": [
           "Related case studies are demonstrations (GAP-C02)",
-          "Discovery price placeholder [€ x]"
+          "Discovery sprint offer and price to confirm"
         ]
       },
       "i18n": {
         "en": "/services/legacy-modernization",
         "ru": "/ru/services/legacy-modernization",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-145",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -809,16 +809,16 @@
         "indexing": "index at launch",
         "launchBlockers": [
           "Related case studies are demonstrations (GAP-C02)",
-          "Discovery price placeholder [€ x]"
+          "Discovery sprint offer and price to confirm"
         ]
       },
       "i18n": {
         "en": "/services/quality-engineering",
         "ru": "/ru/services/quality-engineering",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-145",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -864,16 +864,16 @@
         "indexing": "index at launch",
         "launchBlockers": [
           "Related case studies are demonstrations (GAP-C02)",
-          "Discovery price placeholder [€ x]"
+          "Discovery sprint offer and price to confirm"
         ]
       },
       "i18n": {
         "en": "/services/dedicated-teams",
         "ru": "/ru/services/dedicated-teams",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-145",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },

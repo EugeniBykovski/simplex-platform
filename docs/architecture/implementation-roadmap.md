@@ -86,6 +86,14 @@ Also changed for every page: pending and disabled states, navbar contrast, the l
 
 **Open:** verified capability list (GAP-C01), the ROI assumption (GAP-F07), published-canvas comparison, native editor for Russian, real iOS and screen-reader pass. Its enquiry CTAs turn on with `/contact` in SF-151.
 
+## SF-145: Services
+
+Implemented on `main`. See [services-artboard-matrix.md](../design/services-artboard-matrix.md), [services-claims-register.md](../content/services-claims-register.md) and [services-manual-qa.md](../qa/services-manual-qa.md).
+
+All 13 routes are live, and links to them across the site have turned on, including the `/agent` "AI engineering" CTA.
+
+**Open:** claims listed in the register (GAP-C04, GAP-C10), the Desktop row in the matrix (GAP-D19), published-canvas comparison, native editor for Russian, and Safari, Firefox, device and screen-reader passes. `Service` structured data waits for approved company details (GAP-C08).
+
 ## Parallel work
 
 After SF-142, page tickets are largely independent, because each owns its own sections and content.

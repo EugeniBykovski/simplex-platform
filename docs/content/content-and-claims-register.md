@@ -15,6 +15,10 @@ The design handles this responsibly: it brackets most unknowns and labels demons
 
 So anything bracketed below ships as supplied real data or is hidden, never filled in with an estimate.
 
+## Services copy changes (SF-145)
+
+Each change from the design, with its reason and published wording, is in [services-claims-register.md](services-claims-register.md).
+
 ## Agent copy changes (SF-144)
 
 Each change from the design, with its evidence and published wording, is in [agent-claims-register.md](agent-claims-register.md).
