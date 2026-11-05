@@ -6,22 +6,13 @@ import { AgentWidgets } from "./illustrations";
 
 export function HomeAgent({ content }: { content: HomeContent["agent"] }) {
   return (
-    <section className="bg-mist section" aria-labelledby="agent" style={{ overflow: "hidden" }}>
+    <section className="bg-mist section overflow-hidden" aria-labelledby="agent">
       <div className="orbs" aria-hidden="true">
-        <span
-          className="orb orb-b"
-          style={{ width: 640, height: 640, right: "4%", top: "6%", opacity: 0.45 }}
-        />
-        <span
-          className="orb orb-m"
-          style={{ width: 560, height: 560, right: "28%", bottom: "-10%", opacity: 0.55 }}
-        />
-        <span
-          className="orb orb-t"
-          style={{ width: 420, height: 420, left: -120, top: "30%", opacity: 0.3 }}
-        />
+        <span className="orb orb-b w-[640px] h-[640px] right-[4%] top-[6%] opacity-[0.45]" />
+        <span className="orb orb-m w-[560px] h-[560px] right-[28%] bottom-[-10%] opacity-[0.55]" />
+        <span className="orb orb-t w-[420px] h-[420px] left-[-120px] top-[30%] opacity-[0.3]" />
       </div>
-      <div className="wrap split lift" style={{ alignItems: "center" }}>
+      <div className="wrap split lift items-center">
         <div className="stack gap-6">
           <span className="wrap-row gap-3">
             <Badge isNew>{content.isNew}</Badge>

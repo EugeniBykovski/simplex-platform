@@ -73,14 +73,13 @@ export function HomeTechnologyPanel({
         ))}
       </div>
       <div
-        className="solid split-even"
+        className="solid split-even p-[clamp(24px,4cqi,56px)] rounded-[28px] gap-[48px]"
         id={`${baseId}-panel`}
         role="tabpanel"
         aria-labelledby={`${baseId}-${current.id}`}
-        style={{ padding: "clamp(24px, 4cqi, 56px)", borderRadius: 28, gap: 48 }}
       >
         <div className="stack gap-5">
-          <span className="t-mono" style={{ color: "var(--text-3)" }}>
+          <span className="t-mono text-text-3">
             {String(index + 1).padStart(2, "0")} · {current.label}
           </span>
           <h3 className="t-h2">{current.headline}</h3>
@@ -97,7 +96,7 @@ export function HomeTechnologyPanel({
           <Button
             variant="ghost"
             size="sm"
-            style={{ marginTop: 20, alignSelf: "flex-start" }}
+            className="mt-[20px] self-start"
             aria-expanded={expanded}
             onClick={() => setExpanded((value) => !value)}
           >

@@ -7,7 +7,7 @@ export function HomeTechnology({ content }: { content: HomeContent["technology"]
   return (
     <section className="bg-mist section" aria-labelledby="tech">
       <div className="wrap stack gap-7">
-        <div className="split" style={{ alignItems: "end" }}>
+        <div className="split [align-items:end]">
           <div className="stack gap-5">
             <p className="eyebrow">{content.eyebrow}</p>
             <h2 className="t-h1" id="tech">
@@ -23,7 +23,7 @@ export function HomeTechnology({ content }: { content: HomeContent["technology"]
           showAll={content.showAll}
           showFewer={content.showFewer}
           directory={
-            <ArrowLink href="/technologies" style={{ alignSelf: "flex-start" }}>
+            <ArrowLink href="/technologies" className="self-start">
               {content.directory}
             </ArrowLink>
           }

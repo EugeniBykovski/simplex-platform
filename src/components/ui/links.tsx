@@ -1,4 +1,4 @@
-import type { AnchorHTMLAttributes, CSSProperties, ReactNode } from "react";
+import type { AnchorHTMLAttributes, ReactNode } from "react";
 import { isImplementedRoute } from "@/config/routes";
 import { Link } from "@/i18n/navigation";
 import { cx } from "./cx";
@@ -8,7 +8,6 @@ type RouteLinkProps = {
   href: string;
   children: ReactNode;
   className?: string | undefined;
-  style?: CSSProperties | undefined;
   "aria-label"?: string;
   /** Large cards keep full strength while their route has no page, so they stay readable. */
   pendingLook?: "dim" | "card";

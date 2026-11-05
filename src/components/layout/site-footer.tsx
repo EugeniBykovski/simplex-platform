@@ -29,10 +29,10 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
     <footer className="footer dark" data-menu-inert>
       <div className="wrap">
         <div className="footer-grid">
-          <div className="footer-brand stack gap-5" style={{ maxWidth: 360 }}>
-            <Link href="/" style={{ alignSelf: "flex-start" }}>
+          <div className="footer-brand stack gap-5 max-w-[360px]">
+            <Link className="self-start" href="/">
               <span className="sr-only">{t("homeLabel")}</span>
-              <Lockup variant="on-dark" size={34} style={{ color: "#fff" }} />
+              <Lockup variant="on-dark" className="text-[34px] text-white" />
             </Link>
             <p className="t-body">{t("tagline")}</p>
             <div className="stack gap-2">
@@ -48,7 +48,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
                   <RouteLink key={link.key} href={link.href}>
                     {t(`links.${link.key}`)}
                     {"isNew" in link ? (
-                      <Badge isNew style={{ marginLeft: 8 }}>
+                      <Badge className="ml-[8px]" isNew>
                         {t("new")}
                       </Badge>
                     ) : null}

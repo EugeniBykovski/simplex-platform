@@ -10,6 +10,14 @@ const config = [
     files: ["src/**/*.{ts,tsx}"],
     ignores: ["src/i18n/navigation.ts"],
     rules: {
+      // Static styling lives in Tailwind classes. See docs/design/component-implementation.md.
+      "no-restricted-syntax": [
+        "error",
+        {
+          selector: "JSXAttribute[name.name='style']",
+          message: "Use Tailwind classes in className instead of inline styles.",
+        },
+      ],
       "no-restricted-imports": [
         "error",
         {

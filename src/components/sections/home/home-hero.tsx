@@ -1,9 +1,10 @@
 import { LinkButton } from "@/components/ui/button";
+import { cx } from "@/components/ui/cx";
 import { Icon } from "@/components/ui/icon";
 import { MaskedHeading } from "@/components/ui/typography";
 import type { HomeContent } from "@/content/home";
 import { HeroWidgets } from "./illustrations";
-import { vars } from "./style";
+import { stackIndex } from "./style";
 
 /** The pinned hero, and the three statement cards that rise over it. */
 export function HomeHero({
@@ -16,32 +17,19 @@ export function HomeHero({
   return (
     <div className="hero-stage">
       <section
-        className="hero-pin bg-horizon is-live"
+        className="hero-pin bg-horizon is-live min-h-[960px] flex items-start justify-center p-[250px_0_340px] overflow-hidden"
         aria-labelledby="hero-title"
-        style={{
-          minHeight: 960,
-          display: "flex",
-          alignItems: "flex-start",
-          justifyContent: "center",
-          padding: "250px 0 340px",
-          overflow: "hidden",
-        }}
       >
         <HeroWidgets />
-        <div
-          className="hero-content wrap stack"
-          style={{ alignItems: "center", textAlign: "center", gap: 30, position: "relative" }}
-        >
+        <div className="hero-content wrap stack items-center text-center gap-[30px] relative">
           <p className="eyebrow fade-in">{hero.eyebrow}</p>
           <MaskedHeading
             id="hero-title"
-            style={{ maxWidth: 1180 }}
+            className="max-w-[1180px]"
             lines={[{ text: hero.lines[0] }, { text: hero.lines[1], gradient: true }]}
           />
-          <p className="t-lead fade-in" style={{ maxWidth: 620 }}>
-            {hero.lead}
-          </p>
-          <div className="wrap-row gap-3 fade-in stack-sm" style={{ justifyContent: "center" }}>
+          <p className="t-lead fade-in max-w-[620px]">{hero.lead}</p>
+          <div className="wrap-row gap-3 fade-in stack-sm justify-center">
             <LinkButton href="/contact" size="lg" arrow>
               {hero.primaryCta}
             </LinkButton>
@@ -49,45 +37,29 @@ export function HomeHero({
               {hero.secondaryCta}
             </LinkButton>
           </div>
-          <span className="scroll-cue fade-in" style={{ marginTop: 36 }} aria-hidden="true">
+          <span className="scroll-cue fade-in mt-[36px]" aria-hidden="true">
             {hero.scroll}
             <i />
           </span>
         </div>
       </section>
 
-      <section
-        className="over"
-        aria-label={statements.label}
-        style={{ marginTop: -300, paddingBottom: 140 }}
-      >
-        <div className="wrap stack-cards" style={{ maxWidth: 1100 }}>
+      <section className="over mt-[-300px] pb-[140px]" aria-label={statements.label}>
+        <div className="wrap stack-cards max-w-[1100px]">
           {statements.items.map((item, index) => (
             <article
-              className="glass-frost stack-card"
+              className={cx(
+                cx("glass-frost stack-card", stackIndex[index]),
+                "p-[clamp(28px,5cqi,72px)] min-h-[380px] flex flex-col justify-between gap-[48px]",
+              )}
               key={item.counter}
-              style={vars({
-                "--i": index,
-                padding: "clamp(28px, 5cqi, 72px)",
-                minHeight: 380,
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                gap: 48,
-              })}
             >
               <div className="row between gap-4">
-                <span className="t-mono" style={{ color: "var(--text-3)" }}>
-                  {item.counter}
-                </span>
-                <Icon name={item.icon} size="lg" style={{ color: "var(--ink)" }} />
+                <span className="t-mono text-text-3">{item.counter}</span>
+                <Icon name={item.icon} size="lg" className="text-ink" />
               </div>
-              <h2 className="t-h1" style={{ maxWidth: 820 }}>
-                {item.title}
-              </h2>
-              <p className="t-lead" style={{ maxWidth: 640, color: "var(--text)" }}>
-                {item.body}
-              </p>
+              <h2 className="t-h1 max-w-[820px]">{item.title}</h2>
+              <p className="t-lead max-w-[640px] text-text">{item.body}</p>
             </article>
           ))}
         </div>

@@ -1,4 +1,4 @@
-import type { CSSProperties, HTMLAttributes, ReactNode } from "react";
+import type { HTMLAttributes, ReactNode } from "react";
 import { cx } from "./cx";
 
 export function VisuallyHidden({ children }: { children: ReactNode }) {
@@ -63,21 +63,15 @@ export function Stack({ gap, className, ...rest }: HTMLAttributes<HTMLDivElement
   return <div {...rest} className={cx("stack", gap && `gap-${gap}`, className)} />;
 }
 
-/** Equal columns that collapse at the design's breakpoints. */
+const GRID_COLUMNS = { 2: "grid-2", 3: "grid-3", 4: "grid-4", 12: "grid-12" } as const;
+
+/** Equal columns that collapse at the design's breakpoints. Set the gap with `[--gap:16px]`. */
 export function Grid({
   columns,
-  gap,
   className,
-  style,
   ...rest
-}: HTMLAttributes<HTMLDivElement> & { columns: 2 | 3 | 4 | 12; gap?: number }) {
-  return (
-    <div
-      {...rest}
-      className={cx(`grid-${columns}`, className)}
-      style={{ ...style, ...(gap !== undefined ? ({ "--gap": `${gap}px` } as CSSProperties) : {}) }}
-    />
-  );
+}: HTMLAttributes<HTMLDivElement> & { columns: 2 | 3 | 4 | 12 }) {
+  return <div {...rest} className={cx(GRID_COLUMNS[columns], className)} />;
 }
 
 export function Split({

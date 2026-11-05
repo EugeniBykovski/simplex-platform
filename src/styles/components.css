@@ -121,39 +121,8 @@ html.sx-menu-keep-gutter {
   }
 }
 
-/* Adaptation: keyboard users can skip the navigation. */
-.skip-link {
-  position: fixed;
-  left: 16px;
-  top: 16px;
-  z-index: 100;
-  padding: 12px 18px;
-  border-radius: var(--r-sm);
-  background: #fff;
-  color: var(--ink);
-  font-weight: 500;
-  transform: translateY(-200%);
-}
-.skip-link:focus {
-  transform: none;
-}
-
 /* Adaptation: wide tables must be reachable by keyboard when they scroll. */
 .cmp:focus-visible {
   outline: 2px solid var(--signal);
   outline-offset: 3px;
-}
-
-.locale-switcher {
-  display: flex;
-  gap: 16px;
-}
-.locale-switcher a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-}
-.locale-switcher a[aria-current] {
-  color: #fff;
-  font-weight: 500;
 }

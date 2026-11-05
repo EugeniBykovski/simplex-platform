@@ -1,13 +1,7 @@
 import { Badge } from "@/components/ui/feedback";
 import { Icon, type GlyphName } from "@/components/ui/icon";
 import type { HomeContent } from "@/content/home";
-import { vars } from "./style";
 
-const spread = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between",
-} as const;
 const TOAST_ICONS: { icon: GlyphName; tone: string }[] = [
   { icon: "check", tone: "w-app" },
   { icon: "quality", tone: "w-app g" },
@@ -18,29 +12,16 @@ const TOAST_ICONS: { icon: GlyphName; tone: string }[] = [
 /** "Transparent by default": the liquid-glass bento. */
 export function HomeEngagement({ content }: { content: HomeContent["engagement"] }) {
   return (
-    <section
-      className="mesh-light section"
-      aria-labelledby="feel"
-      style={{ position: "relative", overflow: "hidden" }}
-    >
+    <section className="mesh-light section relative overflow-hidden" aria-labelledby="feel">
       <div className="orbs" aria-hidden="true">
-        <span
-          className="orb orb-c"
-          style={{ width: 560, height: 560, left: "-6%", top: "6%", opacity: 0.55 }}
-        />
-        <span
-          className="orb orb-s"
-          style={{ width: 520, height: 520, right: "-4%", bottom: "-10%", opacity: 0.6 }}
-        />
-        <span
-          className="orb orb-b"
-          style={{ width: 380, height: 380, left: "46%", top: "40%", opacity: 0.45 }}
-        />
+        <span className="orb orb-c w-[560px] h-[560px] left-[-6%] top-[6%] opacity-[0.55]" />
+        <span className="orb orb-s w-[520px] h-[520px] right-[-4%] bottom-[-10%] opacity-[0.6]" />
+        <span className="orb orb-b w-[380px] h-[380px] left-[46%] top-[40%] opacity-[0.45]" />
       </div>
       <div className="wrap stack gap-7 lift">
-        <div className="split" style={{ alignItems: "end" }}>
+        <div className="split [align-items:end]">
           <div className="stack gap-5">
-            <span className="g-chip" style={{ alignSelf: "flex-start" }}>
+            <span className="g-chip self-start">
               <span className="dot dot-g" />
               {content.chip}
             </span>
@@ -50,16 +31,11 @@ export function HomeEngagement({ content }: { content: HomeContent["engagement"]
           </div>
           <p className="t-lead">{content.lead}</p>
         </div>
-        <div className="g-bento" style={{ gridAutoRows: 220 }}>
-          <div
-            className="lg grain b-2 b-r2 reveal"
-            style={{ ...spread, padding: "clamp(24px, 3cqi, 40px)", gap: 20 }}
-          >
+        <div className="g-bento auto-rows-[220px]">
+          <div className="lg grain b-2 b-r2 reveal flex flex-col justify-between p-[clamp(24px,3cqi,40px)] gap-[20px]">
             <span className="row gap-2">
               <Badge isNew>{content.room.live}</Badge>
-              <span className="t-mono" style={{ color: "var(--text-2)" }}>
-                {content.room.label}
-              </span>
+              <span className="t-mono text-text-2">{content.room.label}</span>
             </span>
             <span className="stack gap-3">
               <b className="t-h2">{content.room.title}</b>
@@ -73,21 +49,21 @@ export function HomeEngagement({ content }: { content: HomeContent["engagement"]
               ))}
             </span>
           </div>
-          <div className="lg reveal" style={{ ...spread, padding: 22 }}>
+          <div className="lg reveal flex flex-col justify-between p-[22px]">
             <span className="w-head">
               <span className="w-app">
                 <Icon name="ai" />
               </span>
               {content.agent.label}
             </span>
-            <span className="g-island" style={{ alignSelf: "flex-start" }} aria-hidden="true">
+            <span className="g-island self-start" aria-hidden="true">
               <span className="pulse" />
               {content.agent.status}
-              <span className="ring-sm" style={vars({ "--p": 66 })} />
+              <span className="ring-sm [--p:66]" />
             </span>
             <span className="t-small">{content.agent.body}</span>
           </div>
-          <div className="lg-dark lg-graphite reveal" style={{ ...spread, padding: 22 }}>
+          <div className="lg-dark lg-graphite reveal flex flex-col justify-between p-[22px]">
             <span className="w-head">
               <span className="w-app k">
                 <Icon name="teams" />
@@ -100,24 +76,13 @@ export function HomeEngagement({ content }: { content: HomeContent["engagement"]
               <span className="avatar s">QA</span>
               <span className="avatar">UX</span>
             </span>
-            <span className="t-small" style={{ color: "var(--on-dark-2)" }}>
-              {content.team.body}
-            </span>
+            <span className="t-small text-on-dark-2">{content.team.body}</span>
           </div>
-          <div
-            className="lg b-2 reveal toast-grid"
-            style={{
-              padding: 18,
-              display: "grid",
-              gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
-              gap: 12,
-              alignItems: "center",
-            }}
-          >
+          <div className="lg b-2 reveal toast-grid p-[18px] grid grid-cols-[repeat(2,minmax(0,1fr))] gap-[12px] items-center">
             {content.toasts.map((toast, index) => {
               const design = TOAST_ICONS[index];
               return (
-                <div className="g-toast lg" style={{ width: "auto" }} key={toast.title}>
+                <div className="g-toast lg w-[auto]" key={toast.title}>
                   <span className={design?.tone}>
                     {design ? <Icon name={design.icon} /> : null}
                   </span>

@@ -1,8 +1,8 @@
+import { cx } from "@/components/ui/cx";
 import { Badge } from "@/components/ui/feedback";
 import { ArrowLink, RouteLink } from "@/components/ui/links";
 import type { HomeContent } from "@/content/home";
 import { DesktopVisual, FullCycleVisual, PhonePairVisual } from "./illustrations";
-import { vars } from "./style";
 
 const CARDS = [
   {
@@ -33,31 +33,25 @@ const CARDS = [
       ["FE", " s"],
       ["MB", ""],
     ],
-    tone: "#DCE4FF",
+    labelClass: "text-[#DCE4FF]",
+    bodyClass: "text-[#DCE4FF]",
   },
 ] as const;
 
 export function HomePackages({ content }: { content: HomeContent["packages"] }) {
   return (
     <section
-      className="mesh-graphite section"
+      className="mesh-graphite section relative overflow-hidden text-white"
       aria-labelledby="pk"
-      style={{ position: "relative", overflow: "hidden", color: "#fff" }}
     >
       <div className="orbs" aria-hidden="true">
-        <span
-          className="orb orb-c"
-          style={{ width: 640, height: 640, left: "30%", top: "20%", opacity: 0.6 }}
-        />
-        <span
-          className="orb orb-g"
-          style={{ width: 420, height: 420, right: "-4%", top: "-10%", opacity: 0.45 }}
-        />
+        <span className="orb orb-c w-[640px] h-[640px] left-[30%] top-[20%] opacity-[0.6]" />
+        <span className="orb orb-g w-[420px] h-[420px] right-[-4%] top-[-10%] opacity-[0.45]" />
       </div>
       <div className="wrap lift stack gap-8">
-        <div className="split" style={{ alignItems: "end" }}>
+        <div className="split [align-items:end]">
           <div className="stack gap-5">
-            <span className="g-chip on-dark" style={{ alignSelf: "flex-start" }}>
+            <span className="g-chip on-dark self-start">
               <Badge isNew>{content.isNew}</Badge>
               {content.chip}
             </span>
@@ -66,19 +60,18 @@ export function HomePackages({ content }: { content: HomeContent["packages"] }) 
             </h2>
           </div>
           <div className="stack gap-5">
-            <p className="t-lead" style={{ color: "var(--on-dark-2)" }}>
-              {content.lead}
-            </p>
-            <ArrowLink href="/packages" style={{ color: "#fff" }}>
+            <p className="t-lead text-on-dark-2">{content.lead}</p>
+            <ArrowLink href="/packages" className="text-white">
               {content.link}
             </ArrowLink>
           </div>
         </div>
-        <div className="grid-3" style={vars({ "--gap": "16px", alignItems: "stretch" })}>
+        <div className="grid-3 [--gap:16px] items-stretch">
           {content.cards.map((card, index) => {
             const design = CARDS[index];
             if (!design) return null;
-            const tone = "tone" in design ? design.tone : undefined;
+            const labelClass = "labelClass" in design ? design.labelClass : "text-on-dark-3";
+            const bodyClass = "bodyClass" in design ? design.bodyClass : "text-on-dark-2";
             return (
               <RouteLink
                 key={card.label}
@@ -88,9 +81,7 @@ export function HomePackages({ content }: { content: HomeContent["packages"] }) 
               >
                 {design.visual}
                 <span className="row between">
-                  <span className="t-mono" style={{ color: tone ?? "var(--on-dark-3)" }}>
-                    {card.label}
-                  </span>
+                  <span className={cx("t-mono", labelClass)}>{card.label}</span>
                   <span className="pkg-team">
                     <span className="avatar-stack" aria-hidden="true">
                       {design.avatars.map(([label, variant]) => (
@@ -99,14 +90,12 @@ export function HomePackages({ content }: { content: HomeContent["packages"] }) 
                         </span>
                       ))}
                     </span>
-                    <b style={{ fontSize: 13 }}>{card.team}</b>
+                    <b className="text-[13px]">{card.team}</b>
                   </span>
                 </span>
                 <span className="stack gap-2">
                   <b className="t-h3">{card.title}</b>
-                  <span className="t-body" style={{ color: tone ?? "var(--on-dark-2)" }}>
-                    {card.body}
-                  </span>
+                  <span className={cx("t-body", bodyClass)}>{card.body}</span>
                 </span>
               </RouteLink>
             );

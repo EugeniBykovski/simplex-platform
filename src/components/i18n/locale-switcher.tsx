@@ -10,7 +10,7 @@ export function LocaleSwitcher() {
   const pathname = usePathname();
 
   return (
-    <nav aria-label={t("label")} className="locale-switcher">
+    <nav aria-label={t("label")} className="flex gap-[16px]">
       {locales.map((locale) => (
         // A plain anchor on purpose. The language change replaces <html lang>, so a full document
         // load is correct, and getPathname gives "/" rather than next-intl's "/en" redirect.
@@ -20,6 +20,7 @@ export function LocaleSwitcher() {
           hrefLang={locale}
           lang={locale}
           aria-current={locale === activeLocale ? "true" : undefined}
+          className="inline-flex min-h-[44px] items-center aria-[current]:font-[500] aria-[current]:text-white"
         >
           {t(locale)}
         </a>

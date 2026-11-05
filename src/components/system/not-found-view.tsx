@@ -3,7 +3,6 @@ import { LinkButton } from "@/components/ui/button";
 import { SxMark } from "@/components/ui/logo";
 import { isImplementedRoute } from "@/config/routes";
 import type { Locale } from "@/i18n/routing";
-import "@/styles/system-pages.css";
 
 const secondaryLinks = [
   { href: "/services", label: "services" },
@@ -16,15 +15,15 @@ export async function NotFoundView({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: "errors.notFound" });
 
   return (
-    <main className="bg-ink nf-main">
-      <div className="wrap split nf-split">
-        <div className="nf-copy">
-          <p className="t-mono">{t("eyebrow")}</p>
-          <h1 className="t-h1">
+    <main className="bg-ink flex min-h-[1100px] items-center overflow-hidden p-[200px_0_120px]">
+      <div className="wrap split items-center">
+        <div className="flex flex-col gap-[32px]">
+          <p className="t-mono text-steel">{t("eyebrow")}</p>
+          <h1 className="t-h1 [overflow-wrap:break-word] hyphens-auto">
             {t("titleStart")} <span className="t-grad">{t("titleAccent")}</span>
           </h1>
           <p className="t-lead">{t("body")}</p>
-          <nav className="nf-actions" aria-label={t("eyebrow")}>
+          <nav className="flex flex-wrap items-center gap-[8px]" aria-label={t("eyebrow")}>
             <LinkButton href="/" variant="light" arrow>
               {t("home")}
             </LinkButton>
@@ -37,9 +36,14 @@ export async function NotFoundView({ locale }: { locale: Locale }) {
               ))}
           </nav>
         </div>
-        <div className="nf-art" aria-hidden="true">
-          <span className="nf-digits">404</span>
-          <SxMark live className="nf-mark" />
+        <div className="relative grid place-items-center" aria-hidden="true">
+          <span className="text-[clamp(160px,24cqi,360px)] leading-[.8] font-[600] tracking-[-.07em] text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,.22)]">
+            404
+          </span>
+          <SxMark
+            live
+            className="absolute [filter:drop-shadow(0_30px_50px_rgba(157,180,204,.35))] [--m:150px]"
+          />
         </div>
       </div>
     </main>

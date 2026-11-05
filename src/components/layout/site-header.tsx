@@ -86,8 +86,8 @@ export async function SiteHeader({ locale, menuOpen }: { locale: Locale; menuOpe
       <nav className="nav" aria-label={t("primaryLabel")}>
         <Link href="/" className="nav-logo">
           <span className="sr-only">{t("homeLabel")}</span>
-          <SxMark variant="on-dark" size={46} className="nav-mark" />
-          <Lockup variant="on-dark" size={25} style={{ color: "#fff" }} />
+          <SxMark variant="on-dark" className="nav-mark [--m:46px]" />
+          <Lockup variant="on-dark" className="text-[25px] text-white" />
         </Link>
 
         <ul className="nav-links">
@@ -96,10 +96,7 @@ export async function SiteHeader({ locale, menuOpen }: { locale: Locale; menuOpe
               {t("services")} {caret}
             </TopLink>
             <div className="mega" role="region" aria-label={t("services")}>
-              <div
-                className="mega-cols"
-                style={{ gridTemplateColumns: "repeat(3, minmax(0, 1fr))" }}
-              >
+              <div className="mega-cols grid-cols-[repeat(3,minmax(0,1fr))]">
                 {serviceMenuGroups.map((group) => (
                   <div className="stack" key={group.key}>
                     <p className="mega-group-title">{t(`groups.${group.key}`)}</p>
@@ -110,14 +107,10 @@ export async function SiteHeader({ locale, menuOpen }: { locale: Locale; menuOpe
               <RouteLink href="/agent" className="mega-feature">
                 <span className="row gap-2">
                   <Badge isNew>{t("new")}</Badge>
-                  <span className="t-mono" style={{ color: "#9DB4CC" }}>
-                    {t("agentFeature.label")}
-                  </span>
+                  <span className="t-mono text-[#9DB4CC]">{t("agentFeature.label")}</span>
                 </span>
-                <span className="t-h4" style={{ color: "#fff" }}>
-                  {t("agentFeature.title")}
-                </span>
-                <span className="link-arrow" style={{ color: "#fff" }}>
+                <span className="t-h4 text-white">{t("agentFeature.title")}</span>
+                <span className="link-arrow text-white">
                   {t("agentFeature.cta")} <Icon name="arrow" />
                 </span>
               </RouteLink>
@@ -177,7 +170,7 @@ export async function SiteHeader({ locale, menuOpen }: { locale: Locale; menuOpe
               {t(key)} <Icon name="arrow" size="md" />
             </RouteLink>
           ))}
-          <div className="stack gap-3" style={{ padding: "22px 8px 4px" }}>
+          <div className="stack gap-3 p-[22px_8px_4px]">
             <LinkButton href="/contact" variant="light" size="lg" arrow className="w-full">
               {t("letsTalk")}
             </LinkButton>

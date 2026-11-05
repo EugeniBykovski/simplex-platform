@@ -1,13 +1,12 @@
 import { Icon } from "@/components/ui/icon";
 import { RouteLink } from "@/components/ui/links";
 import type { HomeContent } from "@/content/home";
-import { vars } from "./style";
 
 export function HomeIndustries({ content }: { content: HomeContent["industries"] }) {
   return (
     <section className="section" aria-labelledby="ind">
       <div className="wrap stack gap-8">
-        <div className="split" style={{ alignItems: "end" }}>
+        <div className="split [align-items:end]">
           <div className="stack gap-5">
             <p className="eyebrow">{content.eyebrow}</p>
             <h2 className="t-h1" id="ind">
@@ -16,7 +15,7 @@ export function HomeIndustries({ content }: { content: HomeContent["industries"]
           </div>
           <p className="t-lead">{content.lead}</p>
         </div>
-        <div className="grid-3" style={vars({ "--gap": "16px" })}>
+        <div className="grid-3 [--gap:16px]">
           {content.cards.map((card) => (
             <RouteLink
               key={card.href}
@@ -27,16 +26,14 @@ export function HomeIndustries({ content }: { content: HomeContent["industries"]
               <span className="slice" />
               <span className="row between">
                 <Icon name={card.icon} />
-                <span className="card-arrow" style={{ borderColor: "rgba(255,255,255,.3)" }}>
+                <span className="card-arrow border-[rgba(255,255,255,.3)]">
                   <Icon name="arrow" />
                 </span>
               </span>
               <span className="stack gap-3">
                 <span className="t-h3">{card.name}</span>
                 <span className="ind-more">
-                  <span className="t-small" style={{ color: "#D3D8EE", display: "block" }}>
-                    {card.description}
-                  </span>
+                  <span className="t-small text-[#D3D8EE] block">{card.description}</span>
                 </span>
               </span>
             </RouteLink>

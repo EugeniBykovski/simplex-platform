@@ -1,4 +1,4 @@
-import type { CSSProperties, HTMLAttributes } from "react";
+import type { HTMLAttributes } from "react";
 import { cx } from "./cx";
 
 /** The X from the design: one full stroke, one stroke interrupted by the cut. */
@@ -12,9 +12,8 @@ export function LogoX() {
   );
 }
 
+/** Size a wordmark or lockup with a text class such as `text-[25px]`, and a mark with `[--m:46px]`. */
 type NameProps = HTMLAttributes<HTMLSpanElement> & {
-  /** Sets the logo's size, as a font size in px. */
-  size?: number;
   /** Omit when a parent link already names the logo. */
   label?: string;
 };
@@ -23,14 +22,9 @@ const a11y = (label?: string) =>
   label ? ({ role: "img", "aria-label": label } as const) : ({ "aria-hidden": true } as const);
 
 /** The plain wordmark: "Simple" plus the X. */
-export function Wordmark({ size, label, className, style, ...rest }: NameProps) {
+export function Wordmark({ label, className, ...rest }: NameProps) {
   return (
-    <span
-      {...rest}
-      {...a11y(label)}
-      className={cx("logo", className)}
-      style={{ ...style, ...(size ? { fontSize: size } : {}) }}
-    >
+    <span {...rest} {...a11y(label)} className={cx("logo", className)}>
       <span aria-hidden="true">Simple</span>
       <LogoX />
     </span>
@@ -41,19 +35,12 @@ export function Wordmark({ size, label, className, style, ...rest }: NameProps) 
 export function Lockup({
   variant,
   live,
-  size,
   label,
   className,
-  style,
   ...rest
 }: NameProps & { variant?: "on-dark" | "steel"; live?: boolean }) {
   return (
-    <span
-      {...rest}
-      {...a11y(label)}
-      className={cx("lp", variant, live && "live", className)}
-      style={{ ...style, ...(size ? { fontSize: size } : {}) }}
-    >
+    <span {...rest} {...a11y(label)} className={cx("lp", variant, live && "live", className)}>
       <span aria-hidden="true">Simple</span>
       <span className="lp-x" aria-hidden="true">
         <LogoX />
@@ -69,23 +56,19 @@ export function SxMark({
   variant,
   live,
   flat,
-  size,
   label,
   className,
-  style,
   ...rest
-}: Omit<NameProps, "size"> & {
+}: NameProps & {
   variant?: SxMarkVariant;
   live?: boolean;
   flat?: boolean;
-  size?: number;
 }) {
   return (
     <span
       {...rest}
       {...a11y(label)}
       className={cx("sx-mark", variant, live && "live", flat && "flat", className)}
-      style={{ ...style, ...(size ? ({ "--m": `${size}px` } as CSSProperties) : {}) }}
     >
       <span className="logo" aria-hidden="true">
         S

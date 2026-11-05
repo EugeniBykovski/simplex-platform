@@ -93,16 +93,8 @@ export function HomeEstimatorPanel({
         : result.modelSquad;
 
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "minmax(0, 1.15fr) minmax(0, 1fr)",
-        gap: 20,
-        alignItems: "stretch",
-      }}
-      className="gx-2"
-    >
-      <div className="gx-panel stack gap-6" style={{ padding: "clamp(22px, 3cqi, 36px)" }}>
+    <div className="gx-2 grid grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] gap-[20px] items-stretch">
+      <div className="gx-panel stack gap-6 p-[clamp(22px,3cqi,36px)]">
         <div className="stack gap-3">
           <span className="gx-label">{content.steps.type}</span>
           <div className="wrap-row gap-2">
@@ -149,18 +141,14 @@ export function HomeEstimatorPanel({
           </div>
         </div>
       </div>
-      <div
-        className="gx-dark stack gap-5"
-        style={{ padding: "clamp(22px, 3cqi, 36px)" }}
-        aria-live="polite"
-      >
+      <div className="gx-dark stack gap-5 p-[clamp(22px,3cqi,36px)]" aria-live="polite">
         <div className="row between">
           <span className="gx-label">{result.heading}</span>
           <Badge isNew>{result.live}</Badge>
         </div>
-        <div className="row gap-4" style={{ alignItems: "flex-end" }}>
+        <div className="row gap-4 items-end">
           <span className="gx-num">{size}</span>
-          <span className="t-small" style={{ paddingBottom: 6 }}>
+          <span className="t-small pb-[6px]">
             {size <= 2 ? result.sizeCompact : result.sizeSquad}
           </span>
         </div>
@@ -177,7 +165,7 @@ export function HomeEstimatorPanel({
             <b>{model}</b>
           </div>
         </div>
-        <div className="wrap-row gap-3" style={{ marginTop: "auto" }}>
+        <div className="wrap-row gap-3 mt-auto">
           {cta}
           <span className="t-xs">{result.note}</span>
         </div>

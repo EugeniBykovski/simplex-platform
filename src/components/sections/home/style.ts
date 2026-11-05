@@ -1,4 +1,12 @@
-import type { CSSProperties } from "react";
-
-/** Inline style with custom properties, which the design uses heavily. */
-export const vars = (style: Record<string, string | number>) => style as CSSProperties;
+/**
+ * Stack position for sticky cards. Listed in full so Tailwind can see each class. The design's
+ * longest stack has six cards.
+ */
+export const stackIndex = [
+  "[--i:0]",
+  "[--i:1]",
+  "[--i:2]",
+  "[--i:3]",
+  "[--i:4]",
+  "[--i:5]",
+] as const;

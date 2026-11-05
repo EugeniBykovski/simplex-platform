@@ -1,44 +1,44 @@
 import { Icon } from "@/components/ui/icon";
 import { SxMark } from "@/components/ui/logo";
-import { vars } from "./style";
 
 /**
  * Illustrative interface mock-ups, drawn in HTML as on the Home board. All are decorative and hidden
  * from assistive technology, so their sample text is not translated. Bracketed figures in the
  * board's mock-ups are shown as a dash rather than invented.
  */
-const chipLight = { background: "rgba(255,255,255,.7)" };
+const LEDGER_BARS = [
+  "h-[40%]",
+  "h-[62%]",
+  "h-[48%]",
+  "h-[80%]",
+  "h-[56%]",
+  "h-[92%]",
+  "h-[70%]",
+  "h-[64%]",
+  "h-[86%]",
+  "h-[58%]",
+];
 
 export function HeroWidgets() {
   return (
     <>
-      <span
-        className="hero-beam"
-        aria-hidden="true"
-        style={{ translate: "-50% 0", rotate: "-34deg" }}
-      />
-      <span
-        className="hero-beam"
-        aria-hidden="true"
-        style={{ translate: "-50% 0", rotate: "34deg" }}
-      />
+      <span className="hero-beam [translate:-50%_0] [rotate:-34deg]" aria-hidden="true" />
+      <span className="hero-beam [translate:-50%_0] [rotate:34deg]" aria-hidden="true" />
       <div
-        className="widget float-w"
+        className="widget float-w left-[4%] top-[560px] w-[230px] grid gap-[12px]"
         aria-hidden="true"
-        style={{ left: "4%", top: 560, width: 230, display: "grid", gap: 12 }}
       >
         <span className="w-head">
-          <SxMark size={22} />
+          <SxMark className="[--m:22px]" />
           SimpleX Agent
-          <span className="pulse" style={{ marginLeft: "auto" }} />
+          <span className="pulse ml-auto" />
         </span>
-        <span style={{ fontSize: 14, fontWeight: 600, lineHeight: 1.3 }}>Stack detected</span>
+        <span className="text-[14px] font-[600] leading-[1.3]">Stack detected</span>
         <span className="wrap-row gap-1">
           {["Next.js", "Kotlin", "AWS"].map((label) => (
             <span
-              className="chip"
+              className="chip min-h-[24px] text-[11.5px] [background:rgba(255,255,255,.7)]"
               key={label}
-              style={{ minHeight: 24, fontSize: 11.5, ...chipLight }}
             >
               {label}
             </span>
@@ -46,16 +46,8 @@ export function HeroWidgets() {
         </span>
       </div>
       <div
-        className="widget float-w"
+        className="widget float-w right-[4%] top-[540px] w-[200px] grid gap-[10px] justify-items-start"
         aria-hidden="true"
-        style={{
-          right: "4%",
-          top: 540,
-          width: 200,
-          display: "grid",
-          gap: 10,
-          justifyItems: "start",
-        }}
       >
         <span className="w-head">
           <span className="w-app t">
@@ -63,8 +55,8 @@ export function HeroWidgets() {
           </span>
           Pipeline
         </span>
-        <div className="ring" style={vars({ "--p": 100, "--c": "#0C2A45", width: 72, height: 72 })}>
-          <b style={{ fontSize: 13 }}>Pass</b>
+        <div className="ring [--p:100] [--c:#0C2A45] w-[72px] h-[72px]">
+          <b className="text-[13px]">Pass</b>
         </div>
         <span className="w-sub">Build #128 · deployed to staging</span>
       </div>
@@ -72,24 +64,14 @@ export function HeroWidgets() {
   );
 }
 
-const stepLabel = { marginLeft: "auto", fontFamily: "var(--mono)" };
-
 export function AgentWidgets() {
   return (
-    <div className="grid-2 widget-grid" style={vars({ "--gap": "14px" })} aria-hidden="true">
-      <div
-        className="widget widget-dark wspan2"
-        style={{
-          gridColumn: "span 2",
-          background: "linear-gradient(165deg, rgba(20,27,85,.92), rgba(7,11,43,.94))",
-          display: "grid",
-          gap: 14,
-        }}
-      >
+    <div className="grid-2 widget-grid [--gap:14px]" aria-hidden="true">
+      <div className="widget widget-dark wspan2 col-span-2 [background:linear-gradient(165deg,rgba(20,27,85,.92),rgba(7,11,43,.94))] grid gap-[14px]">
         <span className="w-head">
-          <SxMark size={24} />
+          <SxMark className="[--m:24px]" />
           SimpleX Agent · acme/checkout
-          <span className="row gap-2" style={{ marginLeft: "auto", fontWeight: 500 }}>
+          <span className="row gap-2 ml-auto font-[500]">
             <span className="pulse" />
             Working
           </span>
@@ -99,85 +81,51 @@ export function AgentWidgets() {
             <Icon name="check" />
           </span>
           Mapped 9 domains in the repository
-          <span className="t-xs" style={stepLabel}>
-            done
-          </span>
+          <span className="t-xs ml-auto font-mono">done</span>
         </div>
         <div className="agent-step">
           <span className="ok">
             <Icon name="check" />
           </span>
           Billing module + webhooks · PR #412
-          <span className="t-xs" style={stepLabel}>
-            review
-          </span>
+          <span className="t-xs ml-auto font-mono">review</span>
         </div>
         <div className="agent-step run">
           <span className="ok">
-            <span className="spinner" style={{ width: 12, height: 12, borderWidth: 1.5 }} />
+            <span className="spinner w-[12px] h-[12px] border-[1.5px]" />
           </span>
           Staging environment via Terraform
-          <span className="t-xs" style={stepLabel}>
-            running
-          </span>
+          <span className="t-xs ml-auto font-mono">running</span>
         </div>
       </div>
-      <div
-        className="widget"
-        style={{
-          minHeight: 200,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-        }}
-      >
+      <div className="widget min-h-[200px] flex flex-col justify-between">
         <span className="w-head">
           <span className="w-app">
             <Icon name="custom" />
           </span>
           Detected stack
         </span>
-        <span
-          className="stack gap-1"
-          style={{ fontSize: 15, fontWeight: 600, letterSpacing: "-.01em" }}
-        >
+        <span className="stack gap-1 text-[15px] font-[600] tracking-[-.01em]">
           <span>Next.js 15</span>
           <span>Kotlin · Spring</span>
           <span>PostgreSQL · AWS</span>
         </span>
         <span className="w-sub">Sample stack</span>
       </div>
-      <div
-        className="widget"
-        style={{
-          minHeight: 200,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-        }}
-      >
+      <div className="widget min-h-[200px] flex flex-col justify-between">
         <span className="w-head">
           <span className="w-app t">
             <Icon name="quality" />
           </span>
           Tests
         </span>
-        <div className="ring" style={vars({ "--p": 100, "--c": "#0C2A45" })}>
+        <div className="ring [--p:100] [--c:#0C2A45]">
           <b>48</b>
         </div>
         <span className="w-sub">Sample output</span>
       </div>
-      <div
-        className="widget wspan2"
-        style={{
-          gridColumn: "span 2",
-          display: "flex",
-          alignItems: "center",
-          gap: 16,
-          flexWrap: "wrap",
-        }}
-      >
-        <span className="w-head" style={{ flex: "none" }}>
+      <div className="widget wspan2 col-span-2 flex items-center gap-[16px] flex-wrap">
+        <span className="w-head flex-none">
           <span className="w-app m">
             <Icon name="cloud" />
           </span>
@@ -185,7 +133,7 @@ export function AgentWidgets() {
         </span>
         <span className="wrap-row gap-2">
           {["Web app", "API", "Worker", "CI/CD", "IaC", "Dashboards"].map((label) => (
-            <span className="chip" key={label} style={chipLight}>
+            <span className="chip [background:rgba(255,255,255,.7)]" key={label}>
               {label}
             </span>
           ))}
@@ -197,11 +145,8 @@ export function AgentWidgets() {
 
 export function PhonePairVisual() {
   return (
-    <div className="pkg-vis mesh-light" style={{ alignItems: "center" }} aria-hidden="true">
-      <div
-        className="phone"
-        style={vars({ "--pw": "100px", transform: "rotate(-6deg)", marginRight: -12 })}
-      >
+    <div className="pkg-vis mesh-light items-center" aria-hidden="true">
+      <div className="phone [--pw:100px] [transform:rotate(-6deg)] mr-[-12px]">
         <div className="phone-screen dark">
           <span className="phone-island" />
           <div className="phone-status">
@@ -210,19 +155,13 @@ export function PhonePairVisual() {
           </div>
           <div className="phone-body">
             <span className="ph-h">Hello, Alex</span>
-            <div
-              className="ph-card"
-              style={{
-                height: "3.4em",
-                background: "linear-gradient(150deg, rgba(47,87,245,.9), rgba(26,44,140,.8))",
-              }}
-            />
-            <div className="ph-card" style={{ height: "2em" }} />
-            <div className="ph-card" style={{ height: "2em" }} />
+            <div className="ph-card h-[3.4em] [background:linear-gradient(150deg,rgba(47,87,245,.9),rgba(26,44,140,.8))]" />
+            <div className="ph-card h-[2em]" />
+            <div className="ph-card h-[2em]" />
           </div>
         </div>
       </div>
-      <div className="phone android" style={vars({ "--pw": "100px", transform: "rotate(5deg)" })}>
+      <div className="phone android [--pw:100px] [transform:rotate(5deg)]">
         <div className="phone-screen">
           <span className="phone-island" />
           <div className="phone-status">
@@ -231,8 +170,8 @@ export function PhonePairVisual() {
           </div>
           <div className="phone-body">
             <span className="ph-h">Checkout</span>
-            <div className="ph-card" style={{ height: "2.6em" }} />
-            <div className="ph-card" style={{ height: "2.6em" }} />
+            <div className="ph-card h-[2.6em]" />
+            <div className="ph-card h-[2.6em]" />
             <span className="ph-btn">Pay</span>
           </div>
         </div>
@@ -244,17 +183,13 @@ export function PhonePairVisual() {
 export function DesktopVisual() {
   const tile = (label: string, value: string) => (
     <div className="win-tile">
-      <span style={{ opacity: 0.6, fontSize: 11 }}>{label}</span>
+      <span className="opacity-[0.6] text-[11px]">{label}</span>
       <b>{value}</b>
     </div>
   );
   return (
-    <div
-      className="pkg-vis mesh-light"
-      style={{ alignItems: "center", padding: 18 }}
-      aria-hidden="true"
-    >
-      <div className="desk-win dark" style={{ width: "100%" }}>
+    <div className="pkg-vis mesh-light items-center p-[18px]" aria-hidden="true">
+      <div className="desk-win dark w-[100%]">
         <div className="win-bar">
           <span className="dots">
             <i />
@@ -263,7 +198,7 @@ export function DesktopVisual() {
           </span>
           <span className="ttl">Ops Console</span>
         </div>
-        <div style={{ padding: 12, display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8 }}>
+        <div className="p-[12px] grid grid-cols-[1fr_1fr_1fr] gap-[8px]">
           {tile("Queue", "—")}
           {tile("Devices", "—")}
           {tile("Sync", "OK")}
@@ -276,27 +211,21 @@ export function DesktopVisual() {
 export function FullCycleVisual() {
   return (
     <div
-      className="pkg-vis"
-      style={{
-        background: "linear-gradient(150deg, #1E4268, #08192B)",
-        alignItems: "center",
-        padding: 18,
-        gap: 10,
-      }}
+      className="pkg-vis [background:linear-gradient(150deg,#1E4268,#08192B)] items-center p-[18px] gap-[10px]"
       aria-hidden="true"
     >
-      <div className="browser" style={{ flex: 1 }}>
+      <div className="browser flex-1">
         <div className="browser-bar">
           <span className="url">admin.yourproduct.com</span>
         </div>
-        <div style={{ padding: 10, display: "grid", gap: 6 }}>
-          <div className="mock-line" style={{ width: "50%", height: 8, background: "#070B2B" }} />
-          <div className="mock-line" style={{ width: "90%" }} />
-          <div className="mock-line" style={{ width: "70%" }} />
-          <div className="mock-line" style={{ width: "80%" }} />
+        <div className="p-[10px] grid gap-[6px]">
+          <div className="mock-line w-[50%] h-[8px] [background:#070B2B]" />
+          <div className="mock-line w-[90%]" />
+          <div className="mock-line w-[70%]" />
+          <div className="mock-line w-[80%]" />
         </div>
       </div>
-      <div className="phone" style={vars({ "--pw": "86px" })}>
+      <div className="phone [--pw:86px]">
         <div className="phone-screen">
           <span className="phone-island" />
           <div className="phone-status">
@@ -304,11 +233,8 @@ export function FullCycleVisual() {
             <i />
           </div>
           <div className="phone-body">
-            <div
-              className="ph-card"
-              style={{ height: "3em", background: "linear-gradient(150deg, #2F57F5, #070B2B)" }}
-            />
-            <div className="ph-card" style={{ height: "2em" }} />
+            <div className="ph-card h-[3em] [background:linear-gradient(150deg,#2F57F5,#070B2B)]" />
+            <div className="ph-card h-[2em]" />
           </div>
         </div>
       </div>
@@ -318,16 +244,16 @@ export function FullCycleVisual() {
 
 export function LedgerMock() {
   return (
-    <div className="mock" style={{ width: "100%", maxWidth: 560 }} aria-hidden="true">
+    <div className="mock w-[100%] max-w-[560px]" aria-hidden="true">
       <div className="mock-bar">
-        <b style={{ fontSize: 13 }}>Ledgerline · Treasury</b>
+        <b className="text-[13px]">Ledgerline · Treasury</b>
         <span className="row gap-2">
           <span className="dot" />
           <span className="t-xs">Live</span>
         </span>
       </div>
       <div className="mock-body">
-        <div className="grid-3" style={vars({ "--gap": "10px" })}>
+        <div className="grid-3 [--gap:10px]">
           <div className="mock-kpi">
             <span>Positions</span>
             <b>EUR 48.2m</b>
@@ -346,15 +272,15 @@ export function LedgerMock() {
             <span>Intraday cash · by bank</span>
             <span className="badge-soft badge">Today</span>
           </div>
-          <div className="bars" style={{ marginTop: 12 }}>
-            {[40, 62, 48, 80, 56, 92, 70, 64, 86, 58].map((height, index) => (
-              <i key={index} style={{ height: `${height}%` }} />
+          <div className="bars mt-[12px]">
+            {LEDGER_BARS.map((height) => (
+              <i key={height} className={height} />
             ))}
           </div>
         </div>
         <div className="mock-row">
           <span className="dot dot-o" />
-          <span style={{ flex: 1 }}>FX settlement mismatch · Bank 03</span>
+          <span className="flex-1">FX settlement mismatch · Bank 03</span>
           <span className="badge">Review</span>
         </div>
       </div>
@@ -364,22 +290,12 @@ export function LedgerMock() {
 
 export function CareMock() {
   return (
-    <div className="row gap-5" style={{ alignItems: "flex-end" }} aria-hidden="true">
-      <div className="mock" style={{ width: 230, borderRadius: 30, padding: 10 }}>
-        <div
-          style={{
-            borderRadius: 22,
-            background: "#F4F6FB",
-            padding: "18px 16px",
-            display: "grid",
-            gap: 12,
-          }}
-        >
-          <span className="t-xs" style={{ fontFamily: "var(--mono)" }}>
-            STEP 2 OF 4
-          </span>
-          <b style={{ fontSize: 18, letterSpacing: "-.02em" }}>What brings you in today?</b>
-          <div className="mock-row" style={{ borderColor: "#2F57F5" }}>
+    <div className="row gap-5 items-end" aria-hidden="true">
+      <div className="mock w-[230px] rounded-[30px] p-[10px]">
+        <div className="rounded-[22px] [background:#F4F6FB] p-[18px_16px] grid gap-[12px]">
+          <span className="t-xs font-mono">STEP 2 OF 4</span>
+          <b className="text-[18px] tracking-[-.02em]">What brings you in today?</b>
+          <div className="mock-row border-[#2F57F5]">
             <span className="dot dot-b" />
             New symptoms
           </div>
@@ -391,44 +307,34 @@ export function CareMock() {
             <span className="dot" />
             Prescription
           </div>
-          <div
-            style={{
-              height: 40,
-              borderRadius: 12,
-              background: "#070B2B",
-              color: "#fff",
-              display: "grid",
-              placeItems: "center",
-              fontSize: 12,
-            }}
-          >
+          <div className="h-[40px] rounded-[12px] [background:#070B2B] text-white grid place-items-center text-[12px]">
             Continue
           </div>
         </div>
       </div>
-      <div className="mock hide-sm" style={{ width: 300 }}>
+      <div className="mock hide-sm w-[300px]">
         <div className="mock-bar">
           <b>Triage queue</b>
           <span className="t-xs">Clinic A</span>
         </div>
-        <div className="mock-body" style={{ gap: 8 }}>
+        <div className="mock-body gap-[8px]">
           <div className="mock-row">
             <span className="dot dot-o" />
-            <span style={{ flex: 1 }}>Patient #2041</span>
+            <span className="flex-1">Patient #2041</span>
             <span className="badge">Urgent</span>
           </div>
           <div className="mock-row">
             <span className="dot dot-b" />
-            <span style={{ flex: 1 }}>Patient #2042</span>
+            <span className="flex-1">Patient #2042</span>
             <span className="badge badge-soft">Today</span>
           </div>
           <div className="mock-row">
             <span className="dot dot-m" />
-            <span style={{ flex: 1 }}>Patient #2043</span>
+            <span className="flex-1">Patient #2043</span>
             <span className="badge badge-graphite">Routine</span>
           </div>
-          <div className="mock-line" style={{ width: "70%" }} />
-          <div className="mock-line" style={{ width: "45%" }} />
+          <div className="mock-line w-[70%]" />
+          <div className="mock-line w-[45%]" />
         </div>
       </div>
     </div>
@@ -437,16 +343,13 @@ export function CareMock() {
 
 export function RouteMock() {
   return (
-    <div className="mock" style={{ width: "100%", maxWidth: 560 }} aria-hidden="true">
+    <div className="mock w-[100%] max-w-[560px]" aria-hidden="true">
       <div className="mock-bar">
-        <b style={{ fontSize: 13 }}>Routewise · Dispatch</b>
+        <b className="text-[13px]">Routewise · Dispatch</b>
         <span className="t-xs">Region North</span>
       </div>
-      <div style={{ position: "relative", height: 300, background: "#EEF2FA" }}>
-        <svg
-          viewBox="0 0 560 300"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
-        >
+      <div className="relative h-[300px] [background:#EEF2FA]">
+        <svg viewBox="0 0 560 300" className="absolute inset-[0px] w-[100%] h-[100%]">
           <path
             d="M0 220 L140 160 L260 200 L380 90 L560 120"
             fill="none"
@@ -479,12 +382,9 @@ export function RouteMock() {
           <circle cx="290" cy="210" r="6" fill="#3F6A93" />
           <circle cx="500" cy="160" r="8" fill="#9DB4CC" stroke="#070B2B" strokeWidth="2" />
         </svg>
-        <div
-          className="mock-row"
-          style={{ position: "absolute", left: 14, bottom: 14, width: 220 }}
-        >
+        <div className="mock-row absolute left-[14px] bottom-[14px] w-[220px]">
           <span className="dot dot-b" />
-          <span style={{ flex: 1 }}>Route 12 · 18 stops</span>
+          <span className="flex-1">Route 12 · 18 stops</span>
           <span className="t-xs">On time</span>
         </div>
       </div>
@@ -525,7 +425,7 @@ const MARQUEES = [
 
 export function TechMarquees() {
   return (
-    <div className="stack gap-3" style={{ marginInline: "calc(var(--gutter) * -1)" }}>
+    <div className="stack gap-3 mx-[calc(var(--gutter)_*_-1)]">
       {MARQUEES.map((names, row) => (
         <div className={row ? "marquee rev" : "marquee"} aria-hidden="true" key={row}>
           <div className="marquee-track">
