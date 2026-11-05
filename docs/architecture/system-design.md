@@ -1,0 +1,131 @@
+# System design
+
+The SimpleX website is a statically rendered, bilingual Next.js marketing site with one server-side integration: email through Resend. Related: [component-boundaries.md](component-boundaries.md), [i18n.md](i18n.md), [route-matrix.md](route-matrix.md), [contact-and-email.md](contact-and-email.md).
+
+## Stack
+
+| Layer | Choice | Version installed | Status |
+|---|---|---|---|
+| Framework | Next.js App Router | 16.4.5 | Approved |
+| UI | React, server components by default | 19.3.1 | Approved |
+| Language | TypeScript, strict plus `noUncheckedIndexedAccess` and `exactOptionalPropertyTypes` | 5.9 | Approved |
+| Styling | Tailwind CSS plus ported design CSS | 4.3.4 | Approved |
+| i18n | next-intl | 4.14.9 | **Added at owner request.** A library, not a service |
+| Email | Resend, server only | Not installed; planned for SF-151 | Approved |
+| Tests | Playwright | Not installed; planned for SF-155 | Approved in the ticket |
+
+Not used, as the ticket requires: Storybook, a separate backend, a database, an ORM, a CMS, microservices, state-management libraries, third-party UI frameworks, animation libraries.
+
+TypeScript stays on 5.9 although 7.0 is published, to keep the ESLint and Next.js toolchain on a well-trodden path. Revisit after launch.
+
+## Rendering model
+
+| Concern | Decision |
+|---|---|
+| Pages | All static. `generateStaticParams` for locales and slugs |
+| Components | Server by default. A component becomes client only for state, effects or browser APIs |
+| Data | Local typed modules read at build time. No runtime fetches |
+| Forms | Server Actions with progressive enhancement |
+| Secrets | Server-only modules. Nothing sensitive uses a `NEXT_PUBLIC_` prefix |
+| Previews | `SITE_INDEXABLE` must equal `true` for indexing, so everything else is noindex |
+
+Static rendering suits this site: there is no per-user content, the content changes through deploys, and it gives the best Core Web Vitals at the lowest cost.
+
+## The key finding: how to reproduce the design
+
+The design is not a set of static frames. It is one stylesheet (`simplex.css`, 1,174 lines, 125 KB raw, 25 KB gzipped) plus 31 compositions, and it already behaves responsively through container queries.
+
+**So implementation should port this CSS rather than recreate it in Tailwind utilities.** Hand-translating about 460 classes with bespoke gradients, masks and scroll timelines would introduce drift on every page and defeat the fidelity goal. It also gives no benefit, since the CSS already has tokens and a clear structure.
+
+| Layer | Approach | Why |
+|---|---|---|
+| Tokens | Port the `:root` values into Tailwind v4 `@theme`, keeping the design's names | One token source for both systems |
+| Design classes (`.glass`, `.btn`, `.bg-horizon`, `.t-h1`, …) | Port into `@layer components`, split by the source file's own sections | Exact values; hover, motion and container rules stay intact |
+| New layout glue | Tailwind utilities | Where the design used inline `style` attributes |
+| Page-only CSS | Co-located, from each board's `<helmet>` | Keeps page rules out of the global bundle |
+
+During the port, resolve the cascade. `simplex.css` is versioned by accretion, so `.glass`, `.nav` and others are redefined later in the file. Keep only the final values, drop dead rules (see [GAP-D02](../design/design-gap-register.md)) and keep the `.sx` container root.
+
+## Folder architecture
+
+Exists today:
+
+```
+src/
+  app/[locale]/        layout.tsx, page.tsx, not-found.tsx, [...rest]/page.tsx
+  components/i18n/     locale-switcher.tsx
+  config/              site.ts, routes.ts
+  i18n/                routing.ts, navigation.ts, request.ts, translation-status.ts, messages/{en,ru}/
+  lib/seo/             metadata.ts
+  styles/              globals.css
+  types/               next-intl.d.ts
+  proxy.ts
+scripts/               check-i18n.mjs, validate-docs.mjs
+```
+
+Planned, each created by the ticket that first needs it, never as empty folders:
+
+```
+src/
+  components/
+    ui/                Button, Tabs, Accordion, Field… (SF-142)
+    layout/            SiteLayout, Header, MobileMenu, Footer, Section (SF-142)
+    sections/          Sections shared by more than one route family (SF-142 onward)
+  features/
+    contact/           Form, schema, Server Action, email templates (SF-151)
+    careers/           Application form (SF-149)
+  content/             Typed editorial content per locale (page tickets)
+    services/ industries/ cases/ insights/ careers/ legal/
+  lib/
+    email/             Resend client, server only (SF-151)
+    validation/        Shared validators (SF-151)
+    seo/               JSON-LD builders, sitemap helpers (SF-153)
+  styles/              tokens.css and the ported design CSS (SF-142)
+public/
+  images/ icons/       Optimised assets (SF-154)
+tests/                 Playwright suites (SF-155)
+docs/                  architecture/ design/ content/ seo/ qa/
+```
+
+Refinements to the ticket's proposal:
+
+- **No fonts folder under `public`.** `next/font` self-hosts Geist from the build, so there is nothing to place there.
+- **`src/i18n/` and `src/config/` are added.** Locale logic should have one home, and route families need a typed source.
+- **Planned `src/content/` becomes per-locale.** See [i18n.md](i18n.md).
+- **Page-specific sections sit with their route ticket**, under `src/components/sections/<family>/`, until a second family needs them.
+
+## Content model
+
+Content moves out of the prototype's `renderVals()` into typed modules. Two kinds of text have two homes:
+
+| Kind | Example | Home | Reason |
+|---|---|---|---|
+| Interface strings | Button labels, form errors, counts | `src/i18n/messages/{locale}/` | ICU plurals, type-checked keys, some reach the client |
+| Editorial content | A service's capabilities, a case study | `src/content/<family>/` (planned) | Deep structured data that stays server-only |
+
+Slug templates come directly from the design: `ServicePage` holds 12 entries, `IndustryPage` 6, `CasePage` 3 and `LegalPage` 3.
+
+## Configuration
+
+See `.env.example`. `NEXT_PUBLIC_SITE_URL` sets canonical and hreflang origins, and `SITE_INDEXABLE` gates indexing. `RESEND_API_KEY`, `CONTACT_FROM_EMAIL` and `CONTACT_INBOX_EMAIL` are planned for SF-151, and are server-only.
+
+## Performance budget
+
+Proposed targets at p75 on mobile, enforced in SF-154 and SF-155:
+
+| Metric | Target |
+|---|---|
+| LCP | ≤ 2.5 s |
+| INP | ≤ 200 ms |
+| CLS | ≤ 0.1 |
+| First-load JS, static page | ≤ 110 KB gzipped, including the framework |
+
+Main risks are large `backdrop-filter` areas on low-end phones ([motion spec](../design/motion-interaction-specification.md)), the 25 KB design stylesheet (split out page-only rules) and data-URI icons inside it.
+
+## Security
+
+Secrets stay server-only. Add a security-header set in `next.config.ts` during SF-156: CSP, HSTS, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`. `poweredByHeader` is already off. Form security is in [contact-and-email.md](contact-and-email.md).
+
+## Known framework limitation
+
+When `notFound()` runs during server rendering, Next.js 16.4 returns the right 404 status but an empty HTML shell, and the page appears once JavaScript loads. Verified in SF-140 with curl and headless Chrome, in both languages. Crawlers get the correct status. Visitors without JavaScript see a blank page. Tracked as [GAP-R03](../design/design-gap-register.md).
