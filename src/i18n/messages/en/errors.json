@@ -1,0 +1,7 @@
+{
+  "notFound": {
+    "title": "This page took a different route.",
+    "body": "The link may be out of date, or the page has moved.",
+    "home": "Back to home"
+  }
+}

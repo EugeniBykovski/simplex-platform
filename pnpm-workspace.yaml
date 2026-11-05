@@ -1,0 +1,4 @@
+# Neither package needs its native build step for this project.
+allowBuilds:
+  "@parcel/watcher": false
+  "@swc/core": false

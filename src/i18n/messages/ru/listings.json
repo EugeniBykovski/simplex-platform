@@ -1,0 +1,6 @@
+{
+  "projects": "{count, plural, one {# проект} few {# проекта} many {# проектов} other {# проекта}}",
+  "articles": "{count, plural, one {# статья} few {# статьи} many {# статей} other {# статьи}}",
+  "sampleRoles": "{count, plural, one {# пример вакансии} few {# примера вакансий} many {# примеров вакансий} other {# примера вакансий}}",
+  "minutesRead": "{count} мин чтения"
+}

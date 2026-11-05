@@ -1,0 +1,22 @@
+{
+  "tagline": "Software engineering and digital product development for startups, scale-ups and established businesses.",
+  "groups": {
+    "services": "Services",
+    "industries": "Industries",
+    "company": "Company",
+    "connect": "Connect"
+  },
+  "links": {
+    "allServices": "All services",
+    "technologies": "Technologies",
+    "buildPackages": "Build Packages",
+    "contact": "Contact"
+  },
+  "legal": {
+    "rights": "© {year} SimpleX. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "terms": "Terms",
+    "cookieSettings": "Cookie settings"
+  }
+}
