@@ -81,7 +81,7 @@ export async function SiteHeader({ locale, menuOpen }: { locale: Locale; menuOpe
 
   return (
     <div className="header-slot">
-      <nav className="nav backdrop-blur-lg" aria-label={t("primaryLabel")}>
+      <nav className="nav" aria-label={t("primaryLabel")}>
         <Link href="/" className="nav-logo">
           <span className="sr-only">{t("homeLabel")}</span>
           <SxMark variant="on-dark" className="nav-mark [--m:46px]" />
