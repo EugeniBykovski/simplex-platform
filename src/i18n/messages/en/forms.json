@@ -1,0 +1,7 @@
+{
+  "optional": "Optional",
+  "sending": "Sending…",
+  "tryAgain": "Try again",
+  "errorSummary": "{count, plural, one {Please check # field.} other {Please check # fields.}}",
+  "charactersUsed": "{count} / {max}"
+}

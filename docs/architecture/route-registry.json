@@ -1,0 +1,2238 @@
+{
+  "source": {
+    "artifact": "https://claude.ai/artifact/SHq68U3eVzySjKWCjgFwkG",
+    "version": "1793869596-167d"
+  },
+  "patterns": [
+    "/",
+    "/agent",
+    "/services",
+    "/services/[slug]",
+    "/packages",
+    "/industries",
+    "/industries/[slug]",
+    "/work",
+    "/work/[slug]",
+    "/how-we-work",
+    "/about",
+    "/technologies",
+    "/careers",
+    "/careers/[slug]",
+    "/insights",
+    "/insights/[slug]",
+    "/contact",
+    "/contact/thank-you",
+    "/privacy-policy",
+    "/cookie-policy",
+    "/terms",
+    "/404"
+  ],
+  "patternCount": 22,
+  "concreteRouteCount": 40,
+  "statusLegend": {
+    "APPROVED": "URL label present on a design artboard",
+    "PROPOSED": "No artboard; recommended, needs owner confirmation"
+  },
+  "routes": [
+    {
+      "route": "/",
+      "family": "home",
+      "type": "static",
+      "status": "APPROVED",
+      "template": "Home",
+      "slugProp": null,
+      "artboards": [
+        "Home.dc.html",
+        "Home-p2.dc.html",
+        "Home-p3.dc.html",
+        "Home-p4.dc.html",
+        "HomeTablet.dc.html",
+        "HomeTablet-p2.dc.html",
+        "HomeTablet-p3.dc.html",
+        "HomeTablet-p4.dc.html",
+        "HomeMobile.dc.html",
+        "HomeMobile-p2.dc.html",
+        "HomeMobile-p3.dc.html",
+        "HomeMobile-p4.dc.html",
+        "HomeMobile-p5.dc.html",
+        "HomeMenuMobile.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 23568,
+        "tablet": 26552,
+        "mobile": 33477
+      },
+      "boardedDevices": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "contentSource": "src/content/home/",
+      "interactions": "Tech tabs (8), industry show-more, estimator (type, platforms, stage, pace → roles, team size, model; no price computed), pinned hero, stacked cards, scroll story",
+      "assets": [
+        "viz-ecommerce",
+        "viz-enterprise",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics",
+        "viz-saas"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "SimpleX — Complex engineering. Clear outcomes.",
+        "description": "We design, build, and scale digital products that turn ambitious ideas into real business advantage.",
+        "h1": "Complex engineering. Clear outcomes.",
+        "intent": "Which software engineering partner can build and run complex products?",
+        "topic": "Software engineering and digital product development",
+        "canonical": "/",
+        "breadcrumb": false,
+        "schema": [
+          "Organization",
+          "WebSite"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Demonstration projects in Featured work",
+          "GAP-C01 SimpleX Agent claims",
+          "[128]/[24] sample figures"
+        ]
+      },
+      "i18n": {
+        "en": "/",
+        "ru": "/ru",
+        "ruStatus": "draft"
+      },
+      "ownerTicket": "SF-143",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/agent",
+      "family": "agent",
+      "type": "static",
+      "status": "APPROVED",
+      "template": "Agent",
+      "slugProp": null,
+      "artboards": [
+        "Agent.dc.html",
+        "Agent-p2.dc.html",
+        "AgentMobile.dc.html",
+        "AgentMobile-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 9068,
+        "mobile": 14272
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/agent/",
+      "interactions": "Stack picker tabs (5 stacks), ROI estimator (3 range inputs → hours, FTE, EUR/month), FAQ accordions",
+      "assets": [
+        "viz-light"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "SimpleX Agent",
+        "description": "SimpleX Agent connects to your repositories and tooling, understands your frameworks and conventions, and spins up production-ready ecosystems — services, pipelines, infrastructure and features. Every change is reviewed by a SimpleX engineer before it ships.",
+        "h1": "An engineering agent that speaks your stack.",
+        "intent": "What is the SimpleX engineering agent and how is it deployed?",
+        "topic": "AI engineering agent",
+        "canonical": "/agent",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service",
+          "FAQPage (markup only, see seo-architecture)"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Agent product facts unverified (GAP-C01)"
+        ]
+      },
+      "i18n": {
+        "en": "/agent",
+        "ru": "/ru/agent",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-144",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/services",
+      "family": "services",
+      "type": "static",
+      "status": "APPROVED",
+      "template": "Services",
+      "slugProp": null,
+      "artboards": [
+        "Services.dc.html",
+        "Services-p2.dc.html",
+        "ServicesMobile.dc.html",
+        "ServicesMobile-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 8093,
+        "mobile": 11646
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/services/",
+      "interactions": "Card hovers, lifecycle matrix, vs-alternatives table",
+      "assets": [],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Services — SimpleX",
+        "description": "Design, engineering, data and operations under one roof — so the people who architect your system are the people who build it, and still there when it scales.",
+        "h1": "Every capability. One accountable team.",
+        "intent": "Which software engineering services does SimpleX offer?",
+        "topic": "Software engineering services",
+        "canonical": "/services",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "ItemList"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Vs-alternatives comparison needs review (GAP-C04)"
+        ]
+      },
+      "i18n": {
+        "en": "/services",
+        "ru": "/ru/services",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-145",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/services/custom-software-development",
+      "family": "services",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "ServicePage",
+      "slugProp": "custom-software-development",
+      "artboards": [
+        "ServicePage.dc.html",
+        "ServicePage-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 8455
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/services/",
+      "interactions": "Use-case accordion, hero visual by slug (code, arch, device, desktop, graph, pipeline, team), light or dark theme by slug",
+      "assets": [
+        "photo-meeting",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Custom Software Development — SimpleX",
+        "description": "When off-the-shelf tools force workarounds, custom software turns the way you work into an advantage.",
+        "h1": "Software shaped around your business — not the other way round.",
+        "intent": "Buyer evaluating custom software development partners",
+        "topic": "Custom Software Development",
+        "canonical": "/services/custom-software-development",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Related case studies are demonstrations (GAP-C02)",
+          "Discovery price placeholder [€ x]"
+        ]
+      },
+      "i18n": {
+        "en": "/services/custom-software-development",
+        "ru": "/ru/services/custom-software-development",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-145",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/services/enterprise-software",
+      "family": "services",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "ServicePage",
+      "slugProp": "enterprise-software",
+      "artboards": [
+        "svc-enterprise-software.dc.html",
+        "svc-enterprise-software-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 8476
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/services/",
+      "interactions": "Use-case accordion, hero visual by slug (code, arch, device, desktop, graph, pipeline, team), light or dark theme by slug",
+      "assets": [
+        "photo-meeting",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Enterprise Software — SimpleX",
+        "description": "Enterprise software has to integrate with everything, satisfy auditors and outlive reorganisations.",
+        "h1": "Core systems that hold up under organisational weight.",
+        "intent": "Buyer evaluating enterprise software partners",
+        "topic": "Enterprise Software",
+        "canonical": "/services/enterprise-software",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Related case studies are demonstrations (GAP-C02)",
+          "Discovery price placeholder [€ x]"
+        ]
+      },
+      "i18n": {
+        "en": "/services/enterprise-software",
+        "ru": "/ru/services/enterprise-software",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-145",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/services/web-development",
+      "family": "services",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "ServicePage",
+      "slugProp": "web-development",
+      "artboards": [
+        "svc-web-development.dc.html",
+        "svc-web-development-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 8316
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/services/",
+      "interactions": "Use-case accordion, hero visual by slug (code, arch, device, desktop, graph, pipeline, team), light or dark theme by slug",
+      "assets": [
+        "photo-meeting",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Web Development — SimpleX",
+        "description": "From customer portals to complex SaaS front ends, we build web applications with performance budgets, accessibility and maintainable component architecture from the first commit.",
+        "h1": "Web applications that feel instant and work for everyone.",
+        "intent": "Buyer evaluating web development partners",
+        "topic": "Web Development",
+        "canonical": "/services/web-development",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Related case studies are demonstrations (GAP-C02)",
+          "Discovery price placeholder [€ x]"
+        ]
+      },
+      "i18n": {
+        "en": "/services/web-development",
+        "ru": "/ru/services/web-development",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-145",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/services/mobile-development",
+      "family": "services",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "ServicePage",
+      "slugProp": "mobile-development",
+      "artboards": [
+        "svc-mobile-development.dc.html",
+        "svc-mobile-development-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 8264
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/services/",
+      "interactions": "Use-case accordion, hero visual by slug (code, arch, device, desktop, graph, pipeline, team), light or dark theme by slug",
+      "assets": [
+        "photo-meeting",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Mobile Development — SimpleX",
+        "description": "Native and cross-platform apps that are fast, accessible and dependable offline — with release pipelines that make weekly updates routine.",
+        "h1": "Apps people keep on their home screen.",
+        "intent": "Buyer evaluating mobile development partners",
+        "topic": "Mobile Development",
+        "canonical": "/services/mobile-development",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Related case studies are demonstrations (GAP-C02)",
+          "Discovery price placeholder [€ x]"
+        ]
+      },
+      "i18n": {
+        "en": "/services/mobile-development",
+        "ru": "/ru/services/mobile-development",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-145",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/services/desktop-development",
+      "family": "services",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "ServicePage",
+      "slugProp": "desktop-development",
+      "artboards": [
+        "svc-desktop-development.dc.html",
+        "svc-desktop-development-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 8376
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/services/",
+      "interactions": "Use-case accordion, hero visual by slug (code, arch, device, desktop, graph, pipeline, team), light or dark theme by slug",
+      "assets": [
+        "photo-meeting",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Desktop Applications & Programs — SimpleX",
+        "description": "Windows, macOS and Linux applications for the work that still happens at a keyboard: operator consoles, terminals, point-of-sale, field tools and device control — offline-first, signed and auto-updating.",
+        "h1": "Desktop software that belongs on the desk.",
+        "intent": "Buyer evaluating desktop applications & programs partners",
+        "topic": "Desktop Applications & Programs",
+        "canonical": "/services/desktop-development",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Related case studies are demonstrations (GAP-C02)",
+          "Discovery price placeholder [€ x]"
+        ]
+      },
+      "i18n": {
+        "en": "/services/desktop-development",
+        "ru": "/ru/services/desktop-development",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-145",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/services/ai-engineering",
+      "family": "services",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "ServicePage",
+      "slugProp": "ai-engineering",
+      "artboards": [
+        "svc-ai-engineering.dc.html",
+        "svc-ai-engineering-p2.dc.html",
+        "ServicePageMobile.dc.html",
+        "ServicePageMobile-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 8318,
+        "mobile": 13086
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/services/",
+      "interactions": "Use-case accordion, hero visual by slug (code, arch, device, desktop, graph, pipeline, team), light or dark theme by slug",
+      "assets": [
+        "photo-meeting",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "AI Engineering & Intelligent Automation — SimpleX",
+        "description": "We integrate language models, retrieval and automation into real products — with evaluation, guardrails, observability and cost controls engineered in, not bolted on.",
+        "h1": "AI features that hold up in production.",
+        "intent": "Buyer evaluating ai engineering & intelligent automation partners",
+        "topic": "AI Engineering & Intelligent Automation",
+        "canonical": "/services/ai-engineering",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Related case studies are demonstrations (GAP-C02)",
+          "Discovery price placeholder [€ x]"
+        ]
+      },
+      "i18n": {
+        "en": "/services/ai-engineering",
+        "ru": "/ru/services/ai-engineering",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-145",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/services/cloud-devops",
+      "family": "services",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "ServicePage",
+      "slugProp": "cloud-devops",
+      "artboards": [
+        "svc-cloud-devops.dc.html",
+        "svc-cloud-devops-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 8351
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/services/",
+      "interactions": "Use-case accordion, hero visual by slug (code, arch, device, desktop, graph, pipeline, team), light or dark theme by slug",
+      "assets": [
+        "photo-meeting",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Cloud Engineering & DevOps — SimpleX",
+        "description": "We design cloud platforms, delivery pipelines and observability so teams ship small changes often, recover fast and see exactly what they’re paying for.",
+        "h1": "Releases that are routine. Infrastructure you can read.",
+        "intent": "Buyer evaluating cloud engineering & devops partners",
+        "topic": "Cloud Engineering & DevOps",
+        "canonical": "/services/cloud-devops",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Related case studies are demonstrations (GAP-C02)",
+          "Discovery price placeholder [€ x]"
+        ]
+      },
+      "i18n": {
+        "en": "/services/cloud-devops",
+        "ru": "/ru/services/cloud-devops",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-145",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/services/architecture-consulting",
+      "family": "services",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "ServicePage",
+      "slugProp": "architecture-consulting",
+      "artboards": [
+        "svc-architecture-consulting.dc.html",
+        "svc-architecture-consulting-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 8163
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/services/",
+      "interactions": "Use-case accordion, hero visual by slug (code, arch, device, desktop, graph, pipeline, team), light or dark theme by slug",
+      "assets": [
+        "photo-meeting",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Software Architecture & Technical Consulting — SimpleX",
+        "description": "Independent, senior architecture advice for the moments that matter — before a rewrite, after an acquisition, ahead of a growth phase.",
+        "h1": "Decisions you can build on.",
+        "intent": "Buyer evaluating software architecture & technical consulting partners",
+        "topic": "Software Architecture & Technical Consulting",
+        "canonical": "/services/architecture-consulting",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Related case studies are demonstrations (GAP-C02)",
+          "Discovery price placeholder [€ x]"
+        ]
+      },
+      "i18n": {
+        "en": "/services/architecture-consulting",
+        "ru": "/ru/services/architecture-consulting",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-145",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/services/product-design",
+      "family": "services",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "ServicePage",
+      "slugProp": "product-design",
+      "artboards": [
+        "svc-product-design.dc.html",
+        "svc-product-design-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 8321
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/services/",
+      "interactions": "Use-case accordion, hero visual by slug (code, arch, device, desktop, graph, pipeline, team), light or dark theme by slug",
+      "assets": [
+        "photo-meeting",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Product Design & UI/UX — SimpleX",
+        "description": "Research, UX and interface systems for products with real complexity — designed alongside the engineers who will build them, so nothing is lost in translation.",
+        "h1": "Complex products, made obvious.",
+        "intent": "Buyer evaluating product design & ui/ux partners",
+        "topic": "Product Design & UI/UX",
+        "canonical": "/services/product-design",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Related case studies are demonstrations (GAP-C02)",
+          "Discovery price placeholder [€ x]"
+        ]
+      },
+      "i18n": {
+        "en": "/services/product-design",
+        "ru": "/ru/services/product-design",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-145",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/services/legacy-modernization",
+      "family": "services",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "ServicePage",
+      "slugProp": "legacy-modernization",
+      "artboards": [
+        "svc-legacy-modernization.dc.html",
+        "svc-legacy-modernization-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 8349
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/services/",
+      "interactions": "Use-case accordion, hero visual by slug (code, arch, device, desktop, graph, pipeline, team), light or dark theme by slug",
+      "assets": [
+        "photo-meeting",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Legacy Modernization — SimpleX",
+        "description": "Your legacy systems still run the business — that’s why they’re hard to change.",
+        "h1": "Modernise without stopping the business.",
+        "intent": "Buyer evaluating legacy modernization partners",
+        "topic": "Legacy Modernization",
+        "canonical": "/services/legacy-modernization",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Related case studies are demonstrations (GAP-C02)",
+          "Discovery price placeholder [€ x]"
+        ]
+      },
+      "i18n": {
+        "en": "/services/legacy-modernization",
+        "ru": "/ru/services/legacy-modernization",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-145",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/services/quality-engineering",
+      "family": "services",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "ServicePage",
+      "slugProp": "quality-engineering",
+      "artboards": [
+        "svc-quality-engineering.dc.html",
+        "svc-quality-engineering-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 8190
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/services/",
+      "interactions": "Use-case accordion, hero visual by slug (code, arch, device, desktop, graph, pipeline, team), light or dark theme by slug",
+      "assets": [
+        "photo-meeting",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Quality Engineering & Test Automation — SimpleX",
+        "description": "We build quality into delivery: test strategy, automation and performance engineering that let teams release often without crossing their fingers.",
+        "h1": "Confidence, measured — on every release.",
+        "intent": "Buyer evaluating quality engineering & test automation partners",
+        "topic": "Quality Engineering & Test Automation",
+        "canonical": "/services/quality-engineering",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Related case studies are demonstrations (GAP-C02)",
+          "Discovery price placeholder [€ x]"
+        ]
+      },
+      "i18n": {
+        "en": "/services/quality-engineering",
+        "ru": "/ru/services/quality-engineering",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-145",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/services/dedicated-teams",
+      "family": "services",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "ServicePage",
+      "slugProp": "dedicated-teams",
+      "artboards": [
+        "svc-dedicated-teams.dc.html",
+        "svc-dedicated-teams-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 8223
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/services/",
+      "interactions": "Use-case accordion, hero visual by slug (code, arch, device, desktop, graph, pipeline, team), light or dark theme by slug",
+      "assets": [
+        "photo-meeting",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Dedicated Engineering Teams — SimpleX",
+        "description": "Cross-functional teams that join your rituals, tooling and roadmap — led by experienced engineers, backed by SimpleX standards, and sized to your plans rather than your hiring pipeline.",
+        "h1": "Senior engineers who work like they’re yours.",
+        "intent": "Buyer evaluating dedicated engineering teams partners",
+        "topic": "Dedicated Engineering Teams",
+        "canonical": "/services/dedicated-teams",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Related case studies are demonstrations (GAP-C02)",
+          "Discovery price placeholder [€ x]"
+        ]
+      },
+      "i18n": {
+        "en": "/services/dedicated-teams",
+        "ru": "/ru/services/dedicated-teams",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-145",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/packages",
+      "family": "packages",
+      "type": "static",
+      "status": "APPROVED",
+      "template": "Packages",
+      "slugProp": null,
+      "artboards": [
+        "Packages.dc.html",
+        "Packages-p2.dc.html",
+        "PackagesMobile.dc.html",
+        "PackagesMobile-p2.dc.html",
+        "PackagesMobile-p3.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 11013,
+        "mobile": 16020
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/packages/",
+      "interactions": "Mobile track tabs (iOS, Android, React Native), comparison table",
+      "assets": [],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Build packages — SimpleX",
+        "description": "Three clear ways to build with us: a compact mobile pod for iOS, Android or React Native; desktop applications for Windows, macOS and Linux; or the full cycle — backend, web, website, admin panel and both mobile apps from one team.",
+        "h1": "From a two-person app team to your whole product.",
+        "intent": "Fixed-shape teams for mobile, desktop and full-cycle builds",
+        "topic": "Build packages and team shapes",
+        "canonical": "/packages",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Availability block shows invented data until wired (GAP-F04)",
+          "Team sizes and durations are placeholders"
+        ]
+      },
+      "i18n": {
+        "en": "/packages",
+        "ru": "/ru/packages",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-146",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/industries",
+      "family": "industries",
+      "type": "static",
+      "status": "APPROVED",
+      "template": "Industries",
+      "slugProp": null,
+      "artboards": [
+        "Industries.dc.html",
+        "IndustriesMobile.dc.html",
+        "IndustriesMobile-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 5052,
+        "mobile": 8213
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/industries/",
+      "interactions": "None beyond link and hover states",
+      "assets": [
+        "photo-trading",
+        "viz-ecommerce",
+        "viz-enterprise",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics",
+        "viz-saas"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Industries — SimpleX",
+        "description": "Regulation, peak load, patient safety, multi-tenancy, real-time operations.",
+        "h1": "Context changes everything.",
+        "intent": "Does SimpleX have experience with my sector's constraints?",
+        "topic": "Software engineering by industry",
+        "canonical": "/industries",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "ItemList"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Certifications held by SimpleX unconfirmed (GAP-C03)"
+        ]
+      },
+      "i18n": {
+        "en": "/industries",
+        "ru": "/ru/industries",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-147",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/industries/fintech",
+      "family": "industries",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "IndustryPage",
+      "slugProp": "fintech",
+      "artboards": [
+        "IndustryPage.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 7926
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/industries/",
+      "interactions": "Scenario tabs (3 per slug), slug-driven compliance grid",
+      "assets": [
+        "photo-trading",
+        "viz-ecommerce",
+        "viz-enterprise",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics",
+        "viz-saas"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "FinTech software engineering — SimpleX",
+        "description": "Payments, lending, treasury and wealth platforms that are real-time, auditable and resilient — engineered for regulators as carefully as for users.",
+        "h1": "Software where every number has to be right.",
+        "intent": "FinTech buyer checking domain fit",
+        "topic": "FinTech software engineering",
+        "canonical": "/industries/fintech",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Certification wording (GAP-C03)",
+          "Relevant projects are demonstrations (GAP-C02)"
+        ]
+      },
+      "i18n": {
+        "en": "/industries/fintech",
+        "ru": "/ru/industries/fintech",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-147",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/industries/healthcare",
+      "family": "industries",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "IndustryPage",
+      "slugProp": "healthcare",
+      "artboards": [
+        "ind-healthcare.dc.html",
+        "IndustryPageMobile.dc.html",
+        "IndustryPageMobile-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 7895,
+        "mobile": 11442
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/industries/",
+      "interactions": "Scenario tabs (3 per slug), slug-driven compliance grid",
+      "assets": [
+        "photo-trading",
+        "viz-ecommerce",
+        "viz-enterprise",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics",
+        "viz-saas"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Healthcare software engineering — SimpleX",
+        "description": "Patient and clinician platforms designed for safety, privacy and interoperability — and for the reality of busy, interrupted clinical work.",
+        "h1": "Technology that earns clinicians’ trust.",
+        "intent": "Healthcare buyer checking domain fit",
+        "topic": "Healthcare software engineering",
+        "canonical": "/industries/healthcare",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Certification wording (GAP-C03)",
+          "Relevant projects are demonstrations (GAP-C02)"
+        ]
+      },
+      "i18n": {
+        "en": "/industries/healthcare",
+        "ru": "/ru/industries/healthcare",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-147",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/industries/ecommerce",
+      "family": "industries",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "IndustryPage",
+      "slugProp": "ecommerce",
+      "artboards": [
+        "ind-ecommerce.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 7700
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/industries/",
+      "interactions": "Scenario tabs (3 per slug), slug-driven compliance grid",
+      "assets": [
+        "photo-trading",
+        "viz-ecommerce",
+        "viz-enterprise",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics",
+        "viz-saas"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "E-commerce software engineering — SimpleX",
+        "description": "Storefronts, search and order platforms engineered for peak days — and for constant change between them.",
+        "h1": "Commerce that stays fast when it matters most.",
+        "intent": "E-commerce buyer checking domain fit",
+        "topic": "E-commerce software engineering",
+        "canonical": "/industries/ecommerce",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Certification wording (GAP-C03)",
+          "Relevant projects are demonstrations (GAP-C02)"
+        ]
+      },
+      "i18n": {
+        "en": "/industries/ecommerce",
+        "ru": "/ru/industries/ecommerce",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-147",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/industries/saas",
+      "family": "industries",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "IndustryPage",
+      "slugProp": "saas",
+      "artboards": [
+        "ind-saas.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 7674
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/industries/",
+      "interactions": "Scenario tabs (3 per slug), slug-driven compliance grid",
+      "assets": [
+        "photo-trading",
+        "viz-ecommerce",
+        "viz-enterprise",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics",
+        "viz-saas"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "SaaS software engineering — SimpleX",
+        "description": "Multi-tenant SaaS engineered for reliability, security and unit economics — from the first paying customer to enterprise deals.",
+        "h1": "Products built to grow without growing pains.",
+        "intent": "SaaS buyer checking domain fit",
+        "topic": "SaaS software engineering",
+        "canonical": "/industries/saas",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Certification wording (GAP-C03)",
+          "Relevant projects are demonstrations (GAP-C02)"
+        ]
+      },
+      "i18n": {
+        "en": "/industries/saas",
+        "ru": "/ru/industries/saas",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-147",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/industries/enterprise",
+      "family": "industries",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "IndustryPage",
+      "slugProp": "enterprise",
+      "artboards": [
+        "ind-enterprise.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 7817
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/industries/",
+      "interactions": "Scenario tabs (3 per slug), slug-driven compliance grid",
+      "assets": [
+        "photo-trading",
+        "viz-ecommerce",
+        "viz-enterprise",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics",
+        "viz-saas"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Enterprise software engineering — SimpleX",
+        "description": "Core systems, integration and modernisation across large, long-lived estates — delivered incrementally and governed properly.",
+        "h1": "Change at scale, without breaking what works.",
+        "intent": "Enterprise buyer checking domain fit",
+        "topic": "Enterprise software engineering",
+        "canonical": "/industries/enterprise",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Certification wording (GAP-C03)",
+          "Relevant projects are demonstrations (GAP-C02)"
+        ]
+      },
+      "i18n": {
+        "en": "/industries/enterprise",
+        "ru": "/ru/industries/enterprise",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-147",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/industries/logistics",
+      "family": "industries",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "IndustryPage",
+      "slugProp": "logistics",
+      "artboards": [
+        "ind-logistics.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 7840
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/industries/",
+      "interactions": "Scenario tabs (3 per slug), slug-driven compliance grid",
+      "assets": [
+        "photo-trading",
+        "viz-ecommerce",
+        "viz-enterprise",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics",
+        "viz-saas"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Logistics software engineering — SimpleX",
+        "description": "Routing, tracking and warehouse systems that turn constant movement into decisions dispatchers and drivers can act on.",
+        "h1": "Real-time operations, made visible.",
+        "intent": "Logistics buyer checking domain fit",
+        "topic": "Logistics software engineering",
+        "canonical": "/industries/logistics",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Service"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Certification wording (GAP-C03)",
+          "Relevant projects are demonstrations (GAP-C02)"
+        ]
+      },
+      "i18n": {
+        "en": "/industries/logistics",
+        "ru": "/ru/industries/logistics",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-147",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/work",
+      "family": "work",
+      "type": "static",
+      "status": "APPROVED",
+      "template": "Work",
+      "slugProp": null,
+      "artboards": [
+        "Work.dc.html",
+        "WorkTablet.dc.html",
+        "WorkMobile.dc.html",
+        "WorkMobile-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 4795,
+        "tablet": 6192,
+        "mobile": 8678
+      },
+      "boardedDevices": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "contentSource": "src/content/work/",
+      "interactions": "Industry filter + service filter (aria-pressed), result count (aria-live), empty state with clear action",
+      "assets": [
+        "photo-meeting",
+        "viz-ecommerce",
+        "viz-enterprise",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics",
+        "viz-saas"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Our Work — SimpleX",
+        "description": "A selection of engagements across industries and services. Each one started with a messy, specific problem — and ended with software people rely on.",
+        "h1": "Hard problems, made simple to use.",
+        "intent": "Proof of delivery and the case-study format",
+        "topic": "Portfolio",
+        "canonical": "/work",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "All six projects are demonstration content (GAP-C02)",
+          "Client quote and NPS placeholders"
+        ]
+      },
+      "i18n": {
+        "en": "/work",
+        "ru": "/ru/work",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-148",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/work/ledgerline",
+      "family": "work",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "CasePage",
+      "slugProp": "ledgerline",
+      "artboards": [
+        "CasePage.dc.html",
+        "CasePageMobile.dc.html",
+        "CasePageMobile-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 7764,
+        "mobile": 11288
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/cases/",
+      "interactions": "Layouts A/B/C by slug, sticky TOC (layout B), before/after range slider, next-project nav",
+      "assets": [
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-light",
+        "viz-logistics"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Ledgerline — SimpleX",
+        "description": "From overnight reconciliation to a live view of every position.",
+        "h1": "Ledgerline",
+        "intent": "Proof of capability",
+        "topic": "FinTech case study",
+        "canonical": "/work/ledgerline",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList"
+        ],
+        "indexing": "noindex while demonstration content",
+        "launchBlockers": [
+          "Illustrative case study: replace with approved client work (GAP-C02)"
+        ]
+      },
+      "i18n": {
+        "en": "/work/ledgerline",
+        "ru": "/ru/work/ledgerline",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-148",
+      "instanceNote": null,
+      "note": "Layout A"
+    },
+    {
+      "route": "/work/carepath",
+      "family": "work",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "CasePage",
+      "slugProp": "carepath",
+      "artboards": [
+        "case-carepath.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 6635
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/cases/",
+      "interactions": "Layouts A/B/C by slug, sticky TOC (layout B), before/after range slider, next-project nav",
+      "assets": [
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-light",
+        "viz-logistics"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Carepath — SimpleX",
+        "description": "One front door for patients. One queue for clinicians.",
+        "h1": "Carepath",
+        "intent": "Proof of capability",
+        "topic": "Healthcare case study",
+        "canonical": "/work/carepath",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList"
+        ],
+        "indexing": "noindex while demonstration content",
+        "launchBlockers": [
+          "Illustrative case study: replace with approved client work (GAP-C02)"
+        ]
+      },
+      "i18n": {
+        "en": "/work/carepath",
+        "ru": "/ru/work/carepath",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-148",
+      "instanceNote": null,
+      "note": "Layout B"
+    },
+    {
+      "route": "/work/routewise",
+      "family": "work",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "CasePage",
+      "slugProp": "routewise",
+      "artboards": [
+        "case-routewise.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 6838
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/cases/",
+      "interactions": "Layouts A/B/C by slug, sticky TOC (layout B), before/after range slider, next-project nav",
+      "assets": [
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-light",
+        "viz-logistics"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Routewise — SimpleX",
+        "description": "Plans that adapt as fast as the road does.",
+        "h1": "Routewise",
+        "intent": "Proof of capability",
+        "topic": "Logistics case study",
+        "canonical": "/work/routewise",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList"
+        ],
+        "indexing": "noindex while demonstration content",
+        "launchBlockers": [
+          "Illustrative case study: replace with approved client work (GAP-C02)"
+        ]
+      },
+      "i18n": {
+        "en": "/work/routewise",
+        "ru": "/ru/work/routewise",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-148",
+      "instanceNote": null,
+      "note": "Layout C"
+    },
+    {
+      "route": "/how-we-work",
+      "family": "company",
+      "type": "static",
+      "status": "APPROVED",
+      "template": "HowWeWork",
+      "slugProp": null,
+      "artboards": [
+        "HowWeWork.dc.html",
+        "HowWeWork-p2.dc.html",
+        "HowWeWorkMobile.dc.html",
+        "HowWeWorkMobile-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 9306,
+        "mobile": 13335
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/company/",
+      "interactions": "Scroll story, FAQ accordions",
+      "assets": [],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "How We Work — SimpleX",
+        "description": "Most project risk is invisible until it’s expensive. Our way of working is designed to make it visible early — in architecture, in code and in conversation.",
+        "h1": "Clarity is a delivery method.",
+        "intent": "What does an engagement with SimpleX look like?",
+        "topic": "Delivery method",
+        "canonical": "/how-we-work",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "FAQPage (markup only, see seo-architecture)"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Time-zone and location coverage placeholder"
+        ]
+      },
+      "i18n": {
+        "en": "/how-we-work",
+        "ru": "/ru/how-we-work",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-149",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/about",
+      "family": "company",
+      "type": "static",
+      "status": "APPROVED",
+      "template": "About",
+      "slugProp": null,
+      "artboards": [
+        "About.dc.html",
+        "About-p2.dc.html",
+        "AboutMobile.dc.html",
+        "AboutMobile-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 9101,
+        "mobile": 14354
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/company/",
+      "interactions": "None beyond link and hover states",
+      "assets": [
+        "photo-tower"
+      ],
+      "imagePlaceholders": 3,
+      "seo": {
+        "title": "About — SimpleX",
+        "description": "SimpleX is a software engineering and digital product company.",
+        "h1": "Simple to use. Simple to change.",
+        "intent": "Who is SimpleX and how does it make decisions?",
+        "topic": "Company",
+        "canonical": "/about",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "AboutPage"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Founder story, leadership and photography missing (GAP-C05)"
+        ]
+      },
+      "i18n": {
+        "en": "/about",
+        "ru": "/ru/about",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-149",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/technologies",
+      "family": "company",
+      "type": "static",
+      "status": "APPROVED",
+      "template": "Technologies",
+      "slugProp": null,
+      "artboards": [
+        "Technologies.dc.html",
+        "TechnologiesMobile.dc.html",
+        "TechnologiesMobile-p2.dc.html",
+        "TechnologiesMobile-p3.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 6804,
+        "mobile": 13753
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/company/",
+      "interactions": "Search + category filter + empty state, radar ring tabs (adopt, trial, assess, hold)",
+      "assets": [],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Technologies — SimpleX",
+        "description": "A directory of the technologies we work with, grouped by capability. It describes experience and practice — not vendor certifications or partnerships.",
+        "h1": "The toolkit, and how we use it.",
+        "intent": "Which technologies does SimpleX work with?",
+        "topic": "Technology stack",
+        "canonical": "/technologies",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Sample radar must be replaced or removed"
+        ]
+      },
+      "i18n": {
+        "en": "/technologies",
+        "ru": "/ru/technologies",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-149",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/careers",
+      "family": "careers",
+      "type": "static",
+      "status": "APPROVED",
+      "template": "Careers",
+      "slugProp": null,
+      "artboards": [
+        "Careers.dc.html",
+        "CareersMobile.dc.html",
+        "CareersMobile-p2.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 6527,
+        "mobile": 10042
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/careers/",
+      "interactions": "Team filter with counts, result count (aria-live), empty state",
+      "assets": [],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Careers — SimpleX",
+        "description": "Hard problems, senior colleagues and the time to do things properly.",
+        "h1": "Do the best work of your career.",
+        "intent": "Engineering, design and delivery jobs",
+        "topic": "Careers",
+        "canonical": "/careers",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Sample listings, benefits and locations (GAP-C06)"
+        ]
+      },
+      "i18n": {
+        "en": "/careers",
+        "ru": "/ru/careers",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-149",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/careers/[slug]",
+      "family": "careers",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "Job",
+      "slugProp": null,
+      "artboards": [
+        "Job.dc.html",
+        "JobMobile.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 3447,
+        "mobile": 5023
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/careers/",
+      "interactions": "Apply panel: idle → form → validation → sending → done; copy link",
+      "assets": [],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Senior Backend Engineer — SimpleX Careers",
+        "description": "Sample listing: not a live vacancy.",
+        "h1": "Senior Backend Engineer (Kotlin)",
+        "intent": "Candidate evaluating a role",
+        "topic": "Job posting",
+        "canonical": "/careers/[slug]",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList"
+        ],
+        "indexing": "noindex while sample; add JobPosting only for live roles",
+        "launchBlockers": [
+          "No live vacancies; slugs undefined in design (GAP-R01)"
+        ]
+      },
+      "i18n": {
+        "en": "/careers/[slug]",
+        "ru": "/ru/careers/[slug]",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-149",
+      "instanceNote": "Design shows one sample (ENG-01). Slug values are not defined in the design.",
+      "note": null
+    },
+    {
+      "route": "/insights",
+      "family": "insights",
+      "type": "static",
+      "status": "APPROVED",
+      "template": "Insights",
+      "slugProp": null,
+      "artboards": [
+        "Insights.dc.html",
+        "InsightsMobile.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 4589,
+        "mobile": 7810
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/insights/",
+      "interactions": "Search, category filter, load more with skeleton, empty state, playbook email capture",
+      "assets": [
+        "photo-code",
+        "viz-ecommerce",
+        "viz-enterprise",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics",
+        "viz-saas"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Insights — SimpleX",
+        "description": "Practical writing on architecture, delivery, design and applied AI — from the engineers and designers doing the work.",
+        "h1": "Notes from the work.",
+        "intent": "Practical writing on architecture, delivery, design and applied AI",
+        "topic": "Engineering insights",
+        "canonical": "/insights",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "Blog"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Authors, dates and final articles (GAP-C07)",
+          "Playbook PDF missing (GAP-A03)"
+        ]
+      },
+      "i18n": {
+        "en": "/insights",
+        "ru": "/ru/insights",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-150",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/insights/[slug]",
+      "family": "insights",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "Article",
+      "slugProp": null,
+      "artboards": [
+        "Article.dc.html",
+        "ArticleMobile.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 5038,
+        "mobile": 6479
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/insights/",
+      "interactions": "Reading progress, copy link (1.8 s confirmation), share links, TOC",
+      "assets": [
+        "viz-enterprise",
+        "viz-fintech",
+        "viz-saas"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "The quiet cost of a distributed monolith — SimpleX Insights",
+        "description": "Microservices that must be deployed together are a monolith with network latency. How to recognise one — and three ways out that don’t require a rewrite.",
+        "h1": "The quiet cost of a distributed monolith",
+        "intent": "Engineering leader researching a topic",
+        "topic": "Distributed monoliths",
+        "canonical": "/insights/[slug]",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "BlogPosting"
+        ],
+        "indexing": "noindex while sample",
+        "launchBlockers": [
+          "Author, date and final content placeholders (GAP-C07)",
+          "Slugs undefined in design (GAP-R01)"
+        ]
+      },
+      "i18n": {
+        "en": "/insights/[slug]",
+        "ru": "/ru/insights/[slug]",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-150",
+      "instanceNote": "Design shows one written article and nine listed titles. Slug values are not defined in the design.",
+      "note": null
+    },
+    {
+      "route": "/contact",
+      "family": "contact",
+      "type": "static",
+      "status": "APPROVED",
+      "template": "Contact",
+      "slugProp": null,
+      "artboards": [
+        "Contact.dc.html",
+        "ContactTablet.dc.html",
+        "ContactMobile.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 3235,
+        "tablet": 4530,
+        "mobile": 5262
+      },
+      "boardedDevices": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "contentSource": "src/content/contact/",
+      "interactions": "Lead form: idle, validation, loading, success, network error; scheduler: day, slot, confirm, booked",
+      "assets": [],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Contact — SimpleX",
+        "description": "A senior engineer reads every enquiry. Share as much or as little as you like — we’ll follow up with questions, not a sales script.",
+        "h1": "Tell us what you’re building.",
+        "intent": "How do I start a project with SimpleX?",
+        "topic": "Contact",
+        "canonical": "/contact",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList",
+          "ContactPage"
+        ],
+        "indexing": "index at launch",
+        "launchBlockers": [
+          "Scheduler needs a real provider (GAP-F01)",
+          "Contact email, SLA, budget bands (GAP-C08)"
+        ]
+      },
+      "i18n": {
+        "en": "/contact",
+        "ru": "/ru/contact",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-151",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/contact/thank-you",
+      "family": "contact",
+      "type": "static",
+      "status": "APPROVED",
+      "template": "ThankYou",
+      "slugProp": null,
+      "artboards": [
+        "ThankYou.dc.html",
+        "ThankYouMobile.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 2525,
+        "mobile": 3467
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/contact/",
+      "interactions": "None beyond link and hover states",
+      "assets": [],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Thank you — SimpleX",
+        "description": "Your message is with our team. A senior engineer will reply within one business day [confirm] — usually with a few questions and times for a short call.",
+        "h1": "Thank you. We’ve got it.",
+        "intent": "Post-submission confirmation",
+        "topic": "Confirmation",
+        "canonical": "/contact/thank-you",
+        "breadcrumb": false,
+        "schema": [
+          "BreadcrumbList"
+        ],
+        "indexing": "noindex",
+        "launchBlockers": []
+      },
+      "i18n": {
+        "en": "/contact/thank-you",
+        "ru": "/ru/contact/thank-you",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-151",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/privacy-policy",
+      "family": "legal",
+      "type": "static",
+      "status": "APPROVED",
+      "template": "LegalPage",
+      "slugProp": "privacy",
+      "artboards": [
+        "LegalPage.dc.html",
+        "LegalMobile.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 3213,
+        "mobile": 4274
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/legal/",
+      "interactions": "Section TOC, cookie preference switches + save confirmation (cookie slug only)",
+      "assets": [],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Privacy Policy — SimpleX",
+        "description": "How SimpleX collects, uses and protects personal data when you visit our website, contact us or apply for a role.",
+        "h1": "Privacy Policy",
+        "intent": "Compliance and legal lookup",
+        "topic": "Privacy Policy",
+        "canonical": "/privacy-policy",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList"
+        ],
+        "indexing": "noindex until counsel approves",
+        "launchBlockers": [
+          "Text needs counsel review; placeholders present (GAP-C09)"
+        ]
+      },
+      "i18n": {
+        "en": "/privacy-policy",
+        "ru": "/ru/privacy-policy",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-152",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/cookie-policy",
+      "family": "legal",
+      "type": "static",
+      "status": "APPROVED",
+      "template": "LegalPage",
+      "slugProp": "cookie",
+      "artboards": [
+        "legal-cookie-policy.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 3244
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/legal/",
+      "interactions": "Section TOC, cookie preference switches + save confirmation (cookie slug only)",
+      "assets": [],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Cookie Policy — SimpleX",
+        "description": "Which cookies this website uses, why, and how to change your choices at any time.",
+        "h1": "Cookie Policy",
+        "intent": "Compliance and legal lookup",
+        "topic": "Cookie Policy",
+        "canonical": "/cookie-policy",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList"
+        ],
+        "indexing": "noindex until counsel approves",
+        "launchBlockers": [
+          "Text needs counsel review; placeholders present (GAP-C09)"
+        ]
+      },
+      "i18n": {
+        "en": "/cookie-policy",
+        "ru": "/ru/cookie-policy",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-152",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/terms",
+      "family": "legal",
+      "type": "static",
+      "status": "APPROVED",
+      "template": "LegalPage",
+      "slugProp": "terms",
+      "artboards": [
+        "legal-terms.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 2902
+      },
+      "boardedDevices": [
+        "desktop"
+      ],
+      "contentSource": "src/content/legal/",
+      "interactions": "Section TOC, cookie preference switches + save confirmation (cookie slug only)",
+      "assets": [],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Terms of Use — SimpleX",
+        "description": "The terms that apply when you use the SimpleX website. Client engagements are governed by separate agreements.",
+        "h1": "Terms of Use",
+        "intent": "Compliance and legal lookup",
+        "topic": "Terms of Use",
+        "canonical": "/terms",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList"
+        ],
+        "indexing": "noindex until counsel approves",
+        "launchBlockers": [
+          "Text needs counsel review; placeholders present (GAP-C09)"
+        ]
+      },
+      "i18n": {
+        "en": "/terms",
+        "ru": "/ru/terms",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-152",
+      "instanceNote": null,
+      "note": null
+    },
+    {
+      "route": "/404",
+      "family": "system",
+      "type": "static",
+      "status": "APPROVED",
+      "template": "NotFound",
+      "slugProp": null,
+      "artboards": [
+        "NotFound.dc.html",
+        "NotFoundMobile.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 1977,
+        "mobile": 2466
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/system/",
+      "interactions": "Search form (no-op in prototype)",
+      "assets": [],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Page not found — SimpleX",
+        "description": "The link may be out of date, or the page has moved. Try a search, or start from one of these.",
+        "h1": "This page took a different route.",
+        "intent": "Recovery from a broken link",
+        "topic": "Error",
+        "canonical": "/404",
+        "breadcrumb": false,
+        "schema": [
+          "BreadcrumbList"
+        ],
+        "indexing": "noindex",
+        "launchBlockers": []
+      },
+      "i18n": {
+        "en": "/404",
+        "ru": "/ru/404",
+        "ruStatus": "missing"
+      },
+      "ownerTicket": "SF-152",
+      "instanceNote": null,
+      "note": null
+    }
+  ],
+  "proposed": [
+    {
+      "route": "/ru/*",
+      "status": "PROPOSED",
+      "reason": "Russian locale requested by the owner in the SF-140 instruction. No Russian artboards or copy exist in the design.",
+      "ownerTicket": "SF-141 (routing), page tickets (copy)"
+    },
+    {
+      "route": "/robots.txt",
+      "status": "PROPOSED",
+      "reason": "Technical SEO file",
+      "ownerTicket": "SF-153"
+    },
+    {
+      "route": "/sitemap.xml",
+      "status": "PROPOSED",
+      "reason": "Technical SEO file",
+      "ownerTicket": "SF-153"
+    }
+  ],
+  "referencedWithoutArtboard": [
+    {
+      "item": "Northbeam, Atlas Commerce, Meridian Works",
+      "where": "Work grid",
+      "treatment": "Rendered as non-linking cards in the design (hasCase false). No routes."
+    },
+    {
+      "item": "Nine further article titles",
+      "where": "Insights listing, Home, Article related",
+      "treatment": "All link to the single Article board in the prototype. Need slugs and content."
+    },
+    {
+      "item": "Five further sample roles",
+      "where": "Careers listing, Job",
+      "treatment": "All link to the single Job board in the prototype. Need slugs and content."
+    }
+  ]
+}

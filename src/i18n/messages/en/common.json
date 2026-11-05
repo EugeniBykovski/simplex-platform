@@ -1,0 +1,14 @@
+{
+  "brand": "SimpleX",
+  "locale": {
+    "label": "Choose language",
+    "en": "English",
+    "ru": "Русский"
+  },
+  "actions": {
+    "letsTalk": "Let’s Talk",
+    "startProject": "Start a project",
+    "backHome": "Back to home"
+  },
+  "demoLabel": "Demonstration content"
+}

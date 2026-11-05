@@ -1,0 +1,7289 @@
+{
+  "source": {
+    "artifact": "https://claude.ai/artifact/SHq68U3eVzySjKWCjgFwkG",
+    "artifactId": "ccce009b-05a0-4d27-a5b3-3aecc1990685",
+    "version": "1793869596-167d",
+    "title": "SimpleX — Website & Identity",
+    "indexFile": "project/canvas.json",
+    "accessMethod": "Artifact read action: structured .dc.html source, not screenshots",
+    "designPageCount": 11,
+    "boardCount": 116,
+    "uniqueCompositionCount": 31,
+    "wrapperBoardCount": 85
+  },
+  "designPages": [
+    {
+      "id": "foundations",
+      "name": "Foundations",
+      "boardCount": 11
+    },
+    {
+      "id": "home",
+      "name": "Homepage",
+      "boardCount": 14
+    },
+    {
+      "id": "agent",
+      "name": "SimpleX Agent",
+      "boardCount": 4
+    },
+    {
+      "id": "services",
+      "name": "Services",
+      "boardCount": 30
+    },
+    {
+      "id": "packages",
+      "name": "Build packages",
+      "boardCount": 5
+    },
+    {
+      "id": "industries",
+      "name": "Industries",
+      "boardCount": 11
+    },
+    {
+      "id": "work",
+      "name": "Work & case studies",
+      "boardCount": 9
+    },
+    {
+      "id": "company",
+      "name": "Company & careers",
+      "boardCount": 17
+    },
+    {
+      "id": "insights",
+      "name": "Insights",
+      "boardCount": 4
+    },
+    {
+      "id": "contact",
+      "name": "Contact",
+      "boardCount": 5
+    },
+    {
+      "id": "system",
+      "name": "Legal & system",
+      "boardCount": 6
+    }
+  ],
+  "deviceCoverage": {
+    "desktop": 71,
+    "mobile": 39,
+    "tablet": 6
+  },
+  "kindCoverage": {
+    "reference": 3,
+    "design-system": 6,
+    "shared-component": 2,
+    "page": 105
+  },
+  "composedHeights": {
+    "/services|desktop": 8093,
+    "/services|mobile": 11646,
+    "/services/custom-software-development|desktop": 8455,
+    "/services/enterprise-software|desktop": 8476,
+    "/services/web-development|desktop": 8316,
+    "/services/mobile-development|desktop": 8264,
+    "/services/desktop-development|desktop": 8376,
+    "/services/ai-engineering|desktop": 8318,
+    "/services/cloud-devops|desktop": 8351,
+    "/services/architecture-consulting|desktop": 8163,
+    "/services/product-design|desktop": 8321,
+    "/services/legacy-modernization|desktop": 8349,
+    "/services/quality-engineering|desktop": 8190,
+    "/services/dedicated-teams|desktop": 8223,
+    "/packages|desktop": 11013,
+    "/packages|mobile": 16020,
+    "/services/ai-engineering|mobile": 13086,
+    "/industries|desktop": 5052,
+    "/industries|mobile": 8213,
+    "/industries/fintech|desktop": 7926,
+    "/industries/healthcare|desktop": 7895,
+    "/industries/ecommerce|desktop": 7700,
+    "/industries/saas|desktop": 7674,
+    "/industries/enterprise|desktop": 7817,
+    "/industries/logistics|desktop": 7840,
+    "/industries/healthcare|mobile": 11442,
+    "/work|desktop": 4795,
+    "/work|tablet": 6192,
+    "/work|mobile": 8678,
+    "/work/ledgerline|desktop": 7764,
+    "/work/carepath|desktop": 6635,
+    "/work/routewise|desktop": 6838,
+    "/work/ledgerline|mobile": 11288,
+    "/how-we-work|desktop": 9306,
+    "/how-we-work|mobile": 13335,
+    "/about|desktop": 9101,
+    "/about|mobile": 14354,
+    "/technologies|desktop": 6804,
+    "/technologies|mobile": 13753,
+    "/careers|desktop": 6527,
+    "/careers|mobile": 10042,
+    "/careers/[slug]|desktop": 3447,
+    "/careers/[slug]|mobile": 5023,
+    "/insights|desktop": 4589,
+    "/insights|mobile": 7810,
+    "/insights/[slug]|desktop": 5038,
+    "/insights/[slug]|mobile": 6479,
+    "/contact|desktop": 3235,
+    "/contact|tablet": 4530,
+    "/contact|mobile": 5262,
+    "/contact/thank-you|desktop": 2525,
+    "/contact/thank-you|mobile": 3467,
+    "/privacy-policy|desktop": 3213,
+    "/cookie-policy|desktop": 3244,
+    "/terms|desktop": 2902,
+    "/privacy-policy|mobile": 4274,
+    "/404|desktop": 1977,
+    "/404|mobile": 2466,
+    "/|desktop": 23568,
+    "/|tablet": 26552,
+    "/|mobile": 32545,
+    "/|mobile|menu-open": 932,
+    "/agent|desktop": 9068,
+    "/agent|mobile": 14272
+  },
+  "tileContinuityIssues": [],
+  "compositions": {
+    "About": {
+      "file": "About.dc.html",
+      "bytes": 13204,
+      "title": "About — SimpleX",
+      "h1": "Simple to use. Simple to change.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-horizon",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Simple to use. Simple to change."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": "story",
+          "heading": "The name is the brief."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": null,
+          "ariaLabelledBy": "mission",
+          "heading": "Clarity over cleverness"
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": "values",
+          "heading": "How we make decisions when nobody’s watching."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": "ways",
+          "heading": "Senior people, small teams, written decisions."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": "lead",
+          "heading": "The people accountable."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": "culture",
+          "heading": "Curious, candid, calm under pressure."
+        },
+        {
+          "tag": "section",
+          "ground": "photo photo-tower",
+          "block": "gx-block · TRUST CENTER",
+          "ariaLabelledBy": "trust",
+          "heading": "Safe hands for your code and your data."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-cta dark",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Want to build with us?"
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "line-mask",
+        "prose",
+        "t-body",
+        "t-display",
+        "t-grad",
+        "t-h1",
+        "t-h2",
+        "t-h3",
+        "t-h4",
+        "t-h5",
+        "t-lead",
+        "t-mono",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-cta",
+        "bg-horizon",
+        "bg-ink",
+        "bg-mist",
+        "dark",
+        "photo",
+        "photo-tower"
+      ],
+      "surfaces": [
+        "comp-3",
+        "comp-grid",
+        "comp-tile",
+        "glass",
+        "glass-dark",
+        "gx-head",
+        "gx-tag",
+        "paper-card"
+      ],
+      "grids": [
+        "bento",
+        "grid-12",
+        "grid-2",
+        "grid-3",
+        "grid-4",
+        "split",
+        "split-even",
+        "sticky-col",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "is-live",
+        "line-mask",
+        "reveal"
+      ],
+      "controls": [
+        "btn",
+        "btn-glass",
+        "btn-lg",
+        "btn-light",
+        "btn-primary",
+        "text-link"
+      ],
+      "icons": [
+        "arrow"
+      ],
+      "events": {},
+      "aria": {
+        "aria-current": 1,
+        "role=img": 1
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page",
+          "active": "about"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/",
+        "/careers",
+        "/contact",
+        "/how-we-work"
+      ],
+      "imagePlaceholders": [
+        "Portrait · 4:5",
+        "Team photograph — real people at work, not stock",
+        "Workshop or office photograph"
+      ],
+      "localContainerRules": [],
+      "interaction": "None beyond link and hover states"
+    },
+    "Agent": {
+      "file": "Agent.dc.html",
+      "bytes": 28152,
+      "title": "SimpleX Agent",
+      "h1": "An engineering agent that speaks your stack.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": "HERO",
+          "ariaLabelledBy": null,
+          "heading": "An engineering agent that speaks your stack."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": "STACK PICKER",
+          "ariaLabelledBy": "stack",
+          "heading": "Pick a stack. See the ecosystem it builds."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": "HOW",
+          "ariaLabelledBy": "howh",
+          "heading": "Four steps from repository to running ecosystem."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": "CAPABILITIES WIDGET WALL",
+          "ariaLabelledBy": "caps",
+          "heading": "The repetitive 70% — done properly."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "EMBED",
+          "ariaLabelledBy": "embed",
+          "heading": "Put the agent inside your own product."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": "DEPLOYMENT OPTIONS",
+          "ariaLabelledBy": "dep",
+          "heading": "Three deployment models."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": "faq",
+          "heading": "Questions about the agent."
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": "gx-block · AGENT ROI",
+          "ariaLabelledBy": "roi",
+          "heading": "What would the agent give back to your team?"
+        },
+        {
+          "tag": "section",
+          "ground": "bg-cta dark",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "See it work on your code."
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "line-mask",
+        "t-body",
+        "t-grad",
+        "t-h1",
+        "t-h2",
+        "t-h3",
+        "t-h4",
+        "t-h5",
+        "t-lead",
+        "t-mono",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-cta",
+        "bg-ink",
+        "bg-mist",
+        "dark",
+        "orb",
+        "orbs",
+        "paper",
+        "viz",
+        "viz-light"
+      ],
+      "surfaces": [
+        "glass",
+        "glass-dark",
+        "gx-2",
+        "gx-bar",
+        "gx-dark",
+        "gx-head",
+        "gx-label",
+        "gx-num",
+        "gx-panel",
+        "gx-range",
+        "gx-row",
+        "gx-tag",
+        "widget",
+        "widget-dark",
+        "widget-grid",
+        "widget-stack"
+      ],
+      "grids": [
+        "grid-2",
+        "grid-3",
+        "grid-4",
+        "split",
+        "split-even",
+        "widget-grid",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "float-w",
+        "line-mask",
+        "pulse"
+      ],
+      "controls": [
+        "acc",
+        "btn",
+        "btn-ghost",
+        "btn-glass",
+        "btn-lg",
+        "btn-light",
+        "btn-primary",
+        "gx-range",
+        "tab",
+        "tabs"
+      ],
+      "icons": [
+        "ai",
+        "architecture",
+        "arrow",
+        "check",
+        "cloud",
+        "custom",
+        "legacy",
+        "quality"
+      ],
+      "events": {
+        "onclick": 1,
+        "oninput": 3
+      },
+      "aria": {
+        "aria-current": 1,
+        "role=tablist": 1,
+        "role=tab": 1,
+        "aria-selected": 1,
+        "role=tabpanel": 1,
+        "aria-live": 1
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page",
+          "active": "agent"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/services/ai-engineering"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [
+        "@container sx (max-width:1100px)",
+        "@container sx (max-width:600px)"
+      ],
+      "interaction": "Stack picker tabs (5 stacks), ROI estimator (3 range inputs → hours, FTE, EUR/month), FAQ accordions"
+    },
+    "Article": {
+      "file": "Article.dc.html",
+      "bytes": 10711,
+      "title": "The quiet cost of a distributed monolith — SimpleX Insights",
+      "h1": "The quiet cost of a distributed monolith",
+      "sections": [
+        {
+          "tag": "header",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "The quiet cost of a distributed monolith"
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": "rel",
+          "heading": "Related articles"
+        }
+      ],
+      "typography": [
+        "prose",
+        "t-h1",
+        "t-h3",
+        "t-h4",
+        "t-h5",
+        "t-lead",
+        "t-mono",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-mist",
+        "viz",
+        "viz-enterprise",
+        "viz-fintech",
+        "viz-saas"
+      ],
+      "surfaces": [
+        "card-hover",
+        "paper-card",
+        "solid"
+      ],
+      "grids": [
+        "grid-3",
+        "wrap",
+        "wrap-narrow",
+        "wrap-row"
+      ],
+      "motion": [
+        "card-hover",
+        "progress-bar"
+      ],
+      "controls": [
+        "btn-icon",
+        "link-arrow"
+      ],
+      "icons": [
+        "arrow"
+      ],
+      "events": {
+        "onclick": 1
+      },
+      "aria": {
+        "aria-current": 1,
+        "role=group": 1,
+        "role=status": 1,
+        "role=figure": 1
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page",
+          "active": "insights"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/",
+        "/insights",
+        "/insights/[slug]",
+        "/services/architecture-consulting"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [
+        "@container sx (max-width: 1100px)"
+      ],
+      "interaction": "Reading progress, copy link (1.8 s confirmation), share links, TOC"
+    },
+    "Audit": {
+      "file": "Audit.dc.html",
+      "bytes": 9155,
+      "title": "Reference audit",
+      "h1": "What makes the reference feel premium — and what SimpleX keeps.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "What makes the reference feel premium — and what SimpleX keeps."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": null
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Six principles carried forward."
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "t-body",
+        "t-h1",
+        "t-h2",
+        "t-h4",
+        "t-h5",
+        "t-lead",
+        "t-mono",
+        "t-small"
+      ],
+      "grounds": [
+        "bg-ink",
+        "bg-mist"
+      ],
+      "surfaces": [
+        "glass-dark",
+        "solid"
+      ],
+      "grids": [
+        "grid-12",
+        "grid-3",
+        "split",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [],
+      "controls": [],
+      "icons": [],
+      "events": {},
+      "aria": {},
+      "imports": [],
+      "links": [],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "None beyond link and hover states"
+    },
+    "Careers": {
+      "file": "Careers.dc.html",
+      "bytes": 12430,
+      "title": "Careers — SimpleX",
+      "h1": "Do the best work of your career.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-horizon",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Do the best work of your career."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": "cult",
+          "heading": "What working here feels like."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": null,
+          "ariaLabelledBy": "ben",
+          "heading": "Designed around how people actually work."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": "open",
+          "heading": "Find your role."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": "proc",
+          "heading": "Four steps. No trick questions."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "gx-block · FIRST 90 DAYS",
+          "ariaLabelledBy": "d90",
+          "heading": "Productive in weeks, not months."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-cta dark",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Don’t see your role?"
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "line-mask",
+        "t-body",
+        "t-display",
+        "t-grad",
+        "t-h1",
+        "t-h2",
+        "t-h4",
+        "t-h5",
+        "t-lead",
+        "t-mono",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-cta",
+        "bg-horizon",
+        "bg-ink",
+        "bg-mist",
+        "dark"
+      ],
+      "surfaces": [
+        "glass-dark",
+        "gx-head",
+        "gx-tag",
+        "paper-card",
+        "solid"
+      ],
+      "grids": [
+        "grid-3",
+        "grid-4",
+        "process",
+        "split",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "is-live",
+        "line-mask",
+        "reveal"
+      ],
+      "controls": [
+        "btn",
+        "btn-glass",
+        "btn-lg",
+        "btn-primary",
+        "filter-btn"
+      ],
+      "icons": [
+        "architecture",
+        "arrow",
+        "quality",
+        "teams"
+      ],
+      "events": {
+        "onclick": 1
+      },
+      "aria": {
+        "aria-current": 1,
+        "aria-live": 1,
+        "role=group": 1,
+        "aria-pressed": 1
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page",
+          "active": "careers"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/",
+        "/about",
+        "/careers/[slug]",
+        "/contact"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [
+        "@container sx (max-width: 860px)"
+      ],
+      "interaction": "Team filter with counts, result count (aria-live), empty state"
+    },
+    "CasePage": {
+      "file": "CasePage.dc.html",
+      "bytes": 35582,
+      "title": "Case study — SimpleX",
+      "h1": "{{c.name}}",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": "LAYOUT A — Editorial long-form",
+          "ariaLabelledBy": null,
+          "heading": "{{c.name}}"
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": null
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": null,
+          "ariaLabelledBy": "Technical architecture",
+          "heading": "How it fits together."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": "Outcomes",
+          "heading": "What changed."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-horizon",
+          "block": "LAYOUT B — Sticky sidebar",
+          "ariaLabelledBy": null,
+          "heading": "{{c.name}}"
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": null
+        },
+        {
+          "tag": "section",
+          "ground": "viz {{c.viz}}",
+          "block": "LAYOUT C — Visual-first bands",
+          "ariaLabelledBy": null,
+          "heading": "{{c.name}}"
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "{{c.overview}}"
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": null,
+          "ariaLabelledBy": "Technical architecture",
+          "heading": "Streaming in, decisions out."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-spectrum",
+          "block": null,
+          "ariaLabelledBy": "Outcomes",
+          "heading": "What changed."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "gx-block · BEFORE AFTER",
+          "ariaLabelledBy": "ba",
+          "heading": "Before and after {{c.name}}."
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": "Next project + CTA (all layouts)",
+          "ariaLabelledBy": null,
+          "heading": null
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Facing a problem like this?"
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "t-body",
+        "t-display",
+        "t-grad",
+        "t-h1",
+        "t-h2",
+        "t-h3",
+        "t-h4",
+        "t-h5",
+        "t-lead",
+        "t-mono",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-horizon",
+        "bg-ink",
+        "bg-spectrum",
+        "dark",
+        "paper",
+        "viz",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-light",
+        "viz-logistics"
+      ],
+      "surfaces": [
+        "card-hover",
+        "glass",
+        "glass-dark",
+        "glass-frost",
+        "gx-head",
+        "gx-tag",
+        "paper-card"
+      ],
+      "grids": [
+        "grid-2",
+        "grid-3",
+        "grid-4",
+        "process",
+        "split",
+        "sticky-col",
+        "wrap",
+        "wrap-narrow",
+        "wrap-row"
+      ],
+      "motion": [
+        "ba",
+        "ba-after",
+        "ba-before",
+        "ba-chip",
+        "ba-handle",
+        "ba-pane",
+        "card-hover",
+        "is-live",
+        "reveal"
+      ],
+      "controls": [
+        "btn",
+        "btn-ghost",
+        "btn-lg",
+        "btn-light",
+        "btn-primary"
+      ],
+      "icons": [
+        "alert",
+        "arrow",
+        "check"
+      ],
+      "events": {
+        "oninput": 1
+      },
+      "aria": {
+        "aria-current": 3
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page",
+          "active": "work"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/work"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [
+        "@container sx (max-width: 1000px)"
+      ],
+      "interaction": "Layouts A/B/C by slug, sticky TOC (layout B), before/after range slider, next-project nav"
+    },
+    "Components": {
+      "file": "Components.dc.html",
+      "bytes": 19178,
+      "title": "Component library",
+      "h1": "Every piece, every state.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Every piece, every state."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "Buttons",
+          "ariaLabelledBy": null,
+          "heading": "Buttons & links"
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": "Forms",
+          "ariaLabelledBy": null,
+          "heading": "Form controls"
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "Navigation patterns",
+          "ariaLabelledBy": null,
+          "heading": "Tabs, filters, breadcrumbs, accordion"
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": "Cards",
+          "ariaLabelledBy": null,
+          "heading": "Cards on ink"
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Cards on light"
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "System states",
+          "ariaLabelledBy": null,
+          "heading": "Empty, loading & consent"
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "t-grad",
+        "t-h1",
+        "t-h3",
+        "t-h4",
+        "t-h5",
+        "t-lead",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-horizon",
+        "bg-ink",
+        "bg-mist",
+        "dark",
+        "paper",
+        "viz",
+        "viz-fintech",
+        "viz-light"
+      ],
+      "surfaces": [
+        "card-hover",
+        "glass",
+        "glass-dark",
+        "glass-frost",
+        "solid"
+      ],
+      "grids": [
+        "grid-2",
+        "grid-3",
+        "split",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "card-hover"
+      ],
+      "controls": [
+        "acc",
+        "btn",
+        "btn-ghost",
+        "btn-icon",
+        "btn-lg",
+        "btn-light",
+        "btn-primary",
+        "btn-sm",
+        "check",
+        "filter-btn",
+        "input",
+        "link-arrow",
+        "opt",
+        "search",
+        "select",
+        "tab",
+        "tabs",
+        "text-link",
+        "textarea",
+        "toggle-chip"
+      ],
+      "icons": [
+        "alert",
+        "arrow",
+        "check",
+        "cloud",
+        "link",
+        "search"
+      ],
+      "events": {
+        "onclick": 6
+      },
+      "aria": {
+        "aria-busy": 2,
+        "aria-invalid": 2,
+        "aria-pressed": 2,
+        "role=status": 2,
+        "role=alert": 1,
+        "role=tablist": 1,
+        "role=tab": 1,
+        "aria-selected": 1,
+        "role=group": 1,
+        "aria-current": 1,
+        "role=dialog": 1
+      },
+      "imports": [],
+      "links": [
+        "/cookie-policy"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "Interactive component specimens, including cookie banner and dialog"
+    },
+    "Contact": {
+      "file": "Contact.dc.html",
+      "bytes": 17264,
+      "title": "Contact — SimpleX",
+      "h1": "Tell us what you’re building.",
+      "sections": [
+        {
+          "tag": "main",
+          "ground": "bg-horizon",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Tell us what you’re building."
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": "gx-block · SCHEDULER",
+          "ariaLabelledBy": "book",
+          "heading": "Book 30 minutes with a senior engineer."
+        }
+      ],
+      "typography": [
+        "line-mask",
+        "t-grad",
+        "t-h1",
+        "t-h2",
+        "t-h3",
+        "t-h4",
+        "t-lead",
+        "t-mono",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-horizon",
+        "paper"
+      ],
+      "surfaces": [
+        "glass",
+        "gx-label",
+        "gx-panel",
+        "gx-tag"
+      ],
+      "grids": [
+        "grid-2",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "is-live",
+        "line-mask"
+      ],
+      "controls": [
+        "btn",
+        "btn-ghost",
+        "btn-lg",
+        "btn-primary",
+        "check",
+        "input",
+        "opt",
+        "sched-day",
+        "sched-days",
+        "sched-slot",
+        "sched-slots",
+        "select",
+        "text-link",
+        "textarea",
+        "toggle-chip"
+      ],
+      "icons": [
+        "alert",
+        "arrow",
+        "check"
+      ],
+      "events": {
+        "onsubmit": 1,
+        "onclick": 7,
+        "oninput": 4,
+        "onchange": 1
+      },
+      "aria": {
+        "aria-current": 1,
+        "role=alert": 2,
+        "aria-pressed": 2,
+        "aria-invalid": 4,
+        "aria-busy": 1,
+        "role=status": 2,
+        "role=group": 1
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/",
+        "/careers",
+        "/contact/thank-you",
+        "/privacy-policy"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [
+        "@container sx (max-width: 1000px)"
+      ],
+      "interaction": "Lead form: idle, validation, loading, success, network error; scheduler: day, slot, confirm, booked"
+    },
+    "Footer": {
+      "file": "Footer.dc.html",
+      "bytes": 4514,
+      "title": "SimpleX footer",
+      "h1": null,
+      "sections": [],
+      "typography": [
+        "t-body",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "dark"
+      ],
+      "surfaces": [],
+      "grids": [
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [],
+      "controls": [
+        "link-arrow"
+      ],
+      "icons": [
+        "arrow"
+      ],
+      "events": {},
+      "aria": {},
+      "imports": [],
+      "links": [
+        "/",
+        "/about",
+        "/agent",
+        "/careers",
+        "/contact",
+        "/cookie-policy",
+        "/how-we-work",
+        "/industries/ecommerce",
+        "/industries/enterprise",
+        "/industries/fintech",
+        "/industries/healthcare",
+        "/industries/logistics",
+        "/industries/saas",
+        "/insights",
+        "/packages",
+        "/privacy-policy",
+        "/services",
+        "/services/ai-engineering",
+        "/services/architecture-consulting",
+        "/services/cloud-devops",
+        "/services/custom-software-development",
+        "/services/product-design",
+        "/services/web-development",
+        "/technologies",
+        "/terms",
+        "/work"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "None beyond link and hover states"
+    },
+    "Handoff": {
+      "file": "Handoff.dc.html",
+      "bytes": 12800,
+      "title": "Developer handoff",
+      "h1": "Build notes for engineering.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Build notes for engineering."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Page & route inventory"
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Component inventory"
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Motion behaviour"
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Responsive implementation"
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Unresolved content placeholders"
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "t-h1",
+        "t-h3",
+        "t-lead",
+        "t-mono",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-ink",
+        "bg-mist",
+        "paper"
+      ],
+      "surfaces": [
+        "glass-dark",
+        "paper-card",
+        "solid"
+      ],
+      "grids": [
+        "grid-2",
+        "grid-3",
+        "grid-4",
+        "split",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [],
+      "controls": [],
+      "icons": [
+        "check"
+      ],
+      "events": {},
+      "aria": {},
+      "imports": [],
+      "links": [],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "None beyond link and hover states"
+    },
+    "Home": {
+      "file": "Home.dc.html",
+      "bytes": 63864,
+      "title": "SimpleX — Complex engineering. Clear outcomes.",
+      "h1": "Complex engineering. Clear outcomes.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-horizon",
+          "block": "1 · HERO (pinned) + statements that rise over it",
+          "ariaLabelledBy": "hero-title",
+          "heading": "Complex engineering. Clear outcomes."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": "Our point of view",
+          "heading": null
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": "2 · WHAT WE DO",
+          "ariaLabelledBy": "wwd",
+          "heading": "Engineering everything that moves you forward."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": "2b · SIMPLEX AGENT",
+          "ariaLabelledBy": "agent",
+          "heading": "An AI engineer that knows your stack."
+        },
+        {
+          "tag": "section",
+          "ground": "mesh-graphite",
+          "block": "2c · BUILD PACKAGES",
+          "ariaLabelledBy": "pk",
+          "heading": "From a two-person app team to your whole product."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "3 · WHY SIMPLEX",
+          "ariaLabelledBy": "why",
+          "heading": "The best engineering is the part nobody notices."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": "4 · FEATURED WORK",
+          "ariaLabelledBy": "work",
+          "heading": "Hard problems, made simple to use."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink bg-ink-left",
+          "block": "5 · HOW WE WORK (scroll story)",
+          "ariaLabelledBy": "how",
+          "heading": "From complexity to clarity."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "6 · INDUSTRIES",
+          "ariaLabelledBy": "ind",
+          "heading": "Context changes everything."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": "7 · TECHNOLOGY",
+          "ariaLabelledBy": "tech",
+          "heading": "Chosen for the problem, not the trend."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": "8 · ENGAGEMENT MODELS",
+          "ariaLabelledBy": "models",
+          "heading": "Three ways to work together."
+        },
+        {
+          "tag": "section",
+          "ground": "mesh-light",
+          "block": "8b · HOW AN ENGAGEMENT FEELS (liquid-glass bento)",
+          "ariaLabelledBy": "feel",
+          "heading": "Transparent by default."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "9 · INSIGHTS",
+          "ariaLabelledBy": "ins",
+          "heading": "Notes from the work."
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": "gx-block · BUILD ESTIMATOR",
+          "ariaLabelledBy": "est",
+          "heading": "Shape your team before the first call."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-cta dark",
+          "block": null,
+          "ariaLabelledBy": "cta",
+          "heading": "Let’s build something exceptional."
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "line-mask",
+        "t-body",
+        "t-display",
+        "t-grad",
+        "t-h1",
+        "t-h2",
+        "t-h3",
+        "t-h4",
+        "t-lead",
+        "t-mono",
+        "t-small",
+        "t-tone",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-cta",
+        "bg-horizon",
+        "bg-ink",
+        "bg-ink-left",
+        "bg-mist",
+        "dark",
+        "grain",
+        "mesh-graphite",
+        "mesh-light",
+        "orb",
+        "orbs",
+        "paper",
+        "tex-grid",
+        "viz",
+        "viz-ecommerce",
+        "viz-enterprise",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics",
+        "viz-saas"
+      ],
+      "surfaces": [
+        "card-hover",
+        "glass-dark",
+        "glass-frost",
+        "gx-2",
+        "gx-dark",
+        "gx-head",
+        "gx-label",
+        "gx-num",
+        "gx-panel",
+        "gx-row",
+        "gx-tag",
+        "lg",
+        "lg-cobalt",
+        "lg-dark",
+        "lg-graphite",
+        "panel-split",
+        "paper-card",
+        "solid",
+        "widget",
+        "widget-dark",
+        "widget-grid"
+      ],
+      "grids": [
+        "bento",
+        "bento-md",
+        "g-bento",
+        "grid-12",
+        "grid-2",
+        "grid-3",
+        "split",
+        "split-even",
+        "stack-card",
+        "stack-cards",
+        "sticky-col",
+        "story",
+        "widget-grid",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "card-hover",
+        "fade-in",
+        "float-w",
+        "hero-beam",
+        "hero-pin",
+        "is-live",
+        "line-mask",
+        "marquee",
+        "marquee-track",
+        "pulse",
+        "reveal",
+        "reveal-scale",
+        "stack-card",
+        "story",
+        "story-body",
+        "story-num",
+        "story-rail",
+        "story-step"
+      ],
+      "controls": [
+        "btn",
+        "btn-ghost",
+        "btn-glass",
+        "btn-lg",
+        "btn-light",
+        "btn-primary",
+        "btn-sm",
+        "link-arrow",
+        "opt",
+        "tab",
+        "tabs"
+      ],
+      "icons": [
+        "ai",
+        "architecture",
+        "arrow",
+        "check",
+        "cloud",
+        "custom",
+        "legacy",
+        "quality",
+        "teams"
+      ],
+      "events": {
+        "onclick": 6
+      },
+      "aria": {
+        "role=tablist": 1,
+        "role=tab": 1,
+        "aria-selected": 1,
+        "role=tabpanel": 1,
+        "aria-expanded": 1,
+        "aria-pressed": 4,
+        "aria-live": 1,
+        "role=list": 1,
+        "role=listitem": 3
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page",
+          "start-open": "{{menuOpen}}"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/agent",
+        "/contact",
+        "/how-we-work",
+        "/insights",
+        "/insights/[slug]",
+        "/packages",
+        "/services",
+        "/services/desktop-development",
+        "/technologies",
+        "/work"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "Tech tabs (8), industry show-more, estimator (type, platforms, stage, pace → roles, team size, model; no price computed), pinned hero, stacked cards, scroll story"
+    },
+    "HowWeWork": {
+      "file": "HowWeWork.dc.html",
+      "bytes": 14889,
+      "title": "How We Work — SimpleX",
+      "h1": "Clarity is a delivery method.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Clarity is a delivery method."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": "pr",
+          "heading": "Four commitments, in writing."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": null,
+          "ariaLabelledBy": "meth",
+          "heading": "Eight stages. No surprises."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": "rh",
+          "heading": "A cadence you can plan around."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": "vis",
+          "heading": "Everything visible. Everything yours."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": "gx-block · SPRINT REPORT",
+          "ariaLabelledBy": "rep",
+          "heading": "The report you’ll actually read."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": "faq",
+          "heading": "Questions we hear early."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-cta dark",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Start with a conversation, not a contract."
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "line-mask",
+        "t-body",
+        "t-display",
+        "t-grad",
+        "t-h1",
+        "t-h2",
+        "t-h3",
+        "t-h4",
+        "t-h5",
+        "t-lead",
+        "t-mono",
+        "t-small",
+        "t-tone",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-cta",
+        "bg-ink",
+        "bg-mist",
+        "dark"
+      ],
+      "surfaces": [
+        "glass",
+        "glass-dark",
+        "gx-dark",
+        "gx-label",
+        "gx-row",
+        "gx-tag"
+      ],
+      "grids": [
+        "grid-12",
+        "grid-2",
+        "grid-3",
+        "grid-4",
+        "split",
+        "split-even",
+        "sticky-col",
+        "story",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "line-mask",
+        "reveal",
+        "story",
+        "story-body",
+        "story-num",
+        "story-rail",
+        "story-step"
+      ],
+      "controls": [
+        "acc",
+        "btn",
+        "btn-lg",
+        "btn-light",
+        "btn-primary",
+        "link-arrow"
+      ],
+      "icons": [
+        "arrow",
+        "check"
+      ],
+      "events": {},
+      "aria": {
+        "aria-current": 1
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page",
+          "active": "how"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/",
+        "/contact"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "Scroll story, FAQ accordions"
+    },
+    "Industries": {
+      "file": "Industries.dc.html",
+      "bytes": 9705,
+      "title": "Industries — SimpleX",
+      "h1": "Context changes everything.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Context changes everything."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Four constants we never trade away."
+        },
+        {
+          "tag": "section",
+          "ground": "photo photo-trading",
+          "block": "gx-block · COMPLIANCE",
+          "ariaLabelledBy": "comp",
+          "heading": "Compliance is a requirement, not a phase."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-cta dark",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Don’t see your industry?"
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "line-mask",
+        "t-body",
+        "t-grad",
+        "t-h1",
+        "t-h2",
+        "t-h4",
+        "t-lead",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-cta",
+        "bg-ink",
+        "bg-mist",
+        "dark",
+        "photo",
+        "photo-trading",
+        "viz",
+        "viz-ecommerce",
+        "viz-enterprise",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics",
+        "viz-saas"
+      ],
+      "surfaces": [
+        "comp-grid",
+        "comp-tile",
+        "glass",
+        "gx-head",
+        "gx-tag"
+      ],
+      "grids": [
+        "grid-4",
+        "split",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "line-mask",
+        "reveal"
+      ],
+      "controls": [
+        "btn",
+        "btn-lg",
+        "btn-primary"
+      ],
+      "icons": [
+        "arrow",
+        "cloud",
+        "design",
+        "enterprise",
+        "quality"
+      ],
+      "events": {},
+      "aria": {
+        "aria-current": 1
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page",
+          "active": "industries"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/",
+        "/contact"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [
+        "@container sx (max-width: 1100px)",
+        "@container sx (max-width: 760px)"
+      ],
+      "interaction": "None beyond link and hover states"
+    },
+    "IndustryPage": {
+      "file": "IndustryPage.dc.html",
+      "bytes": 30422,
+      "title": "Industry — SimpleX",
+      "h1": "{{d.headline}}",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "viz {{d.viz}}",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "{{d.headline}}"
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": "ch",
+          "heading": "What makes {{d.name}} hard."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": null,
+          "ariaLabelledBy": "op",
+          "heading": "Where engineering creates the most value."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": "sc",
+          "heading": "What we typically build."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": "eng",
+          "heading": "Built in from the first sprint."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": "caps",
+          "heading": "Services we bring to {{d.name}}."
+        },
+        {
+          "tag": "section",
+          "ground": "photo photo-trading",
+          "block": "gx-block · COMPLIANCE",
+          "ariaLabelledBy": "comp",
+          "heading": "The standards we build {{d.name}} for."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-cta dark",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "{{d.cta}}"
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "line-mask",
+        "t-body",
+        "t-h1",
+        "t-h2",
+        "t-h3",
+        "t-h4",
+        "t-h5",
+        "t-lead",
+        "t-mono",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-cta",
+        "bg-ink",
+        "bg-mist",
+        "dark",
+        "photo",
+        "photo-trading",
+        "viz",
+        "viz-ecommerce",
+        "viz-enterprise",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics",
+        "viz-saas"
+      ],
+      "surfaces": [
+        "card-hover",
+        "comp-grid",
+        "comp-tile",
+        "glass",
+        "glass-dark",
+        "gx-head",
+        "gx-tag",
+        "panel-split",
+        "paper-card",
+        "solid"
+      ],
+      "grids": [
+        "grid-2",
+        "grid-3",
+        "grid-4",
+        "split",
+        "split-even",
+        "sticky-col",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "card-hover",
+        "line-mask",
+        "reveal"
+      ],
+      "controls": [
+        "btn",
+        "btn-ghost",
+        "btn-lg",
+        "btn-light",
+        "btn-primary",
+        "link-arrow",
+        "tab",
+        "tabs"
+      ],
+      "icons": [
+        "arrow",
+        "check"
+      ],
+      "events": {
+        "onclick": 1
+      },
+      "aria": {
+        "aria-current": 1,
+        "role=tablist": 1,
+        "role=tab": 1,
+        "aria-selected": 1,
+        "role=tabpanel": 1
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page",
+          "active": "industries"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/industries"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "Scenario tabs (3 per slug), slug-driven compliance grid"
+    },
+    "Insights": {
+      "file": "Insights.dc.html",
+      "bytes": 11506,
+      "title": "Insights — SimpleX",
+      "h1": "Notes from the work.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Notes from the work."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": "latest",
+          "heading": "Latest"
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "gx-block · PLAYBOOK",
+          "ariaLabelledBy": "pb",
+          "heading": "Make the next big build decision with a model, not a hunch."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Have a problem you’d like us to write about — or solve?"
+        }
+      ],
+      "typography": [
+        "line-mask",
+        "t-body",
+        "t-grad",
+        "t-h1",
+        "t-h2",
+        "t-h3",
+        "t-h4",
+        "t-lead",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-ink",
+        "bg-mist",
+        "photo",
+        "photo-code",
+        "viz",
+        "viz-ecommerce",
+        "viz-enterprise",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics",
+        "viz-saas"
+      ],
+      "surfaces": [
+        "card-hover",
+        "gx-tag",
+        "panel-split",
+        "paper-card",
+        "solid"
+      ],
+      "grids": [
+        "grid-3",
+        "split",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "card-hover",
+        "line-mask"
+      ],
+      "controls": [
+        "btn",
+        "btn-ghost",
+        "btn-lg",
+        "btn-light",
+        "btn-primary",
+        "filter-btn",
+        "input",
+        "search"
+      ],
+      "icons": [
+        "arrow",
+        "check",
+        "search"
+      ],
+      "events": {
+        "oninput": 2,
+        "onclick": 4
+      },
+      "aria": {
+        "aria-current": 1,
+        "aria-live": 1,
+        "role=group": 1,
+        "aria-pressed": 1,
+        "aria-busy": 3,
+        "role=status": 1
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page",
+          "active": "insights"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/insights/[slug]"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "Search, category filter, load more with skeleton, empty state, playbook email capture"
+    },
+    "Job": {
+      "file": "Job.dc.html",
+      "bytes": 9745,
+      "title": "Senior Backend Engineer — SimpleX Careers",
+      "h1": "Senior Backend Engineer (Kotlin)",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Senior Backend Engineer (Kotlin)"
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": null
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Other sample roles"
+        }
+      ],
+      "typography": [
+        "prose",
+        "t-h1",
+        "t-h3",
+        "t-h4",
+        "t-h5",
+        "t-lead",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-horizon",
+        "bg-ink",
+        "bg-mist"
+      ],
+      "surfaces": [
+        "card-hover",
+        "glass"
+      ],
+      "grids": [
+        "grid-3",
+        "sticky-col",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "card-hover"
+      ],
+      "controls": [
+        "btn",
+        "btn-ghost",
+        "btn-lg",
+        "btn-primary",
+        "btn-sm",
+        "input",
+        "link-arrow",
+        "opt",
+        "textarea"
+      ],
+      "icons": [
+        "alert",
+        "arrow",
+        "check",
+        "link"
+      ],
+      "events": {
+        "onclick": 3,
+        "onsubmit": 1,
+        "oninput": 2
+      },
+      "aria": {
+        "aria-current": 1,
+        "role=status": 1
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page",
+          "active": "careers"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/",
+        "/careers",
+        "/careers/[slug]",
+        "/how-we-work"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [
+        "@container sx (max-width: 1000px)"
+      ],
+      "interaction": "Apply panel: idle → form → validation → sending → done; copy link"
+    },
+    "LegalPage": {
+      "file": "LegalPage.dc.html",
+      "bytes": 9197,
+      "title": "Legal — SimpleX",
+      "h1": "{{d.title}}",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "{{d.title}}"
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": null
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "{{s.n}}. {{s.h}}"
+        }
+      ],
+      "typography": [
+        "prose",
+        "t-h1",
+        "t-h4",
+        "t-lead",
+        "t-small"
+      ],
+      "grounds": [
+        "bg-horizon",
+        "bg-mist"
+      ],
+      "surfaces": [
+        "glass",
+        "lg-grid",
+        "lg-toc"
+      ],
+      "grids": [
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [],
+      "controls": [
+        "btn",
+        "btn-primary",
+        "btn-sm",
+        "switch"
+      ],
+      "icons": [
+        "alert",
+        "check"
+      ],
+      "events": {
+        "onclick": 2
+      },
+      "aria": {
+        "aria-current": 1,
+        "role=note": 1,
+        "role=switch": 1,
+        "role=status": 1
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/",
+        "/cookie-policy",
+        "/privacy-policy",
+        "/terms"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [
+        "@container sx (max-width: 1000px)"
+      ],
+      "interaction": "Section TOC, cookie preference switches + save confirmation (cookie slug only)"
+    },
+    "Logo": {
+      "file": "Logo.dc.html",
+      "bytes": 39844,
+      "title": "SimpleX identity",
+      "h1": "A wordmark engineered, not decorated.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "A wordmark engineered, not decorated."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": "Concepts",
+          "ariaLabelledBy": null,
+          "heading": null
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": "Final: hero lockups",
+          "ariaLabelledBy": null,
+          "heading": "Primary lockup: the X, held."
+        },
+        {
+          "tag": "section",
+          "ground": "mesh-light",
+          "block": "Fluid SX mark",
+          "ariaLabelledBy": null,
+          "heading": "The SX tile. Solid, precise."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "Pebble wordmark in use",
+          "ariaLabelledBy": null,
+          "heading": "Hover the name."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "Variants grid",
+          "ariaLabelledBy": null,
+          "heading": "Lockups & versions"
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": "Construction",
+          "ariaLabelledBy": null,
+          "heading": "Three parallelograms. One cut."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": "Animation",
+          "ariaLabelledBy": null,
+          "heading": "Strokes converge. Letters settle."
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "t-body",
+        "t-h1",
+        "t-h2",
+        "t-h3",
+        "t-h4",
+        "t-lead",
+        "t-mono",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-ink",
+        "bg-mist",
+        "bg-spectrum",
+        "mesh-graphite",
+        "mesh-light",
+        "orb",
+        "orbs",
+        "paper",
+        "tex-grid",
+        "tex-grid-dark"
+      ],
+      "surfaces": [
+        "glass-dark",
+        "lg",
+        "lg-anim",
+        "paper-card",
+        "solid",
+        "widget"
+      ],
+      "grids": [
+        "grid-2",
+        "grid-3",
+        "split",
+        "split-even",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "live"
+      ],
+      "controls": [
+        "btn",
+        "btn-light",
+        "btn-sm",
+        "burger"
+      ],
+      "icons": [
+        "arrow",
+        "check"
+      ],
+      "events": {
+        "onmousemove": 1,
+        "onmouseleave": 1,
+        "onclick": 2
+      },
+      "aria": {
+        "role=img": 27
+      },
+      "imports": [],
+      "links": [],
+      "imagePlaceholders": [],
+      "localContainerRules": [
+        "@container sx (max-width: 1000px)"
+      ],
+      "interaction": "Pointer-driven mark demo, replay animation (documentation only)"
+    },
+    "Main": {
+      "file": "Main.dc.html",
+      "bytes": 7947,
+      "title": "SimpleX — Project index",
+      "h1": "Complex engineering. Clear outcomes.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Complex engineering. Clear outcomes."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Route & board index"
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "t-display",
+        "t-grad",
+        "t-h3",
+        "t-lead",
+        "t-mono",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-ink"
+      ],
+      "surfaces": [
+        "glass-dark",
+        "solid"
+      ],
+      "grids": [
+        "grid-4",
+        "grid-auto",
+        "split",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "live"
+      ],
+      "controls": [
+        "btn",
+        "btn-ghost",
+        "btn-light"
+      ],
+      "icons": [
+        "arrow"
+      ],
+      "events": {},
+      "aria": {
+        "role=img": 1
+      },
+      "imports": [],
+      "links": [
+        "/"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "None beyond link and hover states"
+    },
+    "Nav": {
+      "file": "Nav.dc.html",
+      "bytes": 10654,
+      "title": "SimpleX header",
+      "h1": null,
+      "sections": [],
+      "typography": [
+        "t-h4",
+        "t-mono",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [],
+      "surfaces": [],
+      "grids": [],
+      "motion": [],
+      "controls": [
+        "btn",
+        "btn-lg",
+        "btn-light",
+        "burger",
+        "link-arrow"
+      ],
+      "icons": [
+        "ai",
+        "architecture",
+        "arrow",
+        "building",
+        "cloud",
+        "commerce",
+        "custom",
+        "design",
+        "desktop",
+        "enterprise",
+        "fintech",
+        "health",
+        "legacy",
+        "logistics",
+        "mobile",
+        "package",
+        "quality",
+        "saas",
+        "teams",
+        "web"
+      ],
+      "events": {
+        "onclick": 1
+      },
+      "aria": {
+        "role=region": 2,
+        "aria-expanded": 1,
+        "aria-controls": 1
+      },
+      "imports": [],
+      "links": [
+        "/",
+        "/about",
+        "/agent",
+        "/careers",
+        "/contact",
+        "/how-we-work",
+        "/industries",
+        "/industries/ecommerce",
+        "/industries/enterprise",
+        "/industries/fintech",
+        "/industries/healthcare",
+        "/industries/logistics",
+        "/industries/saas",
+        "/insights",
+        "/packages",
+        "/services",
+        "/services/ai-engineering",
+        "/services/architecture-consulting",
+        "/services/cloud-devops",
+        "/services/custom-software-development",
+        "/services/dedicated-teams",
+        "/services/desktop-development",
+        "/services/enterprise-software",
+        "/services/legacy-modernization",
+        "/services/mobile-development",
+        "/services/product-design",
+        "/services/quality-engineering",
+        "/services/web-development",
+        "/work"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "Mega menus (hover + focus-within), burger toggle, mobile menu"
+    },
+    "NotFound": {
+      "file": "NotFound.dc.html",
+      "bytes": 2776,
+      "title": "Page not found — SimpleX",
+      "h1": "This page took a different route.",
+      "sections": [
+        {
+          "tag": "main",
+          "ground": "bg-ink",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "This page took a different route."
+        }
+      ],
+      "typography": [
+        "t-grad",
+        "t-h1",
+        "t-lead",
+        "t-mono"
+      ],
+      "grounds": [
+        "bg-ink"
+      ],
+      "surfaces": [],
+      "grids": [
+        "split",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "live"
+      ],
+      "controls": [
+        "btn",
+        "btn-ghost",
+        "btn-light",
+        "input",
+        "search"
+      ],
+      "icons": [
+        "arrow",
+        "search"
+      ],
+      "events": {
+        "onsubmit": 1
+      },
+      "aria": {
+        "role=search": 1
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/services",
+        "/work"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "Search form (no-op in prototype)"
+    },
+    "Packages": {
+      "file": "Packages.dc.html",
+      "bytes": 40682,
+      "title": "Build packages — SimpleX",
+      "h1": "From a two-person app team to your whole product.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": "HERO",
+          "ariaLabelledBy": "pk-title",
+          "heading": "From a two-person app team to your whole product."
+        },
+        {
+          "tag": "section",
+          "ground": "mesh-light",
+          "block": "THREE PACKAGES",
+          "ariaLabelledBy": "pk-three",
+          "heading": "Pick the shape of your build."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "01 MOBILE POD",
+          "ariaLabelledBy": "pod-title",
+          "heading": "Two engineers. A complete app in the stores."
+        },
+        {
+          "tag": "section",
+          "ground": "mesh-graphite",
+          "block": "02 DESKTOP",
+          "ariaLabelledBy": "desk-title",
+          "heading": "Desktop software that belongs on the desk."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "03 FULL CYCLE",
+          "ariaLabelledBy": "fc-title",
+          "heading": "The whole product. One team. One backlog."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "gx-block · AVAILABILITY",
+          "ariaLabelledBy": "avail",
+          "heading": "Start dates, not “we’ll see”."
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": "COMPARE",
+          "ariaLabelledBy": "cmp-title",
+          "heading": "Compare packages"
+        },
+        {
+          "tag": "section",
+          "ground": "bg-cta dark",
+          "block": "CTA",
+          "ariaLabelledBy": null,
+          "heading": "Tell us what you’re building."
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "t-body",
+        "t-display",
+        "t-h1",
+        "t-h2",
+        "t-h3",
+        "t-h4",
+        "t-lead",
+        "t-mono",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-cta",
+        "bg-ink",
+        "dark",
+        "grain",
+        "mesh-graphite",
+        "mesh-light",
+        "orb",
+        "orbs",
+        "paper"
+      ],
+      "surfaces": [
+        "card-hover",
+        "gx-bar",
+        "gx-dark",
+        "gx-label",
+        "gx-row",
+        "gx-tag",
+        "lg",
+        "lg-dark",
+        "lg-graphite",
+        "solid"
+      ],
+      "grids": [
+        "grid-2",
+        "grid-3",
+        "grid-4",
+        "split",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "card-hover",
+        "pulse"
+      ],
+      "controls": [
+        "acc",
+        "btn",
+        "btn-ghost",
+        "btn-glass",
+        "btn-lg",
+        "btn-light",
+        "btn-primary",
+        "btn-sm",
+        "link-arrow",
+        "tab",
+        "tabs",
+        "toggle"
+      ],
+      "icons": [
+        "alert",
+        "architecture",
+        "arrow",
+        "building",
+        "check",
+        "cloud",
+        "commerce",
+        "design",
+        "fintech",
+        "legacy",
+        "logistics",
+        "mobile",
+        "quality",
+        "web"
+      ],
+      "events": {
+        "onclick": 1
+      },
+      "aria": {
+        "aria-current": 1,
+        "role=tablist": 1,
+        "role=tab": 1,
+        "aria-selected": 1
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page",
+          "active": "services"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/",
+        "/agent",
+        "/contact",
+        "/services",
+        "/services/desktop-development"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [
+        "@container sx (max-width: 860px)",
+        "@container sx (max-width: 600px)"
+      ],
+      "interaction": "Mobile track tabs (iOS, Android, React Native), comparison table"
+    },
+    "ServicePage": {
+      "file": "ServicePage.dc.html",
+      "bytes": 56980,
+      "title": "Service — SimpleX",
+      "h1": "{{s.headline}}",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "{{s.heroBg}}",
+          "block": "HERO",
+          "ariaLabelledBy": null,
+          "heading": "{{s.headline}}"
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": "PROBLEM",
+          "ariaLabelledBy": "problem",
+          "heading": "{{s.problem}}"
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "CAPABILITIES",
+          "ariaLabelledBy": "caps",
+          "heading": "What we bring to {{s.lower}}."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": "VALUE",
+          "ariaLabelledBy": "value",
+          "heading": "What changes for the business."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": "PROCESS",
+          "ariaLabelledBy": "proc",
+          "heading": "How the engagement runs"
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "TECHNOLOGY + USE CASES",
+          "ariaLabelledBy": "uses",
+          "heading": "Where this service fits."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": "RELATED",
+          "ariaLabelledBy": "rel",
+          "heading": "Often combined with"
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "gx-block · FIRST 30 DAYS",
+          "ariaLabelledBy": "d30",
+          "heading": "Your first 30 days, in writing."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-cta dark",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "{{s.cta}}"
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "line-mask",
+        "t-body",
+        "t-h1",
+        "t-h2",
+        "t-h3",
+        "t-h4",
+        "t-h5",
+        "t-lead",
+        "t-mono",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-cta",
+        "bg-ink",
+        "bg-mist",
+        "dark",
+        "paper",
+        "photo",
+        "photo-meeting",
+        "viz",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics"
+      ],
+      "surfaces": [
+        "card-hover",
+        "glass",
+        "glass-dark",
+        "gx-head",
+        "gx-tag",
+        "solid"
+      ],
+      "grids": [
+        "grid-2",
+        "grid-3",
+        "grid-4",
+        "process",
+        "split",
+        "sticky-col",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "card-hover",
+        "line-mask",
+        "process-rail",
+        "reveal"
+      ],
+      "controls": [
+        "acc",
+        "btn",
+        "btn-ghost",
+        "btn-lg",
+        "btn-light",
+        "btn-primary",
+        "link-arrow",
+        "text-link"
+      ],
+      "icons": [
+        "arrow",
+        "arrow-ur",
+        "building",
+        "check",
+        "cloud",
+        "logistics",
+        "mobile"
+      ],
+      "events": {},
+      "aria": {
+        "aria-current": 1
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page",
+          "active": "services"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/how-we-work",
+        "/services",
+        "/technologies"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "Use-case accordion, hero visual by slug (code, arch, device, desktop, graph, pipeline, team), light or dark theme by slug"
+    },
+    "Services": {
+      "file": "Services.dc.html",
+      "bytes": 13815,
+      "title": "Services — SimpleX",
+      "h1": "Every capability. One accountable team.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-horizon",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Every capability. One accountable team."
+        },
+        {
+          "tag": "section",
+          "ground": "{{g.bg}}",
+          "block": null,
+          "ariaLabelledBy": "{{g.title}}",
+          "heading": "{{g.title}}"
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": "matrix",
+          "heading": "Every capability, mapped to the lifecycle."
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": "gx-block · VS ALTERNATIVES",
+          "ariaLabelledBy": "vs",
+          "heading": "SimpleX vs. the usual options."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-cta dark",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Not sure which service you need?"
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "line-mask",
+        "t-body",
+        "t-grad",
+        "t-h1",
+        "t-h2",
+        "t-h4",
+        "t-lead",
+        "t-mono",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-cta",
+        "bg-horizon",
+        "bg-ink",
+        "bg-mist",
+        "dark",
+        "paper"
+      ],
+      "surfaces": [
+        "card-hover",
+        "glass",
+        "gx-head",
+        "gx-tag",
+        "solid"
+      ],
+      "grids": [
+        "grid-12",
+        "grid-2",
+        "split",
+        "split-wide",
+        "sticky-col",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "card-hover",
+        "is-live",
+        "line-mask",
+        "reveal"
+      ],
+      "controls": [
+        "btn",
+        "btn-glass",
+        "btn-lg",
+        "btn-primary"
+      ],
+      "icons": [
+        "arrow"
+      ],
+      "events": {},
+      "aria": {
+        "aria-current": 1
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page",
+          "active": "services"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/how-we-work",
+        "/services/cloud-devops",
+        "/services/custom-software-development",
+        "/services/legacy-modernization"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "Card hovers, lifecycle matrix, vs-alternatives table"
+    },
+    "System": {
+      "file": "System.dc.html",
+      "bytes": 13603,
+      "title": "Design system tokens",
+      "h1": "Restrained palette. Generous light.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Restrained palette. Generous light."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": "Color",
+          "ariaLabelledBy": null,
+          "heading": "Colour"
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "Backgrounds & surfaces",
+          "ariaLabelledBy": null,
+          "heading": "Backgrounds & surfaces"
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": "Type",
+          "ariaLabelledBy": null,
+          "heading": "Typography"
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "Spacing, radius, shadow",
+          "ariaLabelledBy": null,
+          "heading": "Spacing · 4pt base"
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": "Motion & breakpoints",
+          "ariaLabelledBy": null,
+          "heading": "Motion tokens"
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "t-body",
+        "t-h1",
+        "t-h3",
+        "t-h4",
+        "t-lead",
+        "t-mono",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-horizon",
+        "bg-ink",
+        "bg-mist",
+        "bg-spectrum",
+        "paper"
+      ],
+      "surfaces": [
+        "glass",
+        "glass-dark",
+        "glass-frost",
+        "solid"
+      ],
+      "grids": [
+        "grid-12",
+        "grid-2",
+        "grid-3",
+        "grid-auto",
+        "split",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [],
+      "controls": [],
+      "icons": [],
+      "events": {},
+      "aria": {},
+      "imports": [],
+      "links": [],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "None beyond link and hover states"
+    },
+    "Technologies": {
+      "file": "Technologies.dc.html",
+      "bytes": 13337,
+      "title": "Technologies — SimpleX",
+      "h1": "The toolkit, and how we use it.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "The toolkit, and how we use it."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "{{g.name}}"
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Technology follows the problem."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": "gx-block · TECH RADAR",
+          "ariaLabelledBy": "radar",
+          "heading": "What we adopt, trial, assess — and hold."
+        }
+      ],
+      "typography": [
+        "line-mask",
+        "t-body",
+        "t-grad",
+        "t-h1",
+        "t-h2",
+        "t-h3",
+        "t-h4",
+        "t-lead",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-ink",
+        "bg-mist"
+      ],
+      "surfaces": [
+        "glass",
+        "gx-2",
+        "gx-head",
+        "gx-row",
+        "gx-tag",
+        "solid"
+      ],
+      "grids": [
+        "grid-auto",
+        "split",
+        "split-wide",
+        "sticky-col",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "line-mask"
+      ],
+      "controls": [
+        "btn",
+        "btn-ghost",
+        "btn-primary",
+        "filter-btn",
+        "input",
+        "search",
+        "tab",
+        "tabs",
+        "tabs-dark"
+      ],
+      "icons": [
+        "arrow",
+        "search"
+      ],
+      "events": {
+        "oninput": 1,
+        "onclick": 3
+      },
+      "aria": {
+        "aria-current": 1,
+        "role=group": 1,
+        "aria-pressed": 1,
+        "aria-live": 1,
+        "role=tablist": 1,
+        "role=tab": 1,
+        "aria-selected": 1
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/",
+        "/about",
+        "/contact",
+        "/services/architecture-consulting"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "Search + category filter + empty state, radar ring tabs (adopt, trial, assess, hold)"
+    },
+    "ThankYou": {
+      "file": "ThankYou.dc.html",
+      "bytes": 3898,
+      "title": "Thank you — SimpleX",
+      "h1": "Thank you. We’ve got it.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-horizon",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Thank you. We’ve got it."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "While you wait"
+        }
+      ],
+      "typography": [
+        "line-mask",
+        "t-display",
+        "t-grad",
+        "t-h3",
+        "t-h5",
+        "t-lead",
+        "t-small"
+      ],
+      "grounds": [
+        "bg-horizon"
+      ],
+      "surfaces": [
+        "card-hover",
+        "glass",
+        "solid"
+      ],
+      "grids": [
+        "grid-3",
+        "wrap"
+      ],
+      "motion": [
+        "card-hover",
+        "is-live",
+        "line-mask",
+        "live"
+      ],
+      "controls": [
+        "link-arrow"
+      ],
+      "icons": [
+        "architecture",
+        "arrow",
+        "custom",
+        "design"
+      ],
+      "events": {},
+      "aria": {},
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/",
+        "/how-we-work",
+        "/insights",
+        "/work"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "None beyond link and hover states"
+    },
+    "UiKit": {
+      "file": "UiKit.dc.html",
+      "bytes": 21767,
+      "title": "SimpleX UI Kit — foundations &amp; components",
+      "h1": "UI Kit.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": "COVER",
+          "ariaLabelledBy": null,
+          "heading": "UI Kit."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "01 COLOUR",
+          "ariaLabelledBy": null,
+          "heading": "Ink, cobalt and steel blue."
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": "02 TYPE",
+          "ariaLabelledBy": null,
+          "heading": "Geist & Geist Mono."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "03 SPACE RADIUS GRID",
+          "ariaLabelledBy": null,
+          "heading": "A 4-point rhythm."
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": "04 ELEVATION & BLUR",
+          "ariaLabelledBy": null,
+          "heading": "Depth from light, not lines."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "05 LOGO",
+          "ariaLabelledBy": null,
+          "heading": "Wordmark, pebble lockup and SX mark."
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "t-body",
+        "t-display",
+        "t-h1",
+        "t-h2",
+        "t-h3",
+        "t-h4",
+        "t-lead",
+        "t-mono",
+        "t-small"
+      ],
+      "grounds": [
+        "bg-ink",
+        "bg-spectrum",
+        "mesh-graphite",
+        "mesh-light",
+        "orb",
+        "orbs",
+        "paper"
+      ],
+      "surfaces": [
+        "lg",
+        "lg-dark"
+      ],
+      "grids": [
+        "grid-2",
+        "grid-4",
+        "grid-auto",
+        "split",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [],
+      "controls": [],
+      "icons": [
+        "arrow",
+        "arrow-ur"
+      ],
+      "events": {},
+      "aria": {
+        "role=img": 1
+      },
+      "imports": [],
+      "links": [],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "None beyond link and hover states"
+    },
+    "UiKitComponents": {
+      "file": "UiKitComponents.dc.html",
+      "bytes": 27877,
+      "title": "SimpleX UI Kit — components",
+      "h1": "Components, every state.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Components, every state."
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Variants × states."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "07 INPUTS",
+          "ariaLabelledBy": null,
+          "heading": "Fields and states."
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": "08 SELECTION",
+          "ariaLabelledBy": null,
+          "heading": "Checks, radios, toggles, sliders."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "09 LABELS & NAV",
+          "ariaLabelledBy": null,
+          "heading": "Tags, badges, tabs, paging."
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": "10 FEEDBACK",
+          "ariaLabelledBy": null,
+          "heading": "Alerts, toasts, loading."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "11 HEADER",
+          "ariaLabelledBy": null,
+          "heading": "Solid ink header."
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": "12 CARDS",
+          "ariaLabelledBy": null,
+          "heading": "Surfaces for content."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "13 DEVICE MOCKUPS",
+          "ariaLabelledBy": null,
+          "heading": "Phones, desktop, laptop, browser."
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "t-h1",
+        "t-h3",
+        "t-h4",
+        "t-lead",
+        "t-mono",
+        "t-small"
+      ],
+      "grounds": [
+        "bg-horizon",
+        "bg-ink",
+        "dark",
+        "grain",
+        "mesh-graphite",
+        "mesh-light",
+        "orb",
+        "orbs",
+        "paper",
+        "viz",
+        "viz-fintech"
+      ],
+      "surfaces": [
+        "card-hover",
+        "glass-dark",
+        "lg",
+        "lg-dark",
+        "solid"
+      ],
+      "grids": [
+        "grid-2",
+        "grid-3",
+        "grid-4",
+        "split",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "card-hover",
+        "progress-bar",
+        "pulse"
+      ],
+      "controls": [
+        "acc",
+        "btn",
+        "btn-ghost",
+        "btn-glass",
+        "btn-graphite",
+        "btn-icon",
+        "btn-lg",
+        "btn-light",
+        "btn-primary",
+        "btn-sm",
+        "check",
+        "filter-btn",
+        "input",
+        "link-arrow",
+        "search",
+        "select",
+        "tab",
+        "tabs",
+        "text-link",
+        "textarea",
+        "toggle",
+        "toggle-chip"
+      ],
+      "icons": [
+        "ai",
+        "alert",
+        "arrow",
+        "building",
+        "check",
+        "cloud",
+        "custom",
+        "desktop",
+        "link",
+        "package",
+        "plus",
+        "search"
+      ],
+      "events": {},
+      "aria": {
+        "aria-current": 1
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page"
+        }
+      ],
+      "links": [],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "None beyond link and hover states"
+    },
+    "UiKitGlass": {
+      "file": "UiKitGlass.dc.html",
+      "bytes": 23997,
+      "title": "SimpleX UI Kit — glass, blocks &amp; assets",
+      "h1": "Liquid glass.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "mesh-graphite",
+          "block": "COVER · MATERIAL LADDER",
+          "ariaLabelledBy": null,
+          "heading": "Liquid glass."
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": "EFFECTS",
+          "ariaLabelledBy": null,
+          "heading": "Rim, grain, sheen, glow."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "GLASS COMPONENTS · LIGHT",
+          "ariaLabelledBy": null,
+          "heading": "Overlays, controls, notifications."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-ink",
+          "block": "WIDGETS",
+          "ariaLabelledBy": null,
+          "heading": "iOS-style tiles."
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": "BLOCKS",
+          "ariaLabelledBy": null,
+          "heading": "Section patterns, ready to drop in."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "ICONS",
+          "ariaLabelledBy": null,
+          "heading": "29 line icons."
+        },
+        {
+          "tag": "section",
+          "ground": "paper",
+          "block": "BACKGROUNDS + DOWNLOADS",
+          "ariaLabelledBy": null,
+          "heading": "Grounds and files."
+        }
+      ],
+      "typography": [
+        "eyebrow",
+        "t-body",
+        "t-display",
+        "t-h2",
+        "t-h3",
+        "t-h4",
+        "t-lead",
+        "t-mono",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-horizon",
+        "bg-ink",
+        "bg-mist",
+        "bg-spectrum",
+        "grain",
+        "mesh-graphite",
+        "mesh-light",
+        "orb",
+        "orbs",
+        "paper",
+        "sheen"
+      ],
+      "surfaces": [
+        "card-hover",
+        "lg",
+        "lg-clear",
+        "lg-cobalt",
+        "lg-dark",
+        "lg-graphite",
+        "widget",
+        "widget-dark"
+      ],
+      "grids": [
+        "g-bento",
+        "grid-2",
+        "grid-3",
+        "grid-4",
+        "grid-auto",
+        "grid-lines",
+        "split",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "card-hover",
+        "pulse"
+      ],
+      "controls": [
+        "btn",
+        "btn-ghost",
+        "btn-light",
+        "btn-sm"
+      ],
+      "icons": [
+        "ai",
+        "alert",
+        "architecture",
+        "arrow",
+        "arrow-ur",
+        "building",
+        "check",
+        "cloud",
+        "custom",
+        "link",
+        "name",
+        "plus",
+        "quality",
+        "search",
+        "teams"
+      ],
+      "events": {},
+      "aria": {},
+      "imports": [],
+      "links": [],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "None beyond link and hover states"
+    },
+    "Work": {
+      "file": "Work.dc.html",
+      "bytes": 12702,
+      "title": "Our Work — SimpleX",
+      "h1": "Hard problems, made simple to use.",
+      "sections": [
+        {
+          "tag": "section",
+          "ground": "bg-horizon",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Hard problems, made simple to use."
+        },
+        {
+          "tag": "section",
+          "ground": "",
+          "block": "Featured",
+          "ariaLabelledBy": null,
+          "heading": null
+        },
+        {
+          "tag": "section",
+          "ground": "bg-mist",
+          "block": "Filters + grid",
+          "ariaLabelledBy": "all",
+          "heading": "All projects"
+        },
+        {
+          "tag": "section",
+          "ground": "photo photo-meeting",
+          "block": "gx-block · REFERENCES",
+          "ariaLabelledBy": "refs",
+          "heading": "Don’t take our word for it. Take theirs."
+        },
+        {
+          "tag": "section",
+          "ground": "bg-cta dark",
+          "block": null,
+          "ariaLabelledBy": null,
+          "heading": "Your project could be next."
+        }
+      ],
+      "typography": [
+        "line-mask",
+        "t-body",
+        "t-grad",
+        "t-h1",
+        "t-h2",
+        "t-h4",
+        "t-lead",
+        "t-mono",
+        "t-small",
+        "t-xs"
+      ],
+      "grounds": [
+        "bg-cta",
+        "bg-horizon",
+        "bg-mist",
+        "dark",
+        "photo",
+        "photo-meeting",
+        "viz",
+        "viz-ecommerce",
+        "viz-enterprise",
+        "viz-fintech",
+        "viz-healthcare",
+        "viz-logistics",
+        "viz-saas"
+      ],
+      "surfaces": [
+        "card-hover",
+        "gx-tag",
+        "lg-dark",
+        "panel-split",
+        "solid"
+      ],
+      "grids": [
+        "grid-3",
+        "split",
+        "wrap",
+        "wrap-row"
+      ],
+      "motion": [
+        "card-hover",
+        "is-live",
+        "line-mask",
+        "reveal-scale"
+      ],
+      "controls": [
+        "btn",
+        "btn-ghost",
+        "btn-lg",
+        "btn-light",
+        "btn-primary",
+        "filter-btn",
+        "link-arrow"
+      ],
+      "icons": [
+        "alert",
+        "arrow"
+      ],
+      "events": {
+        "onclick": 3
+      },
+      "aria": {
+        "aria-current": 1,
+        "role=note": 1,
+        "aria-live": 1,
+        "role=group": 2,
+        "aria-pressed": 2
+      },
+      "imports": [
+        {
+          "name": "Nav",
+          "mode": "page",
+          "active": "work"
+        },
+        {
+          "name": "Footer"
+        }
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/work/ledgerline"
+      ],
+      "imagePlaceholders": [],
+      "localContainerRules": [],
+      "interaction": "Industry filter + service filter (aria-pressed), result count (aria-live), empty state with clear action"
+    }
+  },
+  "boards": [
+    {
+      "artboardId": "Main.dc.html",
+      "path": "project/Main.dc.html",
+      "title": "00 · Project index",
+      "designPage": "Foundations",
+      "pageId": "foundations",
+      "kind": "reference",
+      "route": null,
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 2573,
+        "x": 0,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Main",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-140"
+    },
+    {
+      "artboardId": "Audit.dc.html",
+      "path": "project/Audit.dc.html",
+      "title": "01 · Reference audit",
+      "designPage": "Foundations",
+      "pageId": "foundations",
+      "kind": "reference",
+      "route": null,
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 3130,
+        "x": 1520,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": false,
+      "sourceComposition": "Audit",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-140"
+    },
+    {
+      "artboardId": "Logo.dc.html",
+      "path": "project/Logo.dc.html",
+      "title": "02 · SimpleX identity",
+      "designPage": "Foundations",
+      "pageId": "foundations",
+      "kind": "design-system",
+      "route": null,
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7450,
+        "x": 3040,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Logo",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-142"
+    },
+    {
+      "artboardId": "System.dc.html",
+      "path": "project/System.dc.html",
+      "title": "03 · Design system tokens",
+      "designPage": "Foundations",
+      "pageId": "foundations",
+      "kind": "design-system",
+      "route": null,
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 5154,
+        "x": 4560,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": false,
+      "sourceComposition": "System",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-142"
+    },
+    {
+      "artboardId": "Components.dc.html",
+      "path": "project/Components.dc.html",
+      "title": "04 · Component library",
+      "designPage": "Foundations",
+      "pageId": "foundations",
+      "kind": "design-system",
+      "route": null,
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 4690,
+        "x": 6080,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Components",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-142"
+    },
+    {
+      "artboardId": "Nav.dc.html",
+      "path": "project/Nav.dc.html",
+      "title": "Component · Header + mega menu",
+      "designPage": "Foundations",
+      "pageId": "foundations",
+      "kind": "shared-component",
+      "route": null,
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 700,
+        "x": 7600,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Nav",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-142"
+    },
+    {
+      "artboardId": "Footer.dc.html",
+      "path": "project/Footer.dc.html",
+      "title": "Component · Footer",
+      "designPage": "Foundations",
+      "pageId": "foundations",
+      "kind": "shared-component",
+      "route": null,
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 863,
+        "x": 7600,
+        "y": 820
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Footer",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-142"
+    },
+    {
+      "artboardId": "Handoff.dc.html",
+      "path": "project/Handoff.dc.html",
+      "title": "05 · Handoff",
+      "designPage": "Foundations",
+      "pageId": "foundations",
+      "kind": "reference",
+      "route": null,
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 4588,
+        "x": 9120,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": false,
+      "sourceComposition": "Handoff",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-140"
+    },
+    {
+      "artboardId": "UiKit.dc.html",
+      "path": "project/UiKit.dc.html",
+      "title": "06a · UI Kit — foundations",
+      "designPage": "Foundations",
+      "pageId": "foundations",
+      "kind": "design-system",
+      "route": null,
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 5760,
+        "x": 10640,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "UiKit",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-142"
+    },
+    {
+      "artboardId": "UiKitComponents.dc.html",
+      "path": "project/UiKitComponents.dc.html",
+      "title": "06b · UI Kit — components & states",
+      "designPage": "Foundations",
+      "pageId": "foundations",
+      "kind": "design-system",
+      "route": null,
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 5880,
+        "x": 12160,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "UiKitComponents",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-142"
+    },
+    {
+      "artboardId": "UiKitGlass.dc.html",
+      "path": "project/UiKitGlass.dc.html",
+      "title": "07 · UI Kit — liquid glass, blocks & assets",
+      "designPage": "Foundations",
+      "pageId": "foundations",
+      "kind": "design-system",
+      "route": null,
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 6832,
+        "x": 13680,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "UiKitGlass",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-142"
+    },
+    {
+      "artboardId": "Services.dc.html",
+      "path": "project/Services.dc.html",
+      "title": "/services · Desktop · part 1/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7230,
+        "x": 0,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Services",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "Services-p2.dc.html",
+      "path": "project/Services-p2.dc.html",
+      "title": "/services · Desktop · part 2/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 863,
+        "x": 1520,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Services",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7230,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "ServicesMobile.dc.html",
+      "path": "project/ServicesMobile.dc.html",
+      "title": "/services · Mobile · part 1/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 7479,
+        "x": 3040,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Services",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "ServicesMobile-p2.dc.html",
+      "path": "project/ServicesMobile-p2.dc.html",
+      "title": "/services · Mobile · part 2/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 4167,
+        "x": 3490,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Services",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7479,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "ServicePage.dc.html",
+      "path": "project/ServicePage.dc.html",
+      "title": "/services/custom-software-development · part 1/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/custom-software-development",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7592,
+        "x": 3940,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "ServicePage-p2.dc.html",
+      "path": "project/ServicePage-p2.dc.html",
+      "title": "/services/custom-software-development · part 2/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/custom-software-development",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 863,
+        "x": 5460,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7592,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-enterprise-software.dc.html",
+      "path": "project/svc-enterprise-software.dc.html",
+      "title": "/services/enterprise-software · part 1/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/enterprise-software",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7613,
+        "x": 6980,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "enterprise-software",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-enterprise-software-p2.dc.html",
+      "path": "project/svc-enterprise-software-p2.dc.html",
+      "title": "/services/enterprise-software · part 2/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/enterprise-software",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 863,
+        "x": 8500,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "enterprise-software",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7613,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-web-development.dc.html",
+      "path": "project/svc-web-development.dc.html",
+      "title": "/services/web-development · part 1/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/web-development",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7453,
+        "x": 10020,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "web-development",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-web-development-p2.dc.html",
+      "path": "project/svc-web-development-p2.dc.html",
+      "title": "/services/web-development · part 2/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/web-development",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 863,
+        "x": 11540,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "web-development",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7453,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-mobile-development.dc.html",
+      "path": "project/svc-mobile-development.dc.html",
+      "title": "/services/mobile-development · part 1/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/mobile-development",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7401,
+        "x": 13060,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "mobile-development",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-mobile-development-p2.dc.html",
+      "path": "project/svc-mobile-development-p2.dc.html",
+      "title": "/services/mobile-development · part 2/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/mobile-development",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 863,
+        "x": 14580,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "mobile-development",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7401,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-desktop-development.dc.html",
+      "path": "project/svc-desktop-development.dc.html",
+      "title": "/services/desktop-development · part 1/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/desktop-development",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7513,
+        "x": 16100,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "desktop-development",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-desktop-development-p2.dc.html",
+      "path": "project/svc-desktop-development-p2.dc.html",
+      "title": "/services/desktop-development · part 2/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/desktop-development",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 863,
+        "x": 17620,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "desktop-development",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7513,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-ai-engineering.dc.html",
+      "path": "project/svc-ai-engineering.dc.html",
+      "title": "/services/ai-engineering · part 1/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/ai-engineering",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7455,
+        "x": 19140,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "ai-engineering",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-ai-engineering-p2.dc.html",
+      "path": "project/svc-ai-engineering-p2.dc.html",
+      "title": "/services/ai-engineering · part 2/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/ai-engineering",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 863,
+        "x": 20660,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "ai-engineering",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7455,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-cloud-devops.dc.html",
+      "path": "project/svc-cloud-devops.dc.html",
+      "title": "/services/cloud-devops · part 1/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/cloud-devops",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7488,
+        "x": 22180,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "cloud-devops",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-cloud-devops-p2.dc.html",
+      "path": "project/svc-cloud-devops-p2.dc.html",
+      "title": "/services/cloud-devops · part 2/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/cloud-devops",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 863,
+        "x": 23700,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "cloud-devops",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7488,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-architecture-consulting.dc.html",
+      "path": "project/svc-architecture-consulting.dc.html",
+      "title": "/services/architecture-consulting · part 1/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/architecture-consulting",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7300,
+        "x": 25220,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "architecture-consulting",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-architecture-consulting-p2.dc.html",
+      "path": "project/svc-architecture-consulting-p2.dc.html",
+      "title": "/services/architecture-consulting · part 2/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/architecture-consulting",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 863,
+        "x": 26740,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "architecture-consulting",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7300,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-product-design.dc.html",
+      "path": "project/svc-product-design.dc.html",
+      "title": "/services/product-design · part 1/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/product-design",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7458,
+        "x": 28260,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "product-design",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-product-design-p2.dc.html",
+      "path": "project/svc-product-design-p2.dc.html",
+      "title": "/services/product-design · part 2/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/product-design",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 863,
+        "x": 29780,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "product-design",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7458,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-legacy-modernization.dc.html",
+      "path": "project/svc-legacy-modernization.dc.html",
+      "title": "/services/legacy-modernization · part 1/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/legacy-modernization",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7486,
+        "x": 31300,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "legacy-modernization",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-legacy-modernization-p2.dc.html",
+      "path": "project/svc-legacy-modernization-p2.dc.html",
+      "title": "/services/legacy-modernization · part 2/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/legacy-modernization",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 863,
+        "x": 32820,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "legacy-modernization",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7486,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-quality-engineering.dc.html",
+      "path": "project/svc-quality-engineering.dc.html",
+      "title": "/services/quality-engineering · part 1/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/quality-engineering",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7327,
+        "x": 34340,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "quality-engineering",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-quality-engineering-p2.dc.html",
+      "path": "project/svc-quality-engineering-p2.dc.html",
+      "title": "/services/quality-engineering · part 2/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/quality-engineering",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 863,
+        "x": 35860,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "quality-engineering",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7327,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-dedicated-teams.dc.html",
+      "path": "project/svc-dedicated-teams.dc.html",
+      "title": "/services/dedicated-teams · part 1/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/dedicated-teams",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7360,
+        "x": 37380,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "dedicated-teams",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "svc-dedicated-teams-p2.dc.html",
+      "path": "project/svc-dedicated-teams-p2.dc.html",
+      "title": "/services/dedicated-teams · part 2/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/dedicated-teams",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 863,
+        "x": 38900,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "dedicated-teams",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7360,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "Packages.dc.html",
+      "path": "project/Packages.dc.html",
+      "title": "/packages · Desktop 1440 · part 1/2",
+      "designPage": "Build packages",
+      "pageId": "packages",
+      "kind": "page",
+      "route": "/packages",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7507,
+        "x": 0,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Packages",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-146"
+    },
+    {
+      "artboardId": "Packages-p2.dc.html",
+      "path": "project/Packages-p2.dc.html",
+      "title": "/packages · Desktop 1440 · part 2/2",
+      "designPage": "Build packages",
+      "pageId": "packages",
+      "kind": "page",
+      "route": "/packages",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 3506,
+        "x": 1520,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Packages",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7507,
+      "ownerTicket": "SF-146"
+    },
+    {
+      "artboardId": "PackagesMobile.dc.html",
+      "path": "project/PackagesMobile.dc.html",
+      "title": "/packages · Mobile 390 · part 1/3",
+      "designPage": "Build packages",
+      "pageId": "packages",
+      "kind": "page",
+      "route": "/packages",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 5451,
+        "x": 3040,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Packages",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 3
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-146"
+    },
+    {
+      "artboardId": "PackagesMobile-p2.dc.html",
+      "path": "project/PackagesMobile-p2.dc.html",
+      "title": "/packages · Mobile 390 · part 2/3",
+      "designPage": "Build packages",
+      "pageId": "packages",
+      "kind": "page",
+      "route": "/packages",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 7162,
+        "x": 3490,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Packages",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 3
+      },
+      "cropOffsetY": 5451,
+      "ownerTicket": "SF-146"
+    },
+    {
+      "artboardId": "PackagesMobile-p3.dc.html",
+      "path": "project/PackagesMobile-p3.dc.html",
+      "title": "/packages · Mobile 390 · part 3/3",
+      "designPage": "Build packages",
+      "pageId": "packages",
+      "kind": "page",
+      "route": "/packages",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 3407,
+        "x": 3940,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Packages",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 3,
+        "of": 3
+      },
+      "cropOffsetY": 12613,
+      "ownerTicket": "SF-146"
+    },
+    {
+      "artboardId": "ServicePageMobile.dc.html",
+      "path": "project/ServicePageMobile.dc.html",
+      "title": "/services/ai-engineering · Mobile · part 1/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/ai-engineering",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 7578,
+        "x": 40420,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "ai-engineering",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "ServicePageMobile-p2.dc.html",
+      "path": "project/ServicePageMobile-p2.dc.html",
+      "title": "/services/ai-engineering · Mobile · part 2/2",
+      "designPage": "Services",
+      "pageId": "services",
+      "kind": "page",
+      "route": "/services/ai-engineering",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 5508,
+        "x": 40870,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ServicePage",
+      "isWrapper": true,
+      "slugProp": "ai-engineering",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7578,
+      "ownerTicket": "SF-145"
+    },
+    {
+      "artboardId": "Industries.dc.html",
+      "path": "project/Industries.dc.html",
+      "title": "/industries · Desktop",
+      "designPage": "Industries",
+      "pageId": "industries",
+      "kind": "page",
+      "route": "/industries",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 5052,
+        "x": 0,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Industries",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-147"
+    },
+    {
+      "artboardId": "IndustriesMobile.dc.html",
+      "path": "project/IndustriesMobile.dc.html",
+      "title": "/industries · Mobile · part 1/2",
+      "designPage": "Industries",
+      "pageId": "industries",
+      "kind": "page",
+      "route": "/industries",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 6857,
+        "x": 1520,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Industries",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-147"
+    },
+    {
+      "artboardId": "IndustriesMobile-p2.dc.html",
+      "path": "project/IndustriesMobile-p2.dc.html",
+      "title": "/industries · Mobile · part 2/2",
+      "designPage": "Industries",
+      "pageId": "industries",
+      "kind": "page",
+      "route": "/industries",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 1356,
+        "x": 1970,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Industries",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 6857,
+      "ownerTicket": "SF-147"
+    },
+    {
+      "artboardId": "IndustryPage.dc.html",
+      "path": "project/IndustryPage.dc.html",
+      "title": "/industries/fintech",
+      "designPage": "Industries",
+      "pageId": "industries",
+      "kind": "page",
+      "route": "/industries/fintech",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7926,
+        "x": 2420,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "IndustryPage",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-147"
+    },
+    {
+      "artboardId": "ind-healthcare.dc.html",
+      "path": "project/ind-healthcare.dc.html",
+      "title": "/industries/healthcare",
+      "designPage": "Industries",
+      "pageId": "industries",
+      "kind": "page",
+      "route": "/industries/healthcare",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7895,
+        "x": 3940,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "IndustryPage",
+      "isWrapper": true,
+      "slugProp": "healthcare",
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-147"
+    },
+    {
+      "artboardId": "ind-ecommerce.dc.html",
+      "path": "project/ind-ecommerce.dc.html",
+      "title": "/industries/ecommerce",
+      "designPage": "Industries",
+      "pageId": "industries",
+      "kind": "page",
+      "route": "/industries/ecommerce",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7700,
+        "x": 5460,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "IndustryPage",
+      "isWrapper": true,
+      "slugProp": "ecommerce",
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-147"
+    },
+    {
+      "artboardId": "ind-saas.dc.html",
+      "path": "project/ind-saas.dc.html",
+      "title": "/industries/saas",
+      "designPage": "Industries",
+      "pageId": "industries",
+      "kind": "page",
+      "route": "/industries/saas",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7674,
+        "x": 6980,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "IndustryPage",
+      "isWrapper": true,
+      "slugProp": "saas",
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-147"
+    },
+    {
+      "artboardId": "ind-enterprise.dc.html",
+      "path": "project/ind-enterprise.dc.html",
+      "title": "/industries/enterprise",
+      "designPage": "Industries",
+      "pageId": "industries",
+      "kind": "page",
+      "route": "/industries/enterprise",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7817,
+        "x": 8500,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "IndustryPage",
+      "isWrapper": true,
+      "slugProp": "enterprise",
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-147"
+    },
+    {
+      "artboardId": "ind-logistics.dc.html",
+      "path": "project/ind-logistics.dc.html",
+      "title": "/industries/logistics",
+      "designPage": "Industries",
+      "pageId": "industries",
+      "kind": "page",
+      "route": "/industries/logistics",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7840,
+        "x": 10020,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "IndustryPage",
+      "isWrapper": true,
+      "slugProp": "logistics",
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-147"
+    },
+    {
+      "artboardId": "IndustryPageMobile.dc.html",
+      "path": "project/IndustryPageMobile.dc.html",
+      "title": "/industries/healthcare · Mobile · part 1/2",
+      "designPage": "Industries",
+      "pageId": "industries",
+      "kind": "page",
+      "route": "/industries/healthcare",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 6261,
+        "x": 11540,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "IndustryPage",
+      "isWrapper": true,
+      "slugProp": "healthcare",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-147"
+    },
+    {
+      "artboardId": "IndustryPageMobile-p2.dc.html",
+      "path": "project/IndustryPageMobile-p2.dc.html",
+      "title": "/industries/healthcare · Mobile · part 2/2",
+      "designPage": "Industries",
+      "pageId": "industries",
+      "kind": "page",
+      "route": "/industries/healthcare",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 5181,
+        "x": 11990,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "IndustryPage",
+      "isWrapper": true,
+      "slugProp": "healthcare",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 6261,
+      "ownerTicket": "SF-147"
+    },
+    {
+      "artboardId": "Work.dc.html",
+      "path": "project/Work.dc.html",
+      "title": "/work · Desktop",
+      "designPage": "Work & case studies",
+      "pageId": "work",
+      "kind": "page",
+      "route": "/work",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 4795,
+        "x": 0,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Work",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-148"
+    },
+    {
+      "artboardId": "WorkTablet.dc.html",
+      "path": "project/WorkTablet.dc.html",
+      "title": "/work · Tablet",
+      "designPage": "Work & case studies",
+      "pageId": "work",
+      "kind": "page",
+      "route": "/work",
+      "device": "tablet",
+      "frame": {
+        "width": 768,
+        "height": 6192,
+        "x": 1520,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Work",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-148"
+    },
+    {
+      "artboardId": "WorkMobile.dc.html",
+      "path": "project/WorkMobile.dc.html",
+      "title": "/work · Mobile · part 1/2",
+      "designPage": "Work & case studies",
+      "pageId": "work",
+      "kind": "page",
+      "route": "/work",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 7322,
+        "x": 2348,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Work",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-148"
+    },
+    {
+      "artboardId": "WorkMobile-p2.dc.html",
+      "path": "project/WorkMobile-p2.dc.html",
+      "title": "/work · Mobile · part 2/2",
+      "designPage": "Work & case studies",
+      "pageId": "work",
+      "kind": "page",
+      "route": "/work",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 1356,
+        "x": 2798,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Work",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7322,
+      "ownerTicket": "SF-148"
+    },
+    {
+      "artboardId": "CasePage.dc.html",
+      "path": "project/CasePage.dc.html",
+      "title": "/work/ledgerline · Layout A",
+      "designPage": "Work & case studies",
+      "pageId": "work",
+      "kind": "page",
+      "route": "/work/ledgerline",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7764,
+        "x": 3248,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "CasePage",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": "A",
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-148"
+    },
+    {
+      "artboardId": "case-carepath.dc.html",
+      "path": "project/case-carepath.dc.html",
+      "title": "/work/carepath · Layout B",
+      "designPage": "Work & case studies",
+      "pageId": "work",
+      "kind": "page",
+      "route": "/work/carepath",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 6635,
+        "x": 4768,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "CasePage",
+      "isWrapper": true,
+      "slugProp": "carepath",
+      "state": null,
+      "layoutVariant": "B",
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-148"
+    },
+    {
+      "artboardId": "case-routewise.dc.html",
+      "path": "project/case-routewise.dc.html",
+      "title": "/work/routewise · Layout C",
+      "designPage": "Work & case studies",
+      "pageId": "work",
+      "kind": "page",
+      "route": "/work/routewise",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 6838,
+        "x": 6288,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "CasePage",
+      "isWrapper": true,
+      "slugProp": "routewise",
+      "state": null,
+      "layoutVariant": "C",
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-148"
+    },
+    {
+      "artboardId": "CasePageMobile.dc.html",
+      "path": "project/CasePageMobile.dc.html",
+      "title": "/work/ledgerline · Mobile · part 1/2",
+      "designPage": "Work & case studies",
+      "pageId": "work",
+      "kind": "page",
+      "route": "/work/ledgerline",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 7991,
+        "x": 7808,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "CasePage",
+      "isWrapper": true,
+      "slugProp": "ledgerline",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-148"
+    },
+    {
+      "artboardId": "CasePageMobile-p2.dc.html",
+      "path": "project/CasePageMobile-p2.dc.html",
+      "title": "/work/ledgerline · Mobile · part 2/2",
+      "designPage": "Work & case studies",
+      "pageId": "work",
+      "kind": "page",
+      "route": "/work/ledgerline",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 3297,
+        "x": 8258,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "CasePage",
+      "isWrapper": true,
+      "slugProp": "ledgerline",
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7991,
+      "ownerTicket": "SF-148"
+    },
+    {
+      "artboardId": "HowWeWork.dc.html",
+      "path": "project/HowWeWork.dc.html",
+      "title": "/how-we-work · part 1/2",
+      "designPage": "Company & careers",
+      "pageId": "company",
+      "kind": "page",
+      "route": "/how-we-work",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7925,
+        "x": 0,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "HowWeWork",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-149"
+    },
+    {
+      "artboardId": "HowWeWork-p2.dc.html",
+      "path": "project/HowWeWork-p2.dc.html",
+      "title": "/how-we-work · part 2/2",
+      "designPage": "Company & careers",
+      "pageId": "company",
+      "kind": "page",
+      "route": "/how-we-work",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 1381,
+        "x": 1520,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "HowWeWork",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7925,
+      "ownerTicket": "SF-149"
+    },
+    {
+      "artboardId": "HowWeWorkMobile.dc.html",
+      "path": "project/HowWeWorkMobile.dc.html",
+      "title": "/how-we-work · Mobile · part 1/2",
+      "designPage": "Company & careers",
+      "pageId": "company",
+      "kind": "page",
+      "route": "/how-we-work",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 7699,
+        "x": 3040,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "HowWeWork",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-149"
+    },
+    {
+      "artboardId": "HowWeWorkMobile-p2.dc.html",
+      "path": "project/HowWeWorkMobile-p2.dc.html",
+      "title": "/how-we-work · Mobile · part 2/2",
+      "designPage": "Company & careers",
+      "pageId": "company",
+      "kind": "page",
+      "route": "/how-we-work",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 5636,
+        "x": 3490,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "HowWeWork",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7699,
+      "ownerTicket": "SF-149"
+    },
+    {
+      "artboardId": "About.dc.html",
+      "path": "project/About.dc.html",
+      "title": "/about · part 1/2",
+      "designPage": "Company & careers",
+      "pageId": "company",
+      "kind": "page",
+      "route": "/about",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7799,
+        "x": 3940,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "About",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-149"
+    },
+    {
+      "artboardId": "About-p2.dc.html",
+      "path": "project/About-p2.dc.html",
+      "title": "/about · part 2/2",
+      "designPage": "Company & careers",
+      "pageId": "company",
+      "kind": "page",
+      "route": "/about",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 1302,
+        "x": 5460,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "About",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7799,
+      "ownerTicket": "SF-149"
+    },
+    {
+      "artboardId": "AboutMobile.dc.html",
+      "path": "project/AboutMobile.dc.html",
+      "title": "/about · Mobile · part 1/2",
+      "designPage": "Company & careers",
+      "pageId": "company",
+      "kind": "page",
+      "route": "/about",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 6543,
+        "x": 6980,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "About",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-149"
+    },
+    {
+      "artboardId": "AboutMobile-p2.dc.html",
+      "path": "project/AboutMobile-p2.dc.html",
+      "title": "/about · Mobile · part 2/2",
+      "designPage": "Company & careers",
+      "pageId": "company",
+      "kind": "page",
+      "route": "/about",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 7811,
+        "x": 7430,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "About",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 6543,
+      "ownerTicket": "SF-149"
+    },
+    {
+      "artboardId": "Technologies.dc.html",
+      "path": "project/Technologies.dc.html",
+      "title": "/technologies",
+      "designPage": "Company & careers",
+      "pageId": "company",
+      "kind": "page",
+      "route": "/technologies",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 6804,
+        "x": 7880,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Technologies",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-149"
+    },
+    {
+      "artboardId": "TechnologiesMobile.dc.html",
+      "path": "project/TechnologiesMobile.dc.html",
+      "title": "/technologies · Mobile · part 1/3",
+      "designPage": "Company & careers",
+      "pageId": "company",
+      "kind": "page",
+      "route": "/technologies",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 681,
+        "x": 9400,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Technologies",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 3
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-149"
+    },
+    {
+      "artboardId": "TechnologiesMobile-p2.dc.html",
+      "path": "project/TechnologiesMobile-p2.dc.html",
+      "title": "/technologies · Mobile · part 2/3",
+      "designPage": "Company & careers",
+      "pageId": "company",
+      "kind": "page",
+      "route": "/technologies",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 8000,
+        "x": 9850,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Technologies",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 3
+      },
+      "cropOffsetY": 681,
+      "ownerTicket": "SF-149"
+    },
+    {
+      "artboardId": "TechnologiesMobile-p3.dc.html",
+      "path": "project/TechnologiesMobile-p3.dc.html",
+      "title": "/technologies · Mobile · part 3/3",
+      "designPage": "Company & careers",
+      "pageId": "company",
+      "kind": "page",
+      "route": "/technologies",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 5072,
+        "x": 10300,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Technologies",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 3,
+        "of": 3
+      },
+      "cropOffsetY": 8681,
+      "ownerTicket": "SF-149"
+    },
+    {
+      "artboardId": "Careers.dc.html",
+      "path": "project/Careers.dc.html",
+      "title": "/careers",
+      "designPage": "Company & careers",
+      "pageId": "company",
+      "kind": "page",
+      "route": "/careers",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 6527,
+        "x": 10750,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Careers",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-149"
+    },
+    {
+      "artboardId": "CareersMobile.dc.html",
+      "path": "project/CareersMobile.dc.html",
+      "title": "/careers · Mobile · part 1/2",
+      "designPage": "Company & careers",
+      "pageId": "company",
+      "kind": "page",
+      "route": "/careers",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 7204,
+        "x": 12270,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Careers",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-149"
+    },
+    {
+      "artboardId": "CareersMobile-p2.dc.html",
+      "path": "project/CareersMobile-p2.dc.html",
+      "title": "/careers · Mobile · part 2/2",
+      "designPage": "Company & careers",
+      "pageId": "company",
+      "kind": "page",
+      "route": "/careers",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 2838,
+        "x": 12720,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Careers",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7204,
+      "ownerTicket": "SF-149"
+    },
+    {
+      "artboardId": "Job.dc.html",
+      "path": "project/Job.dc.html",
+      "title": "/careers/[job-slug]",
+      "designPage": "Company & careers",
+      "pageId": "company",
+      "kind": "page",
+      "route": "/careers/[slug]",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 3447,
+        "x": 13170,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Job",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-149"
+    },
+    {
+      "artboardId": "JobMobile.dc.html",
+      "path": "project/JobMobile.dc.html",
+      "title": "/careers/[job-slug] · Mobile",
+      "designPage": "Company & careers",
+      "pageId": "company",
+      "kind": "page",
+      "route": "/careers/[slug]",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 5023,
+        "x": 14690,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Job",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-149"
+    },
+    {
+      "artboardId": "Insights.dc.html",
+      "path": "project/Insights.dc.html",
+      "title": "/insights",
+      "designPage": "Insights",
+      "pageId": "insights",
+      "kind": "page",
+      "route": "/insights",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 4589,
+        "x": 0,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Insights",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-150"
+    },
+    {
+      "artboardId": "InsightsMobile.dc.html",
+      "path": "project/InsightsMobile.dc.html",
+      "title": "/insights · Mobile",
+      "designPage": "Insights",
+      "pageId": "insights",
+      "kind": "page",
+      "route": "/insights",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 7810,
+        "x": 1520,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Insights",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-150"
+    },
+    {
+      "artboardId": "Article.dc.html",
+      "path": "project/Article.dc.html",
+      "title": "/insights/[article-slug]",
+      "designPage": "Insights",
+      "pageId": "insights",
+      "kind": "page",
+      "route": "/insights/[slug]",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 5038,
+        "x": 1970,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Article",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-150"
+    },
+    {
+      "artboardId": "ArticleMobile.dc.html",
+      "path": "project/ArticleMobile.dc.html",
+      "title": "/insights/[article-slug] · Mobile",
+      "designPage": "Insights",
+      "pageId": "insights",
+      "kind": "page",
+      "route": "/insights/[slug]",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 6479,
+        "x": 3490,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Article",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-150"
+    },
+    {
+      "artboardId": "Contact.dc.html",
+      "path": "project/Contact.dc.html",
+      "title": "/contact",
+      "designPage": "Contact",
+      "pageId": "contact",
+      "kind": "page",
+      "route": "/contact",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 3235,
+        "x": 0,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Contact",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-151"
+    },
+    {
+      "artboardId": "ContactTablet.dc.html",
+      "path": "project/ContactTablet.dc.html",
+      "title": "/contact · Tablet",
+      "designPage": "Contact",
+      "pageId": "contact",
+      "kind": "page",
+      "route": "/contact",
+      "device": "tablet",
+      "frame": {
+        "width": 768,
+        "height": 4530,
+        "x": 1520,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Contact",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-151"
+    },
+    {
+      "artboardId": "ContactMobile.dc.html",
+      "path": "project/ContactMobile.dc.html",
+      "title": "/contact · Mobile",
+      "designPage": "Contact",
+      "pageId": "contact",
+      "kind": "page",
+      "route": "/contact",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 5262,
+        "x": 2348,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Contact",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-151"
+    },
+    {
+      "artboardId": "ThankYou.dc.html",
+      "path": "project/ThankYou.dc.html",
+      "title": "/contact/thank-you",
+      "designPage": "Contact",
+      "pageId": "contact",
+      "kind": "page",
+      "route": "/contact/thank-you",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 2525,
+        "x": 2798,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ThankYou",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-151"
+    },
+    {
+      "artboardId": "ThankYouMobile.dc.html",
+      "path": "project/ThankYouMobile.dc.html",
+      "title": "/contact/thank-you · Mobile",
+      "designPage": "Contact",
+      "pageId": "contact",
+      "kind": "page",
+      "route": "/contact/thank-you",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 3467,
+        "x": 4318,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "ThankYou",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-151"
+    },
+    {
+      "artboardId": "LegalPage.dc.html",
+      "path": "project/LegalPage.dc.html",
+      "title": "/privacy-policy",
+      "designPage": "Legal & system",
+      "pageId": "system",
+      "kind": "page",
+      "route": "/privacy-policy",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 3213,
+        "x": 0,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "LegalPage",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-152"
+    },
+    {
+      "artboardId": "legal-cookie-policy.dc.html",
+      "path": "project/legal-cookie-policy.dc.html",
+      "title": "/cookie-policy",
+      "designPage": "Legal & system",
+      "pageId": "system",
+      "kind": "page",
+      "route": "/cookie-policy",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 3244,
+        "x": 1520,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "LegalPage",
+      "isWrapper": true,
+      "slugProp": "cookie",
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-152"
+    },
+    {
+      "artboardId": "legal-terms.dc.html",
+      "path": "project/legal-terms.dc.html",
+      "title": "/terms",
+      "designPage": "Legal & system",
+      "pageId": "system",
+      "kind": "page",
+      "route": "/terms",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 2902,
+        "x": 3040,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "LegalPage",
+      "isWrapper": true,
+      "slugProp": "terms",
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-152"
+    },
+    {
+      "artboardId": "LegalMobile.dc.html",
+      "path": "project/LegalMobile.dc.html",
+      "title": "/privacy-policy · Mobile",
+      "designPage": "Legal & system",
+      "pageId": "system",
+      "kind": "page",
+      "route": "/privacy-policy",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 4274,
+        "x": 4560,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "LegalPage",
+      "isWrapper": true,
+      "slugProp": "privacy",
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-152"
+    },
+    {
+      "artboardId": "NotFound.dc.html",
+      "path": "project/NotFound.dc.html",
+      "title": "/404",
+      "designPage": "Legal & system",
+      "pageId": "system",
+      "kind": "page",
+      "route": "/404",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 1977,
+        "x": 5010,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "NotFound",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-152"
+    },
+    {
+      "artboardId": "NotFoundMobile.dc.html",
+      "path": "project/NotFoundMobile.dc.html",
+      "title": "/404 · Mobile",
+      "designPage": "Legal & system",
+      "pageId": "system",
+      "kind": "page",
+      "route": "/404",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 2466,
+        "x": 6530,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "NotFound",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-152"
+    },
+    {
+      "artboardId": "Home.dc.html",
+      "path": "project/Home.dc.html",
+      "title": "/ · Desktop 1440 · part 1/4",
+      "designPage": "Homepage",
+      "pageId": "home",
+      "kind": "page",
+      "route": "/",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7699,
+        "x": 0,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Home",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 4
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-143"
+    },
+    {
+      "artboardId": "Home-p2.dc.html",
+      "path": "project/Home-p2.dc.html",
+      "title": "/ · Desktop 1440 · part 2/4",
+      "designPage": "Homepage",
+      "pageId": "home",
+      "kind": "page",
+      "route": "/",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 6677,
+        "x": 1520,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Home",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 4
+      },
+      "cropOffsetY": 7699,
+      "ownerTicket": "SF-143"
+    },
+    {
+      "artboardId": "Home-p3.dc.html",
+      "path": "project/Home-p3.dc.html",
+      "title": "/ · Desktop 1440 · part 3/4",
+      "designPage": "Homepage",
+      "pageId": "home",
+      "kind": "page",
+      "route": "/",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7172,
+        "x": 3040,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Home",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 3,
+        "of": 4
+      },
+      "cropOffsetY": 14376,
+      "ownerTicket": "SF-143"
+    },
+    {
+      "artboardId": "Home-p4.dc.html",
+      "path": "project/Home-p4.dc.html",
+      "title": "/ · Desktop 1440 · part 4/4",
+      "designPage": "Homepage",
+      "pageId": "home",
+      "kind": "page",
+      "route": "/",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 2020,
+        "x": 4560,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Home",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 4,
+        "of": 4
+      },
+      "cropOffsetY": 21548,
+      "ownerTicket": "SF-143"
+    },
+    {
+      "artboardId": "HomeTablet.dc.html",
+      "path": "project/HomeTablet.dc.html",
+      "title": "/ · Tablet 768 · part 1/4",
+      "designPage": "Homepage",
+      "pageId": "home",
+      "kind": "page",
+      "route": "/",
+      "device": "tablet",
+      "frame": {
+        "width": 768,
+        "height": 7650,
+        "x": 6080,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Home",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 4
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-143"
+    },
+    {
+      "artboardId": "HomeTablet-p2.dc.html",
+      "path": "project/HomeTablet-p2.dc.html",
+      "title": "/ · Tablet 768 · part 2/4",
+      "designPage": "Homepage",
+      "pageId": "home",
+      "kind": "page",
+      "route": "/",
+      "device": "tablet",
+      "frame": {
+        "width": 768,
+        "height": 5953,
+        "x": 6908,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Home",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 4
+      },
+      "cropOffsetY": 7650,
+      "ownerTicket": "SF-143"
+    },
+    {
+      "artboardId": "HomeTablet-p3.dc.html",
+      "path": "project/HomeTablet-p3.dc.html",
+      "title": "/ · Tablet 768 · part 3/4",
+      "designPage": "Homepage",
+      "pageId": "home",
+      "kind": "page",
+      "route": "/",
+      "device": "tablet",
+      "frame": {
+        "width": 768,
+        "height": 6858,
+        "x": 7736,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Home",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 3,
+        "of": 4
+      },
+      "cropOffsetY": 13603,
+      "ownerTicket": "SF-143"
+    },
+    {
+      "artboardId": "HomeTablet-p4.dc.html",
+      "path": "project/HomeTablet-p4.dc.html",
+      "title": "/ · Tablet 768 · part 4/4",
+      "designPage": "Homepage",
+      "pageId": "home",
+      "kind": "page",
+      "route": "/",
+      "device": "tablet",
+      "frame": {
+        "width": 768,
+        "height": 6091,
+        "x": 8564,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Home",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 4,
+        "of": 4
+      },
+      "cropOffsetY": 20461,
+      "ownerTicket": "SF-143"
+    },
+    {
+      "artboardId": "HomeMobile.dc.html",
+      "path": "project/HomeMobile.dc.html",
+      "title": "/ · Mobile 390 · part 1/5",
+      "designPage": "Homepage",
+      "pageId": "home",
+      "kind": "page",
+      "route": "/",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 7383,
+        "x": 9392,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Home",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 5
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-143"
+    },
+    {
+      "artboardId": "HomeMobile-p2.dc.html",
+      "path": "project/HomeMobile-p2.dc.html",
+      "title": "/ · Mobile 390 · part 2/5",
+      "designPage": "Homepage",
+      "pageId": "home",
+      "kind": "page",
+      "route": "/",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 4691,
+        "x": 9842,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Home",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 5
+      },
+      "cropOffsetY": 7383,
+      "ownerTicket": "SF-143"
+    },
+    {
+      "artboardId": "HomeMobile-p3.dc.html",
+      "path": "project/HomeMobile-p3.dc.html",
+      "title": "/ · Mobile 390 · part 3/5",
+      "designPage": "Homepage",
+      "pageId": "home",
+      "kind": "page",
+      "route": "/",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 6872,
+        "x": 10292,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Home",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 3,
+        "of": 5
+      },
+      "cropOffsetY": 12074,
+      "ownerTicket": "SF-143"
+    },
+    {
+      "artboardId": "HomeMobile-p4.dc.html",
+      "path": "project/HomeMobile-p4.dc.html",
+      "title": "/ · Mobile 390 · part 4/5",
+      "designPage": "Homepage",
+      "pageId": "home",
+      "kind": "page",
+      "route": "/",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 7782,
+        "x": 10742,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Home",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 4,
+        "of": 5
+      },
+      "cropOffsetY": 18946,
+      "ownerTicket": "SF-143"
+    },
+    {
+      "artboardId": "HomeMobile-p5.dc.html",
+      "path": "project/HomeMobile-p5.dc.html",
+      "title": "/ · Mobile 390 · part 5/5",
+      "designPage": "Homepage",
+      "pageId": "home",
+      "kind": "page",
+      "route": "/",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 5817,
+        "x": 11192,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Home",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 5,
+        "of": 5
+      },
+      "cropOffsetY": 26728,
+      "ownerTicket": "SF-143"
+    },
+    {
+      "artboardId": "HomeMenuMobile.dc.html",
+      "path": "project/HomeMenuMobile.dc.html",
+      "title": "Mobile · Menu open",
+      "designPage": "Homepage",
+      "pageId": "home",
+      "kind": "page",
+      "route": "/",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 932,
+        "x": 11642,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Home",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": "menu-open",
+      "layoutVariant": null,
+      "tile": null,
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-143"
+    },
+    {
+      "artboardId": "Agent.dc.html",
+      "path": "project/Agent.dc.html",
+      "title": "/agent · Desktop · part 1/2",
+      "designPage": "SimpleX Agent",
+      "pageId": "agent",
+      "kind": "page",
+      "route": "/agent",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 7766,
+        "x": 0,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Agent",
+      "isWrapper": false,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-144"
+    },
+    {
+      "artboardId": "Agent-p2.dc.html",
+      "path": "project/Agent-p2.dc.html",
+      "title": "/agent · Desktop · part 2/2",
+      "designPage": "SimpleX Agent",
+      "pageId": "agent",
+      "kind": "page",
+      "route": "/agent",
+      "device": "desktop",
+      "frame": {
+        "width": 1440,
+        "height": 1302,
+        "x": 1520,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Agent",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 7766,
+      "ownerTicket": "SF-144"
+    },
+    {
+      "artboardId": "AgentMobile.dc.html",
+      "path": "project/AgentMobile.dc.html",
+      "title": "/agent · Mobile · part 1/2",
+      "designPage": "SimpleX Agent",
+      "pageId": "agent",
+      "kind": "page",
+      "route": "/agent",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 6615,
+        "x": 3040,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Agent",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 1,
+        "of": 2
+      },
+      "cropOffsetY": 0,
+      "ownerTicket": "SF-144"
+    },
+    {
+      "artboardId": "AgentMobile-p2.dc.html",
+      "path": "project/AgentMobile-p2.dc.html",
+      "title": "/agent · Mobile · part 2/2",
+      "designPage": "SimpleX Agent",
+      "pageId": "agent",
+      "kind": "page",
+      "route": "/agent",
+      "device": "mobile",
+      "frame": {
+        "width": 390,
+        "height": 7657,
+        "x": 3490,
+        "y": 0
+      },
+      "fluid": true,
+      "interactive": true,
+      "sourceComposition": "Agent",
+      "isWrapper": true,
+      "slugProp": null,
+      "state": null,
+      "layoutVariant": null,
+      "tile": {
+        "part": 2,
+        "of": 2
+      },
+      "cropOffsetY": 6615,
+      "ownerTicket": "SF-144"
+    }
+  ]
+}

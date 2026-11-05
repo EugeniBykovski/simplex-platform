@@ -1,0 +1,6 @@
+{
+  "projects": "{count, plural, one {# project} other {# projects}}",
+  "articles": "{count, plural, one {# article} other {# articles}}",
+  "sampleRoles": "{count, plural, one {# sample role} other {# sample roles}}",
+  "minutesRead": "{count} min read"
+}

@@ -1,0 +1,7 @@
+/* Design tokens from simplex.css are ported here in SF-142. See docs/design/design-system-specification.md. */
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}

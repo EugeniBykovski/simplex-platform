@@ -1,0 +1,7 @@
+{
+  "optional": "Необязательно",
+  "sending": "Отправка…",
+  "tryAgain": "Повторить",
+  "errorSummary": "{count, plural, one {Проверьте # поле.} few {Проверьте # поля.} many {Проверьте # полей.} other {Проверьте # поля.}}",
+  "charactersUsed": "{count} / {max}"
+}
