@@ -10,7 +10,7 @@ export type TranslationStatus = "missing" | "draft" | "approved";
 
 export const russianTranslationStatus: Record<RouteFamily, TranslationStatus> = {
   home: "draft",
-  agent: "missing",
+  agent: "draft",
   services: "missing",
   packages: "missing",
   industries: "missing",

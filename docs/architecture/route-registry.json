@@ -138,17 +138,13 @@
       "imagePlaceholders": 0,
       "seo": {
         "title": "SimpleX Agent",
-        "description": "[Approved description needed: the design's lead makes unverified production claims]",
+        "description": "SimpleX Agent is an engineering agent concept designed to work within your stack, with every change reviewed by an engineer. Product details are illustrative.",
         "h1": "An engineering agent that speaks your stack.",
         "intent": "What is the SimpleX engineering agent and how is it deployed?",
         "topic": "AI engineering agent",
         "canonical": "/agent",
         "breadcrumb": true,
-        "schema": [
-          "BreadcrumbList",
-          "Service",
-          "FAQPage (markup only, see seo-architecture)"
-        ],
+        "schema": [],
         "indexing": "noindex until capabilities are verified",
         "launchBlockers": [
           "No production capability may be claimed until verified (GAP-C01)"
@@ -157,10 +153,10 @@
       "i18n": {
         "en": "/agent",
         "ru": "/ru/agent",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-144",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },

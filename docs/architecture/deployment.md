@@ -56,7 +56,7 @@ Then check in a browser that `/` and `/ru` load with no console errors, and that
 
 Do not set `SITE_INDEXABLE=true` on production until:
 
-- The placeholder home is replaced (SF-143). It carries a hard `noindex` until then.
+- `/agent` has a hard `noindex` until its capabilities are verified (GAP-C01).
 - Routes approved for search are added to `indexableRoutes` in `src/config/routes.ts`.
 - Launch blockers in the [gap register](../design/design-gap-register.md) are closed.
 

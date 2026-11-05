@@ -15,12 +15,14 @@ export function Tabs({
   dark,
   defaultId,
   className,
+  listClassName,
 }: {
   label: string;
   items: readonly TabItem[];
   dark?: boolean;
   defaultId?: string;
   className?: string;
+  listClassName?: string;
 }) {
   const baseId = useId();
   const [selected, setSelected] = useState(defaultId ?? items[0]?.id);
@@ -43,7 +45,11 @@ export function Tabs({
 
   return (
     <div className={className}>
-      <div className={cx("tabs", dark && "tabs-dark")} role="tablist" aria-label={label}>
+      <div
+        className={cx("tabs", dark && "tabs-dark", listClassName)}
+        role="tablist"
+        aria-label={label}
+      >
         {items.map((item, index) => {
           const isSelected = item.id === selected;
           return (

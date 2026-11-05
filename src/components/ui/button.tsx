@@ -82,6 +82,22 @@ export function LinkButton({
   );
 }
 
+/** A jump to a section of this page, styled as a button. */
+export function AnchorButton({
+  href,
+  variant = "primary",
+  size = "md",
+  arrow,
+  children,
+  className,
+}: Common & { href: `#${string}`; children: ReactNode; className?: string }) {
+  return (
+    <a href={href} className={buttonClass(variant, size, className)}>
+      {content(children, arrow)}
+    </a>
+  );
+}
+
 /** A square icon action. The label is required because the button has no visible text. */
 export function IconButton({
   label,

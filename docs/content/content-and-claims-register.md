@@ -15,6 +15,10 @@ The design handles this responsibly: it brackets most unknowns and labels demons
 
 So anything bracketed below ships as supplied real data or is hidden, never filled in with an estimate.
 
+## Agent copy changes (SF-144)
+
+Each change from the design, with its evidence and published wording, is in [agent-claims-register.md](agent-claims-register.md).
+
 ## Homepage copy changes (SF-143)
 
 Composition kept, wording changed. Listed in full in [homepage-visual-parity.md](../qa/homepage-visual-parity.md). Still in the Home copy and **awaiting owner confirmation:** "Our engineering handbook is part of the contract", "Senior engineers only", "Code and IP are yours", "NDA first", "Governed: every change approved by a SimpleX engineer".

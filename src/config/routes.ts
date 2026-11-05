@@ -23,7 +23,7 @@ export type RouteFamily = keyof typeof routeFamilies;
  * Routes that have a page today. Each page ticket adds its own. The 404 page offers only these,
  * so it never links to another 404.
  */
-export const implementedRoutes: readonly string[] = ["/"];
+export const implementedRoutes: readonly string[] = ["/", "/agent"];
 
 export function isImplementedRoute(href: string): boolean {
   return implementedRoutes.includes(href);
