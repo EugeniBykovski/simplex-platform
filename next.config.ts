@@ -13,9 +13,6 @@ export default function config(phase: string): NextConfig {
 
   return withNextIntl({
     reactStrictMode: true,
-    // The dev and test component gallery only exists as a route when this flag is set at build time.
-    pageExtensions:
-      process.env.ENABLE_UI_GALLERY === "true" ? ["tsx", "ts", "gallery.tsx"] : ["tsx", "ts"],
     poweredByHeader: false,
     images: {
       formats: ["image/avif", "image/webp"],

@@ -12,8 +12,7 @@ The SimpleX website is a statically rendered, bilingual Next.js marketing site w
 | Styling | Tailwind CSS plus ported design CSS | 4.3.4 | Approved |
 | i18n | next-intl | 4.14.9 | Retained by decision 7. A library, not a service |
 | Email | Resend, server only | Not installed; planned for SF-151 | Approved |
-| Unit tests | Vitest | 5.1 | Approved in SF-141 |
-| Browser tests | Playwright, axe-core | 1.64 | Approved. Foundation suites only; page suites come with SF-155 |
+| Tests | None, by owner decision | n/a | See [manual-qa.md](../qa/manual-qa.md) |
 
 Not used, as the ticket requires: Storybook, a separate backend, a database, an ORM, a CMS, microservices, state-management libraries, third-party UI frameworks, animation libraries.
 
@@ -68,9 +67,6 @@ src/
   types/               next-intl.d.ts
   proxy.ts
 scripts/               check-i18n.mjs, check-client-bundle.mjs, validate-docs.mjs, smoke-404.mjs
-tests/unit/            Vitest
-tests/e2e/             Playwright
-tests/fixtures/design/ Original stylesheet and reference pages
 public/images/design/  The design's seven background images (provenance: GAP-A01)
 .github/workflows/     ci.yml
 ```
@@ -119,7 +115,7 @@ See `.env.example`. `NEXT_PUBLIC_SITE_URL` sets canonical and hreflang origins, 
 
 ## Visual baseline today
 
-The full design stylesheet, tokens, fonts, logo system, shared components, header, footer, and the 404 and error pages exist. Components are compared numerically with the source ([component-implementation.md](../design/component-implementation.md)). **No full page has been built**, so no page-level parity is claimed. The placeholder home and the error page are not approved designs.
+The full design stylesheet, tokens, fonts, logo system, shared components, header, footer, and the 404 and error pages exist. See [component-implementation.md](../design/component-implementation.md). The placeholder home and the error page are not approved designs.
 
 ## Images
 
@@ -127,7 +123,7 @@ The full design stylesheet, tokens, fonts, logo system, shared components, heade
 
 ## Performance budget
 
-Proposed targets at p75 on mobile, enforced in SF-154 and SF-155. **None measured yet:**
+Proposed targets at p75 on mobile, checked in SF-154. **None measured yet:**
 
 | Metric | Target |
 |---|---|
@@ -161,6 +157,6 @@ The file reads the locale that the proxy already sets, so EN and RU both work wi
 - No catch-all routes.
 - Slug pages set `dynamicParams = false` and list slugs in `generateStaticParams`. Tested: unknown slugs then reach this page as real HTML.
 - Do not throw `notFound()` during render. `[locale]/not-found.tsx` remains as a fallback only.
-- `globalNotFound` is an experimental flag, so run `pnpm smoke:404` on every Next.js upgrade.
+- `globalNotFound` is an experimental flag, so recheck 404s by hand on every Next.js upgrade.
 
 Tracked as [GAP-R03](../design/design-gap-register.md).

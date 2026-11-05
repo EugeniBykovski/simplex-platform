@@ -135,8 +135,7 @@ const required = [
   "docs/content/content-and-claims-register.md",
   "docs/seo/seo-architecture.md",
   "docs/seo/page-seo-matrix.md",
-  "docs/qa/visual-regression-strategy.md",
-  "docs/qa/test-matrix.md",
+  "docs/qa/manual-qa.md",
 ];
 for (const path of required) {
   if (!existsSync(path)) fail(`Missing deliverable ${path}`);

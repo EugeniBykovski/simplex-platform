@@ -158,6 +158,6 @@ If the owner later wants real booking, a hosted provider such as Cal.com or Cale
 
 "Send me the playbook" promises a "24-page PDF" and "Unsubscribe anytime". The PDF does not exist (GAP-A03), and "unsubscribe" implies a mailing list, which needs its own consent and tooling. If only one email is ever sent, remove that phrase. Hide the block until the PDF exists.
 
-## Tests
+## Verification
 
-Covered in [test-matrix.md](../qa/test-matrix.md). Playwright uses a mocked email boundary, so CI sends no real email.
+Manual, per [manual-qa.md](../qa/manual-qa.md). Test every form state against a separate inbox, never real ones.

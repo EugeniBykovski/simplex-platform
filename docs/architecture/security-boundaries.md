@@ -1,6 +1,6 @@
 # Security boundaries
 
-The audit below reflects the code at the end of SF-141. The site has no accounts, database or stored user data, and it sets no cookies. Form security is specified in [contact-and-email.md](contact-and-email.md) for SF-151.
+The audit below reflects the code at the end of SF-141. Its test files were later removed by owner decision. The site has no accounts, database or stored user data, and it sets no cookies. Form security is specified in [contact-and-email.md](contact-and-email.md) for SF-151.
 
 ## Audit
 
@@ -8,14 +8,14 @@ The audit below reflects the code at the end of SF-141. The site has no accounts
 |---|---|---|---|
 | Secrets in client bundles | None | `server-only` on email config, no `NEXT_PUBLIC_` secrets | `pnpm check:bundle` with a canary |
 | Server and client modules | One client boundary with data needs: only `common` and `errors` messages reach the browser | Provider receives named namespaces | Search of `.next/static` |
-| Open redirects | The only redirect is next-intl's `/en` removal | Tested with `//evil.example`, `/en//evil.example` and encoded variants | `tests/e2e/security.spec.ts` |
-| Untrusted query parameters | Not read anywhere | Test confirms a script payload is not reflected | `tests/e2e/security.spec.ts` |
+| Open redirects | The only redirect is next-intl's `/en` removal | Tested with `//evil.example`, `/en//evil.example` and encoded variants | Checked in SF-141 |
+| Untrusted query parameters | Not read anywhere | Test confirms a script payload is not reflected | Checked in SF-141 |
 | HTML injection | No `dangerouslySetInnerHTML` | SF-153 JSON-LD must escape `<` when it adds any | Code search |
 | External links | None yet | New ones need `rel="noopener noreferrer"` with `target="_blank"` | Review |
-| Remote images | None allowed: `remotePatterns` is empty | Optimiser returns 400 for remote URLs | `tests/e2e/platform.spec.ts` |
+| Remote images | None allowed: `remotePatterns` is empty | Optimiser returns 400 for remote URLs | Checked in SF-141 |
 | Error exposure | Error pages never render `error.message` | Generic localised text | Tested with a temporary throwing page, since removed |
 | Dependencies | `pnpm audit --prod` reports none | Run again before release | SF-156 |
-| Cookies and tracking | None | Locale cookie disabled | `tests/e2e/locale-routing.spec.ts` |
+| Cookies and tracking | None | Locale cookie disabled | Checked in SF-141 |
 
 ## Security headers
 
@@ -40,7 +40,7 @@ form-action 'self'; frame-ancestors 'none'
 
 **Limitation:** `script-src` allows `'unsafe-inline'`. Next.js inlines bootstrap scripts, and nonces would force every page to render dynamically, losing static delivery. This reduces, but does not remove, protection against injected scripts, so the main defence stays not rendering untrusted HTML at all. Consider hash-based CSP in SF-156 if the framework's support is mature by then.
 
-**What was tested:** `/`, `/ru`, `/nope` and the UI gallery load with no violations or console errors in Chromium, Firefox and WebKit. That covers Geist fonts, data-URI icons, glass surfaces, background images and hydration. **Not yet tested on full pages**, since those do not exist. Each page ticket must keep `tests/e2e/platform.spec.ts` passing for its route. `data:` in `img-src` is needed for the design's masked icons and noise texture.
+**What was tested, in SF-142:** `/`, `/ru`, `/nope` and a since-removed component gallery loaded with no violations or console errors in Chromium, Firefox and WebKit. That covers Geist fonts, data-URI icons, glass surfaces, background images and hydration. **Not yet tested on full pages**, since those do not exist. Each page ticket must check the browser console for violations on its route. `data:` in `img-src` is needed for the design's masked icons and noise texture.
 
 A new external service, such as a scheduling embed or analytics, needs an explicit CSP change plus a privacy-policy entry.
 

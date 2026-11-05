@@ -23,12 +23,6 @@ const hits = files.flatMap((path) => {
     .map((value) => `${path}: found a forbidden value (${value === canary ? "canary" : value})`);
 });
 
-// The gallery must only exist in builds that asked for it.
-const manifest = readFileSync(".next/app-path-routes-manifest.json", "utf8");
-if (manifest.includes("ui-gallery") && process.env.ENABLE_UI_GALLERY !== "true") {
-  hits.push("The UI gallery route is in a build without ENABLE_UI_GALLERY=true");
-}
-
 // A Tailwind utility that shares a design class's name silently overrides it. This has happened:
 // Tailwind's gap-5 is 20px, and the design's is 24px.
 const css = files

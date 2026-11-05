@@ -43,7 +43,7 @@ The production domain is still undecided (GAP-C08).
 Replace `$URL` with the deployment's address.
 
 ```sh
-BASE_URL=$URL pnpm smoke:404
+curl -sI $URL/nope                 # 404
 curl -I $URL/                      # 200, security headers present
 curl -I $URL/en                    # 307 to /
 curl -s $URL/robots.txt            # Disallow on previews

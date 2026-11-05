@@ -50,7 +50,7 @@ Applied throughout these documents.
 |---|---|---|---|---|---|---|
 | GAP-R01 | Careers, Job, Insights, Article | Patterns approved, but no slug values exist. All cards link to one sample board | High | Slug rule in [seo-architecture.md](../seo/seo-architecture.md). Real slugs arrive with real content | Yes | SF-149, SF-150 |
 | GAP-R02 | Nav, HomeMenuMobile | Mobile menu lists 8 of 13 service items, with different labels ("Desktop Apps" vs "Desktop Applications") and no industry sub-links. Built as drawn. **Behaviour RESOLVED as an adaptation:** Escape, focus, inert page, scroll lock and short screens | Low | Owner decides whether to list all items | Yes | SF-142 |
-| GAP-R03 | NotFound | **RESOLVED.** Unknown URLs now return server-rendered, localised HTML with a 404 through `src/app/global-not-found.tsx`, with the shared header and footer. Remaining limits: it relies on the experimental `globalNotFound` flag, and a `notFound()` thrown while rendering still gives an empty shell, so slug pages must use `dynamicParams = false` | Low | Re-run `pnpm smoke:404` on every Next.js upgrade | No | SF-152 |
+| GAP-R03 | NotFound | **RESOLVED.** Unknown URLs now return server-rendered, localised HTML with a 404 through `src/app/global-not-found.tsx`, with the shared header and footer. Remaining limits: it relies on the experimental `globalNotFound` flag, and a `notFound()` thrown while rendering still gives an empty shell, so slug pages must use `dynamicParams = false` | Low | Recheck by hand, with JavaScript off, on every Next.js upgrade | No | SF-152 |
 | GAP-R04 | Nav | No `active` state for `/technologies` or `/contact`, and `/technologies` is footer-only. Built as drawn | Low | Keep, or add a link if the owner wants it | Yes | SF-142 |
 
 ## Content and claims
@@ -84,7 +84,7 @@ Full list: [content-and-claims-register.md](../content/content-and-claims-regist
 |---|---|---|---|---|---|---|
 | GAP-V01 | All | Only three routes have a 768 board | Low | CSS-derived behaviour applies. Review by eye | No | SF-155 |
 | GAP-V02 | case-carepath, case-routewise | Layouts B and C have **no mobile board** and unique markup | High | Implement from CSS rules, label as CSS-derived, get owner review | Yes | SF-148 |
-| GAP-V03 | All | No boards at 320, 1024, 1280, 1920, 2560 | Low | Render the design source at those widths as a reference ([strategy](../qa/visual-regression-strategy.md)) | No | SF-155 |
+| GAP-V03 | All | No boards at 320, 1024, 1280, 1920, 2560 | Low | Render the design source at those widths as a reference ([manual QA](../qa/manual-qa.md)) | No | SF-155 |
 | GAP-V04 | All | No Russian design exists, and Russian text can break `.btn` nowrap, line masks, header fit and display floors | High | [i18n.md](../architecture/i18n.md) adaptations, owner reviews on `ru` | Yes | SF-142, page tickets |
 | GAP-V05 | Handoff | Safe areas **RESOLVED** in `src/styles/components.css`, not yet tested on a real iOS device. The mobile blur cap stays open, pending device testing | Medium | Test in SF-154 | No | SF-142, SF-154 |
 | GAP-V06 | Home | Fixed 960 px sticky hero on short laptops (768 and 900 px tall) is not shown on any board | Medium | Test at 1366 × 768. Change only if it looks wrong, with owner approval | Yes | SF-143 |
@@ -104,7 +104,7 @@ Full list: [content-and-claims-register.md](../content/content-and-claims-regist
 | ID | Artboard | Gap | Severity | Suggested solution | Owner | Ticket |
 |---|---|---|---|---|---|---|
 | GAP-D01 | Foundations | Version labels disagree: 1.0, 1.1, 1.4.0, 1.9 | Low | Pin the artifact version. Treat content as v1.9 | No | SF-142 |
-| GAP-D02 | System, UI Kit | **RESOLVED.** Selectors for classes no page uses are removed, leaving 19 KB gzipped from 25 KB, and later rules still override earlier ones as in the source. Parity tests confirm | Low | None | No | SF-142 |
+| GAP-D02 | System, UI Kit | **RESOLVED.** Selectors for classes no page uses are removed, leaving 19 KB gzipped from 25 KB, and later rules still override earlier ones as in the source. Parity tests confirmed this at the time | Low | None | No | SF-142 |
 | GAP-D03 | Handoff | **CLOSED by decision 9.** Handoff mentions Storybook compatibility. The Technologies page listing Storybook as a skill is unrelated and stays | Low | None | No | SF-142 |
 | GAP-D04 | Global | **RESOLVED for tested browsers.** The fixed skip link resolves against the viewport inside `.sx` in Chromium, Firefox and WebKit | Low | Retest the cookie banner if built | No | SF-142 |
 | GAP-D06 | Global | No board exists for a runtime error page. `[locale]/error.tsx` adapts the NotFound composition, with drafted copy in both languages | Low | Review the copy and layout | Yes | SF-152 |
@@ -130,6 +130,6 @@ Full list: [content-and-claims-register.md](../content/content-and-claims-regist
 |---|---|---|---|---|---|---|
 | GAP-S01 | All | No metadata in the design | Medium | Approve the proposals in [page-seo-matrix.md](../seo/page-seo-matrix.md) | Yes | SF-153 |
 | GAP-S02 | n/a | `EugeniBykovski/simplex-web` is a separate older SimpleX site. Is it live on the target domain? | Medium | If so, plan redirects | Yes | SF-153 |
-| GAP-Q01 | n/a | Reference capture depends on the design runtime | Medium | Spike at the start of SF-155 | No | SF-155 |
+| GAP-Q01 | n/a | **CLOSED by the policy change:** no automated reference capture | Low | None | No | None |
 | GAP-L01 | Audit | The design was benchmarked against a named company's site. The board records that its logo, copy and content were deliberately not copied | Low | Do not ship the Audit board. Owner may want a brief review of overall resemblance | Yes | SF-156 |
 | GAP-J01 | n/a | **Jira was not accessible in SF-140.** Ticket names come from the owner's brief. Acceptance criteria were not compared, and discrepancies are listed in [implementation-roadmap.md](../architecture/implementation-roadmap.md) | High | Owner confirms, or gives Jira access | Yes | SF-141 |

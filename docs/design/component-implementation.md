@@ -24,7 +24,7 @@ Design classes do the visual work, and components put them on the right semantic
 
 ## Components
 
-All exports are under `src/components/`. Evidence: **P** means numeric style parity with the source in `tests/e2e/design-parity.spec.ts`, and **B** means behaviour tests in `tests/e2e/navigation.spec.ts`. Axe runs on all of them through the gallery.
+All exports are under `src/components/`. Evidence, historical at `ddc9e8e`: **P** means numeric style parity with the source, and **B** means behaviour tests. Those tests no longer exist.
 
 | Component | Export | Source board | Variants and states | Responsive | Accessibility | Evidence |
 |---|---|---|---|---|---|---|
@@ -70,18 +70,8 @@ Mobile menu behaviour beyond the board is an adaptation: focus moves in, Escape 
 
 ## Validation
 
-No Storybook. `src/app/[locale]/ui-gallery/page.gallery.tsx` shows every specimen, using production components. **It is a route only when built with `ENABLE_UI_GALLERY=true`**, through the `.gallery.tsx` page extension, and `pnpm check:bundle` fails if a normal build contains it.
-
-`tests/fixtures/design/` holds the original `simplex.css` and reference pages built from the design's own markup. Each test loads a reference and the real site in the same browser, then compares them.
-
-| Check | Tolerance | Coverage |
-|---|---|---|
-| Computed styles of 79 specimens | Exact | 1440, in Chromium, Firefox and WebKit |
-| Header and footer boxes | ±2 px | 9 widths from 320 to 2560 in each browser |
-| Horizontal overflow, header fit | None | All 16 QA widths, EN and RU |
-
-**Limits of this evidence.** It proves the code matches the source stylesheet and markup. It is not a pixel comparison with the published canvas, and full pages do not exist yet. Reference placeholders that are intentionally not rendered (email, Connect column) are removed before comparing, and the test says so. Playwright WebKit is not a Safari device test, so `backdrop-filter`, sticky and safe areas still need a real iOS pass.
+Automated tests and the component gallery were removed by owner decision. See [manual-qa.md](../qa/manual-qa.md). For the record, at SF-142 (`ddc9e8e`) the components passed numeric comparison with the source on Chromium, Firefox and WebKit locally, but CI failed on Linux.
 
 ## Build trap: prefixed blur
 
-The source declares `backdrop-filter` and then `-webkit-backdrop-filter`. The CSS minifier keeps only the last of such a pair, which leaves Chromium with no blur at all. The port removes the prefixed copy, and the minifier regenerates it for Safari. Parity tests now cover this.
+The source declares `backdrop-filter` and then `-webkit-backdrop-filter`. The CSS minifier keeps only the last of such a pair, which leaves Chromium with no blur at all. The port removes the prefixed copy, and the minifier regenerates it for Safari. Check glass by eye after changing the stylesheet.

@@ -2,6 +2,10 @@
 
 Ticket names are the owner's list from the SF-140 brief. **Jira itself was not accessible during SF-140** (GAP-J01), so acceptance criteria inside each ticket have not been compared with this document. Jira was not modified.
 
+## Acceptance for every ticket
+
+Automated tests were removed by owner decision. Each ticket from SF-144 to SF-156 is accepted through typecheck, lint, formatting, a production build, and manual functional, responsive, design and accessibility review. Lighthouse runs only when requested. See [manual-qa.md](../qa/manual-qa.md).
+
 ## Dependency order
 
 ```
@@ -14,7 +18,7 @@ SF-140 Architecture ──▶ SF-141 Setup ──▶ SF-142 Design system + shel
         Agent    Packages                 Company     Contact
           └──────────┴──────────┴─────────────┼───────────┴──────────┘
                                               ▼
-                 SF-153 SEO · SF-154 Assets and performance · SF-155 Visual QA
+                 SF-153 SEO · SF-154 Assets and performance · SF-155 Manual QA
                                               ▼
                                       SF-156 Release
 ```
@@ -47,14 +51,14 @@ Implemented on `main`. **Do not create a second scaffold.**
 |---|---|---|
 | Next.js App Router, React, strict TypeScript | Done | `pnpm build`, `pnpm typecheck` |
 | ESLint, Prettier, pnpm, lockfile | Done | `pnpm lint`, `pnpm format:check` |
-| Tailwind connected to design tokens | Done | `src/styles/globals.css`, `tests/unit/tokens.test.ts` |
-| EN/RU routing, typed messages, translation gate | Done | `tests/e2e/locale-routing.spec.ts` |
-| Server-rendered 404, error boundaries | Done | `tests/e2e/not-found.spec.ts` |
-| Environment validation | Done | `tests/unit/env.test.ts`, [environment-configuration.md](environment-configuration.md) |
+| Tailwind connected to design tokens | Done | `src/styles/globals.css` |
+| EN/RU routing, typed messages, translation gate | Done | `src/i18n/routing.ts` |
+| Server-rendered 404, error boundaries | Done | `src/app/global-not-found.tsx` |
+| Environment validation | Done | [environment-configuration.md](environment-configuration.md) |
 | Security headers, CSP | Done, tested on foundation pages | [security-boundaries.md](security-boundaries.md) |
-| Metadata, canonical, Twitter, robots, sitemap structure | Done | `tests/unit/seo.test.ts` |
-| Image configuration, favicons | Done | `tests/e2e/platform.spec.ts` |
-| Vitest, Playwright, axe, CI workflow | Done. **The workflow has not run on GitHub yet** | `actionlint` passes |
+| Metadata, canonical, Twitter, robots, sitemap structure | Done | `src/lib/seo/metadata.ts` |
+| Image configuration, favicons | Done | `next.config.ts` |
+| CI workflow | Done: install, format, lint, typecheck, build | `.github/workflows/ci.yml` |
 | Deployment guide | Done | [deployment.md](deployment.md) |
 | **Hosting target, Jira reconciliation** | **Open: owner** | GAP-J01 |
 
@@ -62,7 +66,7 @@ Implemented on `main`. **Do not create a second scaffold.**
 
 Implemented on `main`. See [component-implementation.md](../design/component-implementation.md).
 
-**Done:** tokens, ported stylesheet, Tailwind mapping, logo system, primitives, forms, tabs, accordion, header, mega menus, mobile menu, footer, skip link, EN and RU shell strings, UI gallery, design parity tests, Chromium, Firefox and WebKit runs.
+**Done:** tokens, ported stylesheet, Tailwind mapping, logo system, primitives, forms, tabs, accordion, header, mega menus, mobile menu, footer, skip link, EN and RU shell strings.
 
 **Handed to page tickets:** page patterns such as `CtaBand`, whose CSS is ready. Add each route to `implementedRoutes` when its page ships, which turns its links on everywhere.
 
@@ -80,7 +84,7 @@ After SF-142, page tickets are largely independent, because each owns its own se
 | SF-151 Contact, SF-149 Job form | Form primitives and the Server Action pattern. SF-151 goes first |
 | SF-152 Legal | Mostly independent. Needs `Switch` |
 
-Anti-drift rules: page tickets add only under `components/sections/<family>/`; changes to `ui/`, `layout/` or design CSS go through one reviewer; every page ticket runs the visual suite at 390, 768 and 1440 before merging.
+Anti-drift rules: page tickets add only under `components/sections/<family>/`; changes to `ui/`, `layout/` or design CSS go through one reviewer; every page ticket is inspected by hand at 390, 768 and 1440 before merging.
 
 **Suggested order if working serially:** SF-143 (sets most patterns), then SF-145, SF-147, SF-151, SF-148, SF-144, SF-146, SF-149, SF-150, SF-152.
 
@@ -90,7 +94,7 @@ Anti-drift rules: page tickets add only under `components/sections/<family>/`; c
 |---|---|
 | SF-153 Technical SEO | Populate `indexableRoutes`, JSON-LD builders, Open Graph images, root metadata, validation. `robots.ts` and `sitemap.ts` exist. [seo-architecture.md](../seo/seo-architecture.md) |
 | SF-154 Assets, Motion & Performance | Asset pipeline, favicons, Open Graph art, AVIF and WebP, CWV budgets, glass and blur testing, motion tuning. [asset-manifest.md](../design/asset-manifest.md), [motion spec](../design/motion-interaction-specification.md) |
-| SF-155 Visual Regression & E2E | Playwright suites, reference capture, deviations log. [strategy](../qa/visual-regression-strategy.md), [matrix](../qa/test-matrix.md) |
+| SF-155 Visual Regression & E2E | **Scope changed by owner decision:** no automated suites. Manual cross-page responsive, design and accessibility review, per [manual-qa.md](../qa/manual-qa.md) |
 | SF-156 Release Acceptance | Domain, DNS, Resend verification, security headers, Search Console, launch checklist, the index switch, legal sign-off |
 
 ## Scope discrepancies to confirm in Jira

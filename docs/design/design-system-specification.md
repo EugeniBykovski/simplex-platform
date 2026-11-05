@@ -60,7 +60,7 @@ Root features: `font-feature-settings: "ss01", "cv11"`, antialiased, `text-rende
 | Lines | `--line rgba(7,11,43,.10)`, `--line-2 rgba(7,11,43,.18)`, `--line-dark rgba(255,255,255,.12)`, `--line-dark-2 rgba(255,255,255,.22)` |
 | Demo label | `#7A4A00` on `#FFF1D6`, border `#F1D49A` (`.tag-demo`) |
 
-Contrast ratios are the source's own annotations, not independently measured. SF-155 verifies them.
+Contrast ratios are the source's own annotations, not independently measured. Check them in manual review.
 
 **Legacy aliases:** `--graphite-*` resolves to steel blue, and `--mint` and `--teal` to steel and slate. Keep only what the ported markup uses, then remove the aliases. Do not use the words "mint" or "teal" for anything new: the palette retired them in v1.2.
 
@@ -145,7 +145,7 @@ Use only the full wordmark or the SX tile. Never the X alone, never uppercase, n
 
 From the handoff, to be verified rather than assumed: WCAG 2.2 AA, text contrast 4.5:1, visible focus, 44 px targets, `aria-pressed` on filters, `role=tab` on tabs, `aria-live` result counts, native `details`, decorative SVG hidden, and the logo exposed once as "SimpleX".
 
-Known shortfalls: [test-matrix.md](../qa/test-matrix.md) and [design-gap-register.md](design-gap-register.md).
+Known shortfalls: [manual-qa.md](../qa/manual-qa.md) and [design-gap-register.md](design-gap-register.md).
 
 ## Interaction states
 

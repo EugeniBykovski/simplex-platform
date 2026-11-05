@@ -1,6 +1,6 @@
 # Environment configuration
 
-Rules live in `src/config/env.ts`, with unit tests in `tests/unit/env.test.ts`. The template is `.env.example`. **Real values never go in Git:** `.gitignore` excludes every `.env*` file except the template.
+Rules live in `src/config/env.ts`. The template is `.env.example`. **Real values never go in Git:** `.gitignore` excludes every `.env*` file except the template.
 
 ## Variables
 
@@ -31,7 +31,7 @@ A missing URL is safe outside production because those builds are always `noinde
 
 - Anything prefixed `NEXT_PUBLIC_` ends up in browser code. Never use the prefix for a secret.
 - Read email settings only through `getEmailConfig()` in `src/lib/email/config.ts`. It imports `server-only`, so importing it from a Client Component fails the build.
-- Error messages name variables and never print secret values. A test covers this.
+- Error messages name variables and never print secret values.
 - `pnpm check:bundle` searches browser files after a build for server variable names and for a canary value. See [security-boundaries.md](security-boundaries.md).
 
 ## Commands

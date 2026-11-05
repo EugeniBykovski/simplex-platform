@@ -48,7 +48,10 @@ export function MobileMenu({
     outside.forEach((node) => {
       node.inert = true;
     });
-    document.documentElement.classList.add("sx-menu-open");
+    // Keep the width steady only when a scrollbar is really there to disappear.
+    const root = document.documentElement;
+    root.classList.toggle("sx-menu-keep-gutter", window.innerWidth > root.clientWidth);
+    root.classList.add("sx-menu-open");
     // Until routes have pages the panel may hold no focusable link, so it takes focus itself.
     (panel.current?.querySelector<HTMLElement>("a[href], button") ?? panel.current)?.focus();
 
@@ -72,7 +75,7 @@ export function MobileMenu({
       outside.forEach((node) => {
         node.inert = false;
       });
-      document.documentElement.classList.remove("sx-menu-open");
+      document.documentElement.classList.remove("sx-menu-open", "sx-menu-keep-gutter");
       document.removeEventListener("keydown", onKeyDown);
       document.removeEventListener("pointerdown", onPointerDown);
       media.removeEventListener("change", onResize);

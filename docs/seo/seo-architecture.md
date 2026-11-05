@@ -19,7 +19,7 @@ SF-153 implements and verifies this specification. Today:
 | hreflang | Implemented in the helper, emits nothing until a Russian family is approved |
 | Environment indexing gate | Implemented: `SITE_INDEXABLE` |
 | Russian `noindex` | Implemented through translation status |
-| 404 status and `noindex` | Implemented and tested: `pnpm smoke:404` |
+| 404 status and `noindex` | Implemented, checked by hand |
 | Robots | Implemented: disallow all unless indexable |
 | Sitemap | Structure implemented, deliberately empty until routes are approved in `indexableRoutes` |
 | Structured data | **Specified, not implemented** |
@@ -90,7 +90,7 @@ Render JSON-LD server-side through small typed builders (planned at `src/lib/seo
 | `FAQPage` | Agent, How We Work | The questions are visible and genuine. Google has limited FAQ rich results to authoritative government and health sites since 2023, so expect no rich result. Include it only if the owner values it for other consumers |
 | `AggregateRating`, `Review` | Nowhere | There are no approved reviews |
 
-Validate in SF-155 with the Schema Markup Validator.
+Validate by hand with the Schema Markup Validator.
 
 ## Heading hierarchy
 

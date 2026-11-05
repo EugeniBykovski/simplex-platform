@@ -13,17 +13,14 @@ pnpm install
 pnpm dev
 ```
 
-| Command                    | Purpose                                                                                                                                                                             |
-| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `pnpm dev`                 | Development server                                                                                                                                                                  |
-| `pnpm build`, `pnpm start` | Production build and server                                                                                                                                                         |
-| `pnpm verify`              | Format, types, lint, unit tests, i18n, docs, build, client-bundle check                                                                                                             |
-| `pnpm test:unit`           | Vitest                                                                                                                                                                              |
-| `pnpm test:e2e`            | Playwright on Chromium, Firefox and WebKit, against a production build on a free port. Run `pnpm build:test` first, and `pnpm exec playwright install chromium firefox webkit` once |
-| `pnpm check:i18n`          | Fails on key, ICU or plural drift between languages                                                                                                                                 |
-| `pnpm check:bundle`        | Fails if server-only values reach browser files                                                                                                                                     |
-| `pnpm smoke:404`           | Checks server-rendered 404s on a running site (set `BASE_URL`)                                                                                                                      |
-| `pnpm validate:docs`       | Fails on invalid JSON, dead links or broken coverage in `docs/`                                                                                                                     |
+| Command                    | Purpose                                                         |
+| -------------------------- | --------------------------------------------------------------- |
+| `pnpm dev`                 | Development server                                              |
+| `pnpm build`, `pnpm start` | Production build and server                                     |
+| `pnpm verify`              | Format, types, lint, i18n, docs, build, client-bundle check     |
+| `pnpm check:i18n`          | Fails on key, ICU or plural drift between languages             |
+| `pnpm check:bundle`        | Fails if server-only values reach browser files                 |
+| `pnpm validate:docs`       | Fails on invalid JSON, dead links or broken coverage in `docs/` |
 
 ## Documentation
 
@@ -37,7 +34,7 @@ Start with the [system design](docs/architecture/system-design.md) and the [gap 
 
 **SEO:** [architecture](docs/seo/seo-architecture.md) · [page matrix](docs/seo/page-seo-matrix.md)
 
-**QA:** [visual regression](docs/qa/visual-regression-strategy.md) · [test matrix](docs/qa/test-matrix.md)
+**QA:** [quality policy and manual QA](docs/qa/manual-qa.md)
 
 ## Rules worth knowing
 

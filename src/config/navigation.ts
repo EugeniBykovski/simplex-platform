@@ -1,6 +1,6 @@
 /**
- * Navigation structure from the design's Nav and Footer boards. Hrefs are checked against
- * docs/architecture/route-registry.json by tests/unit/navigation.test.ts.
+ * Navigation structure from the design's Nav and Footer boards. Every href must be a route in
+ * docs/architecture/route-registry.json.
  */
 export type NavItemKey =
   | "customSoftware"

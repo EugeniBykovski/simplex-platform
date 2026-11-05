@@ -3,7 +3,7 @@
  * Only token blocks (now in tokens.css) and rules that no page uses were removed. Values are
  * untouched, and later rules still override earlier ones as in the source. -webkit-backdrop-filter is
  * also dropped, because the minifier regenerates it and otherwise loses the standard one. Do not hand-edit:
- * additions belong in components.css. tests/e2e/design-parity.spec.ts compares it to the source.
+ * additions belong in components.css.
  */
 .sx { container-type: inline-size; container-name: sx; font-family: var(--font); color: var(--text); background: var(--white); font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; overflow-x: clip; font-feature-settings: "ss01", "cv11"; }
 .sx *, .sx *::before, .sx *::after { box-sizing: border-box; }
