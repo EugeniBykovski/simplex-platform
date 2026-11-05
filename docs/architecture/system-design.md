@@ -42,7 +42,7 @@ The design is not a set of static frames. It is one stylesheet (`simplex.css`, 1
 |---|---|---|
 | Tokens | **Done in SF-141.** `src/styles/tokens.css` holds the 87 source tokens verbatim, and `@theme inline` in `globals.css` maps them to Tailwind. Default palette, scales and breakpoints are removed | One token source for both systems |
 | Design classes (`.glass`, `.btn`, `.bg-horizon`, `.t-h1`, …) | **Done in SF-142.** `src/styles/simplex.css`, in `@layer components`, generated from source | Exact values; hover, motion and container rules stay intact |
-| New layout glue | Tailwind utilities, with `sx-1280`, `sx-1100`, `sx-1000`, `sx-860` and `sx-600` container variants | Where the design used inline `style` attributes |
+| Everything element-specific | Tailwind classes in `className`, with `sx-1280`, `sx-1100`, `sx-1000`, `sx-860` and `sx-600` container variants | Where the design used inline `style` attributes |
 | Page-only CSS | Co-located, from each board's `<helmet>` | Keeps page rules out of the global bundle |
 
 `simplex.css` is versioned by accretion, so `.glass`, `.nav` and others are redefined later in the file. The port keeps that order rather than merging rules, drops selectors no page uses ([GAP-D02](../design/design-gap-register.md)) and keeps the `.sx` container root.
@@ -56,6 +56,8 @@ src/
   app/                 global-not-found.tsx, global-error.tsx, robots.ts, sitemap.ts, icons
   app/[locale]/        layout.tsx, page.tsx, not-found.tsx, error.tsx
   components/ui/       Design-system primitives
+  components/sections/home/  Homepage sections
+  content/home/        Homepage copy: en.ts, ru.ts, types.ts
   components/layout/   SiteLayout, SiteHeader, SiteFooter, MobileMenu, MegaMenuItem, NavLink
   components/i18n/     locale-switcher.tsx
   components/system/   not-found-view.tsx
@@ -63,7 +65,7 @@ src/
   i18n/                routing.ts, navigation.ts, request.ts, translation-status.ts, messages/{en,ru}/
   lib/seo/             metadata.ts
   lib/email/           config.ts (server-only; unused until SF-151)
-  styles/              tokens.css, simplex.css, components.css, globals.css, fonts.ts, system-pages.css
+  styles/              tokens.css, simplex.css, components.css, globals.css, fonts.ts
   types/               next-intl.d.ts
   proxy.ts
 scripts/               check-i18n.mjs, check-client-bundle.mjs, validate-docs.mjs, smoke-404.mjs
@@ -76,7 +78,7 @@ Planned, each created by the ticket that first needs it, never as empty folders:
 ```
 src/
   components/
-    sections/          Sections shared by more than one route family (page tickets)
+    sections/          More route families (page tickets)
   features/
     contact/           Form, schema, Server Action, email templates (SF-151)
     careers/           Application form (SF-149)
@@ -115,7 +117,7 @@ See `.env.example`. `NEXT_PUBLIC_SITE_URL` sets canonical and hreflang origins, 
 
 ## Visual baseline today
 
-The full design stylesheet, tokens, fonts, logo system, shared components, header, footer, and the 404 and error pages exist. See [component-implementation.md](../design/component-implementation.md). The placeholder home and the error page are not approved designs.
+The full design stylesheet, tokens, fonts, logo system, shared components, header, footer, and the 404 and error pages exist. See [component-implementation.md](../design/component-implementation.md). The error page has no approved design.
 
 ## Images
 

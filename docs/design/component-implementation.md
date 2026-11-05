@@ -10,13 +10,42 @@ What SF-142 actually built. The planning list, with usage per board, is [compone
 | `src/styles/simplex.css` | The design's stylesheet, in the `components` layer | Generated from source. Do not hand-edit |
 | `src/styles/components.css` | Rules from board `<helmet>`s, plus adaptations | Each adaptation is in the [gap register](design-gap-register.md) |
 | `src/styles/globals.css` | Tailwind setup and token mapping | Default palette, numeric spacing and breakpoints are removed |
-| `src/styles/system-pages.css` | 404 and error page rules | From the NotFound board |
 
-Design classes do the visual work, and components put them on the right semantic elements. Use Tailwind utilities only for layout glue. **A Tailwind utility with the same name as a design class silently beats it**, as happened with `gap-5` (20 px against the design's 24 px), so `pnpm check:bundle` now fails on any collision.
+Design classes provide shared visual effects, and Tailwind classes provide everything specific to an element. **A Tailwind utility with the same name as a design class silently beats it**, as happened with `gap-5` (20 px against the design's 24 px), so `pnpm check:bundle` now fails on any collision.
+
+## Styling rule: Tailwind in `className`
+
+Component-level static styling goes directly on the element as Tailwind classes, using theme tokens where one exists and exact arbitrary values otherwise. **ESLint rejects `style` attributes under `src/`.**
+
+| Need | Do this |
+|---|---|
+| Exact design value | `min-h-[380px]`, `p-[clamp(28px,5cqi,72px)]`, `[background:linear-gradient(...)]` |
+| Design token | `text-text-3`, `rounded-lg`, `font-mono` |
+| A CSS variable the design reads | `[--gap:16px]`, `[--p:100]`, `[--m:46px]` |
+| Responsive change | `sx-1100:hidden`: container variants, never viewport breakpoints |
+| Value by index or state | A typed map of complete class names, such as `stackIndex`. Never build a class name from parts |
+| Logo size | `text-[25px]` on `Wordmark` and `Lockup`, `[--m:46px]` on `SxMark` |
+
+There are **no runtime-dynamic exceptions** today.
+
+Inline values beat everything except `!important`, and so do utilities over the `components` layer, which is why the migration was safe. Use `[background:...]` rather than `bg-[...]` to mean the shorthand, because `bg-[gradient]` only sets `background-image`. `border-0` keeps a solid zero-width border, which looks the same as `border: 0`.
+
+### CSS that stays global
+
+| File | Why |
+|---|---|
+| `src/styles/tokens.css` | Design tokens |
+| `src/styles/globals.css` | Tailwind setup, theme mapping, container variants |
+| `src/styles/simplex.css` | **The design's own component classes** (`.btn`, `.glass`, `.bg-horizon`, `.mock`, and so on): pseudo-elements, masks, keyframes, scroll timelines and container rules. Kept so it stays faithful to the source, as the styling rule allows |
+| `src/styles/components.css` | Switch pseudo-elements, pending state, safe areas, menu locking, blur fallbacks |
+| `src/styles/fonts.ts` | Self-hosted Geist |
+
+So design classes such as `glass` and `widget` still appear beside utilities: `className="widget float-w sx-1100:hidden absolute ..."`. Page layout and one-off values live in `className`.
 
 ## API conventions
 
 - Server Components by default. Only `tabs.tsx`, `mobile-menu.tsx`, `mega-menu-item.tsx`, `nav-link.tsx` and `locale-switcher.tsx` carry `"use client"`.
+- `home-technology-panel.tsx` and `home-estimator-panel.tsx` are the only other client components.
 - `controls.tsx` and `form.tsx` have no directive, and are usable from client parents that pass handlers.
 - Native elements first: `<button>` for actions, links for navigation, `<details>` for accordions.
 - All text arrives as props. Primitives hold no strings and no route knowledge, apart from `RouteLink`.

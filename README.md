@@ -2,7 +2,7 @@
 
 Company website for SimpleX. Next.js App Router, strict TypeScript, Tailwind CSS, next-intl (English and Russian). The approved visual source is the [SimpleX Claude Design canvas](https://claude.ai/artifact/SHq68U3eVzySjKWCjgFwkG), pinned at version `1793869596-167d`.
 
-**Status:** foundation and design system are built. No design pages are implemented yet, and nothing is deployed.
+**Status:** foundation, design system and homepage are built. Other pages are pending, and nothing is deployed.
 
 ## Getting started
 
@@ -40,6 +40,7 @@ Start with the [system design](docs/architecture/system-design.md) and the [gap 
 
 - Use `Link`, `redirect` and `usePathname` from `@/i18n/navigation`. ESLint enforces this.
 - Components are server components unless they need browser state.
+- Style in `className` with Tailwind. Inline `style` is rejected by ESLint.
 - Link to site routes through `RouteLink` or `LinkButton`, and add a route to `implementedRoutes` when its page ships.
 - Do not name a Tailwind class like a design class. `pnpm check:bundle` catches collisions.
 - Never fill a `[bracketed]` placeholder with a guess, and never remove a demonstration label from content that is not real. See the [claims register](docs/content/content-and-claims-register.md).

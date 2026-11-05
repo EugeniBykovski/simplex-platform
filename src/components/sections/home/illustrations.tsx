@@ -4,7 +4,8 @@ import { SxMark } from "@/components/ui/logo";
 /**
  * Illustrative interface mock-ups, drawn in HTML as on the Home board. All are decorative and hidden
  * from assistive technology, so their sample text is not translated. Bracketed figures in the
- * board's mock-ups are shown as a dash rather than invented.
+ * board's mock-ups are shown as a dash rather than invented. The hero widgets hide at 1100 px and
+ * below, as the stylesheet intends: the board's inline display overrode that rule (GAP-D12).
  */
 const LEDGER_BARS = [
   "h-[40%]",
@@ -25,7 +26,7 @@ export function HeroWidgets() {
       <span className="hero-beam [translate:-50%_0] [rotate:-34deg]" aria-hidden="true" />
       <span className="hero-beam [translate:-50%_0] [rotate:34deg]" aria-hidden="true" />
       <div
-        className="widget float-w left-[4%] top-[560px] w-[230px] grid gap-[12px]"
+        className="widget float-w sx-1100:hidden left-[4%] top-[560px] w-[230px] grid gap-[12px]"
         aria-hidden="true"
       >
         <span className="w-head">
@@ -46,7 +47,7 @@ export function HeroWidgets() {
         </span>
       </div>
       <div
-        className="widget float-w right-[4%] top-[540px] w-[200px] grid gap-[10px] justify-items-start"
+        className="widget float-w sx-1100:hidden right-[4%] top-[540px] w-[200px] grid gap-[10px] justify-items-start"
         aria-hidden="true"
       >
         <span className="w-head">

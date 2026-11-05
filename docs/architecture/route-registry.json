@@ -91,7 +91,7 @@
           "Organization",
           "WebSite"
         ],
-        "indexing": "index at launch",
+        "indexing": "index at launch, once blockers close",
         "launchBlockers": [
           "Featured work stays labelled as demonstrations (GAP-C02)",
           "SimpleX Agent wording must be verified (GAP-C01)",

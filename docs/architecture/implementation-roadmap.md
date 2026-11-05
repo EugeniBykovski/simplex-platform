@@ -72,6 +72,12 @@ Implemented on `main`. See [component-implementation.md](../design/component-imp
 
 **Open:** real iOS device pass, native editor for Russian, GAP-D07 to GAP-D11 review.
 
+## SF-143: Homepage
+
+Implemented on `main`. See [homepage-artboard-matrix.md](../design/homepage-artboard-matrix.md) and [homepage-visual-parity.md](../qa/homepage-visual-parity.md).
+
+**Open:** native editor for Russian, real iOS pass, and the content blockers listed in the parity record.
+
 ## Parallel work
 
 After SF-142, page tickets are largely independent, because each owns its own sections and content.
