@@ -25,8 +25,10 @@ export default async function GlobalNotFound() {
 
   return (
     <html lang={locale} className={fontClassNames}>
-      <body className="font-sans antialiased">
-        <NotFoundView locale={locale} />
+      <body>
+        <div className="sx">
+          <NotFoundView locale={locale} />
+        </div>
       </body>
     </html>
   );

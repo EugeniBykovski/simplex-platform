@@ -1,7 +1,135 @@
-/* Design tokens from simplex.css are ported here in SF-142. See docs/design/design-system-specification.md. */
 @import "tailwindcss";
+@import "./tokens.css";
+@import "./base.css";
 
+/*
+ * Tailwind's default palette, scales and breakpoints are removed, so utilities can only express
+ * approved design values. Names differ from the source token where Tailwind's namespace would
+ * otherwise make a variable refer to itself, as with --shadow-1 and --blur-xs.
+ */
 @theme inline {
-  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --color-*: initial;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-white: var(--white);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-paper: var(--paper);
+  --color-text: var(--text);
+  --color-text-2: var(--text-2);
+  --color-text-3: var(--text-3);
+  --color-on-dark: var(--on-dark);
+  --color-on-dark-2: var(--on-dark-2);
+  --color-on-dark-3: var(--on-dark-3);
+  --color-cobalt: var(--cobalt);
+  --color-azure: var(--azure);
+  --color-signal: var(--signal);
+  --color-signal-on-dark: var(--signal-on-dark);
+  --color-steel: var(--steel);
+  --color-slate: var(--slate);
+  --color-steel-blue-950: var(--steel-blue-950);
+  --color-steel-blue: var(--steel-blue);
+  --color-steel-blue-700: var(--steel-blue-700);
+  --color-steel-blue-500: var(--steel-blue-500);
+  --color-steel-blue-300: var(--steel-blue-300);
+  --color-steel-blue-100: var(--steel-blue-100);
+  --color-success: var(--success);
+  --color-error: var(--error);
+  --color-warning: var(--warning);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-line-dark: var(--line-dark);
+  --color-line-dark-2: var(--line-dark-2);
+
+  --font-*: initial;
+  --font-sans: var(--font);
+  --font-mono: var(--mono);
+
+  --text-*: initial;
+  --text-display: clamp(54px, 8.4cqi, 128px);
+  --text-display--line-height: 0.94;
+  --text-display--letter-spacing: -0.052em;
+  --text-display--font-weight: 600;
+  --text-h1: clamp(40px, 5.6cqi, 84px);
+  --text-h1--line-height: 0.98;
+  --text-h1--letter-spacing: -0.045em;
+  --text-h1--font-weight: 600;
+  --text-h2: clamp(32px, 4.2cqi, 60px);
+  --text-h2--line-height: 1.02;
+  --text-h2--letter-spacing: -0.04em;
+  --text-h2--font-weight: 600;
+  --text-h3: clamp(26px, 2.6cqi, 38px);
+  --text-h3--line-height: 1.1;
+  --text-h3--letter-spacing: -0.03em;
+  --text-h3--font-weight: 600;
+  --text-h4: clamp(20px, 1.7cqi, 24px);
+  --text-h4--line-height: 1.22;
+  --text-h4--letter-spacing: -0.02em;
+  --text-h4--font-weight: 600;
+  --text-h5: 18px;
+  --text-h5--line-height: 1.3;
+  --text-h5--letter-spacing: -0.012em;
+  --text-h5--font-weight: 600;
+  --text-lead: clamp(18px, 1.55cqi, 22px);
+  --text-lead--line-height: 1.5;
+  --text-lead--letter-spacing: -0.012em;
+  --text-body: 16px;
+  --text-body--line-height: 1.62;
+  --text-small: 14px;
+  --text-small--line-height: 1.55;
+  --text-xs: 12.5px;
+  --text-xs--line-height: 1.5;
+
+  --spacing-s1: var(--s-1);
+  --spacing-s2: var(--s-2);
+  --spacing-s3: var(--s-3);
+  --spacing-s4: var(--s-4);
+  --spacing-s5: var(--s-5);
+  --spacing-s6: var(--s-6);
+  --spacing-s7: var(--s-7);
+  --spacing-s8: var(--s-8);
+  --spacing-s9: var(--s-9);
+  --spacing-s10: var(--s-10);
+  --spacing-s11: var(--s-11);
+  --spacing-gutter: var(--gutter);
+  --spacing-section: var(--section);
+
+  --radius-*: initial;
+  --radius-xs: var(--r-xs);
+  --radius-sm: var(--r-sm);
+  --radius-md: var(--r-md);
+  --radius-lg: var(--r-lg);
+  --radius-xl: var(--r-xl);
+  --radius-pill: var(--r-pill);
+
+  --shadow-*: initial;
+  --shadow-e1: var(--shadow-1);
+  --shadow-e2: var(--shadow-2);
+  --shadow-e3: var(--shadow-3);
+
+  --blur-*: initial;
+  --blur-glass-xs: var(--blur-xs);
+  --blur-glass-s: var(--blur-s);
+  --blur-glass-m: var(--blur-m);
+  --blur-glass-l: var(--blur-l);
+  --blur-glass-xl: var(--blur-xl);
+
+  --ease-*: initial;
+  --ease-sx-out: var(--ease-out);
+  --ease-sx-in-out: var(--ease-in-out);
+  --ease-sx-standard: var(--ease-standard);
+
+  --container-*: initial;
+  --container-content: var(--container);
+  --container-text: var(--container-narrow);
+
+  /* Layout changes use the sx-* container variants below, never viewport breakpoints. */
+  --breakpoint-*: initial;
 }
+
+@custom-variant sx-1280 (@container sx (max-width: 1280px));
+@custom-variant sx-1100 (@container sx (max-width: 1100px));
+@custom-variant sx-1000 (@container sx (max-width: 1000px));
+@custom-variant sx-860 (@container sx (max-width: 860px));
+@custom-variant sx-600 (@container sx (max-width: 600px));

@@ -10,5 +10,12 @@
     "contact": "Contact",
     "metaTitle": "Page not found — SimpleX",
     "metaDescription": "The link may be out of date, or the page has moved."
+  },
+  "error": {
+    "eyebrow": "Error",
+    "title": "Something went wrong.",
+    "body": "This page could not be loaded. Try again, or go back to the home page.",
+    "retry": "Try again",
+    "home": "Back to home"
   }
 }

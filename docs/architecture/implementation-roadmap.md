@@ -41,38 +41,31 @@ Every board has exactly one owner.
 
 ## SF-141: Foundation
 
-Verified on `main` during SF-140. **Do not create a second scaffold.**
+Implemented on `main`. **Do not create a second scaffold.**
 
 | Item | State | Evidence |
 |---|---|---|
-| Next.js App Router, React | Done | Next.js 16.4.5, React 19.3.1, `pnpm build` passes |
-| TypeScript strict | Done | `strict`, `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`; `pnpm typecheck` passes |
-| Tailwind CSS | Done, tokens not ported | v4 installed. Tokens belong to SF-142 |
-| ESLint, Prettier | Done | `pnpm lint`, `pnpm format:check` pass |
-| Package manager, lockfile | Done | pnpm, `pnpm install --frozen-lockfile` passes |
-| EN/RU routing | Done | next-intl, `src/proxy.ts`, [i18n.md](i18n.md) |
-| Typed messages, parity check | Done | `src/types/next-intl.d.ts`, `pnpm check:i18n` |
-| Translation gate | Done | `src/i18n/translation-status.ts` |
-| Metadata helper | Done | `src/lib/seo/metadata.ts` |
-| Fonts with Cyrillic | Done | `src/styles/fonts.ts` |
-| Rendering boundaries | Done | Locale pages are static (SSG). `/_not-found` is dynamic by design, since it reads the locale |
-| Server-rendered 404 | Done in SF-140 | `src/app/global-not-found.tsx`, `pnpm smoke:404` |
-| **Environment validation** | **Not done** | `src/config/site.ts` falls back to localhost with no validation. A production build with no `NEXT_PUBLIC_SITE_URL` would silently emit localhost canonicals |
-| **CI** | **Not done** | No workflow exists |
-| **Playwright** | **Not done** | Shared with SF-155 |
-| **Hosting and environments** | **Not done** | Target not chosen |
-| **Security headers** | **Not done** | Only `poweredByHeader: false` |
-| **Favicon** | **Not done** | `/favicon.ico` returns 404. Assets in SF-154 |
-| **Jira reconciliation** | **Not done** | GAP-J01 |
+| Next.js App Router, React, strict TypeScript | Done | `pnpm build`, `pnpm typecheck` |
+| ESLint, Prettier, pnpm, lockfile | Done | `pnpm lint`, `pnpm format:check` |
+| Tailwind connected to design tokens | Done | `src/styles/globals.css`, `tests/unit/tokens.test.ts` |
+| EN/RU routing, typed messages, translation gate | Done | `tests/e2e/locale-routing.spec.ts` |
+| Server-rendered 404, error boundaries | Done | `tests/e2e/not-found.spec.ts` |
+| Environment validation | Done | `tests/unit/env.test.ts`, [environment-configuration.md](environment-configuration.md) |
+| Security headers, CSP | Done, tested on foundation pages | [security-boundaries.md](security-boundaries.md) |
+| Metadata, canonical, Twitter, robots, sitemap structure | Done | `tests/unit/seo.test.ts` |
+| Image configuration, favicons | Done | `tests/e2e/platform.spec.ts` |
+| Vitest, Playwright, axe, CI workflow | Done. **The workflow has not run on GitHub yet** | `actionlint` passes |
+| Deployment guide | Done | [deployment.md](deployment.md) |
+| **Hosting target, Jira reconciliation** | **Open: owner** | GAP-J01 |
 
 ## SF-142: Design system and shell
 
 **This is the critical dependency.** Page work must not start until it lands, or the pages will fork primitives and drift.
 
-1. Port tokens and design CSS, resolving the cascade ([system-design.md](system-design.md)). Test GAP-D04. Delete the rules in `src/styles/not-found.css` that the port duplicates.
+1. Port tokens and design CSS, resolving the cascade ([system-design.md](system-design.md)). Test GAP-D04. Tokens are done, so port the rest. Delete the rules in `src/styles/system-pages.css` that the port duplicates.
 2. Build `SiteLayout`, `Header`, `MegaMenu`, `MobileMenu`, `Footer`, in both languages. Check header fit in Russian at 1101–1280. Add them to the 404 page.
 3. Build primitives from [component-inventory.md](../design/component-inventory.md).
-4. Add `@sx` container variants to Tailwind.
+4. Use the `sx-*` container variants that already exist in `src/styles/globals.css`.
 5. Add a QA-only specimen route, excluded from production, in place of Storybook.
 6. Set up the reference-capture spike, with SF-155 (GAP-Q01).
 
@@ -96,7 +89,7 @@ Anti-drift rules: page tickets add only under `components/sections/<family>/`; c
 
 | Ticket | Scope |
 |---|---|
-| SF-153 Technical SEO | `robots.ts`, `sitemap.ts`, JSON-LD builders, Twitter metadata, root metadata, validation. [seo-architecture.md](../seo/seo-architecture.md) |
+| SF-153 Technical SEO | Populate `indexableRoutes`, JSON-LD builders, Open Graph images, root metadata, validation. `robots.ts` and `sitemap.ts` exist. [seo-architecture.md](../seo/seo-architecture.md) |
 | SF-154 Assets, Motion & Performance | Asset pipeline, favicons, Open Graph art, AVIF and WebP, CWV budgets, glass and blur testing, motion tuning. [asset-manifest.md](../design/asset-manifest.md), [motion spec](../design/motion-interaction-specification.md) |
 | SF-155 Visual Regression & E2E | Playwright suites, reference capture, deviations log. [strategy](../qa/visual-regression-strategy.md), [matrix](../qa/test-matrix.md) |
 | SF-156 Release Acceptance | Domain, DNS, Resend verification, security headers, Search Console, launch checklist, the index switch, legal sign-off |
@@ -111,7 +104,7 @@ Anti-drift rules: page tickets add only under `components/sections/<family>/`; c
 | Job application form | Could be Careers or Contact | SF-149 builds it on SF-151's form pattern |
 | Motion | SF-154 names motion, but scroll and hover rules arrive with the SF-142 CSS port | SF-142 ports, SF-154 tunes and verifies |
 | Foundations reference boards | `Main`, `Audit`, `Handoff` ship nowhere | Closed by SF-140 |
-| Non-board shared code | Skip link, error page, cookie banner | SF-142, SF-142, SF-152 |
+| Non-board shared code | Skip link, cookie banner | SF-142, SF-152 |
 | Russian copy | No ticket names it | Each page ticket, with a named reviewer (GAP-I01) |
 
 ## Before launch

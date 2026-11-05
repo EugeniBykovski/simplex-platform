@@ -13,13 +13,14 @@ Dependencies point downward only.
 | Sections | `src/components/sections/` (planned) | Editorial page sections | `layout`, `ui`, `lib` |
 | Layout | `src/components/layout/` (planned) | `SiteLayout`, `Header`, `MobileMenu`, `Footer`, `Section` | `ui`, `lib` |
 | UI | `src/components/ui/` (planned) | Design-system primitives with no page knowledge | `lib` |
+| System | `src/components/system/` | 404 view, reused by global and locale boundaries | `lib` |
 | Lib | `src/lib/`, `src/config/`, `src/i18n/` | Helpers, config, no JSX where avoidable | Nothing above |
 
 Rules:
 
 - **UI primitives receive text as props.** They hold no strings and no knowledge of routes.
 - **Sections receive content as typed props.** Pages load content and pass it down, so sections never import a locale's content directly.
-- **Nothing outside `features/contact` touches email**, and `lib/email` is server-only.
+- **Nothing outside `features/contact` and `features/careers` touches email**, and `src/lib/email/config.ts` is server-only: importing it into a Client Component fails the build.
 
 ## Client or server
 
@@ -37,6 +38,7 @@ Default is server. A component is client only if it needs state, effects or brow
 | `ContactForm`, `ApplicationForm` | Inline errors, busy state | Server Action does the work |
 | `CookieConsent`, `CookiePreferences` | Reads and writes consent | Banner must not shift layout |
 | `LocaleSwitcher` | Reads the pathname | Exists today |
+| `[locale]/error.tsx`, `global-error.tsx` | Next.js requires error boundaries to be client code | Exist today |
 
 **Stay on the server, with no JavaScript:**
 

@@ -6,6 +6,7 @@
   "engines": {
     "node": ">=20.9"
   },
+  "packageManager": "pnpm@12.9.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -17,7 +18,10 @@
     "check:i18n": "node scripts/check-i18n.mjs",
     "smoke:404": "node scripts/smoke-404.mjs",
     "validate:docs": "node scripts/validate-docs.mjs",
-    "verify": "pnpm typecheck && pnpm lint && pnpm check:i18n && pnpm validate:docs && pnpm build"
+    "test:e2e": "playwright test",
+    "test:unit": "vitest run",
+    "check:bundle": "node scripts/check-client-bundle.mjs",
+    "verify": "pnpm format:check && pnpm typecheck && pnpm lint && pnpm test:unit && pnpm check:i18n && pnpm validate:docs && pnpm build && pnpm check:bundle"
   },
   "dependencies": {
     "next": "16.4.5",
@@ -26,6 +30,8 @@
     "react-dom": "19.3.1"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.64.1",
     "@tailwindcss/postcss": "4.3.4",
     "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",
@@ -34,6 +40,7 @@
     "eslint-config-next": "16.4.5",
     "prettier": "3.9.10",
     "tailwindcss": "4.3.4",
-    "typescript": "~5.9.3"
+    "typescript": "~5.9.3",
+    "vitest": "^5.1.0"
   }
 }

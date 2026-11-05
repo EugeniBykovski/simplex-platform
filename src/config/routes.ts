@@ -24,3 +24,10 @@ export type RouteFamily = keyof typeof routeFamilies;
  * so it never links to another 404.
  */
 export const implementedRoutes: readonly string[] = ["/"];
+
+/**
+ * Routes approved for search, which feed sitemap.ts. Empty until real pages ship: the placeholder
+ * home is deliberately not listed. Each page ticket adds its route when its blockers in
+ * docs/seo/page-seo-matrix.md are closed.
+ */
+export const indexableRoutes: readonly { path: string; family: RouteFamily }[] = [];

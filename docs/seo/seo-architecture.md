@@ -15,12 +15,13 @@ SF-153 implements and verifies this specification. Today:
 | Metadata API per page, through `buildPageMetadata` | Helper implemented, used only by the placeholder home |
 | Canonical URLs | Implemented in the helper |
 | Open Graph | Text fields implemented. No images (GAP-A02) |
-| Twitter metadata | **Not implemented** |
+| Twitter metadata | Text fields implemented. No images |
 | hreflang | Implemented in the helper, emits nothing until a Russian family is approved |
 | Environment indexing gate | Implemented: `SITE_INDEXABLE` |
 | Russian `noindex` | Implemented through translation status |
 | 404 status and `noindex` | Implemented and tested: `pnpm smoke:404` |
-| Sitemap, robots | **Specified, not implemented** |
+| Robots | Implemented: disallow all unless indexable |
+| Sitemap | Structure implemented, deliberately empty until routes are approved in `indexableRoutes` |
 | Structured data | **Specified, not implemented** |
 | Breadcrumbs | **Specified, not implemented** |
 | Redirects | `/en/*` only. Rest specified |
@@ -50,7 +51,7 @@ Every page exports `generateMetadata` through `buildPageMetadata`. Exists today,
 | Description | Unique per page, 70 to 160 characters. Copy in the matrix is a starting point |
 | Canonical | Absolute on `NEXT_PUBLIC_SITE_URL`, no query string |
 | Open Graph | Title, description, URL, `siteName`, locale, image (GAP-A02) |
-| Twitter | `summary_large_image`. Planned for SF-153: not in the helper yet |
+| Twitter | `summary` today. Planned to become `summary_large_image` in SF-153, when images exist |
 | `metadataBase` | From `siteConfig.url` |
 
 Remaining work: root defaults, image handling, and localised metadata per page.
@@ -68,11 +69,11 @@ Remaining work: root defaults, image handling, and localised metadata per page.
 
 ## robots.txt
 
-`src/app/robots.ts` (planned). Production: allow all, disallow nothing sensitive (there is no private area), reference the sitemap. Non-production: disallow all.
+`src/app/robots.ts`. Production: allow all, reference the sitemap. Non-production: disallow all. Non-indexable builds also send `X-Robots-Tag`.
 
 ## sitemap.xml
 
-`src/app/sitemap.ts` (planned). Generated from the same content modules as the routes, so it cannot drift. Include only indexable routes. Add Russian URLs with `alternates` when a family is `approved`. Use `lastModified` from real content dates, or omit it. No `priority` or `changefreq`, because Google ignores them.
+`src/app/sitemap.ts`, generated from `indexableRoutes` in `src/config/routes.ts`. It stays empty until a page is approved for search, and the placeholder home is not listed. Page tickets add entries. Add Russian URLs with `alternates` when a family is `approved`. Use `lastModified` from real content dates, or omit it. No `priority` or `changefreq`, because Google ignores them.
 
 ## Structured data
 

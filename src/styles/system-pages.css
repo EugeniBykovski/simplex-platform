@@ -1,35 +1,8 @@
 /*
  * The NotFound composition, copied from simplex.css (design 1793869596-167d) with final cascade
- * values. SF-142 ports the whole stylesheet and should then delete the shared rules here.
+ * values, also used by the error page. SF-142 ports the whole stylesheet and should then delete
+ * the rules here that it duplicates.
  */
-.sx {
-  --ink: #070b2b;
-  --on-dark: #fff;
-  --on-dark-2: #bac0dc;
-  --signal-on-dark: #8fb2ff;
-  --line-dark-2: rgba(255, 255, 255, 0.22);
-  --shadow-1: 0 1px 2px rgba(7, 11, 43, 0.06), 0 8px 24px -14px rgba(7, 11, 43, 0.22);
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-  --dur-1: 140ms;
-  --dur-2: 240ms;
-  --dur-3: 420ms;
-  --container: 1320px;
-  --gutter: 64px;
-  container-type: inline-size;
-  container-name: sx;
-  font-size: 16px;
-  line-height: 1.55;
-  overflow-x: clip;
-  font-feature-settings: "ss01", "cv11";
-  text-rendering: optimizeLegibility;
-}
-.sx a:focus-visible {
-  outline: 2px solid var(--signal-on-dark);
-  outline-offset: 3px;
-  border-radius: 6px;
-}
-
 .nf-main {
   min-height: 1100px;
   padding: 200px 0 120px;
@@ -78,7 +51,7 @@
   gap: 8px;
 }
 .t-mono {
-  font-family: var(--font-mono);
+  font-family: var(--mono);
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -265,25 +238,9 @@
   }
 }
 
-/* A container query cannot style its own container, so these must target descendants. */
-@container sx (max-width: 1280px) {
-  .sx * {
-    --gutter: 48px;
-  }
-}
 @container sx (max-width: 1100px) {
   .split {
     grid-template-columns: minmax(0, 1fr);
     gap: 48px;
-  }
-}
-@container sx (max-width: 860px) {
-  .sx * {
-    --gutter: 32px;
-  }
-}
-@container sx (max-width: 600px) {
-  .sx * {
-    --gutter: 20px;
   }
 }

@@ -1,0 +1,111 @@
+/*
+ * SimpleX design tokens, copied verbatim from simplex.css (design version 1793869596-167d).
+ * --font and --mono point at the self-hosted Geist variables. Gradients come from simplex-tokens.json.
+ * Do not edit values here without a design change. tailwind mapping: src/styles/globals.css.
+ */
+:root {
+  --ink: #070b2b;
+  --ink-2: #0c123c;
+  --ink-3: #18205a;
+  --paper: #f4f6fb;
+  --white: #ffffff;
+  --text: #070b2b;
+  --text-2: #464e6e;
+  --text-3: #5f6786;
+  --on-dark: #ffffff;
+  --on-dark-2: #bac0dc;
+  --on-dark-3: #8d94ba;
+  --cobalt: #2f57f5;
+  --azure: #3b8cff;
+  --graphite-950: #08192b;
+  --graphite: #0c2a45;
+  --graphite-700: #1e4268;
+  --graphite-500: #3f6a93;
+  --graphite-300: #8fa7c0;
+  --graphite-100: #e3eaf2;
+  --steel-blue-950: var(--graphite-950);
+  --steel-blue: var(--graphite);
+  --steel-blue-700: var(--graphite-700);
+  --steel-blue-500: var(--graphite-500);
+  --steel-blue-300: var(--graphite-300);
+  --steel-blue-100: var(--graphite-100);
+  --steel: #9db4cc;
+  --slate: #5a7896;
+  --teal: var(--slate);
+  --mint: var(--steel);
+  --signal: #2f57f5;
+  --signal-on-dark: #8fb2ff;
+  --success: #128a5c;
+  --error: #c2364b;
+  --warning: #a46100;
+  --line: rgba(7, 11, 43, 0.1);
+  --line-2: rgba(7, 11, 43, 0.18);
+  --line-dark: rgba(255, 255, 255, 0.12);
+  --line-dark-2: rgba(255, 255, 255, 0.22);
+  --glass-light: linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.52));
+  --glass-light-border: rgba(255, 255, 255, 0.9);
+  --glass-dark: linear-gradient(160deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.035));
+  --glass-dark-border: rgba(255, 255, 255, 0.13);
+  --blur-1: 12px;
+  --blur-2: 24px;
+  --blur-3: 40px;
+  --shadow-1: 0 1px 2px rgba(7, 11, 43, 0.06), 0 8px 24px -14px rgba(7, 11, 43, 0.22);
+  --shadow-2: 0 2px 6px rgba(7, 11, 43, 0.05), 0 30px 70px -36px rgba(7, 11, 43, 0.42);
+  --shadow-3: 0 50px 120px -50px rgba(7, 11, 43, 0.55);
+  --r-xs: 8px;
+  --r-sm: 12px;
+  --r-md: 18px;
+  --r-lg: 26px;
+  --r-xl: 36px;
+  --r-pill: 999px;
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+  --s-10: 128px;
+  --s-11: 160px;
+  --container: 1320px;
+  --container-narrow: 860px;
+  --gutter: 64px;
+  --section: 152px;
+  --font:
+    var(--font-geist), "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: var(--font-geist-mono), ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-1: 140ms;
+  --dur-2: 240ms;
+  --dur-3: 420ms;
+  --dur-4: 720ms;
+  --dur-5: 1200ms;
+  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --lg-edge: linear-gradient(
+    140deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 0.18) 38%,
+    rgba(255, 255, 255, 0.05) 62%,
+    rgba(255, 255, 255, 0.7)
+  );
+  --lg-edge-dark: linear-gradient(
+    140deg,
+    rgba(255, 255, 255, 0.42),
+    rgba(255, 255, 255, 0.06) 40%,
+    rgba(255, 255, 255, 0.02) 60%,
+    rgba(255, 255, 255, 0.28)
+  );
+  --blur-xs: 8px;
+  --blur-s: 16px;
+  --blur-m: 24px;
+  --blur-l: 40px;
+  --blur-xl: 64px;
+  --gradient-spectrum: linear-gradient(100deg, #e3eaf2 0%, #c3d1e0 30%, #8da4f7 68%, #2f57f5 100%);
+  --gradient-text: linear-gradient(90deg, #2f57f5, #2b3f9e 52%, #0c2a45);
+  --gradient-text-on-dark: linear-gradient(90deg, #8fb2ff, #d6e2ee);
+  --gradient-button-sweep: linear-gradient(100deg, #1e4268, #2f57f5 62%, #3b8cff);
+}

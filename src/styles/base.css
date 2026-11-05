@@ -1,0 +1,44 @@
+/* The .sx root from simplex.css: the page-level container that all breakpoints query. */
+@layer base {
+  .sx {
+    container-type: inline-size;
+    container-name: sx;
+    font-family: var(--font);
+    color: var(--text);
+    background: var(--white);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+    font-feature-settings: "ss01", "cv11";
+  }
+  .sx :focus-visible {
+    outline: 2px solid var(--signal);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  .sx :is(.dark, .bg-ink) :focus-visible {
+    outline-color: var(--signal-on-dark);
+  }
+
+  /* A container query cannot style its own container, so these target descendants. */
+  @container sx (max-width: 1280px) {
+    .sx * {
+      --gutter: 48px;
+    }
+  }
+  @container sx (max-width: 860px) {
+    .sx * {
+      --gutter: 32px;
+      --section: 104px;
+    }
+  }
+  @container sx (max-width: 600px) {
+    .sx * {
+      --gutter: 20px;
+      --section: 88px;
+    }
+  }
+}

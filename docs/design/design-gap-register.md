@@ -107,6 +107,7 @@ Full list: [content-and-claims-register.md](../content/content-and-claims-regist
 | GAP-D02 | System, UI Kit | Redefined rules and dead code from accretion: legacy aliases, `.si-glyph`, blob keyframes, unused `.hero-chip`, about 90 kit-only classes | Medium | Resolve the cascade and drop unused rules. Check by rendering, not by assumption | No | SF-142 |
 | GAP-D03 | Handoff | **CLOSED by decision 9.** Handoff mentions Storybook compatibility. The Technologies page listing Storybook as a skill is unrelated and stays | Low | None | No | SF-142 |
 | GAP-D04 | Global | `.sx` is a size container. Check that `position: fixed` children (banner, menu) resolve against the viewport in all target browsers | Medium | Test early in SF-142 | No | SF-142 |
+| GAP-D06 | Global | No board exists for a runtime error page. `[locale]/error.tsx` adapts the NotFound composition, with drafted copy in both languages | Low | Review the copy and layout | Yes | SF-152 |
 | GAP-D05 | Global | No `backdrop-filter` fallback, and missing arrow-key handling on tabs | Medium | Add `@supports` fallback and keyboard support | No | SF-142 |
 
 ## Internationalisation

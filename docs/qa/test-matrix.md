@@ -2,7 +2,18 @@
 
 Playwright, no Storybook. Owner: SF-155, with each page ticket adding its own route tests. Visual comparison: [visual-regression-strategy.md](visual-regression-strategy.md).
 
-The foundation has `pnpm verify` (typecheck, lint, i18n parity, docs validation, build) and `pnpm smoke:404`. Playwright is planned and not yet installed.
+## What exists today
+
+| Command | Covers |
+|---|---|
+| `pnpm verify` | Format, types, lint, unit tests, i18n parity, docs, build, client-bundle check |
+| `pnpm test:unit` | `tests/unit/`: environment, SEO, routes, tokens |
+| `pnpm build && pnpm test:e2e` | `tests/e2e/`: locale routing, 404 without JavaScript, security, platform, axe |
+| `BASE_URL=… pnpm smoke:404` | Raw-HTML 404 check against any running deployment |
+
+Playwright uses its own browser. Locally, `PW_CHANNEL=chrome` uses installed Chrome instead. It starts a production server on port 3947 and **fails rather than reuse a server it did not start**, so it can never test or disturb another project.
+
+**Everything below this point is the plan.** Page suites arrive with their tickets and SF-155.
 
 ## Suite overview
 

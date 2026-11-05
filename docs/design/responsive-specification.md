@@ -41,7 +41,7 @@ Use the design's own values. They are **container queries on `.sx`**, not media 
 | ≤ 760 | Industries only | Local industry-row rule |
 | ≤ 600 | Mobile | Gutter 20, section 88, all grids single column, nav 64 px tall with SX mark, buttons 52 px, `.cmp` scrolls, `.ba` stacks, footer 2 columns |
 
-Tailwind: define `@sx-*` container variants with these same values, and do not add media-query breakpoints. Mixing the two systems would create a band of widths where they disagree.
+Tailwind: use the `sx-1280`, `sx-1100`, `sx-1000`, `sx-860` and `sx-600` container variants in `src/styles/globals.css`. `sx-*` variants carry these same values. Do not add media-query breakpoints. Mixing the two systems would create a band of widths where they disagree.
 
 **Do not use Tailwind's default `sm`, `md`, `lg` for layout.**
 

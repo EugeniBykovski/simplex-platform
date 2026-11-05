@@ -11,7 +11,7 @@ export function LocaleSwitcher() {
 
   return (
     <nav aria-label={t("label")}>
-      <ul className="flex gap-3">
+      <ul className="flex gap-s3">
         {locales.map((locale) => (
           <li key={locale}>
             {/*

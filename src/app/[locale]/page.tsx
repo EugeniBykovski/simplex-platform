@@ -20,6 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: "/",
     title: t("title"),
     description: t("description"),
+    // The placeholder must never be indexed, even on production. SF-143 removes this.
+    noindex: true,
   });
 }
 
@@ -32,9 +34,9 @@ export default async function FoundationPage({ params }: Props) {
   const t = await getTranslations("foundation");
 
   return (
-    <main className="mx-auto flex min-h-dvh max-w-3xl flex-col justify-center gap-6 px-5">
-      <h1 className="text-4xl font-semibold tracking-tight">{t("title")}</h1>
-      <p>{t("body")}</p>
+    <main className="mx-auto flex min-h-dvh max-w-text flex-col justify-center gap-s5 px-gutter">
+      <h1 className="text-h2 text-ink">{t("title")}</h1>
+      <p className="text-lead text-text-2">{t("body")}</p>
       <LocaleSwitcher />
     </main>
   );

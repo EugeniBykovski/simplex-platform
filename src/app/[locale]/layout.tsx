@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import { fontClassNames } from "@/styles/fonts";
 import "@/styles/globals.css";
 
+// Pages opt in through buildPageMetadata. Anything that forgets stays out of search.
 export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
@@ -29,9 +30,11 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className={fontClassNames}>
-      <body className="font-sans antialiased">
+      <body>
         {/* Client bundles receive only what client components read; page copy stays on the server. */}
-        <NextIntlClientProvider messages={{ common, errors }}>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider messages={{ common, errors }}>
+          <div className="sx">{children}</div>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

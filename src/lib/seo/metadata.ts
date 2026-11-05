@@ -8,7 +8,7 @@ import { russianTranslationStatus } from "@/i18n/translation-status";
 export function localizedUrl(locale: Locale, path: string): string {
   const prefix = locale === defaultLocale ? "" : `/${locale}`;
   const suffix = path === "/" ? "" : path;
-  return `${siteConfig.url}${prefix}${suffix}` || siteConfig.url;
+  return `${siteConfig.url}${prefix}${suffix}`;
 }
 
 /** Locales that may be indexed and advertised through hreflang for this route family. */
@@ -18,7 +18,7 @@ export function publishedLocales(family: RouteFamily): readonly Locale[] {
   );
 }
 
-type PageMetadataInput = {
+export type PageMetadataInput = {
   locale: Locale;
   family: RouteFamily;
   /** Locale-neutral path, for example "/services/web-development". */
@@ -60,5 +60,6 @@ export function buildPageMetadata(input: PageMetadataInput): Metadata {
       url: canonical,
       locale: locale === "ru" ? "ru_RU" : "en_US",
     },
+    twitter: { card: "summary", title, description },
   };
 }
