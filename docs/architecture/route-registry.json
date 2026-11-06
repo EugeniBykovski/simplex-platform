@@ -1856,7 +1856,7 @@
       "imagePlaceholders": 0,
       "seo": {
         "title": "Insights — SimpleX",
-        "description": "Practical writing on architecture, delivery, design and applied AI — from the engineers and designers doing the work.",
+        "description": "Practical writing on architecture, delivery, design and applied AI, from SimpleX. No articles are published yet.",
         "h1": "Notes from the work.",
         "intent": "Practical writing on architecture, delivery, design and applied AI",
         "topic": "Engineering insights",
@@ -1868,17 +1868,17 @@
         ],
         "indexing": "index at launch",
         "launchBlockers": [
-          "Authors, dates and final articles (GAP-C07)",
-          "Playbook PDF missing (GAP-A03)"
+          "No articles published; authors, dates and final articles needed (GAP-C07, insights-editorial-register.md)",
+          "Playbook withheld: the PDF does not exist (GAP-A03)"
         ]
       },
       "i18n": {
         "en": "/insights",
         "ru": "/ru/insights",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-150",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -1931,7 +1931,7 @@
       "i18n": {
         "en": "/insights/[slug]",
         "ru": "/ru/insights/[slug]",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-150",
       "implemented": false,

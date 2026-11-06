@@ -193,3 +193,17 @@ Added in SF-149, under `src/components/sections/company/` and `careers/`. Copy l
 
 `jobPositions` in `content/careers/positions.ts` is the only source of job routes, and is empty. `RADAR_DOTS` holds the source's dot positions as whole class names.
 
+## Insights sections
+
+Added in SF-150, under `src/components/sections/insights/`. Content is typed data in `src/content/insights/`, and `getPublishedArticles` is the only reader of it.
+
+| Component | Type | Holds | Reuses |
+|---|---|---|---|
+| `insights-index` | Server | Hero and featured, latest with empty state, cards, CTA | `Breadcrumbs`, `SectorGround`, `Icon`, `LinkButton` |
+| `insights-browser` | Client | Search, category links, count, no-match. State lives in the URL | `SearchField`, `Button`, `Icon` |
+| `article-sections` | Server | Header, share rail, reading column, contents, related | `Breadcrumbs`, `SectorGround`, `ArrowLink`, `ExternalLink` |
+| `article-parts` | Server | The closed block renderer, author initials, date format | `ArrowLink` |
+| `article-copy-button` | Client | Copy link, with a 1.8 s confirmation | `Icon` |
+
+Article links use `Link` directly, as a published article is the only way to reach that code. `routes.ts` must not import `articles.ts`: it reaches the client bundle, and would carry drafts with it.
+

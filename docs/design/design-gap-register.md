@@ -42,7 +42,7 @@ Applied throughout these documents.
 | GAP-F07 | Home, Agent | **Home RESOLVED:** the estimator shows team shape only; its duration, budget and "Agent included" rows are removed. **Agent:** the ROI estimator is kept, with its 40% stated on the page as a modelling assumption rather than a measured result. It still needs evidence, or the widget goes | Medium | Owner decides | Yes | SF-143, SF-144 |
 | GAP-F08 | Contact | `budget` and `timeline` selects are unbound. Inputs lack `name`. 2000-char limit not enforced. `.proto-bar` must not ship | Medium | Fix in implementation | No | SF-151 |
 | GAP-F09 | ThankYou, Contact | `ThankYou` promises a confirmation email, and there are two success screens | Medium | Send one, keep both screens as designed | No | SF-151 |
-| GAP-F10 | Insights | Load more fakes a 900 ms delay with all content local. Article search covers only title and description | Low | Show all or paginate without artificial delay. Keep skeleton only if there is a real wait | No | SF-150 |
+| GAP-F10 | Insights | Load more fakes a 900 ms delay with all content local. Article search covers only title and description | Low | SF-150 shows all, with no skeleton | No | SF-150 |
 
 ## Routes and navigation
 
@@ -65,7 +65,7 @@ Full list: [content-and-claims-register.md](../content/content-and-claims-regist
 | GAP-C04 | Services | Comparison table makes statements about freelancers, agencies and in-house hiring ("Senior sells, junior builds") | Medium | Legal or editorial review. It is labelled a positioning summary | Yes | SF-145 |
 | GAP-C05 | About | Founding story, leaders, portraits, team and office photography all missing | High | SF-149 withholds Leadership and the photo slots. Supply. No stock imagery, per the design's own note | Yes | SF-149 |
 | GAP-C06 | Careers, Job | Sample roles, benefits, locations, salary bands | High | SF-149 shows an empty state and withholds benefits and sample roles ([register](../content/careers-positions-register.md)). Supply real data | Yes | SF-149 |
-| GAP-C07 | Insights, Article, Home | One written sample article, nine titles only, no authors or dates | High | Write or cut. Launch with what is real | Yes | SF-150 |
+| GAP-C07 | Insights, Article, Home | One written sample article, nine titles only, no authors or dates | High | SF-150 ships an empty state, and stores the sample as a draft ([register](../content/insights-editorial-register.md)). Write or cut | Yes | SF-150 |
 | GAP-C08 | Footer, Contact, LegalPage, Nav | Domain, emails, company name and registration, social URLs, SLA, budget bands and currency: all placeholders | Blocker | Supply. Blocks Resend domain, canonicals, schema and legal | Yes | SF-141, SF-151 |
 | GAP-C09 | LegalPage | **DECIDED: not published until owner and legal approve.** Partial text with bracketed gaps | Blocker | Counsel drafts and approves, in each language | Yes | SF-152 |
 | GAP-C10 | Various | Absolute claims with no brackets, so easy to miss: "Senior engineers only", "100% code and IP", "2 wks between demos", "A senior engineer reads every enquiry", "We never sell personal data", "The repetitive 70%" | High | Owner confirms each is true and will stay true | Yes | Page tickets |
@@ -76,7 +76,7 @@ Full list: [content-and-claims-register.md](../content/content-and-claims-regist
 |---|---|---|---|---|---|---|
 | GAP-A01 | Global | Provenance of the seven `img/` backgrounds and the typeface behind outlined logos is undocumented. The README calls procedural-looking images "photography" | Medium | Owner confirms origin. Do not describe them as photography | Yes | SF-154 |
 | GAP-A02 | Global | No Open Graph images, favicon set, web manifest or `.ico` | Medium | Generate from approved marks in SF-154. New social art needs approval | Yes | SF-154 |
-| GAP-A03 | Insights | The "24-page PDF" playbook does not exist | High | Write it, or hide the block | Yes | SF-150 |
+| GAP-A03 | Insights | The "24-page PDF" playbook does not exist | High | SF-150 hides the block. Write it, or drop it | Yes | SF-150 |
 
 ## Responsive
 
@@ -131,6 +131,9 @@ Full list: [content-and-claims-register.md](../content/content-and-claims-regist
 | GAP-D30 | About, Careers | **Deviation made.** Leadership, team and office photo slots, and Careers benefits are withheld, as placeholders. About's culture row becomes two text cards, and its top padding goes, as it now follows a white section. Careers shows an empty roles state | High | Owner supplies real content | Yes | SF-149 |
 | GAP-D31 | About, Technologies | **Deviation made, for accessibility.** Trust text over `bg-tower.jpg` fell to 3.17:1 at 390, so that section has a darker scrim at ≤ 600. The hero's level legend is lighter than the source's `--text-3`, which is too dark on `bg-ink` | Low | None | No | SF-149 |
 | GAP-D32 | How We Work | The source says weekly demos in its cadence and two-week sprints with demos in its stages, and About said two weeks at most. Built as drawn, with the About figure removed | Low | Owner picks one | Yes | SF-149 |
+| GAP-D33 | Insights | **Deviation made.** The search box's inline `flex: 0 1 360px` becomes a 360 px height when `.stack-sm` stacks at ≤ 600, leaving a gap and a misplaced icon. It is `flex: none` there | Low | None | No | SF-150 |
+| GAP-D34 | Article | **Deviation made.** The share rail's `href="#"` links are real LinkedIn, X and `mailto:` links. The contents list has no fixed "on" state, since the source's never changes. The progress bar is hidden under reduced motion, where the source freezes it at 32% | Low | None | No | SF-150 |
+| GAP-D35 | Home | **Deviation made.** With `/insights` live, the three sample article cards would lead to an empty page, so they are no longer links, and keep their "Sample articles" tag | Medium | Owner decides whether to hide the block until articles exist | Yes | SF-150 |
 | GAP-D08 | Nav, Footer | Routes with no page render dimmed and unclickable, so the header looks muted until pages ship. A truthful state from the SF-142 brief, not a design | Low | Clears itself as routes are added to `implementedRoutes` | No |
 | GAP-D09 | Footer | The design has no language switcher. It is in the footer base row, so the header stays as boarded | Low | Owner reviews placement | Yes |
 | GAP-D10 | Nav | Removed from the Agent mega-menu card: "Detects your frameworks, scaffolds the ecosystem and ships production-ready features — reviewed by our engineers", under decision 3. Also removed the mobile menu's "Typical reply within one business day · [confirm SLA]" | Low | Restore when verified | Yes |

@@ -15,6 +15,10 @@ The design handles this responsibly: it brackets most unknowns and labels demons
 
 So anything bracketed below ships as supplied real data or is hidden, never filled in with an estimate.
 
+## Insights (SF-150)
+
+Articles, status, the publication workflow and copy changes are in [insights-editorial-register.md](insights-editorial-register.md).
+
 ## Company and Careers copy changes (SF-149)
 
 Company statements are in [company-claims-register.md](company-claims-register.md), and vacancies and hiring in [careers-positions-register.md](careers-positions-register.md).

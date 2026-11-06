@@ -12,7 +12,7 @@ SF-153 implements and verifies this specification. Today:
 
 | Item | State |
 |---|---|
-| Metadata API per page, through `buildPageMetadata` | Helper implemented, used by `/`, `/agent`, the Services pages, `/packages`, the Industries, Work, Company and Careers pages |
+| Metadata API per page, through `buildPageMetadata` | Helper implemented, used by `/`, `/agent`, the Services pages, `/packages`, the Industries, Work, Company, Careers and Insights pages |
 | Canonical URLs | Implemented in the helper |
 | Open Graph | Text fields implemented. No images (GAP-A02) |
 | Twitter metadata | Text fields implemented. No images |
@@ -73,7 +73,7 @@ Remaining work: root defaults, image handling, and localised metadata per page.
 
 ## sitemap.xml
 
-`src/app/sitemap.ts`, generated from `indexableRoutes` in `src/config/routes.ts`. It stays empty until a page is approved for search, and the placeholder home is not listed. Page tickets add entries. Add Russian URLs with `alternates` when a family is `approved`. Use `lastModified` from real content dates, or omit it. No `priority` or `changefreq`, because Google ignores them.
+`src/app/sitemap.ts`, generated from `indexableRoutes` in `src/config/routes.ts` and from published articles. It stays empty until a page is approved for search, and the placeholder home is not listed. Page tickets add entries. Add Russian URLs with `alternates` when a family is `approved`. Use `lastModified` from real content dates, or omit it. No `priority` or `changefreq`, because Google ignores them.
 
 ## Structured data
 

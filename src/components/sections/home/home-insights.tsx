@@ -1,9 +1,9 @@
 import { cx } from "@/components/ui/cx";
 import { DemoTag } from "@/components/ui/feedback";
-import { ArrowLink, RouteLink } from "@/components/ui/links";
+import { ArrowLink } from "@/components/ui/links";
 import type { HomeContent } from "@/content/home";
 
-/** Sample articles. The article route takes a slug the design does not define, so cards use /insights. */
+/** Sample articles, labelled as such. None is published, so the cards are not links (GAP-C07). */
 export function HomeInsights({ content }: { content: HomeContent["insights"] }) {
   const minutes = (count: number) => content.minutes.replace("{count}", String(count));
   const [first, second] = content.cards;
@@ -25,11 +25,7 @@ export function HomeInsights({ content }: { content: HomeContent["insights"] }) 
           </div>
         </div>
         <div className="grid-12 bento bento-md [--gap:16px]">
-          <RouteLink
-            href="/insights"
-            pendingLook="card"
-            className="solid card-hover reveal col-span-7 overflow-hidden flex flex-col"
-          >
+          <article className="solid reveal col-span-7 overflow-hidden flex flex-col">
             <div className="viz viz-enterprise rounded-[0] h-[360px] flex items-end p-[24px]">
               <span className="slice" />
               <span className="tag text-white border-[rgba(255,255,255,.3)]">
@@ -41,23 +37,21 @@ export function HomeInsights({ content }: { content: HomeContent["insights"] }) 
               <p className="t-body">{content.featured.body}</p>
               <p className="t-xs mt-[8px]">{minutes(content.featured.minutes)}</p>
             </div>
-          </RouteLink>
+          </article>
           <div className="stack gap-4 col-span-5">
             {[
               { card: first, badge: "badge badge-soft" },
               { card: second, badge: "badge badge-graphite" },
             ].map(({ card, badge }) => (
-              <RouteLink
+              <article
                 key={card.title}
-                href="/insights"
-                pendingLook="card"
-                className="solid card-hover reveal p-[32px] flex flex-col gap-[14px] flex-1"
+                className="solid reveal p-[32px] flex flex-col gap-[14px] flex-1"
               >
                 <span className={cx(badge, "self-start")}>{card.tag}</span>
                 <h3 className="t-h4">{card.title}</h3>
                 <p className="t-small">{card.body}</p>
                 <p className="t-xs mt-auto">{minutes(card.minutes)}</p>
-              </RouteLink>
+              </article>
             ))}
           </div>
         </div>

@@ -86,6 +86,14 @@ Also changed for every page: pending and disabled states, navbar contrast, the l
 
 **Open:** verified capability list (GAP-C01), the ROI assumption (GAP-F07), published-canvas comparison, native editor for Russian, real iOS and screen-reader pass. Its enquiry CTAs turn on with `/contact` in SF-151.
 
+## SF-150: Insights
+
+Implemented on `main`. See [insights-artboard-matrix.md](../design/insights-artboard-matrix.md), [insights-editorial-register.md](../content/insights-editorial-register.md) and [insights-manual-qa.md](../qa/insights-manual-qa.md).
+
+`/insights` is live with an empty state and `noindex`, since no article is approved. `/insights/[slug]` generates no page. The sample article is stored as a draft with no route. The playbook is withheld. The article, filter, related and `BlogPosting` code is complete, and was checked with fixtures removed before commit.
+
+**Open:** real articles with authors and dates, the playbook decision, published-canvas comparison, native editor for Russian, and Safari, Firefox, device and screen-reader passes.
+
 ## SF-149: Company and Careers
 
 Implemented on `main`. See [company-careers-artboard-matrix.md](../design/company-careers-artboard-matrix.md), [company-claims-register.md](../content/company-claims-register.md), [careers-positions-register.md](../content/careers-positions-register.md) and [company-careers-manual-qa.md](../qa/company-careers-manual-qa.md).
@@ -204,7 +212,15 @@ Blockers from the [gap register](../design/design-gap-register.md): GAP-C01, GAP
 - **Routes:** `/packages`
 - **Artboards:** `Packages`, `Packages-p2`, `PackagesMobile`, `PackagesMobile-p2`, `PackagesMobile-p3`
 
-### SF-149: Company and Careers
+### SF-150: Insights
+
+Implemented on `main`. See [insights-artboard-matrix.md](../design/insights-artboard-matrix.md), [insights-editorial-register.md](../content/insights-editorial-register.md) and [insights-manual-qa.md](../qa/insights-manual-qa.md).
+
+`/insights` is live with an empty state and `noindex`, since no article is approved. `/insights/[slug]` generates no page. The sample article is stored as a draft with no route. The playbook is withheld. The article, filter, related and `BlogPosting` code is complete, and was checked with fixtures removed before commit.
+
+**Open:** real articles with authors and dates, the playbook decision, published-canvas comparison, native editor for Russian, and Safari, Firefox, device and screen-reader passes.
+
+## SF-149: Company and Careers
 
 Implemented on `main`. See [company-careers-artboard-matrix.md](../design/company-careers-artboard-matrix.md), [company-claims-register.md](../content/company-claims-register.md), [careers-positions-register.md](../content/careers-positions-register.md) and [company-careers-manual-qa.md](../qa/company-careers-manual-qa.md).
 

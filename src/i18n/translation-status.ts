@@ -17,7 +17,7 @@ export const russianTranslationStatus: Record<RouteFamily, TranslationStatus> = 
   work: "draft",
   company: "draft",
   careers: "draft",
-  insights: "missing",
+  insights: "draft",
   contact: "missing",
   legal: "missing",
   system: "missing",
