@@ -86,6 +86,14 @@ Also changed for every page: pending and disabled states, navbar contrast, the l
 
 **Open:** verified capability list (GAP-C01), the ROI assumption (GAP-F07), published-canvas comparison, native editor for Russian, real iOS and screen-reader pass. Its enquiry CTAs turn on with `/contact` in SF-151.
 
+## SF-146: Build Packages
+
+Implemented on `main`. See [packages-artboard-matrix.md](../design/packages-artboard-matrix.md), [packages-commercial-register.md](../content/packages-commercial-register.md) and [packages-manual-qa.md](../qa/packages-manual-qa.md).
+
+`/packages` is live and `noindex`, and links to it across the site have turned on. No price exists in the design, and none was added.
+
+**Open:** founder decisions in the commercial register (none of its terms is verified), whether the availability section stays with no data (GAP-F04), published-canvas comparison, native editor for Russian, and Safari, Firefox, device and screen-reader passes.
+
 ## SF-145: Services
 
 Implemented on `main`. See [services-artboard-matrix.md](../design/services-artboard-matrix.md), [services-claims-register.md](../content/services-claims-register.md) and [services-manual-qa.md](../qa/services-manual-qa.md).

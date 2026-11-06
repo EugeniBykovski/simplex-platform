@@ -46,6 +46,7 @@ export const implementedRoutes: readonly string[] = [
   "/agent",
   "/services",
   ...serviceSlugs.map((slug) => `/services/${slug}`),
+  "/packages",
 ];
 
 export function isImplementedRoute(href: string): boolean {

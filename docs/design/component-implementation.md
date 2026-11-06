@@ -135,3 +135,18 @@ Added in SF-145, under `src/components/sections/services/`. Copy lives in `src/c
 | `service-visuals` | Seven hero illustrations, chosen by slug | Design mock-up classes, `Icon` |
 
 `serviceSlugs` in `config/routes.ts` is the single list of detail routes.
+
+## Build packages sections
+
+Added in SF-146, under `src/components/sections/packages/`. Copy lives in `src/content/packages/`, with locale-neutral package facts in `catalog.ts`.
+
+| Component | Type | Holds | Reuses |
+|---|---|---|---|
+| `packages-sections` | Server | The eight sections, in order | `Breadcrumbs`, `Badge`, `DemoTag`, `Icon`, `SxMark`, `Accordion`, `ComparisonTable`, `ArrowLink`, `LinkButton`, `AnchorButton` |
+| `packages-visuals` | Server | Phones, desktop window, admin laptop | Design device classes |
+| `pod-tracks` | Client | Selection between the three tracks, for the card and the phones | `useTabs`, `TabList`, `TabPanels` |
+
+`ui/tabs` now also exports `useTabs`, `TabList` and `TabPanels`, for layouts that separate tabs from panels. `Tabs` is built on them and behaves as before.
+
+The comparison puts a real `table` inside `ComparisonTable`, using `table-row` and `table-cell` utilities over the `.cmp-row` design class. `ComparisonRow` remains for the Services comparison.
+

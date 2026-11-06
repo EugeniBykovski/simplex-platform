@@ -906,9 +906,9 @@
       "imagePlaceholders": 0,
       "seo": {
         "title": "Build packages — SimpleX",
-        "description": "Three clear ways to build with us: a compact mobile pod for iOS, Android or React Native; desktop applications for Windows, macOS and Linux; or the full cycle — backend, web, website, admin panel and both mobile apps from one team.",
+        "description": "Three ways to build with SimpleX: a compact mobile pod for iOS, Android or React Native; desktop applications for Windows, macOS and Linux; or the full cycle from one team.",
         "h1": "From a two-person app team to your whole product.",
-        "intent": "Fixed-shape teams for mobile, desktop and full-cycle builds",
+        "intent": "Indicative team shapes for mobile, desktop and full-cycle builds",
         "topic": "Build packages and team shapes",
         "canonical": "/packages",
         "breadcrumb": true,
@@ -918,17 +918,17 @@
         ],
         "indexing": "index at launch",
         "launchBlockers": [
-          "Availability block removed until real data exists (GAP-F04)",
-          "Team sizes and durations are placeholders"
+          "Availability section carries no data until a resourcing source exists (GAP-F04)",
+          "Founder decisions in packages-commercial-register.md: team sizes, scope, first-release timing, ownership"
         ]
       },
       "i18n": {
         "en": "/packages",
         "ru": "/ru/packages",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-146",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },

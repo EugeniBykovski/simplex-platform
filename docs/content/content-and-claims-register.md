@@ -15,6 +15,10 @@ The design handles this responsibly: it brackets most unknowns and labels demons
 
 So anything bracketed below ships as supplied real data or is hidden, never filled in with an estimate.
 
+## Build packages copy changes (SF-146)
+
+Each commercial statement, its status, published wording and the decision it needs, is in [packages-commercial-register.md](packages-commercial-register.md).
+
 ## Services copy changes (SF-145)
 
 Each change from the design, with its reason and published wording, is in [services-claims-register.md](services-claims-register.md).
