@@ -94,7 +94,11 @@ function ContactForm({
         <span className="w-[64px] h-[64px] rounded-[20px] bg-[#070B2B] grid place-items-center text-[#9DB4CC]">
           <Icon name="check" className="[--icon:28px]" />
         </span>
-        <h2 className="t-h2 outline-none [overflow-wrap:anywhere] [&:lang(ru)]:hyphens-auto" ref={successRef} tabIndex={-1}>
+        <h2
+          className="t-h2 outline-none [overflow-wrap:anywhere] [&:lang(ru)]:hyphens-auto"
+          ref={successRef}
+          tabIndex={-1}
+        >
           {live
             ? copy.success.live.title.replace("{name}", firstName ? `, ${firstName}` : "")
             : copy.success.demo.title}
