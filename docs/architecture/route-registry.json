@@ -1962,12 +1962,12 @@
         "mobile"
       ],
       "contentSource": "src/content/contact/",
-      "interactions": "Lead form: idle, validation, loading, success, network error; scheduler: day, slot, confirm, booked",
+      "interactions": "Lead form: all states in contact-and-email.md; scheduler is an unavailable panel",
       "assets": [],
       "imagePlaceholders": 0,
       "seo": {
         "title": "Contact — SimpleX",
-        "description": "A senior engineer reads every enquiry. Share as much or as little as you like — we’ll follow up with questions, not a sales script.",
+        "description": "Tell SimpleX what you’re building. Share as much or as little as you like, and we’ll follow up with questions, not a sales script.",
         "h1": "Tell us what you’re building.",
         "intent": "How do I start a project with SimpleX?",
         "topic": "Contact",
@@ -1977,8 +1977,9 @@
           "BreadcrumbList",
           "ContactPage"
         ],
-        "indexing": "index at launch",
+        "indexing": "noindex until real delivery is live, then index at launch",
         "launchBlockers": [
+          "Real delivery, edge rate limiting and a privacy policy: see production-release-checklist.md",
           "Fake scheduler widget is not built (GAP-F01)",
           "Contact email, SLA, budget bands (GAP-C08)"
         ]
@@ -1986,10 +1987,10 @@
       "i18n": {
         "en": "/contact",
         "ru": "/ru/contact",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-151",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -2014,13 +2015,13 @@
         "mobile"
       ],
       "contentSource": "src/content/contact/",
-      "interactions": "None beyond link and hover states",
+      "interactions": "Three states from a signed cookie: confirmed, demo, neutral",
       "assets": [],
       "imagePlaceholders": 0,
       "seo": {
         "title": "Thank you — SimpleX",
-        "description": "Your message is with our team. A senior engineer will reply within one business day [confirm] — usually with a few questions and times for a short call.",
-        "h1": "Thank you. We’ve got it.",
+        "description": "Confirmation for a request sent through the SimpleX contact form.",
+        "h1": "Thank you. Request submitted.",
         "intent": "Post-submission confirmation",
         "topic": "Confirmation",
         "canonical": "/contact/thank-you",
@@ -2034,10 +2035,10 @@
       "i18n": {
         "en": "/contact/thank-you",
         "ru": "/ru/contact/thank-you",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-151",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },

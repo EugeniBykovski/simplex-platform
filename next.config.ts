@@ -23,6 +23,8 @@ export default function config(phase: string): NextConfig {
     experimental: {
       // Needed for server-rendered 404s: see src/app/global-not-found.tsx.
       globalNotFound: true,
+      // The contact form is the only Server Action. Its fields fit well within this.
+      serverActions: { bodySizeLimit: "32kb" },
     },
     // The policy would block the dev server's eval-based tooling.
     ...(phase === PHASE_DEVELOPMENT_SERVER

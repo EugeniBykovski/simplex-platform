@@ -30,7 +30,7 @@ pnpm start -p 3000
 
 3. Leave `SITE_INDEXABLE` unset or `false` until launch. The code also blocks indexing on any `VERCEL_ENV` other than `production`.
 4. Consider Vercel's deployment protection for previews, as a second layer.
-5. Add the Resend variables only when SF-151 ships. See [environment-configuration.md](environment-configuration.md).
+5. Leave the email variables unset until the [production release checklist](production-release-checklist.md). The form then shows its unavailable state. See [environment-configuration.md](environment-configuration.md).
 
 The production domain is still undecided (GAP-C08).
 

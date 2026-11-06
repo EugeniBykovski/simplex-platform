@@ -3,7 +3,7 @@
  * parseSiteEnv. Error messages name variables, and never print secret values.
  */
 export type SiteEnv = { siteUrl: string; indexable: boolean };
-export type EmailEnv = { apiKey: string; fromEmail: string; inboxEmail: string };
+export type EmailEnv = { apiKey: string; fromEmail: string; toEmail: string };
 type RawEnv = Record<string, string | undefined>;
 
 const LOCAL_FALLBACK = "http://localhost:3000";
@@ -48,6 +48,11 @@ export function parseSiteEnv(raw: RawEnv): SiteEnv {
     errors.push("SITE_INDEXABLE=true requires a public https NEXT_PUBLIC_SITE_URL.");
   }
 
+  // Simulated delivery must never reach a public build. Runtime selection also refuses it.
+  if (raw.EMAIL_PROVIDER?.trim() === "mock" && (indexable || raw.VERCEL_ENV === "production")) {
+    errors.push("EMAIL_PROVIDER=mock is not allowed in a production or indexable build.");
+  }
+
   if (errors.length > 0) throw invalid(errors);
   return { siteUrl: url ? url.origin : LOCAL_FALLBACK, indexable };
 }
@@ -56,17 +61,17 @@ export function parseSiteEnv(raw: RawEnv): SiteEnv {
 export function parseEmailEnv(raw: RawEnv): EmailEnv {
   const apiKey = raw.RESEND_API_KEY?.trim();
   const fromEmail = raw.CONTACT_FROM_EMAIL?.trim();
-  const inboxEmail = raw.CONTACT_INBOX_EMAIL?.trim();
+  const toEmail = raw.CONTACT_TO_EMAIL?.trim();
   const errors: string[] = [];
 
   if (!apiKey) errors.push("RESEND_API_KEY is required to send email.");
   if (!fromEmail || !EMAIL_PATTERN.test(fromEmail)) {
     errors.push("CONTACT_FROM_EMAIL must be an email address.");
   }
-  if (!inboxEmail || !EMAIL_PATTERN.test(inboxEmail)) {
-    errors.push("CONTACT_INBOX_EMAIL must be an email address.");
+  if (!toEmail || !EMAIL_PATTERN.test(toEmail)) {
+    errors.push("CONTACT_TO_EMAIL must be an email address.");
   }
 
-  if (errors.length > 0 || !apiKey || !fromEmail || !inboxEmail) throw invalid(errors);
-  return { apiKey, fromEmail, inboxEmail };
+  if (errors.length > 0 || !apiKey || !fromEmail || !toEmail) throw invalid(errors);
+  return { apiKey, fromEmail, toEmail };
 }

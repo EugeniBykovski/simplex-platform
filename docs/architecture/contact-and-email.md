@@ -1,163 +1,172 @@
 # Contact and email architecture
 
-Implemented in SF-151, except the application form, which ships with SF-149. Nothing here is built yet. Source boards: `Contact`, `ContactTablet`, `ContactMobile`, `ThankYou`, `ThankYouMobile`, `Job`, `JobMobile`, `Insights`.
+Implemented in SF-151, with a mock provider. **Real Resend delivery has not been configured or tested, and production lead capture is blocked** until the [activation procedure](#activation-procedure) is complete. Source boards: `Contact`, `ContactTablet`, `ContactMobile`, `ThankYou`, `ThankYouMobile`. Decisions are in [contact-privacy-register.md](../content/contact-privacy-register.md), and the map to the design is in [contact-artboard-matrix.md](../design/contact-artboard-matrix.md).
 
-## Forms in the design
+## Other capture points
 
-The design has four capture points. Resend is the approved delivery service, and **fake appointment scheduling will not be built.**
-
-| Form | Route | Fields | Requires | Status |
-|---|---|---|---|---|
-| Project enquiry | `/contact` | See below | Resend | Build |
-| Job application | `/careers/[slug]` | Name, email, CV or LinkedIn URL, notes | Resend | Build, needs consent (GAP-F02) |
-| Playbook request | `/insights` | Work email | Resend, the PDF, a list decision | **Blocked** (GAP-A03) |
-| Call scheduler | `/contact` | Day, time slot | A real calendar provider | **Not built** (GAP-F01) |
-
-Also not a form: the 404 page's search box (GAP-F05).
-
-## Project enquiry form
-
-Exact fields from `Contact.dc.html`:
-
-| Field | Control | Required | Validation | Error copy |
-|---|---|---|---|---|
-| What can we help with? | Toggle chips, multi-select | No | One or more of the 8 values | None |
-| Name | `input[text]`, `autocomplete=name` | Yes | Non-empty after trim | "Please tell us your name" |
-| Work email | `input[email]`, `autocomplete=email` | Yes | `/^[^@\s]+@[^@\s]+\.[^@\s]+$/` | "Enter a complete email, like name@company.com" |
-| Company | `input[text]`, `autocomplete=organization` | No | None | None |
-| Project description | `textarea` with counter | Yes | At least 20 characters. Counter shows `/ 2000` | "A sentence or two helps us prepare — at least 20 characters" |
-| Budget range | `select` | No | One of 5 values | None |
-| Expected timeline | `select` | No | One of 5 values | None |
-| Consent | Checkbox linking to privacy policy | Yes | Must be checked | "Please confirm so we can reply" |
-
-Chip values: Custom Software, Web & Mobile, AI Engineering, Cloud & DevOps, Product Design, Architecture, Dedicated Team, Not sure yet.
-
-Budget values: Prefer not to say, Under [€50k], [€50k – €150k], [€150k – €500k], [€500k+]. **The bands and the currency are placeholders** (GAP-C08).
-
-Timeline values: Not sure yet, As soon as possible, Within 3 months, 3–6 months, Exploring options.
-
-No field is conditional on another. There is no conditional logic in the design.
-
-### Prototype defects to fix
-
-- `budget` and `timeline` are not bound to state, so the prototype would lose them on submit.
-- The inputs have no `name` attributes, which real form submission requires.
-- The 2000-character limit is displayed but not enforced.
-- `.proto-bar` ("Prototype states") is a review tool and **must not ship**.
-- Inputs have no `aria-describedby` pointing at their error text. Add it.
-
-### States
-
-| State | Trigger | Behaviour from the design |
+| Form | Route | Status |
 |---|---|---|
-| Idle | Load | All fields empty |
-| Validation | Submit with errors | `role="alert"` summary "Please check N field(s)", inline errors, `aria-invalid`, `.is-error` |
-| Field valid | Well-formed email | `.is-valid` on the email field |
-| Sending | Valid submit | Fields disabled, `aria-busy`, spinner, label "Sending…" |
-| Success | Accepted | `role="status"` panel: "Thank you, {firstName}" with Continue and Send another |
-| Network error | Failure | `role="alert"`: "We couldn't send your message. Nothing was lost…", label "Try again", fields preserved |
+| Job application | `/careers/[slug]` | Not built. Applying goes to `/contact` (GAP-F02) |
+| Playbook request | `/insights` | Withheld (GAP-A03) |
+| Call scheduler | `/contact` | No calendar. Truthful unavailable panel (GAP-F01) |
 
-### Success semantics
+## Delivery modes
 
-**Show success only after Resend has accepted the message for delivery.** Accepted is not the same as delivered, so never tell the visitor it has arrived. The design's wording, "Your message is with our team", is acceptable.
+`resolveDelivery` in `src/lib/email/delivery.ts` is the only place delivery is chosen. It runs per request, on the page and again in the action, and **there is no fallback from Resend to the mock.**
 
-The design has two success screens: the inline panel, and `/contact/thank-you` reached through Continue. Keep both as designed. `/contact/thank-you` is `noindex` and must not be used to measure conversions alone, since anyone can open the URL.
+| Mode | Needs | Visitor sees |
+|---|---|---|
+| `unavailable` | The default, for anything else | Fields and submit disabled. "This form isn't accepting requests right now." |
+| `demo` | `EMAIL_PROVIDER=mock`, **and** a loopback host, **and** no `VERCEL_ENV` beyond `development`, **and** `SITE_INDEXABLE` not `true`, **and** an unset or loopback `NEXT_PUBLIC_SITE_URL` | "Demo mode", on the form, the success panel and Thank You. Never presented as a real enquiry |
+| `live` | `EMAIL_PROVIDER=resend`, a key, valid sender and recipient, **and** `CONTACT_LIVE_ENABLED=true`. For Russian, also `contact` set to `approved` | The normal form |
 
-**`ThankYou` promises "Confirmation email sent to you".** So the flow sends two emails: the internal notification and a visitor confirmation. A failed confirmation must not fail the submission, since the enquiry is already safe. The confirmation goes to an unverified address, which makes it an abuse vector, so keep it plain, send it only after anti-spam passes, and never echo the visitor's message text back.
+`parseSiteEnv` also **fails the build** for `EMAIL_PROVIDER=mock` when the build is indexable or `VERCEL_ENV=production`.
+
+`CONTACT_LIVE_ENABLED` is an addition to the amendment's four variables. It records what code cannot check: a verified domain, edge rate limiting, an approved privacy notice and a smoke test. Without it, adding an API key would turn the form on before those are in place.
+
+## Providers
+
+`EmailProvider` in `src/lib/email/provider.ts` has one method, `send`, returning an id or a failure class.
+
+| Class | File | Notes |
+|---|---|---|
+| `MockEmailProvider` | `src/lib/email/mock-provider.ts` | Sends, stores and logs nothing. Its result carries `simulated: true`, and its id starts `simulated-` |
+| `ResendEmailProvider` | `src/lib/email/resend-provider.ts` | `fetch` to Resend's HTTP API, 10 s timeout, no dependency added. **Checked only against a local stub** |
+
+| Provider result | Status | Visitor copy |
+|---|---|---|
+| 2xx with an id | `accepted` | "Your request has been submitted." |
+| 429 | `rate_limited` | "Too many attempts." |
+| 5xx | `provider_failure` | "We couldn't send your request." |
+| Other 4xx | `unavailable` | "This form isn't accepting requests right now." |
+| Timeout, network, or 2xx with no id | `network_failure` | "We couldn't confirm that your request was sent… we might receive it twice." |
+
+### Mock mode
+
+```sh
+EMAIL_PROVIDER=mock pnpm dev
+```
+
+These visitor addresses force an outcome:
+
+| Email | Outcome |
+|---|---|
+| `qa+provider-failure@example.test` | Provider failure |
+| `qa+network-failure@example.test` | Unconfirmed send |
+| `qa+rate-limited@example.test` | Rate limited |
+| `qa+configuration@example.test` | Unavailable |
+| `qa+slow@example.test` | Accepted after 1.5 s, to see the pending state |
+| Anything else valid | Simulated acceptance |
 
 ## Request flow
 
+`submitContact` in `src/app/[locale]/contact/actions.ts`, a Server Action. It works without JavaScript.
+
 ```
-Browser form
-  │  (works without JavaScript; client component adds inline errors and busy state)
+Browser form: instant hints from the same rules; submit disabled while pending
   ▼
-Server Action: features/contact/actions.ts (planned)
-  1. Reject if the honeypot is filled or the submit was implausibly fast
-  2. Throttle by IP
-  3. Validate on the server, always, regardless of client checks
-  4. Send internal notification through Resend ── failure ──▶ return "network error" state
-  5. Send visitor confirmation ── failure ──▶ log, continue
-  6. Return success state
+1. Locale and origin: Origin must match the host, and Sec-Fetch-Site must be same-origin if sent
+2. resolveDelivery: unavailable stops here, before any field is read for use
+3. Parse: known fields, strings, one value each. Anything else is rejected
+4. Honeypot
+5. Validate and normalize
+6. In-memory rate limit
+7. Compose from validated values, with sender and recipient from configuration
+8. provider.send
+9. On acceptance: set the signed cookie. Return a status, never provider detail
 ```
 
-Use a Server Action, not a route handler: it is same-origin, supports progressive enhancement and adds no public API. The proxy matcher already excludes `/api` should a webhook ever need it.
+Next.js adds its own origin check and a body limit, set to 32 KB in `next.config.ts`.
 
-## Validation
+## Field contract
 
-**Recommendation: add Zod in SF-151.** The ticket allows it only if justified, and the justification is real here: one schema can back both client hints and server enforcement, and the same pattern serves the job form. There is no existing project convention to weigh against it.
+Rules are in `src/lib/contact/fields.ts`, shared with the browser. The server's run is authoritative. Parsing is in `src/lib/contact/parse.ts`.
 
-Server rules beyond the design's: trim everything, cap name and company at 200 characters, description at 2000, reject control characters and line breaks in single-line fields (prevents email header injection), and allow-list chip, budget and timeline values.
+| Field | Name | Required | Rules | Normalized |
+|---|---|---|---|---|
+| What can we help with? | `services`, repeated | No | Allow-list of 8, at most 8 values | Deduplicated |
+| Name | `name` | Yes | 1 to 200, no control or separator characters | Whitespace collapsed |
+| Work email | `email` | Yes | One address, at most 254, none of `` <>(),;:"\[] `` or whitespace. No "work domain" rule | Trimmed |
+| Company | `company` | No | At most 200, no control or separator characters | Whitespace collapsed |
+| Project description | `description` | Yes | 20 to 2000, after normalizing. Only line breaks and tabs among controls | CRLF to LF, trimmed |
+| Budget range | `budget` | No | Allow-list of 5 | Defaults to first |
+| Expected timeline | `timeline` | No | Allow-list of 5 | Defaults to first |
+| Consent | `consent` | Yes | Exactly `yes` | |
+| Honeypot | `website` | Must be empty | Any value rejects the submission | |
 
-Messages come from `src/i18n/messages/{locale}/forms.json`, so errors appear in the visitor's language. Validate email format only. Do not try to require a "work" domain.
+Unknown field, file, or repeated single value: the whole submission is rejected with a generic message. No Zod: a small hand-written validator covers it, and the brief asks for no unneeded dependency.
 
-## Resend
+## States
 
-| Item | Requirement |
-|---|---|
-| Sender domain | Verified in Resend with SPF and DKIM, plus DMARC. **Blocked: production domain not chosen** (GAP-C08) |
-| From | `CONTACT_FROM_EMAIL`, on the verified domain |
-| To | `CONTACT_INBOX_EMAIL`. Separate address for careers if the owner wants one |
-| Reply-To | The visitor's address, once validated, so staff can simply reply |
-| API key | `RESEND_API_KEY`, sending-only scope, per environment. Server-only module (planned at `src/lib/email/`) |
-| Preview environments | Use Resend's test mode or a separate inbox. **Never email real inboxes from previews** |
-| Templates | Plain, minimal, in the visitor's locale for confirmations. Internal notifications stay in English |
+Initial, editing, invalid, required missing, invalid email, pending, rate limited, network failure, provider failure, unavailable, rejected, success and demo success. **Values are kept on every recoverable failure, including a dropped connection and without JavaScript.** Errors announce through `role="alert"`, and focus moves to the first invalid field or the alert. Pending is announced in a `role="status"` element.
 
-Treat all visitor input as untrusted in templates: escape it, and do not render links from it as clickable.
+The client calls the action directly, not through the form's `action`, because React resets selects and checkboxes after a form action it started, and a thrown transport error would reach the error boundary.
 
-Resend delivers email. **It is not a booking calendar, an inbox, a CRM or a database.**
+## Thank You
 
-## Anti-spam
+`/contact/thank-you` is `noindex` and not in the sitemap. It has three states:
 
-The design says "Protected by [spam protection]", naming no provider.
-
-Recommended layers, no new vendor needed at first:
-
-1. **Honeypot field**, hidden from people and assistive technology.
-2. **Minimum fill time**, using a signed timestamp in the form.
-3. **Throttle by IP.** Serverless memory does not persist across instances, so a purely local counter is weak. Use the hosting platform's rate limiting (WAF or edge rules) as the real control, with an in-memory limiter as a cheap extra. Proposed limit: 5 submissions per IP per 10 minutes, tuned on real traffic.
-4. **Add Cloudflare Turnstile only if** spam gets through. It is a new external service and needs approval and a privacy-policy entry.
-
-Then replace the placeholder with accurate wording, or delete the line. Do not name a provider that is not in use.
-
-## Errors and delivery failures
-
-| Failure | Visitor sees | System does |
+| State | When | Says |
 |---|---|---|
-| Invalid input | Inline errors, input kept | Nothing sent |
-| Throttled | The network error state, with the email fallback | Log the event only |
-| Honeypot or timing hit | A normal-looking success | Silent drop, log a counter |
-| Resend 4xx or 5xx, or timeout | Network error state; input kept; direct email shown | One retry on 5xx or timeout, then log and alert |
-| Confirmation fails | Normal success | Log it |
-| Outage | Network error state | Direct email address is the fallback, so it must be real (GAP-C08) |
+| Confirmed | Valid cookie, live mode | "Thank you. Request submitted." |
+| Demo | Valid cookie, demo mode | "Your request was simulated. No email was sent." |
+| Neutral | Anything else, including a direct visit | Makes no claim, and links to the form |
 
-**No database is added.** The trade-off: while Resend is down, an enquiry reaches nobody unless the visitor retries or uses the email address. The design's error message already handles that honestly. Revisit if lead volume makes this costly. Use Resend's delivery webhooks later only if bounces need monitoring.
+The `contact_confirmation` cookie comes from `src/lib/contact/confirmation.ts`. It holds a mode, a time and an HMAC, expires in 15 minutes, and carries no personal data. The live key is derived from `RESEND_API_KEY`, so no extra secret is needed, and rotating the key only makes old confirmations neutral. The URL holds nothing and query strings are ignored.
+
+The success panel from the design comes first, then Continue. Nothing about the visitor is stored in the browser. Refreshing within 15 minutes stays confirmed, which remains true.
+
+## Email
+
+`src/lib/contact/message.ts`. Plain text and simple HTML, in English, with no attachments.
+
+- **From:** `CONTACT_FROM_EMAIL`, **To:** `CONTACT_TO_EMAIL`. Neither can come from the form.
+- **Reply-To:** the validated visitor address, never in From.
+- **Subject:** fixed, so no visitor text reaches a header.
+- **Body:** source, name, email, company, help wanted, budget, timeline, description, and the server's receipt time. HTML is escaped, and visitor links are not made clickable.
+
+**No confirmation goes to the visitor** (GAP-F09): it would let anyone send mail to any address through the form.
+
+## Abuse controls
+
+| Control | Where | Limit |
+|---|---|---|
+| Honeypot | Off-screen, `tabindex=-1`, `aria-hidden` | A filled one gets the generic "couldn't process". **Not a fake success**, because a person with autofill would otherwise believe it was sent |
+| Payload size | `next.config.ts` | 32 KB |
+| Field limits | `fields.ts` | As above |
+| Origin | Action and Next.js | Same origin |
+| In-memory limit | `src/lib/contact/rate-limit.ts` | 5 per client and 60 per instance, per 10 minutes. Salted hashes, bounded map. **Trusts `x-forwarded-for`, which only a platform proxy makes reliable** |
+| Edge rate limit | Hosting | **NOT CONFIGURED. Blocks production** |
+| CAPTCHA | | None. Needs approval |
+
+**Production blocker:** serverless instances don't share memory, so the in-memory limiter alone is not adequate. A durable store or external service needs approval. Hosting WAF rules are the lightest route, and adding one is part of activation.
+
+**Duplicates:** submit is disabled while pending, and nothing resends automatically. A retry after "couldn't confirm" may produce a duplicate, and the copy says so. **Exactly-once delivery is not claimed.**
+
+**Not built:** minimum fill time, which is worth adding only if spam appears.
 
 ## Safe logging
 
-Log an event type, a timestamp, a Resend message ID and an error class. **Never log names, emails, message text, IP addresses in clear, or API keys.** Hash the IP if throttling diagnostics need it.
+`logContactEvent` in `src/lib/contact/log.ts` is the only logging on this path. Its parameters can hold an event, a correlation id, a reason, a provider name, a message id and an error name. **Never names, emails, message text, IP addresses or keys.**
 
-## Privacy and consent
+## Activation procedure
 
-- Consent is required, unchecked by default, and links to the privacy policy.
-- The privacy text must list Resend as a processor, along with hosting, and state retention (GAP-C09).
-- The enquiry persists only in the inbox, so retention means the mailbox's retention policy. Define it.
-- The **job form has no consent checkbox** although it collects personal data and the design's privacy policy covers applications. Add one (GAP-F02).
-- Russian-language forms: see the legal question in [i18n.md](i18n.md) (GAP-I02).
+Do these in order, and **do not set `CONTACT_LIVE_ENABLED` first.** See [production-release-checklist.md](production-release-checklist.md).
+
+1. Founder approves the sender domain and recipient mailbox (GAP-C08).
+2. Verify the domain in Resend: SPF, DKIM and DMARC.
+3. Create a sending-only key, per environment. Set it in the host, never in Git or chat.
+4. Set `EMAIL_PROVIDER=resend`, `RESEND_API_KEY`, `CONTACT_FROM_EMAIL` and `CONTACT_TO_EMAIL`. The form stays unavailable.
+5. Configure edge rate limiting on POSTs to `/contact`.
+6. Publish the approved privacy policy (SF-152).
+7. On a protected preview with a test inbox, set `CONTACT_LIVE_ENABLED=true` and run the smoke checklist.
+8. Enable production, and repeat the smoke checklist.
+9. Russian only after GAP-I02, then set `contact` to `approved`.
 
 ## Scheduler
 
-`Contact.dc.html` shows a day picker, slot grid and "Booked — the invite is on its way", with copy promising "calendar invite sent instantly" and "Times shown in your time zone". The slots are hard-coded, labelled "Sample availability", and fixed to CET.
-
-**Decision: no fake scheduling.** The widget is not built, and no page may claim a booking.
-
-**What ships:** the section's heading and pitch, with its button linking to the enquiry form. Remove "calendar invite sent instantly" and "Times shown in your time zone", which describe the widget. Check "NDA available before the call" with the other claims. This is a visible departure from the board (GAP-F01).
-
-If the owner later wants real booking, a hosted provider such as Cal.com or Calendly linked from this section is the lightest route: real availability and invites, no backend. It would be a new external service needing approval and a privacy-policy entry.
-
-## Playbook lead magnet
-
-"Send me the playbook" promises a "24-page PDF" and "Unsubscribe anytime". The PDF does not exist (GAP-A03), and "unsubscribe" implies a mailing list, which needs its own consent and tooling. If only one email is ever sent, remove that phrase. Hide the block until the PDF exists.
+**Decision: no fake scheduling** (GAP-F01). The section stays as "Ask for 30 minutes", with a panel saying online booking isn't available. A hosted provider such as Cal.com or Calendly, linked from there, is the lightest real route. It would be a new external service needing approval, a privacy-policy entry and CSP review.
 
 ## Verification
 
-Manual, per [manual-qa.md](../qa/manual-qa.md). Test every form state against a separate inbox, never real ones.
+Manual, in [contact-manual-qa.md](../qa/contact-manual-qa.md).

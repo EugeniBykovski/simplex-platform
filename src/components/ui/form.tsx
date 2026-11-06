@@ -49,9 +49,17 @@ function Field({
   );
 }
 
-export function FieldError({ id, children }: { id?: string; children: ReactNode }) {
+export function FieldError({
+  id,
+  className,
+  children,
+}: {
+  id?: string;
+  className?: string;
+  children: ReactNode;
+}) {
   return (
-    <p className="error-msg" id={id}>
+    <p className={cx("error-msg", className)} id={id}>
       <Icon name="alert" />
       {children}
     </p>
@@ -154,7 +162,11 @@ export function Checkbox({
         />
         <span>{label}</span>
       </label>
-      {error ? <FieldError id={`${id}-error`}>{error}</FieldError> : null}
+      {error ? (
+        <FieldError id={`${id}-error`} className="pl-[34px]">
+          {error}
+        </FieldError>
+      ) : null}
     </div>
   );
 }

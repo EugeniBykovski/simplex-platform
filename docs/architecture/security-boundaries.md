@@ -52,3 +52,22 @@ A new external service, such as a scheduling embed or analytics, needs an explic
 - `/contact?intent=` (GAP-F06), if built, must allow-list its values.
 - Never log personal data or keys.
 - Forms need the server-side rules in [contact-and-email.md](contact-and-email.md).
+- SF-151 added one cookie, `contact_confirmation`, set only after a form is accepted. It holds no personal data.
+
+## Contact form review (SF-151)
+
+Checked in [contact-manual-qa.md](../qa/contact-manual-qa.md).
+
+| Risk | Control |
+|---|---|
+| Header injection | Control and separator characters rejected. Email allows one address only. Subject is fixed. Delivery is an HTTP JSON call |
+| Sender spoofing, recipient substitution | From and To come only from server configuration. `from` or `to` fields reject the submission |
+| HTML injection | All visitor values escaped in the email. React escapes them on the page |
+| Oversize payloads | 32 KB action limit, plus field limits |
+| Flooding | Honeypot and in-memory limiter. **Edge rate limiting is missing, which blocks production** |
+| CSRF, cross-origin posts | Next.js origin check, own Origin and `Sec-Fetch-Site` check, `SameSite=Lax` cookie. No session exists to abuse |
+| Open redirects | None. The action never redirects, and no URL comes from input |
+| Sensitive errors | Visitors get a status. Provider responses are discarded |
+| Secrets in client bundles | `server-only` modules, and `pnpm check:bundle` with a canary |
+| Personal data in URLs, logs, storage | Not written. Query strings are ignored |
+| Fake delivery in production | Mock needs a loopback host and non-public build. Public builds fail with it set |

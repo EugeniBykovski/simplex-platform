@@ -112,7 +112,7 @@ export const en: HomeContent = {
       "Governed: every change approved by a SimpleX engineer",
     ],
     primaryCta: "Meet the agent",
-    secondaryCta: "Book a demo",
+    secondaryCta: "Ask for a demo",
   },
   packages: {
     isNew: "New",
@@ -508,7 +508,7 @@ export const en: HomeContent = {
           "Investors assessing a portfolio company",
           "Teams planning modernisation",
         ],
-        cta: "Book a review",
+        cta: "Ask for a review",
       },
     ],
   },

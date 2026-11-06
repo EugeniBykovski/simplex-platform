@@ -86,6 +86,14 @@ Also changed for every page: pending and disabled states, navbar contrast, the l
 
 **Open:** verified capability list (GAP-C01), the ROI assumption (GAP-F07), published-canvas comparison, native editor for Russian, real iOS and screen-reader pass. Its enquiry CTAs turn on with `/contact` in SF-151.
 
+## SF-151: Contact
+
+Implemented on `main` with a mock provider: **DONE WITH DEFERRED PROVIDER INTEGRATION.** See [contact-and-email.md](contact-and-email.md), [contact-artboard-matrix.md](../design/contact-artboard-matrix.md), [contact-privacy-register.md](../content/contact-privacy-register.md), [contact-manual-qa.md](../qa/contact-manual-qa.md) and [production-release-checklist.md](production-release-checklist.md).
+
+`/contact` and `/contact/thank-you` render per request. Without configuration, the form is unavailable and sends nothing. Mock delivery works locally, and is refused on any public host or build. Every link to `/contact` is now live, and "Book a…" labels on Home became "Ask for a…".
+
+**Open:** real Resend delivery, edge rate limiting, a privacy policy, a public email address, approved response time and budget bands, GAP-I02, a calendar provider, and Safari, Firefox, device and screen-reader passes.
+
 ## SF-150: Insights
 
 Implemented on `main`. See [insights-artboard-matrix.md](../design/insights-artboard-matrix.md), [insights-editorial-register.md](../content/insights-editorial-register.md) and [insights-manual-qa.md](../qa/insights-manual-qa.md).

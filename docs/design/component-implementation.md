@@ -193,6 +193,17 @@ Added in SF-149, under `src/components/sections/company/` and `careers/`. Copy l
 
 `jobPositions` in `content/careers/positions.ts` is the only source of job routes, and is empty. `RADAR_DOTS` holds the source's dot positions as whole class names.
 
+## Contact sections
+
+Added in SF-151, under `src/components/sections/contact/`. Copy is in `src/content/contact/`. The server boundary is `src/app/[locale]/contact/actions.ts`.
+
+| Component | Type | Holds | Reuses |
+|---|---|---|---|
+| `contact-form` | Client | Form, all states, success panel, honeypot | `TextField`, `TextArea`, `Select`, `Checkbox`, `Alert`, `Button`, `LinkButton`, `TextLink` |
+| `contact-sections` | Server | Intro, scheduler composition, Thank You hero and links | `Breadcrumbs`, `SxMark`, `AnchorButton`, `ArrowLink`, `RouteLink`, `Icon` |
+
+Chips here are native checkboxes in a `.toggle-chip` label, not `ToggleChip`, so they work without JavaScript and group under a real `fieldset`. `FieldError` gained `className`, for the consent error's indent.
+
 ## Insights sections
 
 Added in SF-150, under `src/components/sections/insights/`. Content is typed data in `src/content/insights/`, and `getPublishedArticles` is the only reader of it.

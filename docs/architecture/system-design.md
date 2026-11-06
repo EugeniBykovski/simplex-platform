@@ -1,6 +1,6 @@
 # System design
 
-The SimpleX website is a statically rendered, bilingual Next.js marketing site with one server-side integration: email through Resend. Approved product decisions are listed in the [gap register](../design/design-gap-register.md). Related: [component-boundaries.md](component-boundaries.md), [i18n.md](i18n.md), [route-matrix.md](route-matrix.md), [contact-and-email.md](contact-and-email.md).
+The SimpleX website is a mostly statically rendered, bilingual Next.js marketing site with one server-side integration: email through Resend. Approved product decisions are listed in the [gap register](../design/design-gap-register.md). Related: [component-boundaries.md](component-boundaries.md), [i18n.md](i18n.md), [route-matrix.md](route-matrix.md), [contact-and-email.md](contact-and-email.md).
 
 ## Stack
 
@@ -11,7 +11,7 @@ The SimpleX website is a statically rendered, bilingual Next.js marketing site w
 | Language | TypeScript, strict plus `noUncheckedIndexedAccess` and `exactOptionalPropertyTypes` | 5.9 | Approved |
 | Styling | Tailwind CSS plus ported design CSS | 4.3.4 | Approved |
 | i18n | next-intl | 4.14.9 | Retained by decision 7. A library, not a service |
-| Email | Resend, server only | Not installed; planned for SF-151 | Approved |
+| Email | Resend, server only, over HTTP with no SDK | Implemented with a mock. **Not configured or tested** | Approved |
 | Tests | None, by owner decision | n/a | See [manual-qa.md](../qa/manual-qa.md) |
 
 Not used, as the ticket requires: Storybook, a separate backend, a database, an ORM, a CMS, microservices, state-management libraries, third-party UI frameworks, animation libraries.
@@ -64,7 +64,7 @@ src/
   config/              env.ts, site.ts, routes.ts, navigation.ts, company.ts, security-headers.ts
   i18n/                routing.ts, navigation.ts, request.ts, translation-status.ts, messages/{en,ru}/
   lib/seo/             metadata.ts
-  lib/email/           config.ts (server-only; unused until SF-151)
+  lib/email/           delivery selection, mock and Resend providers (server-only)
   styles/              tokens.css, simplex.css, components.css, globals.css, fonts.ts
   types/               next-intl.d.ts
   proxy.ts
@@ -113,7 +113,7 @@ Slug templates come directly from the design: `ServicePage` holds 12 entries, `I
 
 ## Configuration
 
-See `.env.example`. `NEXT_PUBLIC_SITE_URL` sets canonical and hreflang origins, and `SITE_INDEXABLE` gates indexing. `RESEND_API_KEY`, `CONTACT_FROM_EMAIL` and `CONTACT_INBOX_EMAIL` are planned for SF-151, and are server-only.
+See `.env.example`. `NEXT_PUBLIC_SITE_URL` sets canonical and hreflang origins, and `SITE_INDEXABLE` gates indexing. `RESEND_API_KEY`, `CONTACT_FROM_EMAIL` and `CONTACT_TO_EMAIL` are planned for SF-151, and are server-only.
 
 ## Visual baseline today
 

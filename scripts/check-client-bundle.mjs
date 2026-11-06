@@ -6,7 +6,16 @@ import { join } from "node:path";
 
 const root = ".next/static";
 const canary = process.env.SECRET_CANARY;
-const forbidden = ["RESEND_API_KEY", "CONTACT_FROM_EMAIL", "CONTACT_INBOX_EMAIL", "getEmailConfig"];
+const forbidden = [
+  "RESEND_API_KEY",
+  "CONTACT_FROM_EMAIL",
+  "CONTACT_TO_EMAIL",
+  "CONTACT_LIVE_ENABLED",
+  "EMAIL_PROVIDER",
+  "getEmailConfig",
+  "api.resend.com",
+  "resolveDelivery",
+];
 if (canary) forbidden.push(canary);
 
 const walk = (dir) =>

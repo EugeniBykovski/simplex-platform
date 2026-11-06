@@ -76,6 +76,8 @@ export const implementedRoutes: readonly string[] = [
   "/careers",
   ...jobPositions.map(({ slug }) => `/careers/${slug}`),
   "/insights",
+  "/contact",
+  "/contact/thank-you",
 ];
 
 export function isImplementedRoute(href: string): boolean {
