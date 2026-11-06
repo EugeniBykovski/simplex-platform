@@ -29,14 +29,17 @@ export function Accordion({
 export function Breadcrumbs({
   label,
   items,
+  className,
 }: {
   /** The landmark name, from common.breadcrumb. */
   label: string;
   items: readonly { label: string; href?: string }[];
+  /** For the list, for example `on-dark` on a coloured ground with no dark ancestor. */
+  className?: string;
 }) {
   return (
     <nav aria-label={label}>
-      <ol className="crumbs">
+      <ol className={cx("crumbs", className)}>
         {items.flatMap(({ label: text, href }, index) => {
           const last = index === items.length - 1;
           const entry = (

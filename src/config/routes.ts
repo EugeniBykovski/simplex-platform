@@ -37,6 +37,18 @@ export const serviceSlugs = [
 
 export type ServiceSlug = (typeof serviceSlugs)[number];
 
+/** The six industry pages in the design. There are no others, and no catch-all route. */
+export const industrySlugs = [
+  "fintech",
+  "healthcare",
+  "ecommerce",
+  "saas",
+  "enterprise",
+  "logistics",
+] as const;
+
+export type IndustrySlug = (typeof industrySlugs)[number];
+
 /**
  * Routes that have a page today. Each page ticket adds its own. The 404 page offers only these,
  * so it never links to another 404.
@@ -47,6 +59,8 @@ export const implementedRoutes: readonly string[] = [
   "/services",
   ...serviceSlugs.map((slug) => `/services/${slug}`),
   "/packages",
+  "/industries",
+  ...industrySlugs.map((slug) => `/industries/${slug}`),
 ];
 
 export function isImplementedRoute(href: string): boolean {

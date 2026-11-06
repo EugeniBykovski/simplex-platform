@@ -138,4 +138,5 @@
 @custom-variant sx-1100 (@container sx (max-width: 1100px));
 @custom-variant sx-1000 (@container sx (max-width: 1000px));
 @custom-variant sx-860 (@container sx (max-width: 860px));
+@custom-variant sx-760 (@container sx (max-width: 760px));
 @custom-variant sx-600 (@container sx (max-width: 600px));

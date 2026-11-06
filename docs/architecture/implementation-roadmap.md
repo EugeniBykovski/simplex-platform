@@ -86,6 +86,14 @@ Also changed for every page: pending and disabled states, navbar contrast, the l
 
 **Open:** verified capability list (GAP-C01), the ROI assumption (GAP-F07), published-canvas comparison, native editor for Russian, real iOS and screen-reader pass. Its enquiry CTAs turn on with `/contact` in SF-151.
 
+## SF-147: Industries
+
+Implemented on `main`. See [industries-artboard-matrix.md](../design/industries-artboard-matrix.md), [industries-claims-register.md](../content/industries-claims-register.md) and [industries-manual-qa.md](../qa/industries-manual-qa.md).
+
+All 7 routes are live and `noindex`, and links to them across the site have turned on. The six detail pages share one design composition, so they share one set of sections over per-industry data (GAP-D25).
+
+**Open:** the claims register, especially certifications and compliance wording (GAP-C03) and Healthcare's regulated-software scenarios, unrelated demonstration projects (GAP-D23), published-canvas comparison, native editor for Russian, and Safari, Firefox, device and screen-reader passes.
+
 ## SF-146: Build Packages
 
 Implemented on `main`. See [packages-artboard-matrix.md](../design/packages-artboard-matrix.md), [packages-commercial-register.md](../content/packages-commercial-register.md) and [packages-manual-qa.md](../qa/packages-manual-qa.md).

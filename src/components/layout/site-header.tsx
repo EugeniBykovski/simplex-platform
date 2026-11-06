@@ -163,9 +163,9 @@ export async function SiteHeader({ locale, menuOpen }: { locale: Locale; menuOpe
             </span>
             <Icon name="arrow" size="md" />
           </NavLink>
-          <RouteLink href="/industries" className="mm-link">
+          <NavLink href="/industries" className="mm-link">
             {t("industries")} <Icon name="arrow" size="md" />
-          </RouteLink>
+          </NavLink>
           {primaryLinks.map(({ key, href }) => (
             <RouteLink key={key} href={href} className="mm-link">
               {t(key)} <Icon name="arrow" size="md" />

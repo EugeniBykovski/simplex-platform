@@ -150,3 +150,15 @@ Added in SF-146, under `src/components/sections/packages/`. Copy lives in `src/c
 
 The comparison puts a real `table` inside `ComparisonTable`, using `table-row` and `table-cell` utilities over the `.cmp-row` design class. `ComparisonRow` remains for the Services comparison.
 
+## Industries sections
+
+Added in SF-147, under `src/components/sections/industries/`. Copy lives in `src/content/industries/`, with per-route structure in `catalog.ts`. All are server components. The only client code is the shared `Tabs`.
+
+| Component | Holds | Reuses |
+|---|---|---|
+| `industries-overview` | Hero with `IndustryRow`, constants, compliance, CTA | `Breadcrumbs`, `Icon`, `RouteLink`, `CardArrow`, `LinkButton` |
+| `industry-sections` | The eight detail sections | `Breadcrumbs`, `Tabs`, `Tag`, `DemoTag`, `ArrowLink`, `RouteLink`, `CardArrow`, `SectorGround`, `AnchorButton`, `LinkButton` |
+| `industry-shared` | `ComplianceGrid`, used by both pages, and the gradient class map | Design `.comp-grid`, `.photo` classes |
+
+`industrySlugs` in `config/routes.ts` is the single list of detail routes. `Breadcrumbs` gained `className`. `globals.css` gained the `sx-760` variant, for the source's 760 px row rule.
+

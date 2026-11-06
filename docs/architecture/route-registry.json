@@ -967,7 +967,7 @@
       "imagePlaceholders": 0,
       "seo": {
         "title": "Industries — SimpleX",
-        "description": "Regulation, peak load, patient safety, multi-tenancy, real-time operations.",
+        "description": "Regulation, peak load, patient safety, multi-tenancy, real-time operations. The engineering is familiar; the constraints are not.",
         "h1": "Context changes everything.",
         "intent": "Does SimpleX have experience with my sector's constraints?",
         "topic": "Software engineering by industry",
@@ -979,16 +979,16 @@
         ],
         "indexing": "index at launch",
         "launchBlockers": [
-          "Certifications held by SimpleX unconfirmed (GAP-C03)"
+          "Founder decisions in industries-claims-register.md, including certifications (GAP-C03)"
         ]
       },
       "i18n": {
         "en": "/industries",
         "ru": "/ru/industries",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-147",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -1035,17 +1035,17 @@
         ],
         "indexing": "index at launch",
         "launchBlockers": [
-          "Certification wording (GAP-C03)",
+          "Founder decisions in industries-claims-register.md, including certifications (GAP-C03)",
           "Relevant projects are demonstrations (GAP-C02)"
         ]
       },
       "i18n": {
         "en": "/industries/fintech",
         "ru": "/ru/industries/fintech",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-147",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -1096,17 +1096,17 @@
         ],
         "indexing": "index at launch",
         "launchBlockers": [
-          "Certification wording (GAP-C03)",
+          "Founder decisions in industries-claims-register.md, including certifications (GAP-C03)",
           "Relevant projects are demonstrations (GAP-C02)"
         ]
       },
       "i18n": {
         "en": "/industries/healthcare",
         "ru": "/ru/industries/healthcare",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-147",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -1153,17 +1153,17 @@
         ],
         "indexing": "index at launch",
         "launchBlockers": [
-          "Certification wording (GAP-C03)",
+          "Founder decisions in industries-claims-register.md, including certifications (GAP-C03)",
           "Relevant projects are demonstrations (GAP-C02)"
         ]
       },
       "i18n": {
         "en": "/industries/ecommerce",
         "ru": "/ru/industries/ecommerce",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-147",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -1210,17 +1210,17 @@
         ],
         "indexing": "index at launch",
         "launchBlockers": [
-          "Certification wording (GAP-C03)",
+          "Founder decisions in industries-claims-register.md, including certifications (GAP-C03)",
           "Relevant projects are demonstrations (GAP-C02)"
         ]
       },
       "i18n": {
         "en": "/industries/saas",
         "ru": "/ru/industries/saas",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-147",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -1267,17 +1267,17 @@
         ],
         "indexing": "index at launch",
         "launchBlockers": [
-          "Certification wording (GAP-C03)",
+          "Founder decisions in industries-claims-register.md, including certifications (GAP-C03)",
           "Relevant projects are demonstrations (GAP-C02)"
         ]
       },
       "i18n": {
         "en": "/industries/enterprise",
         "ru": "/ru/industries/enterprise",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-147",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -1324,17 +1324,17 @@
         ],
         "indexing": "index at launch",
         "launchBlockers": [
-          "Certification wording (GAP-C03)",
+          "Founder decisions in industries-claims-register.md, including certifications (GAP-C03)",
           "Relevant projects are demonstrations (GAP-C02)"
         ]
       },
       "i18n": {
         "en": "/industries/logistics",
         "ru": "/ru/industries/logistics",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-147",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },

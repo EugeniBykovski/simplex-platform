@@ -57,6 +57,8 @@ Every component below appears on at least one route, verified by scanning each p
 | Patterns | Scheduler | `.sched-days`, `.sched-day`, `.sched-slots`, `.sched-slot` | client | **Not built: GAP-F01** | Contact | SF-151 |
 | Patterns | Estimator | `.gx-range`, `.opt`, `.gx-num` | client | Live values | Agent, Contact, Home, Job | SF-142 |
 | Patterns | EcosystemDiagram | `.eco`, `.eco-node`, `.eco-core` | server | Reorders ≤ 1100 | Packages | SF-146 |
+| Patterns | IndustryRow | `.viz`, `.chip`, `.card-arrow` | server | Hover, focus. 4 columns ≤ 1100, 2 ≤ 760 | Industries | SF-147 |
+| Patterns | ComplianceGrid | `.comp-grid`, `.comp-tile`, `.seal`, `.photo` | server | 2 columns, then 1 | Industries, IndustryPage | SF-147 |
 | Patterns | Quote | `.quote` | server | — | Article | SF-150 |
 | Data viz | MockUI | `.mock` | server | `aria-hidden` where decorative | Agent, CasePage, Home, HowWeWork, ServicePage, Work | SF-142 |
 | Data viz | ArchitectureDiagram | `.arch`, `.arch-layer`, `.arch-node` | server | — | Article, CasePage, ServicePage | SF-142 |
