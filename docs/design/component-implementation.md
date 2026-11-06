@@ -162,3 +162,17 @@ Added in SF-147, under `src/components/sections/industries/`. Copy lives in `src
 
 `industrySlugs` in `config/routes.ts` is the single list of detail routes. `Breadcrumbs` gained `className`. `globals.css` gained the `sx-760` variant, for the source's 760 px row rule.
 
+## Work sections
+
+Added in SF-148, under `src/components/sections/work/`. Copy lives in `src/content/work/`, with structure in `catalog.ts`.
+
+| Component | Type | Holds | Reuses |
+|---|---|---|---|
+| `work-overview` | Server | Hero, featured, project cards, CTA | `Breadcrumbs`, `Alert`, `Tag`, `DemoTag`, `SectorGround`, `RouteLink`, `ArrowLink`, `LinkButton` |
+| `work-grid` | Client | Filters, count, empty state. Cards arrive server-rendered | `FilterButton`, `Button`, `SxMark` |
+| `case-layouts` | Server | Layouts A, B and C, which differ in composition | `Tag`, `DemoTag`, `SectorGround`, `LinkButton` |
+| `case-shared` | Server | Mock-ups, architecture, shift block, next project, CTA | `Breadcrumbs`, `RouteLink`, `CardArrow`, `LinkButton` |
+| `before-after` | Client | The drag-to-compare position, set on the element at runtime | Design `.ba` classes |
+
+`workSlugs` in `config/routes.ts` is the single list of case routes. The mobile menu's `MobileLink` marks the current page, and stays a disabled link for routes with no page.
+

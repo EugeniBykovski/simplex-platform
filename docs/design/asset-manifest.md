@@ -102,3 +102,16 @@ Authors' avatars, the leadership portraits (4 × 4:5) and team photography are t
 - **The CTO's build-vs-buy playbook PDF**, promised on `/insights` as a "24-page PDF" (GAP-A03).
 - **Open Graph images** for every route (GAP-A02).
 - **`support.js`:** referenced by every board but it is the design runtime, not a site asset. It is not in the published file list and is not needed.
+
+## Work (SF-148)
+
+**The Work section uses no client asset, photograph or screenshot.** Every visual is a design gradient or is drawn in code, so nothing needs rights clearance, and nothing was sourced from stock.
+
+| Visual | Provenance |
+|---|---|
+| Project and hero grounds | `.viz-*`, `.bg-horizon`, `.bg-spectrum`, `.bg-cta`, in `simplex.css` |
+| Positions, queue, summary and form mock-ups | Drawn in code from the design. Fictional, hidden from assistive technology, labelled "Sample" |
+| Dispatch map | Inline SVG copied from `CasePage.dc.html`. Shows no real route |
+| Architecture diagrams | `.arch`, drawn in code. Illustrative |
+| `bg-meeting.jpg` | Only used by the withheld reference block on this page |
+

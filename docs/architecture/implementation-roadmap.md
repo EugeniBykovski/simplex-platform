@@ -86,6 +86,14 @@ Also changed for every page: pending and disabled states, navbar contrast, the l
 
 **Open:** verified capability list (GAP-C01), the ROI assumption (GAP-F07), published-canvas comparison, native editor for Russian, real iOS and screen-reader pass. Its enquiry CTAs turn on with `/contact` in SF-151.
 
+## SF-148: Work
+
+Implemented on `main`. See [work-artboard-matrix.md](../design/work-artboard-matrix.md), [portfolio-attribution-register.md](../content/portfolio-attribution-register.md) and [work-manual-qa.md](../qa/work-manual-qa.md).
+
+All 4 routes are live and `noindex`, and links to them across the site have turned on. All six projects are labelled concepts, with every figure removed and the reference block withheld.
+
+**Open:** founder confirmation that all six projects are fictional, a name check, real client work to replace them, published-canvas comparison, native editor for Russian, and Safari, Firefox, device and screen-reader passes.
+
 ## SF-147: Industries
 
 Implemented on `main`. See [industries-artboard-matrix.md](../design/industries-artboard-matrix.md), [industries-claims-register.md](../content/industries-claims-register.md) and [industries-manual-qa.md](../qa/industries-manual-qa.md).
@@ -188,7 +196,15 @@ Blockers from the [gap register](../design/design-gap-register.md): GAP-C01, GAP
 - **Routes:** `/packages`
 - **Artboards:** `Packages`, `Packages-p2`, `PackagesMobile`, `PackagesMobile-p2`, `PackagesMobile-p3`
 
-### SF-147: Industries
+### SF-148: Work
+
+Implemented on `main`. See [work-artboard-matrix.md](../design/work-artboard-matrix.md), [portfolio-attribution-register.md](../content/portfolio-attribution-register.md) and [work-manual-qa.md](../qa/work-manual-qa.md).
+
+All 4 routes are live and `noindex`, and links to them across the site have turned on. All six projects are labelled concepts, with every figure removed and the reference block withheld.
+
+**Open:** founder confirmation that all six projects are fictional, a name check, real client work to replace them, published-canvas comparison, native editor for Russian, and Safari, Firefox, device and screen-reader passes.
+
+## SF-147: Industries
 
 - **Compositions:** `Industries`, `IndustryPage`
 - **Routes:** `/industries`, `/industries/fintech`, `/industries/healthcare`, `/industries/ecommerce`, `/industries/saas`, `/industries/enterprise`, `/industries/logistics`

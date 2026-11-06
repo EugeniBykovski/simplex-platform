@@ -48,6 +48,7 @@ Every component below appears on at least one route, verified by scanning each p
 | Patterns | ModelCard | `.model-card` | server | `is-featured` variant | Agent, Home | SF-142 |
 | Patterns | ComparisonTable | `.cmp`, `.cmp-row` | server | Scrolls ≤ 600 | Packages, Services | SF-142 |
 | Patterns | ComplianceGrid | `.comp-grid`, `.comp-tile`, `.seal` | server | — | About, Industries, IndustryPage | SF-142 |
+| Patterns | ProjectFilters | `.filter-bar`, `.filter-btn` | client | Live count, empty state | Work | SF-148 |
 | Patterns | Timeline | `.tl` | server | Stacks ≤ 600 | Careers, ServicePage | SF-142 |
 | Patterns | ProcessRail | `.process`, `.process-step`, `.process-rail` | server | Scroll-driven | Careers, CasePage, ServicePage | SF-142 |
 | Patterns | ScrollStory | `.story`, `.story-step`, `.story-rail` | server | Scroll-driven | Home, HowWeWork | SF-142 |

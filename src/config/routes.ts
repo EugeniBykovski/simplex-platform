@@ -49,6 +49,11 @@ export const industrySlugs = [
 
 export type IndustrySlug = (typeof industrySlugs)[number];
 
+/** The three case studies in the design. All are demonstrations, not client work (GAP-C02). */
+export const workSlugs = ["ledgerline", "carepath", "routewise"] as const;
+
+export type WorkSlug = (typeof workSlugs)[number];
+
 /**
  * Routes that have a page today. Each page ticket adds its own. The 404 page offers only these,
  * so it never links to another 404.
@@ -61,6 +66,8 @@ export const implementedRoutes: readonly string[] = [
   "/packages",
   "/industries",
   ...industrySlugs.map((slug) => `/industries/${slug}`),
+  "/work",
+  ...workSlugs.map((slug) => `/work/${slug}`),
 ];
 
 export function isImplementedRoute(href: string): boolean {

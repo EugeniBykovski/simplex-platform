@@ -15,6 +15,10 @@ The design handles this responsibly: it brackets most unknowns and labels demons
 
 So anything bracketed below ships as supplied real data or is hidden, never filled in with an estimate.
 
+## Work copy changes (SF-148)
+
+Each project, its classification and every changed claim is in [portfolio-attribution-register.md](portfolio-attribution-register.md).
+
 ## Industries copy changes (SF-147)
 
 Each change from the design, with its reason and published wording, is in [industries-claims-register.md](industries-claims-register.md).

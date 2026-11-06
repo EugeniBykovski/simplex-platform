@@ -1375,8 +1375,8 @@
       ],
       "imagePlaceholders": 0,
       "seo": {
-        "title": "Our Work — SimpleX",
-        "description": "A selection of engagements across industries and services. Each one started with a messy, specific problem — and ended with software people rely on.",
+        "title": "Our Work — demonstration projects — SimpleX",
+        "description": "Illustrative concepts that show how SimpleX approaches hard software problems across industries and services. These are demonstrations, not client work.",
         "h1": "Hard problems, made simple to use.",
         "intent": "Proof of delivery and the case-study format",
         "topic": "Portfolio",
@@ -1394,10 +1394,10 @@
       "i18n": {
         "en": "/work",
         "ru": "/ru/work",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-148",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -1432,8 +1432,8 @@
       ],
       "imagePlaceholders": 0,
       "seo": {
-        "title": "Ledgerline — SimpleX",
-        "description": "From overnight reconciliation to a live view of every position.",
+        "title": "Ledgerline (demonstration) — SimpleX",
+        "description": "A demonstration case study: how SimpleX would replace overnight bank reconciliation with an event-driven ledger. An illustrative concept, not client work.",
         "h1": "Ledgerline",
         "intent": "Proof of capability",
         "topic": "FinTech case study",
@@ -1450,10 +1450,10 @@
       "i18n": {
         "en": "/work/ledgerline",
         "ru": "/ru/work/ledgerline",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-148",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": "Layout A"
     },
@@ -1484,8 +1484,8 @@
       ],
       "imagePlaceholders": 0,
       "seo": {
-        "title": "Carepath — SimpleX",
-        "description": "One front door for patients. One queue for clinicians.",
+        "title": "Carepath (demonstration) — SimpleX",
+        "description": "A demonstration case study: how SimpleX would unify patient intake and triage across clinic sites. An illustrative concept, not client work or a clinical product.",
         "h1": "Carepath",
         "intent": "Proof of capability",
         "topic": "Healthcare case study",
@@ -1502,10 +1502,10 @@
       "i18n": {
         "en": "/work/carepath",
         "ru": "/ru/work/carepath",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-148",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": "Layout B"
     },
@@ -1536,8 +1536,8 @@
       ],
       "imagePlaceholders": 0,
       "seo": {
-        "title": "Routewise — SimpleX",
-        "description": "Plans that adapt as fast as the road does.",
+        "title": "Routewise (demonstration) — SimpleX",
+        "description": "A demonstration case study: how SimpleX would build route planning that adapts during the day, with live telematics and an offline-first driver app. An illustrative concept, not client work.",
         "h1": "Routewise",
         "intent": "Proof of capability",
         "topic": "Logistics case study",
@@ -1554,10 +1554,10 @@
       "i18n": {
         "en": "/work/routewise",
         "ru": "/ru/work/routewise",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-148",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": "Layout C"
     },

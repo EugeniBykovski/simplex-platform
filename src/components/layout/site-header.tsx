@@ -36,6 +36,19 @@ const caret = (
  * A top-level item. With no page yet it stays visible. If it has a menu it is still a working
  * control, because it opens that menu, so only an item with nothing behind it is marked disabled.
  */
+/** A disabled link until the route has a page, or the current-page link once it does. */
+function MobileLink({ href, children }: { href: string; children: ReactNode }) {
+  return isImplementedRoute(href) ? (
+    <NavLink href={href} className="mm-link">
+      {children}
+    </NavLink>
+  ) : (
+    <RouteLink href={href} className="mm-link">
+      {children}
+    </RouteLink>
+  );
+}
+
 function TopLink({
   href,
   children,
@@ -167,9 +180,9 @@ export async function SiteHeader({ locale, menuOpen }: { locale: Locale; menuOpe
             {t("industries")} <Icon name="arrow" size="md" />
           </NavLink>
           {primaryLinks.map(({ key, href }) => (
-            <RouteLink key={key} href={href} className="mm-link">
+            <MobileLink key={key} href={href}>
               {t(key)} <Icon name="arrow" size="md" />
-            </RouteLink>
+            </MobileLink>
           ))}
           <div className="stack gap-3 p-[22px_8px_4px]">
             <LinkButton href="/contact" variant="light" size="lg" arrow className="w-full">
