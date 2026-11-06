@@ -193,6 +193,10 @@ Added in SF-149, under `src/components/sections/company/` and `careers/`. Copy l
 
 `jobPositions` in `content/careers/positions.ts` is the only source of job routes, and is empty. `RADAR_DOTS` holds the source's dot positions as whole class names.
 
+## Legal sections
+
+Added in SF-152, in `src/components/sections/legal/legal-page.tsx`, a server component with one template for three documents. Text is in `src/content/legal/`, with interface copy (`ui.ts`) apart from documents (`documents.ts`). `registry.ts` holds approval. The shared `Switch` is deliberately unused here (GAP-D38).
+
 ## Contact sections
 
 Added in SF-151, under `src/components/sections/contact/`. Copy is in `src/content/contact/`. The server boundary is `src/app/[locale]/contact/actions.ts`.

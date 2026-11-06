@@ -15,6 +15,10 @@ The design handles this responsibly: it brackets most unknowns and labels demons
 
 So anything bracketed below ships as supplied real data or is hidden, never filled in with an estimate.
 
+## Legal (SF-152)
+
+Status and draft changes are in [legal-document-register.md](legal-document-register.md), and real storage in [cookie-storage-inventory.md](cookie-storage-inventory.md). No legal text is approved.
+
 ## Contact (SF-151)
 
 Copy changes and privacy decisions are in [contact-privacy-register.md](contact-privacy-register.md). The response-time claim, placeholder email and booking slots are not published.

@@ -80,7 +80,6 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
                 {t(`legal.${key}`)}
               </RouteLink>
             ))}
-            <RouteLink href="/cookie-policy">{t("legal.cookieSettings")}</RouteLink>
           </div>
         </div>
       </div>

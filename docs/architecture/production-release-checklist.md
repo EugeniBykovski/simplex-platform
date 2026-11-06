@@ -1,6 +1,6 @@
-# Production release checklist: contact form
+# Production release checklist: contact form and legal
 
-**Status: production lead capture is BLOCKED.** No item below has been done. Complete them in order, as set out in the [activation procedure](contact-and-email.md#activation-procedure). Release as a whole belongs to SF-156.
+**Status: production lead capture and legal publication are BLOCKED.** No item below has been done. Complete them in order, as set out in the [activation procedure](contact-and-email.md#activation-procedure). Release as a whole belongs to SF-156.
 
 ## Before enabling
 
@@ -10,8 +10,10 @@
 - [ ] Sending-only Resend key created, per environment, stored only in the host
 - [ ] `EMAIL_PROVIDER=resend`, `RESEND_API_KEY`, `CONTACT_FROM_EMAIL`, `CONTACT_TO_EMAIL` set on production. **`EMAIL_PROVIDER=mock` is not set anywhere public**
 - [ ] Edge rate limiting active on POSTs to `/contact`. The in-memory limiter alone is not adequate
-- [ ] Privacy policy approved and published, naming Resend and the host, with retention (GAP-C09, SF-152)
-- [ ] Cookie policy lists `contact_confirmation`
+- [ ] Privacy policy approved in `src/content/legal/registry.ts` for each language accepting leads, naming Resend and the host, with retention (GAP-C09). **Code refuses real delivery without it**
+- [ ] Cookie Policy and Terms approved, per language, or a decision to launch without them
+- [ ] [Cookie inventory](../content/cookie-storage-inventory.md) re-checked on the real host
+- [ ] `LEGAL_REVIEW_MODE` unset on production
 - [ ] Founder confirmed the copy in [contact-privacy-register.md](../content/contact-privacy-register.md), including budget bands
 - [ ] Public contact email decided, as the outage fallback
 - [ ] Russian form left disabled, or GAP-I02 cleared by counsel and `contact` set to `approved`
@@ -43,6 +45,14 @@ Run on a protected preview with a test inbox, then on production after setting `
 ## To disable quickly
 
 Unset `CONTACT_LIVE_ENABLED`. The form returns to its unavailable state on the next request, with no build.
+
+## Legal smoke checklist
+
+- [ ] Each approved page shows real effective and revised dates, with no notice and no brackets
+- [ ] Each unapproved page shows "Not yet published", is `noindex` and is out of the sitemap
+- [ ] No draft text in public page source
+- [ ] A browser check shows only the inventory's cookies and no third-party requests
+- [ ] The contact form's note links to the approved policy
 
 ## Before indexing
 

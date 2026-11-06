@@ -48,6 +48,11 @@ export function parseSiteEnv(raw: RawEnv): SiteEnv {
     errors.push("SITE_INDEXABLE=true requires a public https NEXT_PUBLIC_SITE_URL.");
   }
 
+  // Unapproved legal drafts must never reach a public build. The pages refuse them too.
+  if (raw.LEGAL_REVIEW_MODE?.trim() === "true" && (indexable || raw.VERCEL_ENV === "production")) {
+    errors.push("LEGAL_REVIEW_MODE=true is not allowed in a production or indexable build.");
+  }
+
   // Simulated delivery must never reach a public build. Runtime selection also refuses it.
   if (raw.EMAIL_PROVIDER?.trim() === "mock" && (indexable || raw.VERCEL_ENV === "production")) {
     errors.push("EMAIL_PROVIDER=mock is not allowed in a production or indexable build.");

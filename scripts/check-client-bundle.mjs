@@ -11,6 +11,7 @@ const forbidden = [
   "CONTACT_FROM_EMAIL",
   "CONTACT_TO_EMAIL",
   "CONTACT_LIVE_ENABLED",
+  "LEGAL_REVIEW_MODE",
   "EMAIL_PROVIDER",
   "getEmailConfig",
   "api.resend.com",

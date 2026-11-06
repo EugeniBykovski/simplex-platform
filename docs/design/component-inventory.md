@@ -51,6 +51,7 @@ Every component below appears on at least one route, verified by scanning each p
 | Patterns | ProjectFilters | `.filter-bar`, `.filter-btn` | client | Live count, empty state | Work | SF-148 |
 | Patterns | TechDirectory | `.search`, `.filter-bar` | client | Search, category, live count, empty state | Technologies | SF-149 |
 | Patterns | TechRadar | `.tabs-dark`, `.gx-row`, `.gx-2` | client | Ring tabs, stacks ≤ 1000 | Technologies | SF-149 |
+| Patterns | LegalPage | `.prose`, `.chip`, `.alert`, `.glass` | server | Public, review and approved states | Legal | SF-152 |
 | Patterns | ContactFormPanel | `.field`, `.toggle-chip`, `.check`, `.alert` | client | All form states, demo mode | Contact | SF-151 |
 | Patterns | InsightsBrowser | `.search`, `.filter-btn` | client | URL state, live count, no-match | Insights | SF-150 |
 | Patterns | ArticleBlocks | `.prose`, `.quote` | server | Closed block set | Article | SF-150 |

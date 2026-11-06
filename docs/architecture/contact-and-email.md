@@ -18,11 +18,11 @@ Implemented in SF-151, with a mock provider. **Real Resend delivery has not been
 |---|---|---|
 | `unavailable` | The default, for anything else | Fields and submit disabled. "This form isn't accepting requests right now." |
 | `demo` | `EMAIL_PROVIDER=mock`, **and** a loopback host, **and** no `VERCEL_ENV` beyond `development`, **and** `SITE_INDEXABLE` not `true`, **and** an unset or loopback `NEXT_PUBLIC_SITE_URL` | "Demo mode", on the form, the success panel and Thank You. Never presented as a real enquiry |
-| `live` | `EMAIL_PROVIDER=resend`, a key, valid sender and recipient, **and** `CONTACT_LIVE_ENABLED=true`. For Russian, also `contact` set to `approved` | The normal form |
+| `live` | `EMAIL_PROVIDER=resend`, a key, valid sender and recipient, **and** `CONTACT_LIVE_ENABLED=true`, **and** the privacy policy `approved` for that language in `src/content/legal/registry.ts`. For Russian, also `contact` set to `approved` | The normal form |
 
 `parseSiteEnv` also **fails the build** for `EMAIL_PROVIDER=mock` when the build is indexable or `VERCEL_ENV=production`.
 
-`CONTACT_LIVE_ENABLED` is an addition to the amendment's four variables. It records what code cannot check: a verified domain, edge rate limiting, an approved privacy notice and a smoke test. Without it, adding an API key would turn the form on before those are in place.
+`CONTACT_LIVE_ENABLED` is an addition to the amendment's four variables. It records what code cannot check: a verified domain, edge rate limiting and a smoke test. Privacy approval is enforced in code since SF-152. Without it, adding an API key would turn the form on before those are in place.
 
 ## Providers
 
@@ -158,7 +158,7 @@ Do these in order, and **do not set `CONTACT_LIVE_ENABLED` first.** See [product
 3. Create a sending-only key, per environment. Set it in the host, never in Git or chat.
 4. Set `EMAIL_PROVIDER=resend`, `RESEND_API_KEY`, `CONTACT_FROM_EMAIL` and `CONTACT_TO_EMAIL`. The form stays unavailable.
 5. Configure edge rate limiting on POSTs to `/contact`.
-6. Publish the approved privacy policy (SF-152).
+6. Approve the privacy policy for the language, in `src/content/legal/registry.ts`. Until then the form stays unavailable, whatever else is set.
 7. On a protected preview with a test inbox, set `CONTACT_LIVE_ENABLED=true` and run the smoke checklist.
 8. Enable production, and repeat the smoke checklist.
 9. Russian only after GAP-I02, then set `contact` to `approved`.

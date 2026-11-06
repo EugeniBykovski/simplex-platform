@@ -19,8 +19,8 @@ export const russianTranslationStatus: Record<RouteFamily, TranslationStatus> = 
   careers: "draft",
   insights: "draft",
   contact: "draft",
-  legal: "missing",
-  system: "missing",
+  legal: "draft",
+  system: "draft",
 };
 
 /** A page with no translation for this locale must 404 rather than show the wrong language. */

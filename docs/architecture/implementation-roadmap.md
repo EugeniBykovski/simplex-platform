@@ -86,6 +86,14 @@ Also changed for every page: pending and disabled states, navbar contrast, the l
 
 **Open:** verified capability list (GAP-C01), the ROI assumption (GAP-F07), published-canvas comparison, native editor for Russian, real iOS and screen-reader pass. Its enquiry CTAs turn on with `/contact` in SF-151.
 
+## SF-152: Legal and system
+
+Implemented on `main`: **code and design complete, legal publication blocked.** See [legal-system-artboard-matrix.md](../design/legal-system-artboard-matrix.md), [legal-document-register.md](../content/legal-document-register.md), [cookie-storage-inventory.md](../content/cookie-storage-inventory.md) and [legal-system-manual-qa.md](../qa/legal-system-manual-qa.md).
+
+The three legal routes are live with a "Not yet published" state and `noindex`, and all documents are `draft`. Drafts render only in review mode. The site has one cookie and nothing optional, so no preference controls exist, and "Cookie settings" left the footer. Real contact delivery now requires an approved privacy policy. The 404 needed no change.
+
+**Open:** counsel-approved text in each language, company facts, the host's cookies, native Russian review, and Safari, Firefox, device and screen-reader passes.
+
 ## SF-151: Contact
 
 Implemented on `main` with a mock provider: **DONE WITH DEFERRED PROVIDER INTEGRATION.** See [contact-and-email.md](contact-and-email.md), [contact-artboard-matrix.md](../design/contact-artboard-matrix.md), [contact-privacy-register.md](../content/contact-privacy-register.md), [contact-manual-qa.md](../qa/contact-manual-qa.md) and [production-release-checklist.md](production-release-checklist.md).

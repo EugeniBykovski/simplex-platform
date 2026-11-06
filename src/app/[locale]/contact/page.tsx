@@ -5,8 +5,8 @@ import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import { ContactFormPanel } from "@/components/sections/contact/contact-form";
 import { ContactIntro, ContactScheduler } from "@/components/sections/contact/contact-sections";
-import { isImplementedRoute } from "@/config/routes";
 import { getContact } from "@/content/contact";
+import { isLegalPublished } from "@/content/legal/registry";
 import { routing } from "@/i18n/routing";
 import { isLocaleAvailable } from "@/i18n/translation-status";
 import { resolveDelivery } from "@/lib/email/delivery";
@@ -52,7 +52,7 @@ export default async function ContactRoute({ params }: Props) {
           <ContactFormPanel
             action={submitContact.bind(null, locale)}
             mode={delivery.mode}
-            privacyPublished={isImplementedRoute("/privacy-policy")}
+            privacyPublished={isLegalPublished("privacy", locale)}
             locale={locale}
             copy={content.form}
           />

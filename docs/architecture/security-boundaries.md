@@ -1,6 +1,6 @@
 # Security boundaries
 
-The audit below reflects the code at the end of SF-141. Its test files were later removed by owner decision. The site has no accounts, database or stored user data, and it sets no cookies. Form security is specified in [contact-and-email.md](contact-and-email.md) for SF-151.
+The audit below reflects the code at the end of SF-141. Its test files were later removed by owner decision. The site has no accounts, database or stored user data, and it sets one cookie, only after a form is accepted. Form security is specified in [contact-and-email.md](contact-and-email.md) for SF-151.
 
 ## Audit
 
@@ -52,7 +52,7 @@ A new external service, such as a scheduling embed or analytics, needs an explic
 - `/contact?intent=` (GAP-F06), if built, must allow-list its values.
 - Never log personal data or keys.
 - Forms need the server-side rules in [contact-and-email.md](contact-and-email.md).
-- SF-151 added one cookie, `contact_confirmation`, set only after a form is accepted. It holds no personal data.
+- SF-151 added one cookie, `contact_confirmation`, set only after a form is accepted. It holds no personal data. The full list is in [cookie-storage-inventory.md](../content/cookie-storage-inventory.md).
 
 ## Contact form review (SF-151)
 

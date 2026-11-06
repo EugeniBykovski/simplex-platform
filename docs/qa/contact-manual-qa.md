@@ -89,6 +89,8 @@ Direct POSTs with no browser. 38 checks, 0 failures.
 
 Unavailable means submit is disabled. `EMAIL_PROVIDER=mock` with `SITE_INDEXABLE=true` or `VERCEL_ENV=production` fails `parseSiteEnv`, which the build runs.
 
+Since SF-152, that last row needs an approved privacy policy too. With the real draft registry it shows **Unavailable** in every column. See [legal-system-manual-qa.md](legal-system-manual-qa.md).
+
 ## Resend provider, against the local stub
 
 12 checks, 0 failures.

@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { indexableRoutes } from "@/config/routes";
 import { siteConfig } from "@/config/site";
 import { getPublishedArticles } from "@/content/insights";
+import { isLegalPublished, legalDocuments } from "@/content/legal/registry";
 import { localizedUrl, publishedLocales } from "@/lib/seo/metadata";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -29,5 +30,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ];
   });
 
-  return [...pages, ...articles];
+  // Each document only in the languages it is approved in.
+  const paths = { privacy: "/privacy-policy", cookie: "/cookie-policy", terms: "/terms" } as const;
+  const legal = publishedLocales("legal").flatMap((locale) =>
+    (Object.keys(paths) as (keyof typeof paths)[]).flatMap((id) => {
+      const record = legalDocuments[id][locale];
+      return isLegalPublished(id, locale) && record.status === "approved"
+        ? [{ url: localizedUrl(locale, paths[id]), lastModified: record.lastRevised }]
+        : [];
+    }),
+  );
+
+  return [...pages, ...articles, ...legal];
 }

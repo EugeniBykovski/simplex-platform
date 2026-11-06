@@ -2063,12 +2063,12 @@
         "mobile"
       ],
       "contentSource": "src/content/legal/",
-      "interactions": "Section TOC, cookie preference switches + save confirmation (cookie slug only)",
+      "interactions": "Section contents and document links. No preference controls: nothing optional exists",
       "assets": [],
       "imagePlaceholders": 0,
       "seo": {
         "title": "Privacy Policy — SimpleX",
-        "description": "How SimpleX collects, uses and protects personal data when you visit our website, contact us or apply for a role.",
+        "description": "The SimpleX Privacy Policy, and its current status.",
         "h1": "Privacy Policy",
         "intent": "Compliance and legal lookup",
         "topic": "Privacy Policy",
@@ -2077,7 +2077,7 @@
         "schema": [
           "BreadcrumbList"
         ],
-        "indexing": "not published until owner and legal approve",
+        "indexing": "noindex and out of the sitemap until approved, per language",
         "launchBlockers": [
           "Owner and legal approval required before production (GAP-C09)"
         ]
@@ -2085,10 +2085,10 @@
       "i18n": {
         "en": "/privacy-policy",
         "ru": "/ru/privacy-policy",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-152",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -2110,12 +2110,12 @@
         "desktop"
       ],
       "contentSource": "src/content/legal/",
-      "interactions": "Section TOC, cookie preference switches + save confirmation (cookie slug only)",
+      "interactions": "Section contents and document links. No preference controls: nothing optional exists",
       "assets": [],
       "imagePlaceholders": 0,
       "seo": {
         "title": "Cookie Policy — SimpleX",
-        "description": "Which cookies this website uses, why, and how to change your choices at any time.",
+        "description": "The SimpleX Cookie Policy, its current status, and what this site stores.",
         "h1": "Cookie Policy",
         "intent": "Compliance and legal lookup",
         "topic": "Cookie Policy",
@@ -2124,7 +2124,7 @@
         "schema": [
           "BreadcrumbList"
         ],
-        "indexing": "not published until owner and legal approve",
+        "indexing": "noindex and out of the sitemap until approved, per language",
         "launchBlockers": [
           "Owner and legal approval required before production (GAP-C09)"
         ]
@@ -2132,10 +2132,10 @@
       "i18n": {
         "en": "/cookie-policy",
         "ru": "/ru/cookie-policy",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-152",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -2157,12 +2157,12 @@
         "desktop"
       ],
       "contentSource": "src/content/legal/",
-      "interactions": "Section TOC, cookie preference switches + save confirmation (cookie slug only)",
+      "interactions": "Section contents and document links. No preference controls: nothing optional exists",
       "assets": [],
       "imagePlaceholders": 0,
       "seo": {
         "title": "Terms of Use — SimpleX",
-        "description": "The terms that apply when you use the SimpleX website. Client engagements are governed by separate agreements.",
+        "description": "The SimpleX Terms of Use, and their current status.",
         "h1": "Terms of Use",
         "intent": "Compliance and legal lookup",
         "topic": "Terms of Use",
@@ -2171,7 +2171,7 @@
         "schema": [
           "BreadcrumbList"
         ],
-        "indexing": "not published until owner and legal approve",
+        "indexing": "noindex and out of the sitemap until approved, per language",
         "launchBlockers": [
           "Owner and legal approval required before production (GAP-C09)"
         ]
@@ -2179,10 +2179,10 @@
       "i18n": {
         "en": "/terms",
         "ru": "/ru/terms",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-152",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -2207,7 +2207,7 @@
         "mobile"
       ],
       "contentSource": "src/content/system/",
-      "interactions": "Search form (no-op in prototype)",
+      "interactions": "Links only. Search omitted (GAP-F05)",
       "assets": [],
       "imagePlaceholders": 0,
       "seo": {
@@ -2227,7 +2227,7 @@
       "i18n": {
         "en": "/404",
         "ru": "/ru/404",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-152",
       "implemented": true,

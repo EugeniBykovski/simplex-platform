@@ -10,7 +10,7 @@ Copy changes and privacy decisions for SF-151. Source: `Contact.dc.html` and `Th
 | "We reply within one business day", `[Confirm response commitment]` | No approved response time | "We read your request. We reply to the email address you give us." |
 | `[hello@your-domain.com]`, "Prefer email?" | No real address (GAP-C08) | Block withheld. Failure copy does not offer email |
 | "Protected by [spam protection]" | Names nothing, and claims protection not yet complete | Removed. "No mailing lists." stays |
-| "as described in the privacy policy" | The policy doesn't exist (SF-152) | "Our privacy policy isn't published yet." A link replaces this by itself when `/privacy-policy` ships |
+| "as described in the privacy policy" | The policy doesn't exist (SF-152) | "Our privacy policy isn't published yet." A link replaces this by itself only when the policy is **approved**, not merely because the route exists |
 | Placeholders "Alex Morgan", "alex@company.com" | Sample person | "Your name", "you@company.com" |
 | `[€50k]`, `[€150k]`, `[€500k+]` | **Bands and currency unconfirmed** | Shown without brackets, as they are questions rather than claims. **Founder to confirm or replace** |
 | "We couldn't send your message. Nothing was lost… or email us directly" | No address, and a timeout can't claim it wasn't sent | Separate failure and unconfirmed copy |
@@ -35,9 +35,9 @@ Copy changes and privacy decisions for SF-151. Source: `Contact.dc.html` and `Th
 | Storage | No contact database. No browser storage. The message exists only in the email and the provider's own systems | Implemented |
 | Retention | Mailbox and Resend retention are undefined | **Open** (GAP-C09) |
 | Processors | Resend and the host must be named in the privacy policy. The form says "our email provider" | **Open**, SF-152 |
-| Privacy policy | Not published, and the form says so | **Blocks production** (GAP-C09) |
+| Privacy policy | Route exists since SF-152, draft only, and the form says it isn't published. **Real delivery is refused in code until it is approved** | **Blocks production** (GAP-C09) |
 | Russian-language form | Disabled for real delivery until `contact` is `approved` in `src/i18n/translation-status.ts`, which includes the counsel review in GAP-I02 | **Blocked** |
-| Cookie | `contact_confirmation`: `HttpOnly`, `SameSite=Lax`, 15 minutes, set only after acceptance. Holds a mode, a time and a signature. No personal data | Implemented. Add to the cookie policy (SF-152) |
+| Cookie | `contact_confirmation`: `HttpOnly`, `SameSite=Lax`, 15 minutes, set only after acceptance. Holds a mode, a time and a signature. No personal data | Implemented. In the [inventory](cookie-storage-inventory.md) |
 | Logs | Event, correlation id, provider name, provider message id, failure class and error name. **Never** name, email, company, message, IP or key | Implemented, checked in QA |
 | Rate-limit memory | Salted hash of the client address, in process memory, 10 minutes | Implemented. Mention in the policy |
 | Analytics | None. No conversion event fires | Implemented |

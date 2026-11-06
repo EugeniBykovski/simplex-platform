@@ -14,6 +14,7 @@ Rules live in `src/config/env.ts`. The template is `.env.example`. **Real values
 | `CONTACT_FROM_EMAIL` | Server only | With `resend` | For real delivery | Must be one plain address |
 | `CONTACT_TO_EMAIL` | Server only | With `resend` | For real delivery | Must be one plain address |
 | `CONTACT_LIVE_ENABLED` | Server only | With `resend` | For real delivery | Must be exactly `true`. Set only after the [activation procedure](contact-and-email.md#activation-procedure) |
+| `LEGAL_REVIEW_MODE` | Server and build | Internal review only | No | Exactly `true` shows drafts. Read at build. Fails a production or indexable build |
 
 `CONTACT_TO_EMAIL` replaces the earlier `CONTACT_INBOX_EMAIL`, following the SF-151 amendment. Nothing was deployed with the old name.
 

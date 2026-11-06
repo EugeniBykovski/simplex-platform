@@ -1,4 +1,5 @@
 import "server-only";
+import { isLegalPublished } from "@/content/legal/registry";
 import { russianTranslationStatus } from "@/i18n/translation-status";
 import type { Locale } from "@/i18n/routing";
 import { getEmailConfig } from "./config";
@@ -7,7 +8,12 @@ import type { EmailProvider } from "./provider";
 import { ResendEmailProvider } from "./resend-provider";
 
 export type UnavailableReason =
-  "no_provider" | "mock_refused" | "resend_not_configured" | "not_enabled" | "locale_not_approved";
+  | "no_provider"
+  | "mock_refused"
+  | "resend_not_configured"
+  | "not_enabled"
+  | "privacy_not_approved"
+  | "locale_not_approved";
 
 export type Delivery =
   | { mode: "live" | "demo"; provider: EmailProvider; from: string; to: string }
@@ -45,7 +51,8 @@ function mockAllowed(hosts: readonly (string | null)[]): boolean {
  * The only place delivery is chosen. It fails closed, and there is no fallback from Resend to the
  * mock: a missing key is a configuration state, not permission to fake delivery. CONTACT_LIVE_ENABLED
  * records that the checks code cannot make have been done (verified domain, edge rate limiting,
- * privacy notice, smoke test). Russian also waits for its legal review (GAP-I02).
+ * smoke test). An approved privacy policy is enforced here, per language, and Russian also waits for
+ * its legal review (GAP-I02).
  */
 export function resolveDelivery(
   hosts: { host: string | null; forwardedHost: string | null },
@@ -74,6 +81,9 @@ export function resolveDelivery(
   }
   if (process.env.CONTACT_LIVE_ENABLED?.trim() !== "true") {
     return { mode: "unavailable", reason: "not_enabled" };
+  }
+  if (!isLegalPublished("privacy", locale)) {
+    return { mode: "unavailable", reason: "privacy_not_approved" };
   }
   if (locale === "ru" && russianTranslationStatus.contact !== "approved") {
     return { mode: "unavailable", reason: "locale_not_approved" };

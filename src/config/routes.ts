@@ -78,6 +78,9 @@ export const implementedRoutes: readonly string[] = [
   "/insights",
   "/contact",
   "/contact/thank-you",
+  "/privacy-policy",
+  "/cookie-policy",
+  "/terms",
 ];
 
 export function isImplementedRoute(href: string): boolean {
