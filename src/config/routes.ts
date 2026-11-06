@@ -1,3 +1,5 @@
+import { jobPositions } from "@/content/careers/positions";
+
 /**
  * Route families from the approved design. docs/architecture/route-registry.json holds the full
  * per-route record; scripts/validate-docs.mjs fails if the two disagree.
@@ -68,6 +70,11 @@ export const implementedRoutes: readonly string[] = [
   ...industrySlugs.map((slug) => `/industries/${slug}`),
   "/work",
   ...workSlugs.map((slug) => `/work/${slug}`),
+  "/about",
+  "/how-we-work",
+  "/technologies",
+  "/careers",
+  ...jobPositions.map(({ slug }) => `/careers/${slug}`),
 ];
 
 export function isImplementedRoute(href: string): boolean {

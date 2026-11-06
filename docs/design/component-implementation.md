@@ -176,3 +176,20 @@ Added in SF-148, under `src/components/sections/work/`. Copy lives in `src/conte
 
 `workSlugs` in `config/routes.ts` is the single list of case routes. The mobile menu's `MobileLink` marks the current page, and stays a disabled link for routes with no page.
 
+## Company and Careers sections
+
+Added in SF-149, under `src/components/sections/company/` and `careers/`. Copy lives in `src/content/company/` and `src/content/careers/`.
+
+| Component | Type | Holds | Reuses |
+|---|---|---|---|
+| `about-sections` | Server | The About sections | `Breadcrumbs`, `Tag`, `Wordmark`, `LinkButton` |
+| `how-we-work-sections` | Server | The How We Work sections, with the `.story` rail | `Breadcrumbs`, `Accordion`, `Tag`, `ArrowLink`, `LinkButton` |
+| `technologies-sections` | Server | Hero, follows, radar section | `Breadcrumbs`, `LinkButton` |
+| `tech-directory` | Client | Search, category filter, count, empty state | `SearchField`, `FilterButton`, `Button` |
+| `tech-radar` | Client | Ring tabs, with lit dots | `useTabs`, `TabList`, `TabPanels` |
+| `careers-sections` | Server | The Careers sections, with the empty state | `Breadcrumbs`, `AnchorButton`, `LinkButton`, `RouteLink`, `CardArrow` |
+| `job-sections` | Server | The job page, for real roles only | `Breadcrumbs`, `LinkButton`, `ArrowLink`, `RouteLink` |
+| `copy-link` | Client | "Copy link to role" | `Button` |
+
+`jobPositions` in `content/careers/positions.ts` is the only source of job routes, and is empty. `RADAR_DOTS` holds the source's dot positions as whole class names.
+

@@ -115,3 +115,7 @@ Authors' avatars, the leadership portraits (4 × 4:5) and team photography are t
 | Architecture diagrams | `.arch`, drawn in code. Illustrative |
 | `bg-meeting.jpg` | Only used by the withheld reference block on this page |
 
+## Company and Careers (SF-149)
+
+Only `bg-tower.jpg` is used, through `.photo-tower`. **Portraits, team photographs and office photographs do not exist, and were not replaced with stock**, as the design asks (GAP-C05). The design has no technology logos, so none is used.
+

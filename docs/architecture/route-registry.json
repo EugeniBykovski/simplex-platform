@@ -1601,16 +1601,16 @@
         ],
         "indexing": "index at launch",
         "launchBlockers": [
-          "Time-zone and location coverage placeholder"
+          "Founder decisions in company-claims-register.md: locations, delivery commitments"
         ]
       },
       "i18n": {
         "en": "/how-we-work",
         "ru": "/ru/how-we-work",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-149",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -1644,7 +1644,7 @@
       "imagePlaceholders": 3,
       "seo": {
         "title": "About — SimpleX",
-        "description": "SimpleX is a software engineering and digital product company.",
+        "description": "SimpleX is a software engineering and digital product company. We exist to make complex systems feel simple, for the people who use them and the people who maintain them.",
         "h1": "Simple to use. Simple to change.",
         "intent": "Who is SimpleX and how does it make decisions?",
         "topic": "Company",
@@ -1656,16 +1656,16 @@
         ],
         "indexing": "index at launch",
         "launchBlockers": [
-          "Founder story, leadership and photography missing (GAP-C05)"
+          "Founder decisions in company-claims-register.md: founding story, leadership and photography (GAP-C05), ownership"
         ]
       },
       "i18n": {
         "en": "/about",
         "ru": "/ru/about",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-149",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -1697,7 +1697,7 @@
       "imagePlaceholders": 0,
       "seo": {
         "title": "Technologies — SimpleX",
-        "description": "A directory of the technologies we work with, grouped by capability. It describes experience and practice — not vendor certifications or partnerships.",
+        "description": "A directory of technologies SimpleX plans around, grouped by capability. It describes engineering practice, not vendor certifications or partnerships.",
         "h1": "The toolkit, and how we use it.",
         "intent": "Which technologies does SimpleX work with?",
         "topic": "Technology stack",
@@ -1708,16 +1708,16 @@
         ],
         "indexing": "index at launch",
         "launchBlockers": [
-          "Sample radar must be replaced or removed"
+          "Founder confirms the directory; the sample radar must be replaced or removed (company-claims-register.md)"
         ]
       },
       "i18n": {
         "en": "/technologies",
         "ru": "/ru/technologies",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-149",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -1748,7 +1748,7 @@
       "imagePlaceholders": 0,
       "seo": {
         "title": "Careers — SimpleX",
-        "description": "Hard problems, senior colleagues and the time to do things properly.",
+        "description": "How SimpleX thinks about work: hard problems, written decisions and the time to do things properly. No roles are listed right now.",
         "h1": "Do the best work of your career.",
         "intent": "Engineering, design and delivery jobs",
         "topic": "Careers",
@@ -1759,16 +1759,16 @@
         ],
         "indexing": "index when live roles exist",
         "launchBlockers": [
-          "Sample listings, benefits and locations (GAP-C06)"
+          "No live roles; benefits withheld (GAP-C06, careers-positions-register.md)"
         ]
       },
       "i18n": {
         "en": "/careers",
         "ru": "/ru/careers",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-149",
-      "implemented": false,
+      "implemented": true,
       "instanceNote": null,
       "note": null
     },
@@ -1815,7 +1815,7 @@
       "i18n": {
         "en": "/careers/[slug]",
         "ru": "/ru/careers/[slug]",
-        "ruStatus": "missing"
+        "ruStatus": "draft"
       },
       "ownerTicket": "SF-149",
       "implemented": false,

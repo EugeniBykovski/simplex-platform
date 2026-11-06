@@ -86,6 +86,14 @@ Also changed for every page: pending and disabled states, navbar contrast, the l
 
 **Open:** verified capability list (GAP-C01), the ROI assumption (GAP-F07), published-canvas comparison, native editor for Russian, real iOS and screen-reader pass. Its enquiry CTAs turn on with `/contact` in SF-151.
 
+## SF-149: Company and Careers
+
+Implemented on `main`. See [company-careers-artboard-matrix.md](../design/company-careers-artboard-matrix.md), [company-claims-register.md](../content/company-claims-register.md), [careers-positions-register.md](../content/careers-positions-register.md) and [company-careers-manual-qa.md](../qa/company-careers-manual-qa.md).
+
+`/about`, `/how-we-work`, `/technologies` and `/careers` are live and `noindex`, and links to them across the site have turned on. No vacancy is live, so `/careers/[slug]` generates no page. Leadership, team photographs and benefits are withheld.
+
+**Open:** founder facts in the registers, real roles and a way to apply, published-canvas comparison, native editor for Russian, and Safari, Firefox, device and screen-reader passes.
+
 ## SF-148: Work
 
 Implemented on `main`. See [work-artboard-matrix.md](../design/work-artboard-matrix.md), [portfolio-attribution-register.md](../content/portfolio-attribution-register.md) and [work-manual-qa.md](../qa/work-manual-qa.md).
@@ -196,7 +204,15 @@ Blockers from the [gap register](../design/design-gap-register.md): GAP-C01, GAP
 - **Routes:** `/packages`
 - **Artboards:** `Packages`, `Packages-p2`, `PackagesMobile`, `PackagesMobile-p2`, `PackagesMobile-p3`
 
-### SF-148: Work
+### SF-149: Company and Careers
+
+Implemented on `main`. See [company-careers-artboard-matrix.md](../design/company-careers-artboard-matrix.md), [company-claims-register.md](../content/company-claims-register.md), [careers-positions-register.md](../content/careers-positions-register.md) and [company-careers-manual-qa.md](../qa/company-careers-manual-qa.md).
+
+`/about`, `/how-we-work`, `/technologies` and `/careers` are live and `noindex`, and links to them across the site have turned on. No vacancy is live, so `/careers/[slug]` generates no page. Leadership, team photographs and benefits are withheld.
+
+**Open:** founder facts in the registers, real roles and a way to apply, published-canvas comparison, native editor for Russian, and Safari, Firefox, device and screen-reader passes.
+
+## SF-148: Work
 
 Implemented on `main`. See [work-artboard-matrix.md](../design/work-artboard-matrix.md), [portfolio-attribution-register.md](../content/portfolio-attribution-register.md) and [work-manual-qa.md](../qa/work-manual-qa.md).
 

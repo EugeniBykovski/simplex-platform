@@ -15,6 +15,10 @@ The design handles this responsibly: it brackets most unknowns and labels demons
 
 So anything bracketed below ships as supplied real data or is hidden, never filled in with an estimate.
 
+## Company and Careers copy changes (SF-149)
+
+Company statements are in [company-claims-register.md](company-claims-register.md), and vacancies and hiring in [careers-positions-register.md](careers-positions-register.md).
+
 ## Work copy changes (SF-148)
 
 Each project, its classification and every changed claim is in [portfolio-attribution-register.md](portfolio-attribution-register.md).
