@@ -34,7 +34,7 @@ CSS backgrounds can't use `loading="lazy"`. On Home, the six sections holding im
 | Check on Home | Before | After |
 |---|---|---|
 | Background images at load, in a browser check | 6 | **0**, and 6 as they scroll into view |
-| Image bytes in Lighthouse's run | 231 KB | 51 KB. Not 0, as that run's own page handling brings some sections into view |
+| Image bytes in Lighthouse's run | 231 KB | 51 KB. Not 0 in that tool, for a reason not investigated |
 | Main-thread work, 4× CPU, first load | 463 ms without skipping | 386 ms |
 
 Checked: rendering when scrolled into view, the End key, height stability once rendered, and text staying in the accessibility tree and DOM. Browsers without the property load everything, as before. Full-page screenshot tools see skipped sections as blank, so capture tools need to disable it. PDF printing produced 24 pages, though **the printed content was not reviewed section by section.**

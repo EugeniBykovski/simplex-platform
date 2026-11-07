@@ -57,7 +57,7 @@ Lighthouse transfer on Home, mobile, one run each:
 
 ## Home's LCP element
 
-**The 1.90 s is flattering.** At first paint, Home's `h1` sits behind its reveal mask, so only a sliver counts (size 2,583), and the larger lead paragraph (26,488) fades in afterwards. Chrome doesn't re-record it, so the metric stops early. A visitor sees the hero finish at about 3 s under this profile, with or without this work, because of the designed 0.5 s delay and 1.2 s fade.
+**The 1.90 s is flattering.** At first paint, Home's `h1` sits behind its reveal mask, so only a sliver counts (size 2,583), and the larger lead paragraph (26,488) fades in afterwards. In these runs it isn't recorded as a candidate, so the metric stops early. Why Chrome skips it wasn't established. A visitor sees the hero finish at about 3.6 s under this profile, with or without this work: first paint at about 1.9 s, plus the designed 0.5 s delay and 1.2 s fade.
 
 Starting the fade at `opacity: 0.001` would be a metric-only trick, and wasn't used. **Shortening the delay is a design decision**, listed in [remaining issues](remaining-issues.md).
 
