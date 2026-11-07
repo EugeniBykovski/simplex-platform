@@ -4,7 +4,10 @@ import type { HomeContent } from "@/content/home";
 
 export function HomeHow({ content }: { content: HomeContent["how"] }) {
   return (
-    <section className="bg-ink bg-ink-left section" aria-labelledby="how">
+    <section
+      className="bg-ink bg-ink-left section [content-visibility:auto] [contain-intrinsic-size:auto_2350px] sx-1000:[contain-intrinsic-size:auto_2100px] sx-600:[contain-intrinsic-size:auto_2950px]"
+      aria-labelledby="how"
+    >
       <div className="wrap split">
         <div className="sticky-col stack gap-6">
           <span className="tag self-start">{content.tag}</span>

@@ -83,6 +83,8 @@ Lab only. One run per page and form factor, local indexable build, Lighthouse's 
 
 SEO 66 is only the deliberate `noindex`. No article is published, so none was measured.
 
+**SF-154 later found that these Lighthouse LCP values are unreliable against localhost.** See [core-web-vitals.md](../performance/core-web-vitals.md).
+
 **Findings, for SF-154:**
 
 - **Mobile LCP stays above the 2.5 s target, up to 3.8 s on Home.** The LCP element is text. Lighthouse estimates 360 ms of render-blocking savings, and 30 KiB of unused JavaScript.

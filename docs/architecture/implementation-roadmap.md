@@ -86,6 +86,14 @@ Also changed for every page: pending and disabled states, navbar contrast, the l
 
 **Open:** verified capability list (GAP-C01), the ROI assumption (GAP-F07), published-canvas comparison, native editor for Russian, real iOS and screen-reader pass. Its enquiry CTAs turn on with `/contact` in SF-151.
 
+## SF-154: Media, motion and performance
+
+Implemented on `main`. See [core-web-vitals.md](../performance/core-web-vitals.md), [remaining-issues.md](../performance/remaining-issues.md) and [media-motion-inventory.md](../design/media-motion-inventory.md).
+
+Images are 80% smaller through AVIF and WebP, English pages load 2 fonts instead of 6, Home skips off-screen work, and three animations became composited. The design is pixel-equivalent to the previous commit. **LCP did not materially change on typical routes:** Home's page weight fell from 619 to 378 KiB, and results became more consistent. Field data doesn't exist.
+
+**Open:** image rights (GAP-A01), real devices, real hosting, and Russian font loading.
+
 ## SF-153: Technical SEO
 
 Implemented on `main`. See [technical-audit.md](../seo/technical-audit.md), [route-seo-matrix.md](../seo/route-seo-matrix.md) and [release-checklist.md](../seo/release-checklist.md).

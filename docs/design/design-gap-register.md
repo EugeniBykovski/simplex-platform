@@ -86,7 +86,7 @@ Full list: [content-and-claims-register.md](../content/content-and-claims-regist
 | GAP-V02 | case-carepath, case-routewise | Layouts B and C have **no mobile board** and unique markup | High | Implement from CSS rules, label as CSS-derived, get owner review | Yes | SF-148 |
 | GAP-V03 | All | No boards at 320, 1024, 1280, 1920, 2560 | Low | Render the design source at those widths as a reference ([manual QA](../qa/manual-qa.md)) | No | SF-155 |
 | GAP-V04 | All | No Russian design exists, and Russian text can break `.btn` nowrap, line masks, header fit and display floors | High | [i18n.md](../architecture/i18n.md) adaptations, owner reviews on `ru` | Yes | SF-142, page tickets |
-| GAP-V05 | Handoff | Safe areas **RESOLVED** in `src/styles/components.css`, not yet tested on a real iOS device. The mobile blur cap stays open, pending device testing | Medium | Test in SF-154 | No | SF-142, SF-154 |
+| GAP-V05 | Handoff | Safe areas **RESOLVED** in `src/styles/components.css`, not yet tested on a real iOS device. The mobile blur cap stays open, pending device testing | Medium | Not possible in SF-154, which had no real device. Glass is unchanged, and this stays open | No | SF-142, SF-154 |
 | GAP-V06 | Home | Fixed 960 px sticky hero on short laptops. **Inspected at 1366 × 768:** the headline, lead and CTAs are all above the fold. The scroll cue falls below it, which is harmless. No change made | Low | None | No | SF-143 |
 
 ## Motion

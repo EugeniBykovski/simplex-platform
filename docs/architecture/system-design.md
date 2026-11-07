@@ -125,7 +125,7 @@ The full design stylesheet, tokens, fonts, logo system, shared components, heade
 
 ## Performance budget
 
-Proposed targets at p75 on mobile, checked in SF-154. **None measured yet:**
+Proposed targets at p75 on mobile. **Field data does not exist.** Lab results are in [core-web-vitals.md](../performance/core-web-vitals.md). The JS target is not met at about 151 KB, as React and Next.js alone are 122 KB ([bundle audit](../performance/bundle-audit.md)):
 
 | Metric | Target |
 |---|---|

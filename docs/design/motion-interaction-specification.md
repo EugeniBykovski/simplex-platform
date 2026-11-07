@@ -8,6 +8,8 @@ Native scrolling only, no hijacking. CSS scroll-driven animation behind `@suppor
 
 **No animation library is needed.** Every effect below is CSS, apart from the small state changes noted.
 
+**SF-154 changed how three effects render, not how they look:** story focus now fades a glow layer, the pulse scales a pseudo-element, and the scroll cue uses a transform. See [motion-audit.md](../performance/motion-audit.md).
+
 ## Tokens
 
 | Token | Value | | Token | Value |

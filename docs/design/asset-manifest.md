@@ -20,7 +20,7 @@ The README calls these "blurred business photography". All seven were inspected:
 
 **Responsive behaviour:** `center / cover` under gradient overlays, so every crop is acceptable and no art direction is needed.
 
-**Production:** convert to AVIF and WebP. Because they are CSS backgrounds under a heavy overlay, they can compress hard. Keep them as CSS `image-set()` rather than `next/image`, unless a section needs LCP priority.
+**Production:** done in SF-154: AVIF and WebP through CSS `image-set()`, with JPEG as fallback. See [image-optimization.md](../performance/image-optimization.md).
 
 ## Gradient grounds (`uikit/backgrounds/`)
 
@@ -66,8 +66,8 @@ Pages draw the logo inline, not from these files: live Geist text plus an inline
 
 | Family | Weights | Source | Cyrillic | Licence |
 |---|---|---|---|---|
-| Geist | 300–700 variable | Google Fonts link in every board | Yes: verified in the served CSS | SIL OFL 1.1 (verify in SF-154) |
-| Geist Mono | 400, 500 | Google Fonts link in every board | Yes: verified in the served CSS | SIL OFL 1.1 (verify in SF-154) |
+| Geist | 300–700 variable | Google Fonts link in every board | Yes: verified in the served CSS | SIL OFL 1.1, verified in SF-154 |
+| Geist Mono | 400, 500 | Google Fonts link in every board | Yes: verified in the served CSS | SIL OFL 1.1, verified in SF-154 |
 
 The foundation self-hosts both through `next/font/google`, so visitors never contact Google. The stylesheet's fallback chain also names Inter, which is never loaded.
 

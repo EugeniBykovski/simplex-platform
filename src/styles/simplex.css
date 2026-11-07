@@ -343,7 +343,7 @@
 .skel { background: linear-gradient(90deg, rgba(7,11,43,.06) 25%, rgba(7,11,43,.11) 50%, rgba(7,11,43,.06) 75%); background-size: 200% 100%; animation: sx-shimmer 1.4s linear infinite; border-radius: 8px; }
 .scroll-cue { display: inline-flex; flex-direction: column; align-items: center; gap: 10px; font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--text-3); }
 .scroll-cue i { position: relative; width: 1px; height: 44px; background: var(--line-2); overflow: hidden; }
-.scroll-cue i::after { content: ""; position: absolute; left: 0; top: -40%; width: 1px; height: 40%; background: var(--ink); animation: sx-cue 2.2s var(--ease-in-out) infinite; }
+.scroll-cue i::after { content: ""; position: absolute; left: 0; top: 0; transform: translateY(-100%); width: 1px; height: 40%; background: var(--ink); animation: sx-cue 2.2s var(--ease-in-out) infinite; }
 .hero-stage { position: relative; }
 .hero-pin { position: sticky; top: 0; z-index: 0; }
 .over { position: relative; z-index: 2; }
@@ -370,11 +370,11 @@
 @supports (animation-timeline: view()) {
 .story { view-timeline-name: --story; }
 .story-rail i { animation: sx-grow-y linear both; animation-timeline: --story; animation-range: contain 0% contain 100%; }
-.story-step .story-body { animation: sx-focus linear both; animation-timeline: view(); animation-range: cover 10% cover 90%; }
+.story-step .story-body::after { content: ""; position: absolute; inset: -1px; border-radius: inherit; border: 1px solid rgba(157,180,204,.5); box-shadow: 0 0 0 1px rgba(157,180,204,.25), 0 30px 80px -40px rgba(90,120,150,.5); pointer-events: none; animation: sx-focus linear both; animation-timeline: view(); animation-range: cover 10% cover 90%; }
 }
 }
 @keyframes sx-grow-y { from { transform: scaleY(0); } to { transform: scaleY(1); } }
-@keyframes sx-focus { 0%, 100% { border-color: rgba(255,255,255,.13); box-shadow: none; } 35%, 65% { border-color: rgba(157,180,204,.5); box-shadow: 0 0 0 1px rgba(157,180,204,.25), 0 30px 80px -40px rgba(90,120,150,.5); } }
+@keyframes sx-focus { 0%, 100% { opacity: 0; } 35%, 65% { opacity: 1; } }
 @container sx (max-width: 1100px) {
 .bento-md > * { grid-column: span 6 !important; }
 }
@@ -394,7 +394,7 @@
 }
 @keyframes sx-spin { to { transform: rotate(360deg); } }
 @keyframes sx-shimmer { to { background-position: -200% 0; } }
-@keyframes sx-cue { 0% { top: -40%; } 60%, 100% { top: 110%; } }
+@keyframes sx-cue { 0% { transform: translateY(-100%); } 60%, 100% { transform: translateY(275%); } }
 @keyframes sx-rise { from { transform: translateY(48px); } to { transform: none; } }
 @keyframes sx-fade { from { opacity: 0; } to { opacity: 1; } }
 @keyframes sx-mask { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
@@ -563,11 +563,12 @@
 @media (prefers-reduced-motion: no-preference) {
 .marquee-track { animation: sx-marquee 40s linear infinite; }
 .marquee.rev .marquee-track { animation-direction: reverse; animation-duration: 48s; }
-.pulse { animation: sx-pulse 2s ease-out infinite; }
+.pulse { position: relative; }
+.pulse::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: rgba(43,212,154,.55); animation: sx-pulse 2s ease-out infinite; }
 .float-w { animation: sx-drift 10s var(--ease-in-out) infinite; }
 .float-w:nth-of-type(2n) { animation-duration: 12s; animation-delay: -4s; }
 }
-@keyframes sx-pulse { 0% { box-shadow: 0 0 0 0 rgba(43,212,154,.55); } 100% { box-shadow: 0 0 0 10px rgba(43,212,154,0); } }
+@keyframes sx-pulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(3.5); opacity: 0; } }
 @container sx (max-width: 1100px) {
 .float-w { display: none; }
 }
@@ -781,6 +782,9 @@
 .sx-mark:hover::after, .sx-mark.live::after { background-position: -40% 0; }
 .sx-mark.live::after { animation: sx-sheen 6s var(--ease-in-out) infinite !important; }
 @keyframes sx-sheen { 0%, 60% { background-position: 120% 0; } 85%, 100% { background-position: -40% 0; } }
+@media (prefers-reduced-motion: reduce) {
+.sx-mark.live::after { animation: none !important; }
+}
 .sx-mark.steel, .sx-mark.on-dark { --bg: linear-gradient(160deg, #24507D 0%, #163A60 45%, #0C2A45 100%); --rim: rgba(157,180,204,.38); }
 .sx-mark.cobalt { --bg: linear-gradient(160deg, #233DA8 0%, #172B85 45%, #0E1A5E 100%); --rim: rgba(143,178,255,.32); --x-accent: #9DB4CC; }
 .sx-mark.ink { --bg: linear-gradient(160deg, #10183F, #070B2B); --rim: rgba(255,255,255,.12); }
@@ -790,19 +794,19 @@
 .lp-x::before { inset: -.19em -.18em -.16em -.2em; border-radius: .2em !important; clip-path: polygon(0 0, 100% 0, 100% 100%, 26% 100%, 0 81%); transform: none; animation: none !important; box-shadow: inset 0 0 0 .025em var(--rim), inset 0 .02em 0 rgba(255,255,255,.1), inset 0 -.08em .16em rgba(0,0,0,.3); transition: transform .5s var(--ease-out); }
 .lp:hover .lp-x::before, .lp.open .lp-x::before { border-radius: .2em; transform: translateY(-.03em); }
 .lp.on-dark, .lp.steel { --pb: linear-gradient(160deg, #24507D 0%, #163A60 45%, #0C2A45 100%); --rim: rgba(157,180,204,.4); --x-accent: #9DB4CC; }
-.viz-fintech { background: radial-gradient(60% 70% at 85% 15%, rgba(47,87,245,.45), transparent 70%), linear-gradient(160deg, rgba(7,11,43,.25), rgba(7,11,43,.8)), url("/images/design/bg-trading.jpg") center / cover, #0B1240; }
-.viz-healthcare { background: radial-gradient(60% 70% at 20% 10%, rgba(157,180,204,.35), transparent 70%), linear-gradient(160deg, rgba(12,42,69,.55), rgba(8,25,43,.88)), url("/images/design/bg-office.jpg") center / cover, #0C2A45; }
-.viz-ecommerce { background: radial-gradient(70% 70% at 80% 80%, rgba(59,140,255,.35), transparent 70%), linear-gradient(160deg, rgba(7,11,43,.15), rgba(7,11,43,.75)), url("/images/design/bg-city.jpg") center / cover, #101848; }
-.viz-saas { background: radial-gradient(60% 60% at 0% 0%, rgba(47,87,245,.4), transparent 70%), linear-gradient(160deg, rgba(7,11,43,.2), rgba(7,11,43,.8)), url("/images/design/bg-code.jpg") center / cover, #0A0F38; }
-.viz-enterprise { background: radial-gradient(70% 60% at 100% 50%, rgba(47,87,245,.45), transparent 70%), linear-gradient(160deg, rgba(7,11,43,.45), rgba(7,11,43,.85)), url("/images/design/bg-tower.jpg") center / cover, #080D30; }
-.viz-logistics { background: radial-gradient(60% 60% at 100% 0%, rgba(157,180,204,.3), transparent 70%), linear-gradient(160deg, rgba(7,11,43,.2), rgba(7,11,43,.75)), url("/images/design/bg-server.jpg") center / cover, #0B1A42; }
-.viz-light { background: linear-gradient(160deg, rgba(255,255,255,.55), rgba(238,242,250,.85)), url("/images/design/bg-office.jpg") center / cover, #EEF2FA; }
+.viz-fintech { background: radial-gradient(60% 70% at 85% 15%, rgba(47,87,245,.45), transparent 70%), linear-gradient(160deg, rgba(7,11,43,.25), rgba(7,11,43,.8)), url("/images/design/bg-trading.jpg") center / cover, #0B1240; background: radial-gradient(60% 70% at 85% 15%, rgba(47,87,245,.45), transparent 70%), linear-gradient(160deg, rgba(7,11,43,.25), rgba(7,11,43,.8)), image-set(url("/images/design/bg-trading.avif") type("image/avif"), url("/images/design/bg-trading.webp") type("image/webp"), url("/images/design/bg-trading.jpg") type("image/jpeg")) center / cover, #0B1240; }
+.viz-healthcare { background: radial-gradient(60% 70% at 20% 10%, rgba(157,180,204,.35), transparent 70%), linear-gradient(160deg, rgba(12,42,69,.55), rgba(8,25,43,.88)), url("/images/design/bg-office.jpg") center / cover, #0C2A45; background: radial-gradient(60% 70% at 20% 10%, rgba(157,180,204,.35), transparent 70%), linear-gradient(160deg, rgba(12,42,69,.55), rgba(8,25,43,.88)), image-set(url("/images/design/bg-office.avif") type("image/avif"), url("/images/design/bg-office.webp") type("image/webp"), url("/images/design/bg-office.jpg") type("image/jpeg")) center / cover, #0C2A45; }
+.viz-ecommerce { background: radial-gradient(70% 70% at 80% 80%, rgba(59,140,255,.35), transparent 70%), linear-gradient(160deg, rgba(7,11,43,.15), rgba(7,11,43,.75)), url("/images/design/bg-city.jpg") center / cover, #101848; background: radial-gradient(70% 70% at 80% 80%, rgba(59,140,255,.35), transparent 70%), linear-gradient(160deg, rgba(7,11,43,.15), rgba(7,11,43,.75)), image-set(url("/images/design/bg-city.avif") type("image/avif"), url("/images/design/bg-city.webp") type("image/webp"), url("/images/design/bg-city.jpg") type("image/jpeg")) center / cover, #101848; }
+.viz-saas { background: radial-gradient(60% 60% at 0% 0%, rgba(47,87,245,.4), transparent 70%), linear-gradient(160deg, rgba(7,11,43,.2), rgba(7,11,43,.8)), url("/images/design/bg-code.jpg") center / cover, #0A0F38; background: radial-gradient(60% 60% at 0% 0%, rgba(47,87,245,.4), transparent 70%), linear-gradient(160deg, rgba(7,11,43,.2), rgba(7,11,43,.8)), image-set(url("/images/design/bg-code.avif") type("image/avif"), url("/images/design/bg-code.webp") type("image/webp"), url("/images/design/bg-code.jpg") type("image/jpeg")) center / cover, #0A0F38; }
+.viz-enterprise { background: radial-gradient(70% 60% at 100% 50%, rgba(47,87,245,.45), transparent 70%), linear-gradient(160deg, rgba(7,11,43,.45), rgba(7,11,43,.85)), url("/images/design/bg-tower.jpg") center / cover, #080D30; background: radial-gradient(70% 60% at 100% 50%, rgba(47,87,245,.45), transparent 70%), linear-gradient(160deg, rgba(7,11,43,.45), rgba(7,11,43,.85)), image-set(url("/images/design/bg-tower.avif") type("image/avif"), url("/images/design/bg-tower.webp") type("image/webp"), url("/images/design/bg-tower.jpg") type("image/jpeg")) center / cover, #080D30; }
+.viz-logistics { background: radial-gradient(60% 60% at 100% 0%, rgba(157,180,204,.3), transparent 70%), linear-gradient(160deg, rgba(7,11,43,.2), rgba(7,11,43,.75)), url("/images/design/bg-server.jpg") center / cover, #0B1A42; background: radial-gradient(60% 60% at 100% 0%, rgba(157,180,204,.3), transparent 70%), linear-gradient(160deg, rgba(7,11,43,.2), rgba(7,11,43,.75)), image-set(url("/images/design/bg-server.avif") type("image/avif"), url("/images/design/bg-server.webp") type("image/webp"), url("/images/design/bg-server.jpg") type("image/jpeg")) center / cover, #0B1A42; }
+.viz-light { background: linear-gradient(160deg, rgba(255,255,255,.55), rgba(238,242,250,.85)), url("/images/design/bg-office.jpg") center / cover, #EEF2FA; background: linear-gradient(160deg, rgba(255,255,255,.55), rgba(238,242,250,.85)), image-set(url("/images/design/bg-office.avif") type("image/avif"), url("/images/design/bg-office.webp") type("image/webp"), url("/images/design/bg-office.jpg") type("image/jpeg")) center / cover, #EEF2FA; }
 .photo { position: relative; isolation: isolate; overflow: hidden; color: #fff; background-color: #0A1040; background-size: cover; background-position: center; }
 .photo::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(170deg, rgba(7,11,43,.35), rgba(7,11,43,.86)); }
-.photo-meeting { background-image: url("/images/design/bg-meeting.jpg"); }
-.photo-trading { background-image: url("/images/design/bg-trading.jpg"); }
-.photo-code { background-image: url("/images/design/bg-code.jpg"); }
-.photo-tower { background-image: url("/images/design/bg-tower.jpg"); }
+.photo-meeting { background-image: url("/images/design/bg-meeting.jpg"); background-image: image-set(url("/images/design/bg-meeting.avif") type("image/avif"), url("/images/design/bg-meeting.webp") type("image/webp"), url("/images/design/bg-meeting.jpg") type("image/jpeg")); }
+.photo-trading { background-image: url("/images/design/bg-trading.jpg"); background-image: image-set(url("/images/design/bg-trading.avif") type("image/avif"), url("/images/design/bg-trading.webp") type("image/webp"), url("/images/design/bg-trading.jpg") type("image/jpeg")); }
+.photo-code { background-image: url("/images/design/bg-code.jpg"); background-image: image-set(url("/images/design/bg-code.avif") type("image/avif"), url("/images/design/bg-code.webp") type("image/webp"), url("/images/design/bg-code.jpg") type("image/jpeg")); }
+.photo-tower { background-image: url("/images/design/bg-tower.jpg"); background-image: image-set(url("/images/design/bg-tower.avif") type("image/avif"), url("/images/design/bg-tower.webp") type("image/webp"), url("/images/design/bg-tower.jpg") type("image/jpeg")); }
 .gx-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: end; }
 .gx-tag { align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; height: 28px; padding: 0 12px; border-radius: 999px; font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--graphite); background: var(--graphite-100); }
 :is(.dark, .bg-ink, .photo) .gx-tag { color: #DCE6FF; background: rgba(255,255,255,.1); }

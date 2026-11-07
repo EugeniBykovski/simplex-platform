@@ -4,7 +4,10 @@ import type { HomeContent } from "@/content/home";
 
 export function HomeModels({ content }: { content: HomeContent["models"] }) {
   return (
-    <section className="bg-ink section" aria-labelledby="models">
+    <section
+      className="bg-ink section [content-visibility:auto] [contain-intrinsic-size:auto_1150px] sx-1000:[contain-intrinsic-size:auto_1650px] sx-600:[contain-intrinsic-size:auto_2250px]"
+      aria-labelledby="models"
+    >
       <div className="wrap stack gap-8">
         <div className="split [align-items:end]">
           <div className="stack gap-5">

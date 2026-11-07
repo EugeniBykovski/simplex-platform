@@ -10,7 +10,10 @@ export function HomeInsights({ content }: { content: HomeContent["insights"] }) 
   if (!first || !second) return null;
 
   return (
-    <section className="section" aria-labelledby="ins">
+    <section
+      className="section [content-visibility:auto] [contain-intrinsic-size:auto_1050px] sx-1000:[contain-intrinsic-size:auto_1350px] sx-600:[contain-intrinsic-size:auto_1650px]"
+      aria-labelledby="ins"
+    >
       <div className="wrap stack gap-7">
         <div className="wrap-row between gap-5 items-end">
           <div className="stack gap-5">

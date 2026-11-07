@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import type { ReactNode } from "react";
 import { SiteLayout } from "@/components/layout/site-layout";
 import { routing } from "@/i18n/routing";
@@ -29,13 +29,12 @@ export default async function LocaleLayout({ children, params }: Props) {
   if (!hasLocale(routing.locales, locale)) notFound();
 
   setRequestLocale(locale);
-  const { common, errors } = await getMessages({ locale });
 
   return (
     <html lang={locale} className={fontClassNames}>
       <body>
-        {/* Client bundles receive only what client components read; page copy stays on the server. */}
-        <NextIntlClientProvider messages={{ common, errors }}>
+        {/* Supplies the locale only. Client components get their words as props. */}
+        <NextIntlClientProvider messages={null}>
           <SiteLayout locale={locale}>{children}</SiteLayout>
         </NextIntlClientProvider>
       </body>

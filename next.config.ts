@@ -34,6 +34,20 @@ export default function config(phase: string): NextConfig {
     // The policy would block the dev server's eval-based tooling.
     ...(phase === PHASE_DEVELOPMENT_SERVER
       ? {}
-      : { headers: async () => [{ source: "/:path*", headers }] }),
+      : {
+          headers: async () => [
+            { source: "/:path*", headers },
+            // Not fingerprinted, so a day fresh rather than immutable: a changed image still arrives.
+            {
+              source: "/images/design/:file*",
+              headers: [
+                {
+                  key: "Cache-Control",
+                  value: "public, max-age=86400, stale-while-revalidate=604800",
+                },
+              ],
+            },
+          ],
+        }),
   });
 }

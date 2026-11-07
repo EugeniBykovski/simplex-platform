@@ -5,7 +5,10 @@ import { TechMarquees } from "./illustrations";
 
 export function HomeTechnology({ content }: { content: HomeContent["technology"] }) {
   return (
-    <section className="bg-mist section" aria-labelledby="tech">
+    <section
+      className="bg-mist section [content-visibility:auto] [contain-intrinsic-size:auto_1375px] sx-1000:[contain-intrinsic-size:auto_1450px] sx-600:[contain-intrinsic-size:auto_1600px]"
+      aria-labelledby="tech"
+    >
       <div className="wrap stack gap-7">
         <div className="split [align-items:end]">
           <div className="stack gap-5">

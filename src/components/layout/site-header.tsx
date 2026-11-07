@@ -81,6 +81,7 @@ function TopLink({
 
 export async function SiteHeader({ locale, menuOpen }: { locale: Locale; menuOpen?: boolean }) {
   const t = await getTranslations({ locale, namespace: "nav" });
+  const tLocale = await getTranslations({ locale, namespace: "common.locale" });
 
   const megaLink = ({ key, href, icon }: MegaItem) => (
     <RouteLink key={key} href={href} className="mega-link">
@@ -153,7 +154,10 @@ export async function SiteHeader({ locale, menuOpen }: { locale: Locale; menuOpe
           startOpen={menuOpen ?? false}
           cta={
             <>
-              <LocaleSwitcher />
+              <LocaleSwitcher
+                label={tLocale("label")}
+                names={{ en: tLocale("en"), ru: tLocale("ru") }}
+              />
               <LinkButton href="/contact" variant="light" arrow>
                 {t("letsTalk")}
               </LinkButton>

@@ -11,7 +11,10 @@ const MOCKS = { fintech: <LedgerMock />, healthcare: <CareMock />, logistics: <R
 /** All three projects stay labelled as demonstrations until verified clients exist. */
 export function HomeWork({ content }: { content: HomeContent["work"] }) {
   return (
-    <section className="bg-mist section" aria-labelledby="work">
+    <section
+      className="bg-mist section [content-visibility:auto] [contain-intrinsic-size:auto_2650px] sx-1000:[contain-intrinsic-size:auto_3500px] sx-600:[contain-intrinsic-size:auto_3900px]"
+      aria-labelledby="work"
+    >
       <div className="wrap stack gap-8">
         <div className="wrap-row between gap-5 items-end">
           <div className="stack gap-5 max-w-[760px]">
