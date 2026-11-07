@@ -278,6 +278,24 @@ html.sx-menu-keep-gutter {
   scrollbar-gutter: stable;
 }
 
+/* Adaptation: Russian words can be wider than a narrow column. Hyphenate rather than clip. */
+@container sx (max-width: 600px) {
+  :lang(ru) :is(h1, h2, h3, h4, .t-display, .t-h1, .t-h2, .t-h3, .t-h4) {
+    hyphens: auto;
+  }
+}
+
+/* Adaptation: a long Russian label wraps at the narrowest widths rather than overflowing. */
+@container sx (max-width: 360px) {
+  :lang(ru) .btn {
+    height: auto;
+    min-height: var(--bh);
+    padding-block: 8px;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
 /* Adaptation: touch devices wider than 600 px have no hover to reveal these. */
 @media (hover: none) {
   .ind-card .ind-more {

@@ -71,6 +71,7 @@ export type WorkSharedCopy = {
     interface: string;
     outcomes: string;
     onThisPage: string;
+    caseDetails: string;
   };
   discuss: string;
   architecture: { tag: string; title: string; lead: string };

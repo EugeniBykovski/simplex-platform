@@ -11,7 +11,7 @@ export async function SiteLayout({ locale, children }: { locale: Locale; childre
   return (
     <div className="sx">
       <a
-        className="fixed top-[16px] left-[16px] z-[100] -translate-y-[200%] rounded-sm bg-white p-[12px_18px] font-[500] text-ink focus:translate-y-0"
+        className="fixed top-[16px] left-[16px] z-[100] -translate-y-[200%] rounded-sm bg-white p-[12px_18px] font-[500] text-ink focus:translate-y-[0]"
         href="#main-content"
         data-menu-inert
       >

@@ -17,6 +17,7 @@ export const shared: WorkSharedCopy = {
     interface: "Product interface",
     outcomes: "Intended outcomes",
     onThisPage: "On this page",
+    caseDetails: "Case study details",
   },
   discuss: "Discuss a similar project",
   architecture: {

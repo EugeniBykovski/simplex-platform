@@ -26,6 +26,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
 
   return (
     <footer className="footer dark" data-menu-inert>
+      <h2 className="sr-only">{t("heading")}</h2>
       <div className="wrap">
         <div className="footer-grid">
           <div className="footer-brand stack gap-5 max-w-[360px]">

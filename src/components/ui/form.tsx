@@ -34,7 +34,7 @@ function Field({
 }: FieldProps & { children: ReactNode }) {
   return (
     <div className={cx("field", error ? "is-error" : valid && "is-valid", fieldClassName)}>
-      <label className="label" htmlFor={id}>
+      <label className="label flex-wrap" htmlFor={id}>
         {label}
         {hint ? <span className="opt">{hint}</span> : null}
       </label>

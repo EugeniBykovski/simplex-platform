@@ -222,7 +222,7 @@ export function CaseLayoutB({ page, shared }: { page: CarepathCopy; shared: Work
           </div>
         </div>
       </section>
-      <section className="section pt-[96px]" aria-label={page.name}>
+      <section className="section pt-[96px]" aria-label={shared.labels.caseDetails}>
         <div className="wrap grid grid-cols-[300px_minmax(0,1fr)] gap-[72px] items-start sx-1000:grid-cols-[minmax(0,1fr)] sx-1000:gap-[40px]">
           <aside className="sticky top-[120px] flex flex-col gap-[20px] sx-1000:relative sx-1000:top-[0]">
             <dl className="paper-card stack gap-4 p-[24px]">
@@ -424,7 +424,7 @@ export function CaseLayoutC({ page, shared }: { page: RoutewiseCopy; shared: Wor
           </div>
         </div>
       </section>
-      <section className="section" aria-label={page.name}>
+      <section className="section" aria-label={shared.labels.caseDetails}>
         <div className="wrap stack gap-9">
           <div className="grid-4 [--gap:0px] border-y border-y-[var(--line-2)]">
             {page.facts.map((fact) => (

@@ -86,6 +86,12 @@ Also changed for every page: pending and disabled states, navbar contrast, the l
 
 **Open:** verified capability list (GAP-C01), the ROI assumption (GAP-F07), published-canvas comparison, native editor for Russian, real iOS and screen-reader pass. Its enquiry CTAs turn on with `/contact` in SF-151.
 
+## SF-155: Cross-device QA
+
+Done on `main`. See [cross-device-visual-audit.md](../qa/cross-device-visual-audit.md), [visual-gap-register.md](../qa/visual-gap-register.md) and [release-readiness.md](../qa/release-readiness.md).
+
+Found and fixed: an invisible skip link, Russian headings and a button overflowing at mobile widths, clipped Russian form labels, duplicate landmark names and a heading-order gap. No P0 or P1 remains. Real devices, screen readers and real hosting are untested.
+
 ## SF-154: Media, motion and performance
 
 Implemented on `main`. See [core-web-vitals.md](../performance/core-web-vitals.md), [remaining-issues.md](../performance/remaining-issues.md) and [media-motion-inventory.md](../design/media-motion-inventory.md).
