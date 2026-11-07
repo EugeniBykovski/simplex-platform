@@ -1,5 +1,5 @@
+import { SeoBreadcrumbs } from "@/components/seo/seo-breadcrumbs";
 import { LinkButton } from "@/components/ui/button";
-import { Breadcrumbs } from "@/components/ui/controls";
 import { cx } from "@/components/ui/cx";
 import { Icon } from "@/components/ui/icon";
 import { RouteLink } from "@/components/ui/links";
@@ -18,15 +18,18 @@ export const DOT: Record<DotTone, string | undefined> = {
 export function CaseCrumbs({
   shared,
   name,
+  path,
   className,
 }: {
   shared: WorkSharedCopy;
   name: string;
+  path: string;
   className?: string;
 }) {
   const { breadcrumb } = shared;
   return (
-    <Breadcrumbs
+    <SeoBreadcrumbs
+      path={path}
       {...(className ? { className } : {})}
       label={breadcrumb.label}
       items={[

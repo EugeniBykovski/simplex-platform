@@ -1,5 +1,6 @@
+import { SeoBreadcrumbs } from "@/components/seo/seo-breadcrumbs";
 import { LinkButton } from "@/components/ui/button";
-import { ComparisonRow, ComparisonTable, Breadcrumbs } from "@/components/ui/controls";
+import { ComparisonRow, ComparisonTable } from "@/components/ui/controls";
 import { cx } from "@/components/ui/cx";
 import { Icon } from "@/components/ui/icon";
 import { RouteLink } from "@/components/ui/links";
@@ -19,7 +20,8 @@ export function ServicesHero({ content }: { content: ServicesOverviewCopy }) {
     >
       <div className="wrap split items-end">
         <div className="stack gap-6">
-          <Breadcrumbs
+          <SeoBreadcrumbs
+            path="/services"
             label={breadcrumb.label}
             items={[{ label: breadcrumb.home, href: "/" }, { label: breadcrumb.current }]}
           />

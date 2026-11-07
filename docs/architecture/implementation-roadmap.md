@@ -86,6 +86,14 @@ Also changed for every page: pending and disabled states, navbar contrast, the l
 
 **Open:** verified capability list (GAP-C01), the ROI assumption (GAP-F07), published-canvas comparison, native editor for Russian, real iOS and screen-reader pass. Its enquiry CTAs turn on with `/contact` in SF-151.
 
+## SF-153: Technical SEO
+
+Implemented on `main`. See [technical-audit.md](../seo/technical-audit.md), [route-seo-matrix.md](../seo/route-seo-matrix.md) and [release-checklist.md](../seo/release-checklist.md).
+
+`indexableRoutes` is now the one indexing gate, feeding robots, sitemap, hreflang and structured data, with 14 English pages listed. Added typed JSON-LD, generated social cards, 308 redirects for `/en/*`, self-canonical Russian drafts, rewritten descriptions and service-to-industry links. **Nothing is indexed, as no domain exists and `SITE_INDEXABLE` is off.**
+
+**Open:** production domain, founder sign-off of Home and Services claims, Russian review, external validators and Search Console, and mobile LCP (SF-154).
+
 ## SF-152: Legal and system
 
 Implemented on `main`: **code and design complete, legal publication blocked.** See [legal-system-artboard-matrix.md](../design/legal-system-artboard-matrix.md), [legal-document-register.md](../content/legal-document-register.md), [cookie-storage-inventory.md](../content/cookie-storage-inventory.md) and [legal-system-manual-qa.md](../qa/legal-system-manual-qa.md).

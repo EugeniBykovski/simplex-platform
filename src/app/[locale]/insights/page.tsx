@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: "/insights",
     title,
     description,
-    noindex: getPublishedArticles(locale).length === 0,
+    approved: getPublishedArticles(locale).length > 0,
   });
 }
 

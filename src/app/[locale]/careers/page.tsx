@@ -29,7 +29,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: "/careers",
     title,
     description,
-    noindex: true,
   });
 }
 

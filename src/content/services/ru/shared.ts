@@ -22,6 +22,7 @@ export const shared: ServiceSharedCopy = {
     link: "Каталог технологий",
   },
   uses: { eyebrow: "Типичные сценарии", title: "Где эта услуга уместна." },
+  industries: "Подходящие отрасли",
   related: { eyebrow: "Связанное", title: "Часто сочетается с" },
   cases: {
     title: "Похожие кейсы",

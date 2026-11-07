@@ -1,5 +1,5 @@
+import { SeoBreadcrumbs } from "@/components/seo/seo-breadcrumbs";
 import { LinkButton } from "@/components/ui/button";
-import { Breadcrumbs } from "@/components/ui/controls";
 import { cx } from "@/components/ui/cx";
 import { Icon, type GlyphName } from "@/components/ui/icon";
 import { RouteLink } from "@/components/ui/links";
@@ -30,7 +30,8 @@ export function IndustriesHero({
       <div className="wrap stack gap-8">
         <div className="split items-end">
           <div className="stack gap-6">
-            <Breadcrumbs
+            <SeoBreadcrumbs
+              path="/industries"
               label={breadcrumb.label}
               items={[{ label: breadcrumb.home, href: "/" }, { label: breadcrumb.current }]}
             />

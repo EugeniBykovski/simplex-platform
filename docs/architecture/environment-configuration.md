@@ -16,6 +16,8 @@ Rules live in `src/config/env.ts`. The template is `.env.example`. **Real values
 | `CONTACT_LIVE_ENABLED` | Server only | With `resend` | For real delivery | Must be exactly `true`. Set only after the [activation procedure](contact-and-email.md#activation-procedure) |
 | `LEGAL_REVIEW_MODE` | Server and build | Internal review only | No | Exactly `true` shows drafts. Read at build. Fails a production or indexable build |
 
+**Canonical origin.** `NEXT_PUBLIC_SITE_URL` drives canonicals, sitemap, Open Graph and structured data. No production domain is approved, so it stays unset, and any build falls back to `http://localhost:3000`, which is safe only because such builds are `noindex`.
+
 `CONTACT_TO_EMAIL` replaces the earlier `CONTACT_INBOX_EMAIL`, following the SF-151 amendment. Nothing was deployed with the old name.
 
 There are no analytics identifiers, because no analytics provider has been approved (GAP-F03).

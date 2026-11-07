@@ -29,7 +29,7 @@ export function CaseLayoutA({ page, shared }: { page: CaseCopy; shared: WorkShar
     <>
       <section className="bg-ink p-[220px_0_0] overflow-hidden" aria-labelledby="case-title">
         <div className="wrap stack gap-7">
-          <CaseCrumbs shared={shared} name={page.name} />
+          <CaseCrumbs shared={shared} name={page.name} path="/work/ledgerline" />
           <div className="wrap-row gap-2">
             <Tag>{page.industry}</Tag>
             <DemoTag>{shared.demoLong}</DemoTag>
@@ -179,7 +179,7 @@ export function CaseLayoutB({ page, shared }: { page: CarepathCopy; shared: Work
       >
         <div className="wrap split items-center">
           <div className="stack gap-6">
-            <CaseCrumbs shared={shared} name={page.name} />
+            <CaseCrumbs shared={shared} name={page.name} path="/work/carepath" />
             <div className="wrap-row gap-2">
               <Tag>{page.industry}</Tag>
               <DemoTag>{shared.demoShort}</DemoTag>
@@ -407,6 +407,7 @@ export function CaseLayoutC({ page, shared }: { page: RoutewiseCopy; shared: Wor
           <CaseCrumbs
             shared={shared}
             name={page.name}
+            path="/work/routewise"
             className="on-dark text-[#E6EAF7] [&_a]:text-white"
           />
           <div className="wrap-row between gap-5 items-end">

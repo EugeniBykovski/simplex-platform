@@ -75,7 +75,7 @@ Full list: [content-and-claims-register.md](../content/content-and-claims-regist
 | ID | Artboard | Gap | Severity | Suggested solution | Owner | Ticket |
 |---|---|---|---|---|---|---|
 | GAP-A01 | Global | Provenance of the seven `img/` backgrounds and the typeface behind outlined logos is undocumented. The README calls procedural-looking images "photography" | Medium | Owner confirms origin. Do not describe them as photography | Yes | SF-154 |
-| GAP-A02 | Global | No Open Graph images, favicon set, web manifest or `.ico` | Medium | Generate from approved marks in SF-154. New social art needs approval | Yes | SF-154 |
+| GAP-A02 | Global | SF-153 added generated Open Graph cards, from the wordmark and each page's title. Favicon set and web manifest remain | Medium | Generate from approved marks in SF-154. New social art needs approval | Yes | SF-154 |
 | GAP-A03 | Insights | The "24-page PDF" playbook does not exist | High | SF-150 hides the block. Write it, or drop it | Yes | SF-150 |
 
 ## Responsive
@@ -139,6 +139,7 @@ Full list: [content-and-claims-register.md](../content/content-and-claims-regist
 | GAP-D38 | LegalPage, Footer | **Deviation made.** The board's Analytics and Preferences switches, "Save preferences" and footer "Cookie settings" would control nothing: the site has no optional technology. Replaced with a list of what it actually stores, and the footer link removed | High | Keep until an optional technology is approved. Then build real gating | Owner reviews | SF-152 |
 | GAP-D39 | LegalPage | **Deviation made.** "Last updated", "Version" and "Download PDF" have no real values or file. Dates appear only for approved documents. No version or PDF exists | Medium | Owner decides whether versions or PDFs are wanted | Yes | SF-152 |
 | GAP-D40 | LegalPage | **Deviation made.** The board has no public state for an unapproved document, only a "Template content" note on the full text. Visitors get "Not yet published" instead, with drafts in review mode only. The board's full composition returns on approval | High | Keep until approval | Copy sign-off | SF-152 |
+| GAP-D41 | ServicePage | **Deviation made.** A "Relevant industries" row of links on service pages, which the board lacks, for two-way linking. Uses the design's own pairing in `industryCatalog`, and appears only where an industry names the service | Low | Keep, or restyle | Owner reviews | SF-153 |
 | GAP-D08 | Nav, Footer | Routes with no page render dimmed and unclickable, so the header looks muted until pages ship. A truthful state from the SF-142 brief, not a design | Low | Clears itself as routes are added to `implementedRoutes` | No |
 | GAP-D09 | Footer | The design has no language switcher. It is in the footer base row, so the header stays as boarded | Low | Owner reviews placement | Yes |
 | GAP-D10 | Nav | Removed from the Agent mega-menu card: "Detects your frameworks, scaffolds the ecosystem and ships production-ready features — reviewed by our engineers", under decision 3. Also removed the mobile menu's "Typical reply within one business day · [confirm SLA]" | Low | Restore when verified | Yes |

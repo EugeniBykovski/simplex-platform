@@ -1,5 +1,5 @@
+import { SeoBreadcrumbs } from "@/components/seo/seo-breadcrumbs";
 import { LinkButton } from "@/components/ui/button";
-import { Breadcrumbs } from "@/components/ui/controls";
 import { cx } from "@/components/ui/cx";
 import type { TechnologiesCopy } from "@/content/company";
 import type { Locale } from "@/i18n/routing";
@@ -17,7 +17,8 @@ export function TechHero({ content }: { content: TechnologiesCopy }) {
     <section className="bg-ink p-[220px_0_110px]" aria-labelledby="tech-title">
       <div className="wrap split items-end">
         <div className="stack gap-6">
-          <Breadcrumbs
+          <SeoBreadcrumbs
+            path="/technologies"
             label={breadcrumb.label}
             items={[
               { label: breadcrumb.home, href: "/" },

@@ -1,4 +1,4 @@
-import { Breadcrumbs } from "@/components/ui/controls";
+import { SeoBreadcrumbs } from "@/components/seo/seo-breadcrumbs";
 import { cx } from "@/components/ui/cx";
 import { ArrowLink, ExternalLink } from "@/components/ui/links";
 import { SectorGround } from "@/components/ui/surface";
@@ -23,7 +23,9 @@ export function ArticleHeader({
   return (
     <header className="bg-mist p-[200px_0_0]">
       <div className="wrap-narrow stack gap-6">
-        <Breadcrumbs
+        <SeoBreadcrumbs
+          path={`/insights/${article.slug}`}
+          approved
           label={content.breadcrumb.label}
           items={[
             { label: content.breadcrumb.home, href: "/" },

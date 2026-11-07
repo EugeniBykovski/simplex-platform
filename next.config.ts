@@ -20,6 +20,11 @@ export default function config(phase: string): NextConfig {
       // Local images only. Add exact hosts here if a real need appears.
       remotePatterns: [],
     },
+    // One permanent hop for the default locale's prefixed URLs. English lives at the bare path.
+    redirects: async () => [
+      { source: "/en", destination: "/", permanent: true },
+      { source: "/en/:path*", destination: "/:path*", permanent: true },
+    ],
     experimental: {
       // Needed for server-rendered 404s: see src/app/global-not-found.tsx.
       globalNotFound: true,

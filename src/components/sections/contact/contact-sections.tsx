@@ -1,5 +1,5 @@
+import { SeoBreadcrumbs } from "@/components/seo/seo-breadcrumbs";
 import { AnchorButton, LinkButton } from "@/components/ui/button";
-import { Breadcrumbs } from "@/components/ui/controls";
 import { Icon } from "@/components/ui/icon";
 import { ArrowLink, RouteLink, TextLink } from "@/components/ui/links";
 import { SxMark } from "@/components/ui/logo";
@@ -11,7 +11,8 @@ export function ContactIntro({ content }: { content: ContactCopy }) {
   return (
     <div className="stack gap-8">
       <div className="stack gap-6">
-        <Breadcrumbs
+        <SeoBreadcrumbs
+          path="/contact"
           label={breadcrumb.label}
           items={[{ label: breadcrumb.home, href: "/" }, { label: breadcrumb.current }]}
         />

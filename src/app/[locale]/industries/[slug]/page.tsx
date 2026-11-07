@@ -43,7 +43,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: `/industries/${slug}`,
     title,
     description,
-    noindex: true,
   });
 }
 
@@ -65,7 +64,12 @@ export default async function IndustryDetailPage({ params }: Props) {
 
   return (
     <main>
-      <IndustryHero page={page} shared={shared} structure={structure} />
+      <IndustryHero
+        page={page}
+        shared={shared}
+        structure={structure}
+        path={`/industries/${slug}`}
+      />
       <IndustryChallenges page={page} shared={shared} />
       <IndustryOpportunities page={page} shared={shared} />
       <IndustryScenarios page={page} shared={shared} />

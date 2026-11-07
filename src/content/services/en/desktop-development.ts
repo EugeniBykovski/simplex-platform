@@ -5,7 +5,7 @@ export const page: ServicePageCopy = {
   meta: {
     title: "Desktop Applications & Programs — SimpleX",
     description:
-      "Windows, macOS and Linux applications for the work that still happens at a keyboard: operator consoles, terminals, point-of-sale, field tools and device control — offline-first, signed and auto-updating.",
+      "Windows, macOS and Linux applications for operator consoles, point-of-sale, field tools and device control: offline-first, signed and auto-updating.",
   },
   title: "Desktop Applications & Programs",
   short: "Desktop Development",

@@ -1,6 +1,6 @@
+import { SeoBreadcrumbs } from "@/components/seo/seo-breadcrumbs";
 import { Suspense } from "react";
 import { LinkButton } from "@/components/ui/button";
-import { Breadcrumbs } from "@/components/ui/controls";
 import { Icon } from "@/components/ui/icon";
 import { SectorGround } from "@/components/ui/surface";
 import { insightCategories, type InsightsCopy, type PublishedArticle } from "@/content/insights";
@@ -25,7 +25,8 @@ export function InsightsHero({
       <div className="wrap stack gap-8">
         <div className="split items-end">
           <div className="stack gap-6">
-            <Breadcrumbs
+            <SeoBreadcrumbs
+              path="/insights"
               label={breadcrumb.label}
               items={[{ label: breadcrumb.home, href: "/" }, { label: breadcrumb.current }]}
             />

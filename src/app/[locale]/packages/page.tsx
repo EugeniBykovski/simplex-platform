@@ -32,7 +32,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: "/packages",
     title,
     description,
-    noindex: true,
   });
 }
 

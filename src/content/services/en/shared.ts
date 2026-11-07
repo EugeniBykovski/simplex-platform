@@ -22,6 +22,7 @@ export const shared: ServiceSharedCopy = {
     link: "Technology directory",
   },
   uses: { eyebrow: "Representative use cases", title: "Where this service fits." },
+  industries: "Relevant industries",
   related: { eyebrow: "Related", title: "Often combined with" },
   cases: {
     title: "Related case studies",

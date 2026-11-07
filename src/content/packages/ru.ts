@@ -5,7 +5,7 @@ export const content: PackagesContent = {
   meta: {
     title: "Пакеты разработки — SimpleX",
     description:
-      "Три формата работы с SimpleX: компактный мобильный под для iOS, Android или React Native, десктопные приложения для Windows, macOS и Linux или полный цикл от одной команды.",
+      "Три способа работать с SimpleX: мобильный под для iOS, Android или React Native, приложения для Windows, macOS и Linux или полный цикл от одной команды.",
   },
   breadcrumb: {
     label: "Навигационная цепочка",

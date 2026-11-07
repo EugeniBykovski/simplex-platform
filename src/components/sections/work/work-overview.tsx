@@ -1,5 +1,5 @@
+import { SeoBreadcrumbs } from "@/components/seo/seo-breadcrumbs";
 import { LinkButton } from "@/components/ui/button";
-import { Breadcrumbs } from "@/components/ui/controls";
 import { cx } from "@/components/ui/cx";
 import { Alert, DemoTag, Tag } from "@/components/ui/feedback";
 import { Icon } from "@/components/ui/icon";
@@ -19,7 +19,8 @@ export function WorkHero({ content }: { content: WorkOverviewCopy }) {
     >
       <div className="wrap split items-end">
         <div className="stack gap-6">
-          <Breadcrumbs
+          <SeoBreadcrumbs
+            path="/work"
             label={breadcrumb.label}
             items={[{ label: breadcrumb.home, href: "/" }, { label: breadcrumb.current }]}
           />

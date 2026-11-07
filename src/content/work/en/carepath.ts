@@ -5,7 +5,7 @@ export const page: CarepathCopy = {
   meta: {
     title: "Carepath (demonstration) — SimpleX",
     description:
-      "A demonstration case study: how SimpleX would unify patient intake and triage across clinic sites. An illustrative concept, not client work or a clinical product.",
+      "Demonstration case study: how SimpleX would unify patient intake and triage across clinics. An illustrative concept, not client work or a clinical product.",
   },
   name: "Carepath",
   industry: "Healthcare",

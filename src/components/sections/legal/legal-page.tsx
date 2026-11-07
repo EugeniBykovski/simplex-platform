@@ -1,5 +1,5 @@
+import { SeoBreadcrumbs } from "@/components/seo/seo-breadcrumbs";
 import type { Metadata } from "next";
-import { Breadcrumbs } from "@/components/ui/controls";
 import { cx } from "@/components/ui/cx";
 import { Icon } from "@/components/ui/icon";
 import {
@@ -31,7 +31,7 @@ export function legalMetadata(id: LegalDocumentId, locale: Locale): Metadata {
     path: legalPaths[id],
     title: `${title} — SimpleX`,
     description: metaDescription,
-    noindex: !isLegalPublished(id, locale),
+    approved: isLegalPublished(id, locale),
   });
 }
 
@@ -102,7 +102,9 @@ export function LegalPage({ id, locale }: { id: LegalDocumentId; locale: Locale 
     <main>
       <section className="bg-mist p-[210px_0_80px]">
         <div className="wrap stack gap-6">
-          <Breadcrumbs
+          <SeoBreadcrumbs
+            path={legalPaths[id]}
+            approved={approved}
             label={ui.breadcrumb.label}
             items={[
               { label: ui.breadcrumb.home, href: "/" },
@@ -196,9 +198,10 @@ export function LegalPage({ id, locale }: { id: LegalDocumentId; locale: Locale 
                 {englishApproved ? (
                   <p>
                     {ui.pending.englishOnly}{" "}
-                    <Link href={legalPaths[id]} locale={defaultLocale}>
+                    {/* English lives at the bare path, so this avoids a redirect through /en. */}
+                    <a href={legalPaths[id]} hrefLang={defaultLocale}>
                       {ui.pending.englishLink}
-                    </Link>
+                    </a>
                   </p>
                 ) : null}
               </>

@@ -8,7 +8,7 @@ export const content: PackagesContent = {
   meta: {
     title: "Build packages — SimpleX",
     description:
-      "Three ways to build with SimpleX: a compact mobile pod for iOS, Android or React Native; desktop applications for Windows, macOS and Linux; or the full cycle from one team.",
+      "Three ways to build with SimpleX: a mobile pod for iOS, Android or React Native, desktop apps for Windows, macOS and Linux, or the full cycle from one team.",
   },
   breadcrumb: {
     label: "Breadcrumb",

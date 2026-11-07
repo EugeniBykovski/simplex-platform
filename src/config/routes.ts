@@ -88,8 +88,40 @@ export function isImplementedRoute(href: string): boolean {
 }
 
 /**
- * Routes approved for search, which feed sitemap.ts. Empty until real pages ship: the placeholder
- * home is deliberately not listed. Each page ticket adds its route when its blockers in
- * docs/seo/page-seo-matrix.md are closed.
+ * The one list of static pages approved for search. Robots tags, the sitemap and structured data
+ * all read it, so they cannot disagree. Articles and legal documents join through their own
+ * approval records instead. Add a route only when its blockers in docs/seo/route-seo-matrix.md close.
  */
-export const indexableRoutes: readonly { path: string; family: RouteFamily }[] = [];
+export const indexableRoutes: readonly { path: string; family: RouteFamily }[] = [
+  { path: "/", family: "home" },
+  { path: "/services", family: "services" },
+  ...serviceSlugs.map((slug) => ({ path: `/services/${slug}`, family: "services" as const })),
+];
+
+/** The family a concrete path belongs to, matching its pattern in routeFamilies. */
+export function familyOfPath(path: string): RouteFamily {
+  const [, first = ""] = path.split("/");
+  const root = `/${first}`;
+  const found = (Object.keys(routeFamilies) as RouteFamily[]).find((family) =>
+    routeFamilies[family].some((pattern) => pattern === path || pattern === root),
+  );
+  return found ?? "system";
+}
+
+/** Pages with their own social card. Anything else falls back through ogCardFor in lib/seo. */
+export const ogCardPaths: readonly string[] = [
+  "/agent",
+  "/services",
+  ...serviceSlugs.map((slug) => `/services/${slug}`),
+  "/packages",
+  "/industries",
+  ...industrySlugs.map((slug) => `/industries/${slug}`),
+  "/work",
+  ...workSlugs.map((slug) => `/work/${slug}`),
+  "/about",
+  "/how-we-work",
+  "/technologies",
+  "/careers",
+  "/insights",
+  "/contact",
+];

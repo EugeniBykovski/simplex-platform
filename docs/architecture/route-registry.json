@@ -352,7 +352,7 @@
       "imagePlaceholders": 0,
       "seo": {
         "title": "Web Development — SimpleX",
-        "description": "From customer portals to complex SaaS front ends, we build web applications with performance budgets, accessibility and maintainable component architecture from the first commit.",
+        "description": "Customer portals and complex SaaS front ends, built with performance budgets, accessibility and maintainable component architecture from the first commit.",
         "h1": "Web applications that feel instant and work for everyone.",
         "intent": "Buyer evaluating web development partners",
         "topic": "Web Development",
@@ -462,7 +462,7 @@
       "imagePlaceholders": 0,
       "seo": {
         "title": "Desktop Applications & Programs — SimpleX",
-        "description": "Windows, macOS and Linux applications for the work that still happens at a keyboard: operator consoles, terminals, point-of-sale, field tools and device control — offline-first, signed and auto-updating.",
+        "description": "Windows, macOS and Linux applications for operator consoles, point-of-sale, field tools and device control: offline-first, signed and auto-updating.",
         "h1": "Desktop software that belongs on the desk.",
         "intent": "Buyer evaluating desktop applications & programs partners",
         "topic": "Desktop Applications & Programs",
@@ -521,7 +521,7 @@
       "imagePlaceholders": 0,
       "seo": {
         "title": "AI Engineering & Intelligent Automation — SimpleX",
-        "description": "We integrate language models, retrieval and automation into real products — with evaluation, guardrails, observability and cost controls engineered in, not bolted on.",
+        "description": "We integrate language models, retrieval and automation into real products, with evaluation, guardrails, observability and cost controls engineered in.",
         "h1": "AI features that hold up in production.",
         "intent": "Buyer evaluating ai engineering & intelligent automation partners",
         "topic": "AI Engineering & Intelligent Automation",
@@ -631,7 +631,7 @@
       "imagePlaceholders": 0,
       "seo": {
         "title": "Software Architecture & Technical Consulting — SimpleX",
-        "description": "Independent, senior architecture advice for the moments that matter — before a rewrite, after an acquisition, ahead of a growth phase.",
+        "description": "Independent architecture advice for the moments that matter: before a rewrite, after an acquisition or ahead of a growth phase.",
         "h1": "Decisions you can build on.",
         "intent": "Buyer evaluating software architecture & technical consulting partners",
         "topic": "Software Architecture & Technical Consulting",
@@ -741,7 +741,7 @@
       "imagePlaceholders": 0,
       "seo": {
         "title": "Legacy Modernization — SimpleX",
-        "description": "Your legacy systems still run the business — that’s why they’re hard to change.",
+        "description": "Modernise the legacy systems that still run your business, incrementally: understand, wrap, replace and retire, with value delivered at every step.",
         "h1": "Modernise without stopping the business.",
         "intent": "Buyer evaluating legacy modernization partners",
         "topic": "Legacy Modernization",
@@ -851,7 +851,7 @@
       "imagePlaceholders": 0,
       "seo": {
         "title": "Dedicated Engineering Teams — SimpleX",
-        "description": "Cross-functional teams that join your rituals, tooling and roadmap — led by experienced engineers, backed by SimpleX standards, and sized to your plans rather than your hiring pipeline.",
+        "description": "Cross-functional engineering teams that join your tooling and roadmap, led by experienced engineers and sized to your plans, not your hiring pipeline.",
         "h1": "Senior engineers who work like they’re yours.",
         "intent": "Buyer evaluating dedicated engineering teams partners",
         "topic": "Dedicated Engineering Teams",
@@ -906,7 +906,7 @@
       "imagePlaceholders": 0,
       "seo": {
         "title": "Build packages — SimpleX",
-        "description": "Three ways to build with SimpleX: a compact mobile pod for iOS, Android or React Native; desktop applications for Windows, macOS and Linux; or the full cycle from one team.",
+        "description": "Three ways to build with SimpleX: a mobile pod for iOS, Android or React Native, desktop apps for Windows, macOS and Linux, or the full cycle from one team.",
         "h1": "From a two-person app team to your whole product.",
         "intent": "Indicative team shapes for mobile, desktop and full-cycle builds",
         "topic": "Build packages and team shapes",
@@ -1485,7 +1485,7 @@
       "imagePlaceholders": 0,
       "seo": {
         "title": "Carepath (demonstration) — SimpleX",
-        "description": "A demonstration case study: how SimpleX would unify patient intake and triage across clinic sites. An illustrative concept, not client work or a clinical product.",
+        "description": "Demonstration case study: how SimpleX would unify patient intake and triage across clinics. An illustrative concept, not client work or a clinical product.",
         "h1": "Carepath",
         "intent": "Proof of capability",
         "topic": "Healthcare case study",
@@ -1537,7 +1537,7 @@
       "imagePlaceholders": 0,
       "seo": {
         "title": "Routewise (demonstration) — SimpleX",
-        "description": "A demonstration case study: how SimpleX would build route planning that adapts during the day, with live telematics and an offline-first driver app. An illustrative concept, not client work.",
+        "description": "Demonstration case study: adaptive route planning with live telematics and an offline-first driver app. An illustrative concept, not client work.",
         "h1": "Routewise",
         "intent": "Proof of capability",
         "topic": "Logistics case study",
@@ -1644,7 +1644,7 @@
       "imagePlaceholders": 3,
       "seo": {
         "title": "About — SimpleX",
-        "description": "SimpleX is a software engineering and digital product company. We exist to make complex systems feel simple, for the people who use them and the people who maintain them.",
+        "description": "SimpleX is a software engineering and digital product company. We make complex systems feel simple for the people who use and maintain them.",
         "h1": "Simple to use. Simple to change.",
         "intent": "Who is SimpleX and how does it make decisions?",
         "topic": "Company",

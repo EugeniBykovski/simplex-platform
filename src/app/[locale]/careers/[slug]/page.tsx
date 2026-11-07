@@ -49,7 +49,7 @@ export default async function JobPage({ params }: Props) {
 
   return (
     <main>
-      <JobHero content={content} job={job} />
+      <JobHero content={content} job={job} path={`/careers/${slug}`} />
       <JobBody content={content.job} job={job} />
       <JobOthers content={content.job} others={others} locale={locale} />
     </main>

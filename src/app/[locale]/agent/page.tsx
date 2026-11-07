@@ -30,7 +30,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: "/agent",
     title,
     description,
-    noindex: true,
   });
 }
 

@@ -4,7 +4,8 @@ import type { ServicePageCopy } from "../types";
 export const page: ServicePageCopy = {
   meta: {
     title: "Legacy Modernization — SimpleX",
-    description: "Your legacy systems still run the business — that’s why they’re hard to change.",
+    description:
+      "Modernise the legacy systems that still run your business, incrementally: understand, wrap, replace and retire, with value delivered at every step.",
   },
   title: "Legacy Modernization",
   short: "Legacy Modernization",

@@ -1,5 +1,6 @@
+import { SeoBreadcrumbs } from "@/components/seo/seo-breadcrumbs";
 import { AnchorButton, LinkButton } from "@/components/ui/button";
-import { Accordion, Breadcrumbs } from "@/components/ui/controls";
+import { Accordion } from "@/components/ui/controls";
 import { cx } from "@/components/ui/cx";
 import { DemoTag } from "@/components/ui/feedback";
 import { Icon } from "@/components/ui/icon";
@@ -26,10 +27,12 @@ export function ServiceHero({
   page,
   shared,
   structure,
+  path,
 }: {
   page: ServicePageCopy;
   shared: ServiceSharedCopy;
   structure: ServiceStructure;
+  path: string;
 }) {
   const dark = structure.theme === "dark";
   const panel = dark
@@ -44,7 +47,8 @@ export function ServiceHero({
     >
       <div className="wrap split items-center">
         <div className="stack gap-6">
-          <Breadcrumbs
+          <SeoBreadcrumbs
+            path={path}
             label={shared.breadcrumb.label}
             items={[
               { label: shared.breadcrumb.home, href: "/" },
@@ -278,10 +282,12 @@ export function ServiceRelated({
   structure,
   relatedPages,
   shared,
+  industries,
 }: {
   structure: ServiceStructure;
   relatedPages: Record<ServiceSlug, ServicePageCopy>;
   shared: ServiceSharedCopy;
+  industries: readonly { href: string; name: string }[];
 }) {
   return (
     <section className="bg-mist section scroll-mt-[90px]" id="cases" aria-labelledby="rel">
@@ -310,6 +316,20 @@ export function ServiceRelated({
             </RouteLink>
           ))}
         </div>
+        {industries.length > 0 ? (
+          <nav className="wrap-row gap-2 items-center" aria-label={shared.industries}>
+            <span className="t-small mr-[8px]">{shared.industries}</span>
+            {industries.map((industry) => (
+              <RouteLink
+                className="chip chip-outline min-h-[36px]"
+                href={industry.href}
+                key={industry.href}
+              >
+                {industry.name}
+              </RouteLink>
+            ))}
+          </nav>
+        ) : null}
         <div className="wrap-row between gap-4 mt-[32px] items-end">
           <h2 className="t-h3">{shared.cases.title}</h2>
           <DemoTag>{shared.cases.tag}</DemoTag>

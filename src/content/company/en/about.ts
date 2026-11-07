@@ -3,7 +3,7 @@ export const about = {
   meta: {
     title: "About — SimpleX",
     description:
-      "SimpleX is a software engineering and digital product company. We exist to make complex systems feel simple, for the people who use them and the people who maintain them.",
+      "SimpleX is a software engineering and digital product company. We make complex systems feel simple for the people who use and maintain them.",
   },
   breadcrumb: { label: "Breadcrumb", home: "Home", current: "About" },
   hero: {

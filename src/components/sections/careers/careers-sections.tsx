@@ -1,5 +1,5 @@
+import { SeoBreadcrumbs } from "@/components/seo/seo-breadcrumbs";
 import { AnchorButton, LinkButton } from "@/components/ui/button";
-import { Breadcrumbs } from "@/components/ui/controls";
 import { Icon, type GlyphName } from "@/components/ui/icon";
 import { RouteLink } from "@/components/ui/links";
 import { CardArrow } from "@/components/ui/surface";
@@ -19,7 +19,8 @@ export function CareersHero({ content }: { content: CareersCopy }) {
     >
       <div className="wrap split items-end">
         <div className="stack gap-6">
-          <Breadcrumbs
+          <SeoBreadcrumbs
+            path="/careers"
             label={breadcrumb.label}
             items={[{ label: breadcrumb.home, href: "/" }, { label: breadcrumb.current }]}
           />

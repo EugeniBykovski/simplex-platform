@@ -1,5 +1,5 @@
+import { SeoBreadcrumbs } from "@/components/seo/seo-breadcrumbs";
 import { LinkButton } from "@/components/ui/button";
-import { Breadcrumbs } from "@/components/ui/controls";
 import { ArrowLink, RouteLink } from "@/components/ui/links";
 import type { CareersCopy, JobCopy, JobPosition } from "@/content/careers";
 import type { Locale } from "@/i18n/routing";
@@ -10,11 +10,20 @@ import { CopyLink } from "./copy-link";
  * this renders. The source's form only simulates sending, so applying goes through /contact until
  * an approved route exists (GAP-F02).
  */
-export function JobHero({ content, job }: { content: CareersCopy; job: JobCopy }) {
+export function JobHero({
+  content,
+  job,
+  path,
+}: {
+  content: CareersCopy;
+  job: JobCopy;
+  path: string;
+}) {
   return (
     <section className="bg-ink p-[220px_0_100px]" aria-labelledby="job-title">
       <div className="wrap stack gap-6">
-        <Breadcrumbs
+        <SeoBreadcrumbs
+          path={path}
           label={content.breadcrumb.label}
           items={[
             { label: content.breadcrumb.home, href: "/" },

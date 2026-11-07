@@ -5,7 +5,7 @@ export const page: ServicePageCopy = {
   meta: {
     title: "AI Engineering & Intelligent Automation — SimpleX",
     description:
-      "We integrate language models, retrieval and automation into real products — with evaluation, guardrails, observability and cost controls engineered in, not bolted on.",
+      "We integrate language models, retrieval and automation into real products, with evaluation, guardrails, observability and cost controls engineered in.",
   },
   title: "AI Engineering & Intelligent Automation",
   short: "AI Engineering",

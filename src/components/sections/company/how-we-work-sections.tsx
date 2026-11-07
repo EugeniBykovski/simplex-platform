@@ -1,6 +1,7 @@
+import { SeoBreadcrumbs } from "@/components/seo/seo-breadcrumbs";
 import { Fragment } from "react";
 import { LinkButton } from "@/components/ui/button";
-import { Accordion, Breadcrumbs } from "@/components/ui/controls";
+import { Accordion } from "@/components/ui/controls";
 import { Tag } from "@/components/ui/feedback";
 import { Icon } from "@/components/ui/icon";
 import { ArrowLink } from "@/components/ui/links";
@@ -27,7 +28,8 @@ export function HowHero({ content }: { content: HowWeWorkCopy }) {
   return (
     <section className="bg-ink p-[230px_0_140px] overflow-hidden" aria-labelledby="how-title">
       <div className="wrap stack gap-8">
-        <Breadcrumbs
+        <SeoBreadcrumbs
+          path="/how-we-work"
           label={breadcrumb.label}
           items={[{ label: breadcrumb.home, href: "/" }, { label: breadcrumb.current }]}
         />

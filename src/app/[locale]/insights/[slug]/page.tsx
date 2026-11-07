@@ -14,6 +14,7 @@ import {
   getPublishedArticles,
   getRelatedArticles,
 } from "@/content/insights";
+import { JsonLd } from "@/components/seo/json-ld";
 import { routing } from "@/i18n/routing";
 import { isLocaleAvailable } from "@/i18n/translation-status";
 import { buildPageMetadata, localizedUrl } from "@/lib/seo/metadata";
@@ -36,23 +37,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!article) return {};
 
   const { title, description } = article.words.seo;
-  const base = buildPageMetadata({
+  return buildPageMetadata({
     locale,
     family: "insights",
     path: `/insights/${slug}`,
     title,
     description,
-  });
-  return {
-    ...base,
-    openGraph: {
-      ...base.openGraph,
-      type: "article",
+    approved: true,
+    article: {
       publishedTime: article.words.publishedAt,
-      ...(article.words.modifiedAt ? { modifiedTime: article.words.modifiedAt } : {}),
+      modifiedTime: article.words.modifiedAt,
       authors: [article.words.author.name],
     },
-  };
+  });
 }
 
 /** The section order follows Article.dc.html. */
@@ -82,12 +79,7 @@ export default async function ArticlePage({ params }: Props) {
 
   return (
     <main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
-        }}
-      />
+      <JsonLd data={structuredData} />
       <div className="progress-bar motion-reduce:hidden" aria-hidden="true">
         <i />
       </div>

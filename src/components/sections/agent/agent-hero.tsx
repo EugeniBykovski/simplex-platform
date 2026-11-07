@@ -1,5 +1,5 @@
+import { SeoBreadcrumbs } from "@/components/seo/seo-breadcrumbs";
 import { AnchorButton, LinkButton } from "@/components/ui/button";
-import { Breadcrumbs } from "@/components/ui/controls";
 import { Badge, DemoTag } from "@/components/ui/feedback";
 import type { AgentContent } from "@/content/agent";
 import { AgentSessionMock } from "./illustrations";
@@ -24,7 +24,8 @@ export function AgentHero({
       </div>
       <div className="wrap lift grid grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-[56px] items-center sx-1100:grid-cols-[minmax(0,1fr)]">
         <div className="stack gap-6">
-          <Breadcrumbs
+          <SeoBreadcrumbs
+            path="/agent"
             label={breadcrumb.label}
             items={[{ label: breadcrumb.home, href: "/" }, { label: breadcrumb.current }]}
           />

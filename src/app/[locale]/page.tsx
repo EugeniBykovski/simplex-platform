@@ -19,7 +19,9 @@ import { HomeWork } from "@/components/sections/home/home-work";
 import { getHomeContent } from "@/content/home";
 import { routing } from "@/i18n/routing";
 import { isLocaleAvailable } from "@/i18n/translation-status";
-import { buildPageMetadata } from "@/lib/seo/metadata";
+import { JsonLd } from "@/components/seo/json-ld";
+import { homeJsonLd } from "@/lib/seo/jsonld";
+import { buildPageMetadata, isIndexEligible } from "@/lib/seo/metadata";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -41,6 +43,9 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <main>
+      {isIndexEligible({ path: "/", locale, family: "home" }) ? (
+        <JsonLd data={homeJsonLd(locale, content.meta.description)} />
+      ) : null}
       <HomeHero hero={content.hero} statements={content.statements} />
       <HomeWhatWeDo content={content.whatWeDo} />
       <HomeAgent content={content.agent} />

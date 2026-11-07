@@ -119,6 +119,10 @@ Authors' avatars, the leadership portraits (4 × 4:5) and team photography are t
 
 Only `bg-tower.jpg` is used, through `.photo-tower`. **Portraits, team photographs and office photographs do not exist, and were not replaced with stock**, as the design asks (GAP-C05). The design has no technology logos, so none is used.
 
+## Social cards (SF-153)
+
+`/og/*` cards are generated at build by `src/app/[locale]/og/[...path]/route.tsx`, from the inline wordmark and each page's approved title, through `next/og`. They use `src/assets/og/geist-600-latin.woff` and `src/assets/og/geist-600-cyrillic.woff`, which are Geist from Google Fonts under the SIL OFL 1.1, committed because the renderer can't read woff2. No photograph or client imagery. **Not yet approved by the owner** (GAP-A02).
+
 ## Legal and system (SF-152)
 
 No image. Backgrounds are `bg-mist`, `bg-horizon` and `bg-ink`. The source's "Download PDF" has no file.

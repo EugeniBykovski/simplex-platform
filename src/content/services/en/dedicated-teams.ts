@@ -5,7 +5,7 @@ export const page: ServicePageCopy = {
   meta: {
     title: "Dedicated Engineering Teams — SimpleX",
     description:
-      "Cross-functional teams that join your rituals, tooling and roadmap — led by experienced engineers, backed by SimpleX standards, and sized to your plans rather than your hiring pipeline.",
+      "Cross-functional engineering teams that join your tooling and roadmap, led by experienced engineers and sized to your plans, not your hiring pipeline.",
   },
   title: "Dedicated Engineering Teams",
   short: "Dedicated Teams",

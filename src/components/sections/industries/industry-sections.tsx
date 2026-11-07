@@ -1,5 +1,5 @@
+import { SeoBreadcrumbs } from "@/components/seo/seo-breadcrumbs";
 import { AnchorButton, LinkButton } from "@/components/ui/button";
-import { Breadcrumbs } from "@/components/ui/controls";
 import { cx } from "@/components/ui/cx";
 import { DemoTag, Tag } from "@/components/ui/feedback";
 import { Icon } from "@/components/ui/icon";
@@ -19,7 +19,8 @@ export function IndustryHero({
   page,
   shared,
   structure,
-}: PageProps & { structure: IndustryStructure }) {
+  path,
+}: PageProps & { structure: IndustryStructure; path: string }) {
   const { breadcrumb, hero } = shared;
   return (
     <section
@@ -32,7 +33,8 @@ export function IndustryHero({
       <span className="slice top-[64%]" />
       <div className="wrap stack gap-8 relative">
         <div className="stack gap-6 max-w-[980px]">
-          <Breadcrumbs
+          <SeoBreadcrumbs
+            path={path}
             className="on-dark text-[#E6EAF7] [&_a]:text-white"
             label={breadcrumb.label}
             items={[

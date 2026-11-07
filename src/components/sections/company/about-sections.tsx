@@ -1,5 +1,5 @@
+import { SeoBreadcrumbs } from "@/components/seo/seo-breadcrumbs";
 import { LinkButton } from "@/components/ui/button";
-import { Breadcrumbs } from "@/components/ui/controls";
 import { Tag } from "@/components/ui/feedback";
 import { Wordmark } from "@/components/ui/logo";
 import type { AboutCopy } from "@/content/company";
@@ -18,7 +18,8 @@ export function AboutHero({ content }: { content: AboutCopy }) {
       aria-labelledby="about-title"
     >
       <div className="wrap stack gap-7 items-center text-center">
-        <Breadcrumbs
+        <SeoBreadcrumbs
+          path="/about"
           label={breadcrumb.label}
           items={[{ label: breadcrumb.home, href: "/" }, { label: breadcrumb.current }]}
         />

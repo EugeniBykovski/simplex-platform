@@ -15,6 +15,10 @@ The design handles this responsibly: it brackets most unknowns and labels demons
 
 So anything bracketed below ships as supplied real data or is hidden, never filled in with an estimate.
 
+## SEO (SF-153)
+
+Metadata and structured data repeat only claims already on the page, and listed pages still need sign-off. See [release-checklist.md](../seo/release-checklist.md). "senior" came out of the Architecture page's description, not its body.
+
 ## Legal (SF-152)
 
 Status and draft changes are in [legal-document-register.md](legal-document-register.md), and real storage in [cookie-storage-inventory.md](cookie-storage-inventory.md). No legal text is approved.

@@ -8,24 +8,7 @@ International B2B search visibility for software engineering services. The desig
 
 ## Status
 
-SF-153 implements and verifies this specification. Today:
-
-| Item | State |
-|---|---|
-| Metadata API per page, through `buildPageMetadata` | Helper implemented, used by `/`, `/agent`, the Services pages, `/packages`, the Industries, Work, Company, Careers, Insights, Contact and Legal pages |
-| Canonical URLs | Implemented in the helper |
-| Open Graph | Text fields implemented. No images (GAP-A02) |
-| Twitter metadata | Text fields implemented. No images |
-| hreflang | Implemented in the helper, emits nothing until a Russian family is approved |
-| Environment indexing gate | Implemented: `SITE_INDEXABLE` |
-| Russian `noindex` | Implemented through translation status |
-| 404 status and `noindex` | Implemented, checked by hand |
-| Robots | Implemented: disallow all unless indexable |
-| Sitemap | Structure implemented, deliberately empty until routes are approved in `indexableRoutes` |
-| Structured data | **Specified, not implemented** |
-| Breadcrumbs | **Specified, not implemented** |
-| Redirects | `/en/*` only. Rest specified |
-| Internal linking, alt text, CWV | Specified, verified per page |
+SF-153 implemented this. Current state and evidence live in: [route-seo-matrix.md](route-seo-matrix.md), [international-seo.md](international-seo.md), [structured-data.md](structured-data.md), [sitemap-robots-indexing.md](sitemap-robots-indexing.md), [internal-linking.md](internal-linking.md), [technical-audit.md](technical-audit.md) and [release-checklist.md](release-checklist.md). Strategy is in [content-strategy.md](content-strategy.md) and [editorial-roadmap.md](editorial-roadmap.md). **Where this older specification differs, those win.** In particular: Russian drafts are now self-canonical, `/en/*` is a 308, and `indexableRoutes` is the one indexing gate.
 
 ## The launch blocker
 
@@ -39,7 +22,7 @@ Most of the site's trust content is placeholder or illustrative. Publishing demo
 | `noindex` until reviewed | All `/ru` URLs | Translation reviewed and approved |
 | Always `noindex` | `/contact/thank-you`, 404 | Permanent |
 
-`buildPageMetadata` in `src/lib/seo/metadata.ts` already supports the `noindex` override.
+`isIndexEligible` in `src/lib/seo/metadata.ts` applies this, from `indexableRoutes`.
 
 ## Metadata API
 
@@ -51,7 +34,7 @@ Every page exports `generateMetadata` through `buildPageMetadata`. Exists today,
 | Description | Unique per page, 70 to 160 characters. Copy in the matrix is a starting point |
 | Canonical | Absolute on `NEXT_PUBLIC_SITE_URL`, no query string |
 | Open Graph | Title, description, URL, `siteName`, locale, image (GAP-A02) |
-| Twitter | `summary` today. Planned to become `summary_large_image` in SF-153, when images exist |
+| Twitter | `summary_large_image` |
 | `metadataBase` | From `siteConfig.url` |
 
 Remaining work: root defaults, image handling, and localised metadata per page.
@@ -60,8 +43,8 @@ Remaining work: root defaults, image handling, and localised metadata per page.
 
 - One canonical per page. No trailing slash, which is the Next.js default, enforced by a redirect.
 - Query strings never appear in canonicals. If filters ever reach the URL, they stay self-canonical to the base page.
-- `/en/*` 307s to the unprefixed URL today (next-intl's behaviour). **Check in SF-153** whether it can become a 308, which suits a permanent rule better.
-- Draft Russian pages canonicalise to English.
+- `/en/*` 308s to the unprefixed URL, from `next.config.ts`.
+- Draft Russian pages are `noindex` and self-canonical.
 
 ## Indexing of non-production
 

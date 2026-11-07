@@ -1,6 +1,7 @@
+import { SeoBreadcrumbs } from "@/components/seo/seo-breadcrumbs";
 import type { ReactNode } from "react";
 import { AnchorButton, LinkButton } from "@/components/ui/button";
-import { Accordion, Breadcrumbs, ComparisonTable } from "@/components/ui/controls";
+import { Accordion, ComparisonTable } from "@/components/ui/controls";
 import { cx } from "@/components/ui/cx";
 import { Badge, DemoTag } from "@/components/ui/feedback";
 import { Icon, type GlyphName } from "@/components/ui/icon";
@@ -40,7 +41,8 @@ export function PackagesHero({ content }: { content: PackagesContent }) {
         <span className="orb orb-b w-[420px] h-[420px] right-[4%] top-[80px] opacity-[.45]" />
       </div>
       <div className="wrap lift stack gap-7">
-        <Breadcrumbs
+        <SeoBreadcrumbs
+          path="/packages"
           label={breadcrumb.label}
           items={[
             { label: breadcrumb.home, href: "/" },

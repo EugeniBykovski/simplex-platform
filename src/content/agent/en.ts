@@ -14,7 +14,7 @@ const block = (
  */
 export const en: AgentContent = {
   meta: {
-    title: "SimpleX Agent",
+    title: "SimpleX Agent — engineering agent concept",
     description:
       "SimpleX Agent is an engineering agent concept designed to work within your stack, with every change reviewed by an engineer. Product details are illustrative.",
   },

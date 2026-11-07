@@ -5,7 +5,7 @@ export const page: ServicePageCopy = {
   meta: {
     title: "Software Architecture & Technical Consulting — SimpleX",
     description:
-      "Independent, senior architecture advice for the moments that matter — before a rewrite, after an acquisition, ahead of a growth phase.",
+      "Independent architecture advice for the moments that matter: before a rewrite, after an acquisition or ahead of a growth phase.",
   },
   title: "Software Architecture & Technical Consulting",
   short: "Architecture & Consulting",

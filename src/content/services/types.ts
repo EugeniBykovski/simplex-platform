@@ -47,6 +47,7 @@ export type ServiceSharedCopy = {
   tech: { eyebrow: string; note: string; link: string };
   uses: { eyebrow: string; title: string };
   related: { eyebrow: string; title: string };
+  industries: string;
   cases: {
     title: string;
     tag: string;

@@ -5,7 +5,7 @@ export const page: ServicePageCopy = {
   meta: {
     title: "Web Development — SimpleX",
     description:
-      "From customer portals to complex SaaS front ends, we build web applications with performance budgets, accessibility and maintainable component architecture from the first commit.",
+      "Customer portals and complex SaaS front ends, built with performance budgets, accessibility and maintainable component architecture from the first commit.",
   },
   title: "Web Development",
   short: "Web Development",

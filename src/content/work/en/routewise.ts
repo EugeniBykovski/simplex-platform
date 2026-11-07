@@ -5,7 +5,7 @@ export const page: RoutewiseCopy = {
   meta: {
     title: "Routewise (demonstration) — SimpleX",
     description:
-      "A demonstration case study: how SimpleX would build route planning that adapts during the day, with live telematics and an offline-first driver app. An illustrative concept, not client work.",
+      "Demonstration case study: adaptive route planning with live telematics and an offline-first driver app. An illustrative concept, not client work.",
   },
   name: "Routewise",
   industry: "Logistics",
