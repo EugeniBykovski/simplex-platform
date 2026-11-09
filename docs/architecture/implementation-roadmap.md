@@ -86,6 +86,12 @@ Also changed for every page: pending and disabled states, navbar contrast, the l
 
 **Open:** verified capability list (GAP-C01), the ROI assumption (GAP-F07), published-canvas comparison, native editor for Russian, real iOS and screen-reader pass. Its enquiry CTAs turn on with `/contact` in SF-151.
 
+## SF-156: Release acceptance
+
+Done on `main`, as a readiness assessment. **Public go-live is NO-GO**, pending external approvals. See [production-readiness.md](../release/production-readiness.md) and [go-no-go.md](../release/go-no-go.md).
+
+Added header hardening, social card caching, an industry hero preload, and owner-requested effects (GAP-D42). Investigated the founder's Lighthouse report: a development server. Production scores 100 on desktop and 94–97 on mobile, and SEO is intentionally blocked.
+
 ## SF-155: Cross-device QA
 
 Done on `main`. See [cross-device-visual-audit.md](../qa/cross-device-visual-audit.md), [visual-gap-register.md](../qa/visual-gap-register.md) and [release-readiness.md](../qa/release-readiness.md).

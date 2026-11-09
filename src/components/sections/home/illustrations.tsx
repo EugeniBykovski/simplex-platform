@@ -26,7 +26,7 @@ export function HeroWidgets() {
       <span className="hero-beam [translate:-50%_0] [rotate:-34deg]" aria-hidden="true" />
       <span className="hero-beam [translate:-50%_0] [rotate:34deg]" aria-hidden="true" />
       <div
-        className="widget float-w sx-1100:hidden left-[4%] top-[560px] w-[230px] grid gap-[12px]"
+        className="widget float-w fx-parallax-hero sx-1100:hidden left-[4%] top-[560px] w-[230px] grid gap-[12px]"
         aria-hidden="true"
       >
         <span className="w-head">
@@ -47,7 +47,7 @@ export function HeroWidgets() {
         </span>
       </div>
       <div
-        className="widget float-w sx-1100:hidden right-[4%] top-[540px] w-[200px] grid gap-[10px] justify-items-start"
+        className="widget float-w fx-parallax-hero sx-1100:hidden right-[4%] top-[540px] w-[200px] grid gap-[10px] justify-items-start"
         aria-hidden="true"
       >
         <span className="w-head">

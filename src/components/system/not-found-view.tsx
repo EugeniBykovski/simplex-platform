@@ -42,7 +42,7 @@ export async function NotFoundView({ locale }: { locale: Locale }) {
           </span>
           <SxMark
             live
-            className="absolute [filter:drop-shadow(0_30px_50px_rgba(157,180,204,.35))] [--m:150px]"
+            className="fx-parallax fx-parallax-deep absolute [filter:drop-shadow(0_30px_50px_rgba(157,180,204,.35))] [--m:150px]"
           />
         </div>
       </div>

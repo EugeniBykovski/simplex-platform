@@ -95,7 +95,10 @@ export function ThankYouHero({
   return (
     <section className="bg-horizon is-live p-[240px_0_200px] overflow-hidden">
       <div className="wrap stack gap-7 items-center text-center">
-        <SxMark live className="[--m:80px] [filter:drop-shadow(0_24px_30px_rgba(7,11,43,.25))]" />
+        <SxMark
+          live
+          className="fx-parallax [--m:80px] [filter:drop-shadow(0_24px_30px_rgba(7,11,43,.25))]"
+        />
         <h1 className="t-display max-w-[1000px] [&:lang(ru)]:hyphens-auto">
           <span className="block pb-[.06em]">{words.lines[0]} </span>
           <span className="block pb-[.06em] t-grad">{words.lines[1]}</span>

@@ -1,6 +1,19 @@
 import type { ComplianceTile, IndustryViz } from "@/content/industries";
 
 /** Listed whole, so the class names reach the stylesheet. */
+/**
+ * The background each sector ground uses in simplex.css. The industry hero's ground is its LCP
+ * element, found late because it's a CSS background, so the page preloads it.
+ */
+export const VIZ_IMAGE: Record<string, string> = {
+  fintech: "trading",
+  healthcare: "office",
+  ecommerce: "city",
+  saas: "code",
+  enterprise: "tower",
+  logistics: "server",
+};
+
 export const VIZ_CLASS: Record<IndustryViz, string> = {
   fintech: "viz-fintech",
   healthcare: "viz-healthcare",

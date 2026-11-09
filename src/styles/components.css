@@ -278,6 +278,114 @@ html.sx-menu-keep-gutter {
   scrollbar-gutter: stable;
 }
 
+/*
+ * Owner-requested effects, SF-156 (GAP-D42). All of them are off under reduced motion, and the
+ * pointer ones are off on touch. Native scrolling is kept: only same-page links glide, through
+ * SiteEffects, so keyboard focus and find-in-page stay instant.
+ */
+
+/*
+ * A finished reveal let go of the element instead of holding transform: none, which overrode the
+ * hover lift on revealed cards. Its end state equals the element's own, so nothing looks different.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .sx .reveal,
+    .sx .reveal-scale > * {
+      animation-fill-mode: backwards;
+    }
+  }
+}
+
+/* Depth: cards tilt toward the pointer, and lift as the design already intended. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .sx .card-hover {
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+  .sx .card-hover:hover {
+    transform: perspective(1000px) rotateX(var(--fx-rx, 0deg)) rotateY(var(--fx-ry, 0deg))
+      translateY(-4px);
+  }
+
+  /* Glass: a soft highlight follows the pointer across glass panels and cards. */
+  .sx :is(.card-hover:not(.viz), .glass, .glass-dark, .lg, .lg-dark)::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+    pointer-events: none;
+    background: radial-gradient(
+      520px circle at var(--fx-mx, 50%) var(--fx-my, 0%),
+      rgba(255, 255, 255, 0.2),
+      transparent 42%
+    );
+    opacity: 0;
+    transition: opacity var(--dur-3) var(--ease-out);
+  }
+  .sx :is(.glass-dark, .lg-dark)::after,
+  .sx :is(.dark, .bg-ink) .card-hover:not(.viz)::after {
+    background: radial-gradient(
+      520px circle at var(--fx-mx, 50%) var(--fx-my, 0%),
+      rgba(157, 180, 204, 0.16),
+      transparent 42%
+    );
+  }
+  .sx :is(.card-hover:not(.viz), .glass, .glass-dark, .lg, .lg-dark):hover::after {
+    opacity: 1;
+  }
+  .sx .solid.card-hover {
+    position: relative;
+  }
+}
+
+/* Parallax: decorative layers drift against the scroll, on a CSS timeline with no scroll handler. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .sx .fx-parallax {
+      animation: fx-parallax linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+    .sx .fx-parallax-deep {
+      --fx-depth: 72px;
+    }
+    /* The Home hero is pinned, so its widgets follow the page scroll, as the hero's own dim does. */
+    .sx .fx-parallax-hero {
+      animation: fx-rise-away linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 900px;
+    }
+    .sx .fx-parallax-hero + .fx-parallax-hero {
+      --fx-depth: 120px;
+    }
+    /* Glow orbs drift inside their clipped layer, alternate ones the other way, for depth. */
+    .sx .orbs > .orb {
+      animation: fx-parallax linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+      --fx-depth: 56px;
+    }
+    .sx .orbs > .orb:nth-child(2n) {
+      --fx-depth: -36px;
+    }
+  }
+}
+@keyframes fx-rise-away {
+  to {
+    translate: 0 calc(var(--fx-depth, 72px) * -1);
+  }
+}
+@keyframes fx-parallax {
+  from {
+    translate: 0 var(--fx-depth, 40px);
+  }
+  to {
+    translate: 0 calc(var(--fx-depth, 40px) * -1);
+  }
+}
+
 /* Adaptation: Russian words can be wider than a narrow column. Hyphenate rather than clip. */
 @container sx (max-width: 600px) {
   :lang(ru) :is(h1, h2, h3, h4, .t-display, .t-h1, .t-h2, .t-h3, .t-h4) {

@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import type { ReactNode } from "react";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { SiteEffects } from "@/components/layout/site-effects";
 import { SiteHeader } from "@/components/layout/site-header";
 import type { Locale } from "@/i18n/routing";
 
@@ -22,6 +23,7 @@ export async function SiteLayout({ locale, children }: { locale: Locale; childre
         {children}
       </div>
       <SiteFooter locale={locale} />
+      <SiteEffects />
     </div>
   );
 }

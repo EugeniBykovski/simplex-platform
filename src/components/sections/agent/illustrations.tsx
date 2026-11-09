@@ -52,7 +52,7 @@ export function AgentSessionMock({ content }: { content: AgentContent["hero"]["m
         </div>
       </div>
       <div
-        className="widget float-w w-[160px] h-[170px] left-[0] top-[10px] flex flex-col justify-between sx-860:hidden"
+        className="widget float-w fx-parallax w-[160px] h-[170px] left-[0] top-[10px] flex flex-col justify-between sx-860:hidden"
         aria-hidden="true"
       >
         <span className="w-head">
@@ -69,7 +69,7 @@ export function AgentSessionMock({ content }: { content: AgentContent["hero"]["m
         <span className="w-sub">{content.testsNote}</span>
       </div>
       <div
-        className="widget float-w w-[160px] h-[170px] left-[0] bottom-[20px] flex flex-col justify-between sx-860:hidden"
+        className="widget float-w fx-parallax w-[160px] h-[170px] left-[0] bottom-[20px] flex flex-col justify-between sx-860:hidden"
         aria-hidden="true"
       >
         <span className="w-head">

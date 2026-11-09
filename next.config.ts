@@ -37,6 +37,16 @@ export default function config(phase: string): NextConfig {
       : {
           headers: async () => [
             { source: "/:path*", headers },
+            // Social cards are built once per deployment. A day suits link-preview crawlers.
+            {
+              source: "/:prefix(ru)?/og/:path*",
+              headers: [
+                {
+                  key: "Cache-Control",
+                  value: "public, max-age=86400, stale-while-revalidate=604800",
+                },
+              ],
+            },
             // Not fingerprinted, so a day fresh rather than immutable: a changed image still arrives.
             {
               source: "/images/design/:file*",

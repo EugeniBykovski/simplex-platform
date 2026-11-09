@@ -8,6 +8,8 @@ Native scrolling only, no hijacking. CSS scroll-driven animation behind `@suppor
 
 **No animation library is needed.** Every effect below is CSS, apart from the small state changes noted.
 
+**SF-156 added owner-requested effects beyond the design** (GAP-D42): smooth scrolling for same-page links, card tilt and glass highlight on fine pointers, and parallax. See [production readiness](../release/production-readiness.md). Reveals now release the element when finished, so hover lifts work on revealed cards.
+
 **SF-154 changed how three effects render, not how they look:** story focus now fades a glow layer, the pulse scales a pseudo-element, and the scroll cue uses a transform. See [motion-audit.md](../performance/motion-audit.md).
 
 ## Tokens

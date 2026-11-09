@@ -8,7 +8,8 @@ import { CardArrow, SectorGround } from "@/components/ui/surface";
 import { Tabs } from "@/components/ui/tabs";
 import { serviceCatalog, caseStudies } from "@/content/services";
 import type { IndustryPageCopy, IndustrySharedCopy, IndustryStructure } from "@/content/industries";
-import { ComplianceGrid, VIZ_CLASS } from "./industry-shared";
+import { preload } from "react-dom";
+import { ComplianceGrid, VIZ_CLASS, VIZ_IMAGE } from "./industry-shared";
 
 type PageProps = { page: IndustryPageCopy; shared: IndustrySharedCopy };
 
@@ -22,6 +23,15 @@ export function IndustryHero({
   path,
 }: PageProps & { structure: IndustryStructure; path: string }) {
   const { breadcrumb, hero } = shared;
+  const image = VIZ_IMAGE[structure.viz];
+  // AVIF only: a browser without it skips the hint and falls back through image-set as before.
+  if (image) {
+    preload(`/images/design/bg-${image}.avif`, {
+      as: "image",
+      type: "image/avif",
+      fetchPriority: "high",
+    });
+  }
   return (
     <section
       className={cx("viz rounded-[0] p-[220px_0_120px] text-white", VIZ_CLASS[structure.viz])}

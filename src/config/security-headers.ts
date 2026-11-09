@@ -22,6 +22,10 @@ export function buildSecurityHeaders({ indexable }: { indexable: boolean }) {
     // No includeSubDomains or preload until the production domain and its subdomains are known.
     { key: "Strict-Transport-Security", value: "max-age=31536000" },
     { key: "X-Content-Type-Options", value: "nosniff" },
+    // frame-ancestors already forbids framing. This covers browsers that predate it.
+    { key: "X-Frame-Options", value: "DENY" },
+    // No window this site opens may reach back into it, and none can reach into this one.
+    { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
     { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
     { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
     // Also covers non-HTML responses, which a robots meta tag cannot.
