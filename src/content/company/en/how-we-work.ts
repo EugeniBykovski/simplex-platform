@@ -1,14 +1,14 @@
 /** From HowWeWork.dc.html. Changes are listed in docs/content/company-claims-register.md. */
 export const howWeWork = {
   meta: {
-    title: "How We Work — SimpleX",
+    title: "How We Work - SimpleX",
     description:
-      "Most project risk is invisible until it’s expensive. Our way of working is designed to make it visible early — in architecture, in code and in conversation.",
+      "Most project risk is invisible until it’s expensive. Our way of working is designed to make it visible early - in architecture, in code and in conversation.",
   },
   breadcrumb: { label: "Breadcrumb", home: "Home", current: "How We Work" },
   hero: {
     lines: ["Clarity is a", "delivery method."],
-    lead: "Most project risk is invisible until it’s expensive. Our way of working is designed to make it visible early — in architecture, in code and in conversation.",
+    lead: "Most project risk is invisible until it’s expensive. Our way of working is designed to make it visible early - in architecture, in code and in conversation.",
     chain: [
       "Discovery",
       "Architecture",
@@ -27,7 +27,7 @@ export const howWeWork = {
     items: [
       {
         title: "Ownership",
-        body: "One accountable lead per engagement. We want to own outcomes, not just tickets — and to say so when something is at risk.",
+        body: "One accountable lead per engagement. We want to own outcomes, not just tickets - and to say so when something is at risk.",
       },
       {
         title: "Transparency",
@@ -47,7 +47,7 @@ export const howWeWork = {
     tag: "Methodology",
     titleStart: "Eight stages.",
     titleEnd: "Fewer surprises.",
-    lead: "Stages overlap and repeat — architecture keeps evolving during engineering, optimisation feeds the next discovery. What stays the same is that each stage should end with something concrete.",
+    lead: "Stages overlap and repeat - architecture keeps evolving during engineering, optimisation feeds the next discovery. What stays the same is that each stage should end with something concrete.",
     action: "Plan your first stage",
     durationLabel: "Indicative duration",
     outputLabel: "You receive",
@@ -66,7 +66,7 @@ export const howWeWork = {
       },
       {
         title: "Product strategy",
-        body: "Outcomes, success metrics and a roadmap sequenced by value and risk — so the first release tests the riskiest assumption.",
+        body: "Outcomes, success metrics and a roadmap sequenced by value and risk - so the first release tests the riskiest assumption.",
         duration: "1–2 weeks",
         output: "Roadmap, success metrics",
       },
@@ -110,7 +110,7 @@ export const howWeWork = {
       {
         when: "Daily",
         title: "Async stand-up",
-        body: "Written progress and blockers in your channel — no meeting tax.",
+        body: "Written progress and blockers in your channel - no meeting tax.",
       },
       {
         when: "Weekly",
@@ -139,7 +139,7 @@ export const howWeWork = {
     title: "Everything visible, by default.",
     checks: [
       "Code in your repositories from the first commit",
-      "Backlog in your tool — Jira, Linear or Azure DevOps",
+      "Backlog in your tool - Jira, Linear or Azure DevOps",
       "Delivery metrics on a shared dashboard: lead time, deployment frequency, change failure rate",
       "Architecture decision records next to the code",
       "A monthly risk register reviewed with your sponsor",
@@ -188,7 +188,7 @@ export const howWeWork = {
       {
         question: "Can we start small?",
         answer:
-          "Yes — an engagement can begin with a short discovery or architecture review. You decide whether to continue based on what it produces.",
+          "Yes - an engagement can begin with a short discovery or architecture review. You decide whether to continue based on what it produces.",
       },
       {
         question: "How do you work with our in-house engineers?",

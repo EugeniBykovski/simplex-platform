@@ -3,7 +3,7 @@ import type { ServicePageCopy } from "../types";
 /** Draft that needs review by a native editor. It stays noindex until russianTranslationStatus approves it. */
 export const page: ServicePageCopy = {
   meta: {
-    title: "Выделенные инженерные команды — SimpleX",
+    title: "Выделенные инженерные команды - SimpleX",
     description:
       "Кросс-функциональные команды, которые подключаются к вашим инструментам и планам, под руководством опытных инженеров и в нужном вам размере.",
   },
@@ -25,7 +25,7 @@ export const page: ServicePageCopy = {
   ],
   capsTitle: "Что мы привносим в вашу команду.",
   capsIntro:
-    "Команды под ваши цели — от одного старшего специалиста до полноценной продуктовой команды с дизайном, QA и руководством поставкой.",
+    "Команды под ваши цели - от одного старшего специалиста до полноценной продуктовой команды с дизайном, QA и руководством поставкой.",
   caps: [
     {
       title: "Продуктовые команды",

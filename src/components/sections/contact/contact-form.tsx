@@ -40,9 +40,9 @@ type FormProps = {
   privacyPublished: boolean;
   locale: string;
   copy: ContactCopy["form"];
+  /** A service preselected from the link that opened the page, already checked by the server. */
+  initialServices?: readonly string[];
 };
-
-const initialState: ContactFormState = { status: "idle", values: emptyContactValues };
 
 const controlId = (field: ContactField) => (field === "services" ? "cf-services-0" : `cf-${field}`);
 
@@ -58,8 +58,13 @@ function ContactForm({
   privacyPublished,
   locale,
   copy,
+  initialServices = [],
   onRestart,
 }: FormProps & { onRestart: () => void }) {
+  const initialState: ContactFormState = {
+    status: "idle",
+    values: { ...emptyContactValues, services: [...initialServices] },
+  };
   // `formAction` serves visitors without JavaScript, whose result arrives in the rendered page.
   const [formState, formAction] = useActionState(action, initialState);
   const [clientState, setClientState] = useState<ContactFormState | null>(null);

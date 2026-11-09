@@ -3,13 +3,13 @@ import type { IndustryPageCopy } from "../types";
 /** From IndustryPage.dc.html, slug "healthcare". Changes are listed in docs/content/industries-claims-register.md. */
 export const page: IndustryPageCopy = {
   meta: {
-    title: "Healthcare software engineering — SimpleX",
+    title: "Healthcare software engineering - SimpleX",
     description:
-      "Patient and clinician platforms designed for safety, privacy and interoperability — and for the reality of busy, interrupted clinical work.",
+      "Patient and clinician platforms designed for safety, privacy and interoperability - and for the reality of busy, interrupted clinical work.",
   },
   name: "Healthcare",
   headline: "Technology that earns clinicians’ trust.",
-  lead: "Patient and clinician platforms designed for safety, privacy and interoperability — and for the reality of busy, interrupted clinical work.",
+  lead: "Patient and clinician platforms designed for safety, privacy and interoperability - and for the reality of busy, interrupted clinical work.",
   facts: [
     {
       key: "Typical systems",
@@ -57,7 +57,7 @@ export const page: IndustryPageCopy = {
     },
     {
       title: "Decision support",
-      body: "Assistive tools that summarise and flag — always with clinical oversight.",
+      body: "Assistive tools that summarise and flag - always with clinical oversight.",
     },
   ],
   scenarios: [

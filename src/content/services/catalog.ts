@@ -1,5 +1,5 @@
 import type { ServiceSlug } from "@/config/routes";
-import type { CaseKey, ServiceStructure } from "./types";
+import type { ServiceStructure } from "./types";
 
 /** The structure of each service page, from ServicePage.dc.html. It does not vary by locale. */
 export const serviceCatalog: Record<ServiceSlug, ServiceStructure> = {
@@ -9,7 +9,7 @@ export const serviceCatalog: Record<ServiceSlug, ServiceStructure> = {
     visual: "code",
     icon: "custom",
     related: ["architecture-consulting", "product-design", "quality-engineering"],
-    cases: ["ledgerline", "routewise"],
+    cases: ["simplefit-boxing", "simple-house"],
   },
   "enterprise-software": {
     idx: "S02",
@@ -17,7 +17,7 @@ export const serviceCatalog: Record<ServiceSlug, ServiceStructure> = {
     visual: "arch",
     icon: "enterprise",
     related: ["legacy-modernization", "cloud-devops", "architecture-consulting"],
-    cases: ["routewise", "ledgerline"],
+    cases: ["simple-house", "financialpress"],
   },
   "web-development": {
     idx: "S03",
@@ -25,7 +25,7 @@ export const serviceCatalog: Record<ServiceSlug, ServiceStructure> = {
     visual: "device",
     icon: "web",
     related: ["product-design", "mobile-development", "quality-engineering"],
-    cases: ["carepath", "ledgerline"],
+    cases: ["financialpress", "simple-market"],
   },
   "mobile-development": {
     idx: "S04",
@@ -33,7 +33,7 @@ export const serviceCatalog: Record<ServiceSlug, ServiceStructure> = {
     visual: "device",
     icon: "mobile",
     related: ["web-development", "product-design", "quality-engineering"],
-    cases: ["routewise", "carepath"],
+    cases: ["deeply", "wait"],
   },
   "desktop-development": {
     idx: "S12",
@@ -41,15 +41,15 @@ export const serviceCatalog: Record<ServiceSlug, ServiceStructure> = {
     visual: "desktop",
     icon: "desktop",
     related: ["mobile-development", "legacy-modernization", "product-design"],
-    cases: ["routewise", "ledgerline"],
+    cases: [],
   },
   "ai-engineering": {
     idx: "S05",
     theme: "light",
     visual: "graph",
     icon: "ai",
-    related: ["architecture-consulting", "cloud-devops", "quality-engineering"],
-    cases: ["carepath", "ledgerline"],
+    related: ["architecture-consulting", "cloud-devops", "telegram-bots"],
+    cases: ["financialpress", "simple-house"],
   },
   "cloud-devops": {
     idx: "S06",
@@ -57,7 +57,7 @@ export const serviceCatalog: Record<ServiceSlug, ServiceStructure> = {
     visual: "pipeline",
     icon: "cloud",
     related: ["legacy-modernization", "architecture-consulting", "quality-engineering"],
-    cases: ["ledgerline", "routewise"],
+    cases: ["simple-market", "financialpress"],
   },
   "architecture-consulting": {
     idx: "S07",
@@ -65,7 +65,7 @@ export const serviceCatalog: Record<ServiceSlug, ServiceStructure> = {
     visual: "arch",
     icon: "architecture",
     related: ["legacy-modernization", "enterprise-software", "cloud-devops"],
-    cases: ["ledgerline", "routewise"],
+    cases: ["financialpress", "simplefit-boxing"],
   },
   "product-design": {
     idx: "S08",
@@ -73,7 +73,7 @@ export const serviceCatalog: Record<ServiceSlug, ServiceStructure> = {
     visual: "device",
     icon: "design",
     related: ["web-development", "mobile-development", "custom-software-development"],
-    cases: ["carepath", "routewise"],
+    cases: ["deeply", "anyway"],
   },
   "legacy-modernization": {
     idx: "S09",
@@ -81,7 +81,7 @@ export const serviceCatalog: Record<ServiceSlug, ServiceStructure> = {
     visual: "arch",
     icon: "legacy",
     related: ["architecture-consulting", "cloud-devops", "quality-engineering"],
-    cases: ["routewise", "ledgerline"],
+    cases: [],
   },
   "quality-engineering": {
     idx: "S10",
@@ -89,7 +89,7 @@ export const serviceCatalog: Record<ServiceSlug, ServiceStructure> = {
     visual: "pipeline",
     icon: "quality",
     related: ["cloud-devops", "web-development", "legacy-modernization"],
-    cases: ["ledgerline", "carepath"],
+    cases: ["simplefit-boxing", "financialpress"],
   },
   "dedicated-teams": {
     idx: "S11",
@@ -97,15 +97,14 @@ export const serviceCatalog: Record<ServiceSlug, ServiceStructure> = {
     visual: "team",
     icon: "teams",
     related: ["custom-software-development", "quality-engineering", "cloud-devops"],
-    cases: ["routewise", "carepath"],
+    cases: [],
   },
-};
-
-export const caseStudies: Record<
-  CaseKey,
-  { name: string; href: string; viz: "fintech" | "healthcare" | "logistics" }
-> = {
-  ledgerline: { name: "Ledgerline", href: "/work/ledgerline", viz: "fintech" },
-  carepath: { name: "Carepath", href: "/work/carepath", viz: "healthcare" },
-  routewise: { name: "Routewise", href: "/work/routewise", viz: "logistics" },
+  "telegram-bots": {
+    idx: "S13",
+    theme: "dark",
+    visual: "device",
+    icon: "chat",
+    related: ["ai-engineering", "web-development", "custom-software-development"],
+    cases: [],
+  },
 };

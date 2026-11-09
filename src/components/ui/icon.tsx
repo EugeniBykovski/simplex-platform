@@ -30,7 +30,8 @@ export type GlyphName =
   | "commerce"
   | "saas"
   | "building"
-  | "logistics";
+  | "logistics"
+  | "chat";
 
 /** A decorative icon from the design's set. Give its parent the accessible name. */
 export function Icon({

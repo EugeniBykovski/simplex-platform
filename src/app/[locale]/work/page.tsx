@@ -8,7 +8,7 @@ import {
   WorkHero,
   WorkProjects,
 } from "@/components/sections/work/work-overview";
-import { getWorkOverview } from "@/content/work";
+import { getWorkOverview, getWorkShared } from "@/content/work";
 import { routing } from "@/i18n/routing";
 import { isLocaleAvailable } from "@/i18n/translation-status";
 import { buildPageMetadata } from "@/lib/seo/metadata";
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!hasLocale(routing.locales, locale)) return {};
 
   const { title, description } = getWorkOverview(locale).meta;
-  // Every project is a labelled demonstration, never indexed as client work (GAP-C02).
+  // Work stays out of the index until the founder approves the project pages (GAP-C02).
   return buildPageMetadata({
     locale,
     family: "work",
@@ -30,19 +30,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
-/** The section order follows Work.dc.html, without the withheld reference block. */
+/** The section order follows Work.dc.html, with the approved projects in place of its concepts. */
 export default async function WorkPage({ params }: Props) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale) || !isLocaleAvailable("work", locale)) notFound();
   setRequestLocale(locale);
 
   const content = getWorkOverview(locale);
+  const shared = getWorkShared(locale);
 
   return (
     <main>
       <WorkHero content={content} />
-      <WorkFeatured content={content} />
-      <WorkProjects content={content} locale={locale} />
+      <WorkFeatured content={content} shared={shared} locale={locale} />
+      <WorkProjects content={content} shared={shared} locale={locale} />
       <WorkCta content={content.cta} />
     </main>
   );

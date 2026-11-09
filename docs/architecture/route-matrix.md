@@ -37,9 +37,14 @@ Machine-readable twin: [route-registry.json](route-registry.json). Source: desig
 | `/industries/enterprise` | APPROVED | static | IndustryPage `enterprise` | 1 | desktop | index at launch | SF-147 |
 | `/industries/logistics` | APPROVED | static | IndustryPage `logistics` | 1 | desktop | index at launch | SF-147 |
 | `/work` | APPROVED | static | Work | 4 | desktop · tablet · mobile | noindex until verified client work exists | SF-148 |
-| `/work/ledgerline` | APPROVED | static | CasePage `ledgerline` | 3 | desktop · mobile | noindex: demonstration, never a client success story | SF-148 |
-| `/work/carepath` | APPROVED | static | CasePage `carepath` | 1 | desktop | noindex: demonstration, never a client success story | SF-148 |
-| `/work/routewise` | APPROVED | static | CasePage `routewise` | 1 | desktop | noindex: demonstration, never a client success story | SF-148 |
+| `/work/simplefit-boxing` | APPROVED | static | CasePage project template `simplefit-boxing` | 1 | desktop · mobile | noindex until the founder approves the project pages (GAP-C02) | SF-157 |
+| `/work/financialpress` | APPROVED | static | CasePage project template `financialpress` | 1 | desktop · mobile | noindex until the founder approves the project pages (GAP-C02) | SF-157 |
+| `/work/hobworks` | APPROVED | static | CasePage project template `hobworks` | 1 | desktop · mobile | noindex until the founder approves the project pages (GAP-C02) | SF-157 |
+| `/work/simple-house` | APPROVED | static | CasePage project template `simple-house` | 1 | desktop · mobile | noindex until the founder approves the project pages (GAP-C02) | SF-157 |
+| `/work/simple-market` | APPROVED | static | CasePage project template `simple-market` | 1 | desktop · mobile | noindex until the founder approves the project pages (GAP-C02) | SF-157 |
+| `/work/deeply` | APPROVED | static | CasePage project template `deeply` | 1 | desktop · mobile | noindex until the founder approves the project pages (GAP-C02) | SF-157 |
+| `/work/wait` | APPROVED | static | CasePage project template `wait` | 1 | desktop · mobile | noindex until the founder approves the project pages (GAP-C02) | SF-157 |
+| `/work/anyway` | APPROVED | static | CasePage project template `anyway` | 1 | desktop · mobile | noindex until the founder approves the project pages (GAP-C02) | SF-157 |
 | `/how-we-work` | APPROVED | static | HowWeWork | 4 | desktop · mobile | index at launch | SF-149 |
 | `/about` | APPROVED | static | About | 4 | desktop · mobile | index at launch | SF-149 |
 | `/technologies` | APPROVED | static | Technologies | 4 | desktop · mobile | index at launch | SF-149 |

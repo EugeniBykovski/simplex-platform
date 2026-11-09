@@ -1,6 +1,5 @@
 import type { GlyphName } from "@/components/ui/icon";
-import type { ServiceSlug } from "@/config/routes";
-import type { CaseKey } from "@/content/services";
+import type { ServiceSlug, WorkSlug } from "@/config/routes";
 
 export type TitledBody = { title: string; body: string };
 
@@ -39,8 +38,8 @@ export type IndustryStructure = {
   heroScrim?: boolean;
   /** The four services the design relates to this industry, in its order. */
   services: readonly ServiceSlug[];
-  /** One demonstration project. Some belong to another sector, as in the design (GAP-D23). */
-  project: CaseKey;
+  /** An approved portfolio project in this sector, where one exists (SF-157). */
+  project?: WorkSlug;
 };
 
 export type IndustrySharedCopy = {
@@ -57,10 +56,9 @@ export type IndustrySharedCopy = {
     components: string;
   };
   considerations: { eyebrow: string; title: string };
-  capabilities: { eyebrow: string; projects: string; tag: string; read: string };
+  capabilities: { eyebrow: string; projects: string; read: string };
   /** The names used on the capability cards. */
   services: Partial<Record<ServiceSlug, string>>;
-  cases: Record<CaseKey, { industry: string; summary: string }>;
   compliance: { tag: string; lead: string; note: string };
   cta: { lead: string; primary: string };
 };

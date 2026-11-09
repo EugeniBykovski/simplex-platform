@@ -14,7 +14,7 @@ const block = (
  */
 export const en: AgentContent = {
   meta: {
-    title: "SimpleX Agent — engineering agent concept",
+    title: "SimpleX Agent - engineering agent concept",
     description:
       "SimpleX Agent is an engineering agent concept designed to work within your stack, with every change reviewed by an engineer. Product details are illustrative.",
   },
@@ -37,7 +37,7 @@ export const en: AgentContent = {
       request: "Add subscription billing to checkout and set up staging.",
       answerStart: "Detected ",
       answerStack: "Next.js 15 · TypeScript · Prisma · PostgreSQL",
-      answerEnd: ". Here’s the plan — an engineer will review each PR.",
+      answerEnd: ". Here’s the plan - an engineer will review each PR.",
       steps: [
         { text: "Repository read · domains mapped", state: "done" },
         { text: "Billing module + webhooks · draft PR", state: "review" },
@@ -170,14 +170,14 @@ export const en: AgentContent = {
   },
   capabilities: {
     eyebrow: "What the agent is designed to do",
-    title: "The repetitive work — done properly.",
+    title: "The repetitive work - done properly.",
     lead: "Scaffolding, glue code, tests, infrastructure and documentation, generated to your standards, so senior engineers can spend their time on architecture and product decisions.",
     feature: { head: "Feature generation", title: "From ticket to reviewed pull request." },
     tests: { head: "Tests", ring: "Goal", note: "Coverage target agreed with your team" },
     infrastructure: {
       head: "Infrastructure",
       big: "IaC",
-      note: "Terraform, Bicep or Pulumi — matched to your cloud",
+      note: "Terraform, Bicep or Pulumi - matched to your cloud",
     },
     migrations: {
       head: "Migrations",
@@ -198,7 +198,7 @@ export const en: AgentContent = {
   embed: {
     eyebrow: "Embed it in your product",
     title: "Put the agent inside your own product.",
-    lead: "The same engine is intended to power in-product assistants and automations for your customers — white-labelled, connected to your data and governed by your rules.",
+    lead: "The same engine is intended to power in-product assistants and automations for your customers - white-labelled, connected to your data and governed by your rules.",
     checks: [
       "Planned SDKs for web (React) and mobile (iOS, Android, Flutter)",
       "Designed to run in your cloud, with your data in your accounts",

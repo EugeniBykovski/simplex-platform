@@ -3,7 +3,7 @@ import type { ServicePageCopy } from "../types";
 /** Copy from ServicePage.dc.html, slug legacy-modernization, design 1793869596-167d. Changes are in docs/content/services-claims-register.md. */
 export const page: ServicePageCopy = {
   meta: {
-    title: "Legacy Modernization — SimpleX",
+    title: "Legacy Modernization - SimpleX",
     description:
       "Modernise the legacy systems that still run your business, incrementally: understand, wrap, replace and retire, with value delivered at every step.",
   },
@@ -11,7 +11,7 @@ export const page: ServicePageCopy = {
   short: "Legacy Modernization",
   blurb: "Evolve systems without stopping them.",
   headline: "Modernise without stopping the business.",
-  lead: "Your legacy systems still run the business — that’s why they’re hard to change. We modernise incrementally, replacing parts behind stable interfaces until the old system can retire quietly.",
+  lead: "Your legacy systems still run the business - that’s why they’re hard to change. We modernise incrementally, replacing parts behind stable interfaces until the old system can retire quietly.",
   glance: [
     "Incremental, reversible steps",
     "No big-bang cut-overs",
@@ -25,7 +25,7 @@ export const page: ServicePageCopy = {
   ],
   capsTitle: "What we bring to modernisation.",
   capsIntro:
-    "An incremental approach: understand, wrap, replace, retire — with value delivered at every step.",
+    "An incremental approach: understand, wrap, replace, retire - with value delivered at every step.",
   caps: [
     {
       title: "System discovery & mapping",

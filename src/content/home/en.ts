@@ -6,7 +6,7 @@ import type { HomeContent } from "./types";
  */
 export const en: HomeContent = {
   meta: {
-    title: "SimpleX — Complex engineering. Clear outcomes.",
+    title: "SimpleX - Complex engineering. Clear outcomes.",
     description:
       "We design, build, and scale digital products that turn ambitious ideas into real business advantage.",
   },
@@ -25,7 +25,7 @@ export const en: HomeContent = {
         counter: "01 / 03 · Our point of view",
         icon: "architecture",
         title: "Software rarely fails all at once.",
-        body: "It erodes — through shortcuts nobody revisits, ownership nobody holds and architecture nobody can explain. We build systems that stay understandable as they grow.",
+        body: "It erodes - through shortcuts nobody revisits, ownership nobody holds and architecture nobody can explain. We build systems that stay understandable as they grow.",
       },
       {
         counter: "02 / 03",
@@ -37,7 +37,7 @@ export const en: HomeContent = {
         counter: "03 / 03",
         icon: "ai",
         title: "AI that ships inside your product.",
-        body: "Our own SimpleX Agent is designed to build on your stack and run inside your product — evaluated, governed and engineered to the same standard as everything else.",
+        body: "Our own SimpleX Agent is designed to build on your stack and run inside your product - evaluated, governed and engineered to the same standard as everything else.",
       },
     ],
   },
@@ -45,7 +45,7 @@ export const en: HomeContent = {
     tag: "What we do",
     titleStart: "Engineering everything",
     titleTone: "that moves you forward.",
-    lead: "Every capability, one accountable team — from a two-person app pod to the full product. Bring us a blank page, a product that needs to grow, or a system that has outgrown itself.",
+    lead: "Every capability, one accountable team - from a two-person app pod to the full product. Bring us a blank page, a product that needs to grow, or a system that has outgrown itself.",
     link: "See all services",
     services: [
       {
@@ -53,7 +53,7 @@ export const en: HomeContent = {
         title: "Custom Software",
         href: "/services/custom-software-development",
         description:
-          "Bespoke platforms and products designed around how your business actually works — not around a template.",
+          "Bespoke platforms and products designed around how your business actually works - not around a template.",
         chips: ["Platforms", "Internal tools", "APIs"],
       },
       {
@@ -93,7 +93,7 @@ export const en: HomeContent = {
         title: "Architecture & Consulting",
         href: "/services/architecture-consulting",
         description:
-          "Architecture reviews, technical due diligence and roadmaps you can act on — written by engineers who build.",
+          "Architecture reviews, technical due diligence and roadmaps you can act on - written by engineers who build.",
         chips: ["Reviews", "Due diligence", "Roadmaps"],
       },
     ],
@@ -103,7 +103,7 @@ export const en: HomeContent = {
     eyebrow: "SimpleX Agent",
     titleStart: "An AI engineer",
     titleAccent: "that knows your stack.",
-    lead: "Our own agent is designed to connect to your repositories, understand your frameworks and generate services, pipelines, infrastructure and features as reviewable changes — for stacks such as Next.js, Spring, .NET, Django and Flutter.",
+    lead: "Our own agent is designed to connect to your repositories, understand your frameworks and generate services, pipelines, infrastructure and features as reviewable changes - for stacks such as Next.js, Spring, .NET, Django and Flutter.",
     illustrative: "Product details illustrative",
     checks: [
       "Stack-aware: designed to follow your frameworks, versions and conventions",
@@ -118,33 +118,33 @@ export const en: HomeContent = {
     isNew: "New",
     chip: "Build packages",
     title: "From a two-person app team to your whole product.",
-    lead: "A compact pod for iOS, Android or React Native. Desktop software for Windows, macOS and Linux. Or the full cycle — backend, web app, website, admin panel and both mobile apps from one squad.",
+    lead: "A compact pod for iOS, Android or React Native. Desktop software for Windows, macOS and Linux. Or the full cycle - backend, web app, website, admin panel and both mobile apps from one squad.",
     link: "Compare packages",
     cards: [
       {
         label: "01 · Mobile pod",
         team: "2 people",
         title: "A complete app, from two engineers.",
-        body: "Native iOS, native Android or one React Native app for both stores — designed, built and released.",
+        body: "Native iOS, native Android or one React Native app for both stores - designed, built and released.",
       },
       {
         label: "02 · Desktop apps",
         team: "2–3 people",
         title: "Software that belongs on the desk.",
-        body: "Windows, macOS and Linux — offline-first, hardware-aware, signed and auto-updating.",
+        body: "Windows, macOS and Linux - offline-first, hardware-aware, signed and auto-updating.",
       },
       {
         label: "03 · Full cycle",
         team: "One squad",
         title: "Backend, web, website, admin, iOS & Android.",
-        body: "The whole product as one system — one API, one design system, one release train.",
+        body: "The whole product as one system - one API, one design system, one release train.",
       },
     ],
   },
   why: {
     eyebrow: "Why SimpleX",
     title: "The best engineering is the part nobody notices.",
-    lead: "Until it’s missing. We balance six things most partners trade against each other — so the product you launch is also the product you can keep.",
+    lead: "Until it’s missing. We balance six things most partners trade against each other - so the product you launch is also the product you can keep.",
     cards: [
       {
         label: "01 · Engineering excellence",
@@ -174,56 +174,18 @@ export const en: HomeContent = {
       {
         label: "06 · Business outcomes",
         title: "Measured in outcomes, not hours.",
-        body: "We report on lead time, reliability, adoption and cost to serve — the numbers your board actually asks about.",
+        body: "We report on lead time, reliability, adoption and cost to serve - the numbers your board actually asks about.",
       },
     ],
   },
   work: {
     eyebrow: "Featured work",
-    titleStart: "Hard problems,",
-    titleTone: "made simple to use.",
-    demoNote: "Demonstration projects · illustrative",
+    titleStart: "Real products,",
+    titleTone: "engineered end to end.",
     link: "All work",
-    demo: "Demo",
-    challenge: "Challenge",
-    solution: "Solution",
-    cta: "View case study",
-    projects: [
-      {
-        name: "Ledgerline",
-        industry: "FinTech",
-        href: "/work/ledgerline",
-        viz: "fintech",
-        summary: "A real-time treasury platform for a mid-market finance team.",
-        challenge:
-          "Cash positions reconciled overnight across fourteen bank feeds, with exceptions handled in spreadsheets.",
-        solution:
-          "An event-driven ledger with continuous reconciliation, role-based approvals and an audit trail an auditor can read.",
-        tags: ["Kotlin", "Kafka", "PostgreSQL", "React"],
-      },
-      {
-        name: "Carepath",
-        industry: "Healthcare",
-        href: "/work/carepath",
-        viz: "healthcare",
-        summary: "Unified patient intake and triage for a multi-site clinic group.",
-        challenge:
-          "Intake split across paper forms, phone calls and three systems that didn’t talk to each other.",
-        solution:
-          "Accessible patient flows, a clinician triage queue and FHIR integration with existing records.",
-        tags: ["TypeScript", "React Native", "FHIR", "Azure"],
-      },
-      {
-        name: "Routewise",
-        industry: "Logistics",
-        href: "/work/routewise",
-        viz: "logistics",
-        summary: "Route orchestration for a regional distribution network.",
-        challenge: "Dispatchers planning hundreds of daily routes by hand as volumes doubled.",
-        solution: "Optimised planning, live telematics and a driver app that works offline.",
-        tags: ["Go", "Python", "GCP", "Flutter"],
-      },
-    ],
+    role: "Our role",
+    built: "What is built",
+    cta: "View project",
   },
   how: {
     tag: "How we work",
@@ -247,7 +209,7 @@ export const en: HomeContent = {
         kicker: "Architect",
         title: "Make the expensive decisions deliberately.",
         description:
-          "Target architecture, trade-offs written as decision records, and a delivery plan sequenced by risk — not by convenience.",
+          "Target architecture, trade-offs written as decision records, and a delivery plan sequenced by risk - not by convenience.",
         out: ["Target architecture", "ADRs", "Delivery plan"],
       },
       {
@@ -271,7 +233,7 @@ export const en: HomeContent = {
         kicker: "Scale",
         title: "Operate, measure and evolve.",
         description:
-          "Observability, performance and cost work as usage grows — and a roadmap that keeps the architecture ahead of demand.",
+          "Observability, performance and cost work as usage grows - and a roadmap that keeps the architecture ahead of demand.",
         out: ["Observability", "SLOs", "Evolution roadmap"],
       },
     ],
@@ -279,7 +241,7 @@ export const en: HomeContent = {
   industries: {
     eyebrow: "Industries",
     title: "Context changes everything.",
-    lead: "Regulation, peak load, safety, scale. We bring patterns that already work in your sector — and the judgement to know when they don’t.",
+    lead: "Regulation, peak load, safety, scale. We bring patterns that already work in your sector - and the judgement to know when they don’t.",
     cards: [
       {
         name: "FinTech",
@@ -297,7 +259,7 @@ export const en: HomeContent = {
           "Patient and clinician platforms built for safety, privacy and interoperability.",
       },
       {
-        name: "E-commerce",
+        name: "E-\u2060commerce",
         icon: "commerce",
         viz: "ecommerce",
         href: "/industries/ecommerce",
@@ -376,7 +338,7 @@ export const en: HomeContent = {
         label: "Mobile",
         headline: "Native quality, shared where it makes sense.",
         description:
-          "We choose native or cross-platform per product — based on performance needs, team skills and long-term cost.",
+          "We choose native or cross-platform per product - based on performance needs, team skills and long-term cost.",
         items: [
           { name: "Swift / SwiftUI", use: "iOS" },
           { name: "Kotlin / Compose", use: "Android" },
@@ -475,7 +437,7 @@ export const en: HomeContent = {
         icon: "custom",
         title: "End-to-End Product Delivery",
         description:
-          "From idea to production and beyond — strategy, design, engineering and operation under one accountable lead.",
+          "From idea to production and beyond - strategy, design, engineering and operation under one accountable lead.",
         best: [
           "Startups building a first product",
           "New digital business lines",
@@ -515,7 +477,7 @@ export const en: HomeContent = {
   engagement: {
     chip: "Working with SimpleX",
     title: "Transparent by default.",
-    lead: "You see the same board, the same pull requests and the same work in progress we do — every day, not at the end of a phase.",
+    lead: "You see the same board, the same pull requests and the same work in progress we do - every day, not at the end of a phase.",
     room: {
       live: "Live",
       label: "Shared delivery room",
@@ -552,7 +514,7 @@ export const en: HomeContent = {
       {
         tag: "AI in practice",
         title: "Evaluating LLM features before they reach users",
-        body: "Offline test sets, guardrails and online metrics — a practical evaluation stack for product teams.",
+        body: "Offline test sets, guardrails and online metrics - a practical evaluation stack for product teams.",
         minutes: 7,
       },
       {
@@ -566,7 +528,7 @@ export const en: HomeContent = {
   estimator: {
     tag: "Estimator · 60 seconds",
     title: "Shape your team before the first call.",
-    lead: "Choose what you’re building. See the team we’d put on it — then get a written proposal from a senior engineer.",
+    lead: "Choose what you’re building. See the team we’d put on it - then get a written proposal from a senior engineer.",
     steps: {
       type: "1 · What are you building?",
       platforms: "2 · Platforms",

@@ -3,7 +3,7 @@ import type { TechnologiesCopy } from "../en/technologies";
 /** Draft that needs review by a native editor. It stays noindex until russianTranslationStatus approves it. */
 export const technologies: TechnologiesCopy = {
   meta: {
-    title: "Технологии — SimpleX",
+    title: "Технологии - SimpleX",
     description:
       "Каталог технологий, на которые ориентируется SimpleX, по областям применения. Он описывает инженерную практику, а не сертификаты или партнёрства с вендорами.",
   },
@@ -16,12 +16,12 @@ export const technologies: TechnologiesCopy = {
   hero: {
     lines: ["Инструменты", "и как мы их применяем."],
     lead: "Каталог технологий, на которые мы ориентируемся, по областям применения. Он описывает инженерную практику, а не сертификаты или партнёрства с вендорами.",
-    core: "Основные — наш обычный выбор",
-    selective: "Выборочные — где уместно",
+    core: "Основные - наш обычный выбор",
+    selective: "Выборочные - где уместно",
   },
   directory: {
     searchLabel: "Поиск технологий",
-    searchPlaceholder: "Поиск — например, Kotlin, Terraform, RAG",
+    searchPlaceholder: "Поиск - например, Kotlin, Terraform, RAG",
     categoryLabel: "Категория",
     all: "Все",
     coreTag: "Основная",

@@ -3,13 +3,13 @@ import type { IndustryPageCopy } from "../types";
 /** From IndustryPage.dc.html, slug "saas". Changes are listed in docs/content/industries-claims-register.md. */
 export const page: IndustryPageCopy = {
   meta: {
-    title: "SaaS software engineering — SimpleX",
+    title: "SaaS software engineering - SimpleX",
     description:
-      "Multi-tenant SaaS engineered for reliability, security and unit economics — from the first paying customer to enterprise deals.",
+      "Multi-tenant SaaS engineered for reliability, security and unit economics - from the first paying customer to enterprise deals.",
   },
   name: "SaaS",
   headline: "Products built to grow without growing pains.",
-  lead: "Multi-tenant SaaS engineered for reliability, security and unit economics — from the first paying customer to enterprise deals.",
+  lead: "Multi-tenant SaaS engineered for reliability, security and unit economics - from the first paying customer to enterprise deals.",
   facts: [
     {
       key: "Typical systems",

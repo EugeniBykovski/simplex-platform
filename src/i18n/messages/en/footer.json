@@ -1,5 +1,5 @@
 {
-  "homeLabel": "SimpleX — home",
+  "homeLabel": "SimpleX - home",
   "new": "New",
   "tagline": "Software engineering and digital product development for startups, scale-ups and established businesses.",
   "startProject": "Start a project",
@@ -20,7 +20,7 @@
     "allServices": "All services",
     "fintech": "FinTech",
     "healthcare": "Healthcare",
-    "ecommerce": "E-commerce",
+    "ecommerce": "E-\u2060commerce",
     "saas": "SaaS",
     "enterprise": "Enterprise",
     "logistics": "Logistics",

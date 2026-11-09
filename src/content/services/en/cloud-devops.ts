@@ -3,7 +3,7 @@ import type { ServicePageCopy } from "../types";
 /** Copy from ServicePage.dc.html, slug cloud-devops, design 1793869596-167d. Changes are in docs/content/services-claims-register.md. */
 export const page: ServicePageCopy = {
   meta: {
-    title: "Cloud Engineering & DevOps — SimpleX",
+    title: "Cloud Engineering & DevOps - SimpleX",
     description:
       "We design cloud platforms, delivery pipelines and observability so teams ship small changes often, recover fast and see exactly what they’re paying for.",
   },

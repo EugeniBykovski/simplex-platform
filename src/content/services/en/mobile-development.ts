@@ -3,17 +3,17 @@ import type { ServicePageCopy } from "../types";
 /** Copy from ServicePage.dc.html, slug mobile-development, design 1793869596-167d. Changes are in docs/content/services-claims-register.md. */
 export const page: ServicePageCopy = {
   meta: {
-    title: "Mobile Development — SimpleX",
+    title: "Mobile Development - SimpleX",
     description:
-      "Native and cross-platform apps that are fast, accessible and dependable offline — with release pipelines that make weekly updates routine.",
+      "Native and cross-platform apps that are fast, accessible and dependable offline - with release pipelines that make weekly updates routine.",
   },
   title: "Mobile Development",
   short: "Mobile Development",
   blurb: "Native and cross-platform apps.",
   headline: "Apps people keep on their home screen.",
-  lead: "Native and cross-platform apps that are fast, accessible and dependable offline — with release pipelines that make weekly updates routine.",
+  lead: "Native and cross-platform apps that are fast, accessible and dependable offline - with release pipelines that make weekly updates routine.",
   glance: [
-    "iOS, Android or React Native — from a two-person pod",
+    "iOS, Android or React Native - from a two-person pod",
     "Offline-first architecture",
     "Automated store releases",
   ],
@@ -25,7 +25,7 @@ export const page: ServicePageCopy = {
   ],
   capsTitle: "What we bring to mobile.",
   capsIntro:
-    "We choose native or cross-platform per product, based on performance needs, team skills and long-term cost — and explain the trade-off.",
+    "We choose native or cross-platform per product, based on performance needs, team skills and long-term cost - and explain the trade-off.",
   caps: [
     {
       title: "Native iOS & Android",

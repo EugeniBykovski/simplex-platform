@@ -3,7 +3,7 @@ import type { ServicePageCopy } from "../types";
 /** Copy from ServicePage.dc.html, slug architecture-consulting, design 1793869596-167d. Changes are in docs/content/services-claims-register.md. */
 export const page: ServicePageCopy = {
   meta: {
-    title: "Software Architecture & Technical Consulting — SimpleX",
+    title: "Software Architecture & Technical Consulting - SimpleX",
     description:
       "Independent architecture advice for the moments that matter: before a rewrite, after an acquisition or ahead of a growth phase.",
   },
@@ -11,7 +11,7 @@ export const page: ServicePageCopy = {
   short: "Architecture & Consulting",
   blurb: "Decisions you can build on.",
   headline: "Decisions you can build on.",
-  lead: "Independent, senior architecture advice for the moments that matter — before a rewrite, after an acquisition, ahead of a growth phase. Written by engineers who build, not slideware.",
+  lead: "Independent, senior architecture advice for the moments that matter - before a rewrite, after an acquisition, ahead of a growth phase. Written by engineers who build, not slideware.",
   glance: [
     "Focused, time-boxed architecture reviews",
     "Technical due diligence for investors",
@@ -25,7 +25,7 @@ export const page: ServicePageCopy = {
   ],
   capsTitle: "What we bring to architecture decisions.",
   capsIntro:
-    "Evidence-led assessments that end in decisions and a plan — not a report that sits in a drawer.",
+    "Evidence-led assessments that end in decisions and a plan - not a report that sits in a drawer.",
   caps: [
     {
       title: "Architecture review",
@@ -37,7 +37,7 @@ export const page: ServicePageCopy = {
     },
     {
       title: "Modernisation strategy",
-      body: "Rewrite, refactor or replace — with evidence for each.",
+      body: "Rewrite, refactor or replace - with evidence for each.",
     },
     {
       title: "Platform & vendor selection",
@@ -107,7 +107,7 @@ export const page: ServicePageCopy = {
     },
     {
       title: "Post-merger platform consolidation",
-      body: "Which systems to keep, merge or retire — and in what order.",
+      body: "Which systems to keep, merge or retire - and in what order.",
     },
   ],
   cta: "Facing a decision that’s expensive to reverse?",

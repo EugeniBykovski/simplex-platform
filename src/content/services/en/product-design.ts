@@ -3,15 +3,15 @@ import type { ServicePageCopy } from "../types";
 /** Copy from ServicePage.dc.html, slug product-design, design 1793869596-167d. Changes are in docs/content/services-claims-register.md. */
 export const page: ServicePageCopy = {
   meta: {
-    title: "Product Design & UI/UX — SimpleX",
+    title: "Product Design & UI/UX - SimpleX",
     description:
-      "Research, UX and interface systems for products with real complexity — designed alongside the engineers who will build them, so nothing is lost in translation.",
+      "Research, UX and interface systems for products with real complexity - designed alongside the engineers who will build them, so nothing is lost in translation.",
   },
   title: "Product Design & UI/UX",
   short: "Product Design",
   blurb: "Complex products, made obvious.",
   headline: "Complex products, made obvious.",
-  lead: "Research, UX and interface systems for products with real complexity — designed alongside the engineers who will build them, so nothing is lost in translation.",
+  lead: "Research, UX and interface systems for products with real complexity - designed alongside the engineers who will build them, so nothing is lost in translation.",
   glance: [
     "Research with real users",
     "Design systems in Figma and in code",

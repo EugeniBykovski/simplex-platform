@@ -3,7 +3,7 @@ import type { ServicePageCopy } from "../types";
 /** Copy from ServicePage.dc.html, slug web-development, design 1793869596-167d. Changes are in docs/content/services-claims-register.md. */
 export const page: ServicePageCopy = {
   meta: {
-    title: "Web Development — SimpleX",
+    title: "Web Development - SimpleX",
     description:
       "Customer portals and complex SaaS front ends, built with performance budgets, accessibility and maintainable component architecture from the first commit.",
   },
@@ -19,7 +19,7 @@ export const page: ServicePageCopy = {
   ],
   problem: "Slow and inaccessible costs more than it looks.",
   pains: [
-    "Every extra second of load time loses users who never complain — they just leave.",
+    "Every extra second of load time loses users who never complain - they just leave.",
     "Front ends that grew without structure become slower to change than the back end.",
     "Accessibility debt turns into legal and reputational risk.",
   ],

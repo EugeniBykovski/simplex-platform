@@ -3,7 +3,7 @@ import type { ServicePageCopy } from "../types";
 /** Copy from ServicePage.dc.html, slug ai-engineering, design 1793869596-167d. Changes are in docs/content/services-claims-register.md. */
 export const page: ServicePageCopy = {
   meta: {
-    title: "AI Engineering & Intelligent Automation — SimpleX",
+    title: "AI Engineering & Intelligent Automation - SimpleX",
     description:
       "We integrate language models, retrieval and automation into real products, with evaluation, guardrails, observability and cost controls engineered in.",
   },
@@ -11,7 +11,7 @@ export const page: ServicePageCopy = {
   short: "AI Engineering",
   blurb: "Production-grade intelligent features.",
   headline: "AI features that hold up in production.",
-  lead: "We integrate language models, retrieval and automation into real products — with evaluation, guardrails, observability and cost controls engineered in, not bolted on.",
+  lead: "We integrate language models, retrieval and automation into real products - with evaluation, guardrails, observability and cost controls engineered in, not bolted on.",
   glance: [
     "Can draw on SimpleX Agent, our engineering agent concept",
     "Evaluated before release, monitored after",
@@ -25,7 +25,7 @@ export const page: ServicePageCopy = {
   ],
   capsTitle: "What we bring to AI engineering.",
   capsIntro:
-    "AI treated as software engineering: versioned, tested, observable and owned — and used only where it measurably helps.",
+    "AI treated as software engineering: versioned, tested, observable and owned - and used only where it measurably helps.",
   caps: [
     {
       title: "Retrieval-augmented generation",
@@ -108,7 +108,7 @@ export const page: ServicePageCopy = {
     },
     {
       title: "Support triage and drafting",
-      body: "Tickets routed and replies drafted for agents to approve — faster, not unsupervised.",
+      body: "Tickets routed and replies drafted for agents to approve - faster, not unsupervised.",
     },
   ],
   cta: "Have an AI prototype that needs to grow up?",

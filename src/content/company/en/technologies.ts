@@ -4,20 +4,20 @@
  */
 export const technologies = {
   meta: {
-    title: "Technologies — SimpleX",
+    title: "Technologies - SimpleX",
     description:
       "A directory of technologies SimpleX plans around, grouped by capability. It describes engineering practice, not vendor certifications or partnerships.",
   },
   breadcrumb: { label: "Breadcrumb", home: "Home", company: "Company", current: "Technologies" },
   hero: {
     lines: ["The toolkit,", "and how we use it."],
-    lead: "A directory of the technologies we plan around, grouped by capability. It describes engineering practice — not vendor certifications or partnerships.",
-    core: "Core — our usual choice",
-    selective: "Selective — used where it fits",
+    lead: "A directory of the technologies we plan around, grouped by capability. It describes engineering practice - not vendor certifications or partnerships.",
+    core: "Core - our usual choice",
+    selective: "Selective - used where it fits",
   },
   directory: {
     searchLabel: "Search technologies",
-    searchPlaceholder: "Search — e.g. Kotlin, Terraform, RAG",
+    searchPlaceholder: "Search - e.g. Kotlin, Terraform, RAG",
     categoryLabel: "Category",
     all: "All",
     coreTag: "Core",
@@ -133,13 +133,13 @@ export const technologies = {
   },
   follows: {
     title: "Technology follows the problem.",
-    lead: "We recommend mature, well-supported tools your team can hire for and maintain — and explain every choice in writing.",
+    lead: "We recommend mature, well-supported tools your team can hire for and maintain - and explain every choice in writing.",
     primary: "Architecture & consulting",
     secondary: "Let’s Talk",
   },
   radar: {
     tag: "Technology radar · sample",
-    title: "What we adopt, trial, assess — and hold.",
+    title: "What we adopt, trial, assess - and hold.",
     lead: "An illustrative radar, to show how we would reason about a stack for you, and why. It is not a published position.",
     label: "Radar ring",
     rings: {

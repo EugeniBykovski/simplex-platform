@@ -1,12 +1,14 @@
 import { SeoBreadcrumbs } from "@/components/seo/seo-breadcrumbs";
 import { AnchorButton, LinkButton } from "@/components/ui/button";
 import { cx } from "@/components/ui/cx";
-import { DemoTag, Tag } from "@/components/ui/feedback";
+import { Tag } from "@/components/ui/feedback";
 import { Icon } from "@/components/ui/icon";
 import { ArrowLink, RouteLink } from "@/components/ui/links";
 import { CardArrow, SectorGround } from "@/components/ui/surface";
 import { Tabs } from "@/components/ui/tabs";
-import { serviceCatalog, caseStudies } from "@/content/services";
+import { serviceCatalog } from "@/content/services";
+import { getProject } from "@/content/work";
+import type { Locale } from "@/i18n/routing";
 import type { IndustryPageCopy, IndustrySharedCopy, IndustryStructure } from "@/content/industries";
 import { preload } from "react-dom";
 import { ComplianceGrid, VIZ_CLASS, VIZ_IMAGE } from "./industry-shared";
@@ -243,10 +245,11 @@ export function IndustryCapabilities({
   page,
   shared,
   structure,
-}: PageProps & { structure: IndustryStructure }) {
+  locale,
+}: PageProps & { structure: IndustryStructure; locale: Locale }) {
   const { capabilities } = shared;
-  const study = caseStudies[structure.project];
-  const projectCopy = shared.cases[structure.project];
+  const project = structure.project ? getProject(structure.project) : undefined;
+  const words = project?.words[locale];
   return (
     <section className="bg-mist section scroll-mt-[90px]" id="projects" aria-labelledby="caps">
       <div className="wrap stack gap-8">
@@ -271,27 +274,32 @@ export function IndustryCapabilities({
             </RouteLink>
           ))}
         </div>
-        <div className="wrap-row between gap-4 mt-[24px] items-end">
-          <h2 className="t-h3">{capabilities.projects}</h2>
-          <DemoTag>{capabilities.tag}</DemoTag>
-        </div>
-        <RouteLink
-          href={study.href}
-          pendingLook="card"
-          className="solid card-hover panel-split overflow-hidden rounded-[30px]"
-        >
-          <div className="stack gap-4 p-[clamp(24px,4cqi,48px)] justify-center">
-            <span className="t-mono text-text-3">{projectCopy.industry}</span>
-            <span className="t-h2">{study.name}</span>
-            <span className="t-body">{projectCopy.summary}</span>
-            <span className="link-arrow">
-              {capabilities.read} <Icon name="arrow" />
-            </span>
-          </div>
-          <SectorGround sector={study.viz} className="rounded-[0] min-h-[320px]">
-            <span className="slice" />
-          </SectorGround>
-        </RouteLink>
+        {project && words ? (
+          <>
+            <h2 className="t-h3 mt-[24px]">{capabilities.projects}</h2>
+            <RouteLink
+              href={`/work/${project.slug}`}
+              pendingLook="card"
+              className="solid card-hover panel-split overflow-hidden rounded-[30px]"
+            >
+              <div className="stack gap-4 p-[clamp(24px,4cqi,48px)] justify-center">
+                <span className="t-mono text-text-3">{words.category}</span>
+                <span className="t-h2">{project.name}</span>
+                <span className="t-body">{words.summary}</span>
+                <span className="link-arrow">
+                  {capabilities.read} <Icon name="arrow" />
+                </span>
+              </div>
+              <SectorGround
+                sector={project.ground}
+                className="rounded-[0] min-h-[320px] grid place-items-center"
+              >
+                <span className="slice" />
+                <Icon name={project.icon} className="relative text-white [--icon:72px]" />
+              </SectorGround>
+            </RouteLink>
+          </>
+        ) : null}
       </div>
     </section>
   );

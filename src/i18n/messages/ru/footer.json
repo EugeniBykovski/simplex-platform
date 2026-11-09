@@ -1,5 +1,5 @@
 {
-  "homeLabel": "SimpleX — на главную",
+  "homeLabel": "SimpleX - на главную",
   "new": "Новое",
   "tagline": "Разработка программного обеспечения и цифровых продуктов для стартапов, растущих компаний и зрелого бизнеса.",
   "startProject": "Начать проект",
@@ -20,7 +20,7 @@
     "allServices": "Все услуги",
     "fintech": "Финтех",
     "healthcare": "Здравоохранение",
-    "ecommerce": "E-commerce",
+    "ecommerce": "E-\u2060commerce",
     "saas": "SaaS",
     "enterprise": "Корпорации",
     "logistics": "Логистика",

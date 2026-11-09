@@ -13,35 +13,20 @@ export const shared: ServiceSharedCopy = {
   value: {
     tag: "Business value",
     title: "What changes for the business.",
-    lead: "Outcomes we aim for — agreed with you at the start and reviewed as the work progresses.",
+    lead: "Outcomes we aim for - agreed with you at the start and reviewed as the work progresses.",
   },
   process: { title: "How the engagement runs", link: "Our full delivery approach" },
   tech: {
     eyebrow: "Relevant technologies",
-    note: "Chosen per engagement — we’ll recommend what fits your team and estate.",
+    note: "Chosen per engagement - we’ll recommend what fits your team and estate.",
     link: "Technology directory",
   },
   uses: { eyebrow: "Representative use cases", title: "Where this service fits." },
   industries: "Relevant industries",
   related: { eyebrow: "Related", title: "Often combined with" },
   cases: {
-    title: "Related case studies",
-    tag: "Demonstration projects",
-    read: "Read case study",
-    items: {
-      ledgerline: {
-        industry: "FinTech · Demo",
-        summary: "Real-time treasury platform with continuous reconciliation.",
-      },
-      carepath: {
-        industry: "Healthcare · Demo",
-        summary: "Unified patient intake and triage across clinic sites.",
-      },
-      routewise: {
-        industry: "Logistics · Demo",
-        summary: "Route orchestration with live telematics and an offline driver app.",
-      },
-    },
+    title: "Related projects",
+    read: "View project",
   },
   first30: {
     tag: "What happens next",
@@ -56,7 +41,7 @@ export const shared: ServiceSharedCopy = {
       {
         mark: "W1",
         title: "Architecture brief",
-        body: "Current state, risks and the plan — reviewed with your tech lead.",
+        body: "Current state, risks and the plan - reviewed with your tech lead.",
       },
       {
         mark: "W2",
@@ -71,11 +56,11 @@ export const shared: ServiceSharedCopy = {
     ],
     sprintTitle: "Not ready to commit? Start with a paid discovery sprint.",
     sprintBody:
-      "Two weeks and a decision-ready plan you keep — whether or not we build it. The price is agreed up front.",
+      "Two weeks and a decision-ready plan you keep - whether or not we build it. The price is agreed up front.",
     sprintCta: "Ask about discovery",
   },
   cta: {
-    lead: "A conversation with an engineer. You’ll leave with a clearer view of options — whether or not we work together.",
+    lead: "A conversation with an engineer. You’ll leave with a clearer view of options - whether or not we work together.",
     primary: "Let’s Talk",
   },
   visuals: {

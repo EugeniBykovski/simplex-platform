@@ -3,12 +3,12 @@ import type { ContactCopy } from "./en";
 /** Draft Russian. Noindex until reviewed, and the live form also waits on GAP-I02. */
 export const contact: ContactCopy = {
   meta: {
-    title: "Контакты — SimpleX",
+    title: "Контакты - SimpleX",
     description:
       "Расскажите SimpleX, что вы создаёте. Поделитесь тем, чем считаете нужным, а мы ответим вопросами, а не заготовленной презентацией.",
   },
   thankYouMeta: {
-    title: "Спасибо — SimpleX",
+    title: "Спасибо - SimpleX",
     description: "Подтверждение заявки, отправленной через контактную форму SimpleX.",
   },
   breadcrumb: { label: "Навигационная цепочка", home: "Главная", current: "Контакты" },
@@ -49,6 +49,7 @@ export const contact: ContactCopy = {
         "product-design": "Продуктовый дизайн",
         architecture: "Архитектура",
         "dedicated-team": "Выделенная команда",
+        "telegram-bots": "Telegram-бот и автоматизация бизнеса",
         "not-sure": "Пока не знаю",
       },
     },

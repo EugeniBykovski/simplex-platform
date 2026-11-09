@@ -13,10 +13,17 @@ import {
   ServiceRelated,
   ServiceValue,
 } from "@/components/sections/services/service-sections";
+import {
+  TelegramAiIntegrations,
+  TelegramPlatforms,
+  TelegramSecurityFaq,
+} from "@/components/sections/services/telegram-sections";
 import { JsonLd } from "@/components/seo/json-ld";
 import { industrySlugs, serviceSlugs, type ServiceSlug } from "@/config/routes";
 import { getIndustryPage, industryCatalog } from "@/content/industries";
 import { getServicePage, getServiceShared, serviceCatalog } from "@/content/services";
+import { getTelegramCopy } from "@/content/services/telegram";
+import type { ServiceId } from "@/lib/contact/fields";
 import { routing } from "@/i18n/routing";
 import { isLocaleAvailable } from "@/i18n/translation-status";
 import { serviceJsonLd } from "@/lib/seo/jsonld";
@@ -24,8 +31,21 @@ import { buildPageMetadata, isIndexEligible } from "@/lib/seo/metadata";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
-/** Unknown slugs get the real 404, since only the design's twelve pages are generated. */
+/** Unknown slugs get the real 404, since only the listed service pages are generated. */
 export const dynamicParams = false;
+
+/** The contact form option each service page preselects, where one matches. */
+const CONTACT_SERVICE: Partial<Record<ServiceSlug, ServiceId>> = {
+  "custom-software-development": "custom-software",
+  "web-development": "web-mobile",
+  "mobile-development": "web-mobile",
+  "ai-engineering": "ai-engineering",
+  "cloud-devops": "cloud-devops",
+  "product-design": "product-design",
+  "architecture-consulting": "architecture",
+  "dedicated-teams": "dedicated-team",
+  "telegram-bots": "telegram-bots",
+};
 
 export function generateStaticParams() {
   return serviceSlugs.map((slug) => ({ slug }));
@@ -75,6 +95,9 @@ export default async function ServiceDetailPage({ params }: Props) {
       name: getIndustryPage(locale, industry).name,
     }));
   const path = `/services/${slug}`;
+  const contactId = CONTACT_SERVICE[slug];
+  const contactHref = contactId ? `/contact?service=${contactId}` : "/contact";
+  const telegram = slug === "telegram-bots" ? getTelegramCopy(locale) : null;
 
   return (
     <main>
@@ -88,9 +111,19 @@ export default async function ServiceDetailPage({ params }: Props) {
           })}
         />
       ) : null}
-      <ServiceHero page={page} shared={shared} structure={structure} path={path} />
+      <ServiceHero
+        page={page}
+        shared={shared}
+        structure={structure}
+        path={path}
+        contactHref={contactHref}
+      />
       <ServiceProblem page={page} eyebrow={shared.problemEyebrow} />
       <ServiceCapabilities page={page} eyebrow={shared.capsEyebrow} />
+      {telegram ? <TelegramPlatforms content={telegram.platforms} /> : null}
+      {telegram ? (
+        <TelegramAiIntegrations ai={telegram.ai} integrations={telegram.integrations} />
+      ) : null}
       <ServiceValue page={page} content={shared.value} />
       <ServiceProcess page={page} content={shared.process} />
       <ServiceFit page={page} tech={shared.tech} uses={shared.uses} />
@@ -99,9 +132,17 @@ export default async function ServiceDetailPage({ params }: Props) {
         relatedPages={relatedPages}
         shared={shared}
         industries={industries}
+        locale={locale}
       />
+      {telegram ? (
+        <TelegramSecurityFaq
+          security={telegram.security}
+          faq={telegram.faq}
+          cta={telegram.contactCta}
+        />
+      ) : null}
       <ServiceFirst30 content={shared.first30} />
-      <ServiceCta page={page} content={shared.cta} />
+      <ServiceCta page={page} content={shared.cta} contactHref={contactHref} />
     </main>
   );
 }

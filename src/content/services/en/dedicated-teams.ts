@@ -3,7 +3,7 @@ import type { ServicePageCopy } from "../types";
 /** Copy from ServicePage.dc.html, slug dedicated-teams, design 1793869596-167d. Changes are in docs/content/services-claims-register.md. */
 export const page: ServicePageCopy = {
   meta: {
-    title: "Dedicated Engineering Teams — SimpleX",
+    title: "Dedicated Engineering Teams - SimpleX",
     description:
       "Cross-functional engineering teams that join your tooling and roadmap, led by experienced engineers and sized to your plans, not your hiring pipeline.",
   },
@@ -11,7 +11,7 @@ export const page: ServicePageCopy = {
   short: "Dedicated Teams",
   blurb: "Senior engineers, embedded with you.",
   headline: "Senior engineers who work like they’re yours.",
-  lead: "Cross-functional teams that join your rituals, tooling and roadmap — led by experienced engineers, backed by SimpleX standards, and sized to your plans rather than your hiring pipeline.",
+  lead: "Cross-functional teams that join your rituals, tooling and roadmap - led by experienced engineers, backed by SimpleX standards, and sized to your plans rather than your hiring pipeline.",
   glance: [
     "Senior-led and cross-functional",
     "Your tools, your rituals",
@@ -25,7 +25,7 @@ export const page: ServicePageCopy = {
   ],
   capsTitle: "What we bring to your team.",
   capsIntro:
-    "Teams shaped to your goals — from a single senior specialist to a full product squad with design, QA and delivery leadership.",
+    "Teams shaped to your goals - from a single senior specialist to a full product squad with design, QA and delivery leadership.",
   caps: [
     {
       title: "Product squads",

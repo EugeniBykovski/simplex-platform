@@ -3,13 +3,13 @@ import type { IndustryPageCopy } from "../types";
 /** From IndustryPage.dc.html, slug "ecommerce". Changes are listed in docs/content/industries-claims-register.md. */
 export const page: IndustryPageCopy = {
   meta: {
-    title: "E-commerce software engineering — SimpleX",
+    title: "E-commerce software engineering - SimpleX",
     description:
-      "Storefronts, search and order platforms engineered for peak days — and for constant change between them.",
+      "Storefronts, search and order platforms engineered for peak days - and for constant change between them.",
   },
-  name: "E-commerce",
+  name: "E-\u2060commerce",
   headline: "Commerce that stays fast when it matters most.",
-  lead: "Storefronts, search and order platforms engineered for peak days — and for constant change between them.",
+  lead: "Storefronts, search and order platforms engineered for peak days - and for constant change between them.",
   facts: [
     {
       key: "Typical systems",
@@ -24,7 +24,7 @@ export const page: IndustryPageCopy = {
       value: "Performance, scale, speed of change",
     },
   ],
-  challengesTitle: "What makes E-commerce hard.",
+  challengesTitle: "What makes E-\u2060commerce hard.",
   challengesIntro:
     "Commerce rewards speed twice: pages that load instantly and teams that can ship a campaign by Friday. Monolithic platforms rarely deliver both.",
   challenges: [
@@ -45,7 +45,8 @@ export const page: IndustryPageCopy = {
       body: "Stock, orders and returns must agree across every channel.",
     },
   ],
-  opportunitiesLead: "Three opportunities common in E-commerce, and how we would approach them.",
+  opportunitiesLead:
+    "Three opportunities common in E-\u2060commerce, and how we would approach them.",
   opportunities: [
     {
       title: "Composable commerce",
@@ -96,7 +97,7 @@ export const page: IndustryPageCopy = {
     },
   ],
   considerationsLead:
-    "Priorities we design for in E-commerce, checked throughout delivery rather than once before launch.",
+    "Priorities we design for in E-\u2060commerce, checked throughout delivery rather than once before launch.",
   considerations: [
     {
       title: "Peak load testing",
@@ -123,8 +124,8 @@ export const page: IndustryPageCopy = {
       body: "Built around the accessibility law in your markets.",
     },
   ],
-  capabilitiesTitle: "Services we bring to E-commerce.",
-  complianceTitle: "The standards we build E-commerce for.",
+  capabilitiesTitle: "Services we bring to E-\u2060commerce.",
+  complianceTitle: "The standards we build E-\u2060commerce for.",
   compliance: [
     {
       seal: "PCI",

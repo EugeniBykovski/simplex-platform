@@ -5,12 +5,12 @@
  */
 export const contact = {
   meta: {
-    title: "Contact — SimpleX",
+    title: "Contact - SimpleX",
     description:
       "Tell SimpleX what you’re building. Share as much or as little as you like, and we’ll follow up with questions, not a sales script.",
   },
   thankYouMeta: {
-    title: "Thank you — SimpleX",
+    title: "Thank you - SimpleX",
     description: "Confirmation for a request sent through the SimpleX contact form.",
   },
   breadcrumb: { label: "Breadcrumb", home: "Home", current: "Contact" },
@@ -48,6 +48,7 @@ export const contact = {
         "product-design": "Product Design",
         architecture: "Architecture",
         "dedicated-team": "Dedicated Team",
+        "telegram-bots": "Telegram Bot & Business Automation",
         "not-sure": "Not sure yet",
       },
     },
@@ -109,8 +110,8 @@ export const contact = {
         tooLong: "Please use 200 characters or fewer",
       },
       description: {
-        required: "A sentence or two helps us prepare — at least 20 characters",
-        tooShort: "A sentence or two helps us prepare — at least 20 characters",
+        required: "A sentence or two helps us prepare - at least 20 characters",
+        tooShort: "A sentence or two helps us prepare - at least 20 characters",
         invalid: "Please remove any special control characters",
         tooLong: "Please use 2000 characters or fewer",
       },

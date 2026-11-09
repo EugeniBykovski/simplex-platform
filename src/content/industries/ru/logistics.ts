@@ -3,12 +3,12 @@ import type { IndustryPageCopy } from "../types";
 /** Draft that needs review by a native editor. It stays noindex until russianTranslationStatus approves it. */
 export const page: IndustryPageCopy = {
   meta: {
-    title: "Разработка ПО для логистики — SimpleX",
+    title: "Разработка ПО для логистики - SimpleX",
     description:
       "Системы маршрутов, отслеживания и складов, которые превращают постоянное движение в решения для диспетчеров и водителей.",
   },
   name: "Логистика",
-  headline: "Операции в реальном времени — на виду.",
+  headline: "Операции в реальном времени - на виду.",
   lead: "Системы маршрутов, отслеживания и складов, которые превращают постоянное движение в решения для диспетчеров и водителей.",
   facts: [
     {

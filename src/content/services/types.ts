@@ -1,5 +1,5 @@
 import type { GlyphName } from "@/components/ui/icon";
-import type { ServiceSlug } from "@/config/routes";
+import type { ServiceSlug, WorkSlug } from "@/config/routes";
 
 export type TitledText = { title: string; body: string };
 
@@ -24,7 +24,6 @@ export type ServicePageCopy = {
   cta: string;
 };
 
-export type CaseKey = "ledgerline" | "carepath" | "routewise";
 export type ServiceVisual = "code" | "arch" | "device" | "desktop" | "graph" | "pipeline" | "team";
 
 export type ServiceStructure = {
@@ -33,7 +32,8 @@ export type ServiceStructure = {
   visual: ServiceVisual;
   icon: GlyphName;
   related: readonly ServiceSlug[];
-  cases: readonly CaseKey[];
+  /** Approved portfolio projects that used this service, if any. */
+  cases: readonly WorkSlug[];
 };
 
 /** The copy every service page shares, including the labels inside its hero illustrations. */
@@ -48,12 +48,7 @@ export type ServiceSharedCopy = {
   uses: { eyebrow: string; title: string };
   related: { eyebrow: string; title: string };
   industries: string;
-  cases: {
-    title: string;
-    tag: string;
-    read: string;
-    items: Record<CaseKey, { industry: string; summary: string }>;
-  };
+  cases: { title: string; read: string };
   first30: {
     tag: string;
     title: string;

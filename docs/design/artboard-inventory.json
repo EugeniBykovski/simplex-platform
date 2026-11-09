@@ -6588,7 +6588,7 @@
       "designPage": "Work & case studies",
       "pageId": "work",
       "kind": "page",
-      "route": "/work/ledgerline",
+      "route": "/work/simplefit-boxing",
       "device": "desktop",
       "frame": {
         "width": 1440,
@@ -6606,7 +6606,8 @@
       "layoutVariant": "A",
       "tile": null,
       "cropOffsetY": 0,
-      "ownerTicket": "SF-148"
+      "ownerTicket": "SF-148",
+      "routeNote": "SF-157: the design's concept case is retired. This board's template now renders the approved project pages."
     },
     {
       "artboardId": "case-carepath.dc.html",
@@ -6615,7 +6616,7 @@
       "designPage": "Work & case studies",
       "pageId": "work",
       "kind": "page",
-      "route": "/work/carepath",
+      "route": "/work/financialpress",
       "device": "desktop",
       "frame": {
         "width": 1440,
@@ -6633,7 +6634,8 @@
       "layoutVariant": "B",
       "tile": null,
       "cropOffsetY": 0,
-      "ownerTicket": "SF-148"
+      "ownerTicket": "SF-148",
+      "routeNote": "SF-157: the design's concept case is retired. This board's template now renders the approved project pages."
     },
     {
       "artboardId": "case-routewise.dc.html",
@@ -6642,7 +6644,7 @@
       "designPage": "Work & case studies",
       "pageId": "work",
       "kind": "page",
-      "route": "/work/routewise",
+      "route": "/work/hobworks",
       "device": "desktop",
       "frame": {
         "width": 1440,
@@ -6660,7 +6662,8 @@
       "layoutVariant": "C",
       "tile": null,
       "cropOffsetY": 0,
-      "ownerTicket": "SF-148"
+      "ownerTicket": "SF-148",
+      "routeNote": "SF-157: the design's concept case is retired. This board's template now renders the approved project pages."
     },
     {
       "artboardId": "CasePageMobile.dc.html",
@@ -6669,7 +6672,7 @@
       "designPage": "Work & case studies",
       "pageId": "work",
       "kind": "page",
-      "route": "/work/ledgerline",
+      "route": "/work/simplefit-boxing",
       "device": "mobile",
       "frame": {
         "width": 390,
@@ -6690,7 +6693,8 @@
         "of": 2
       },
       "cropOffsetY": 0,
-      "ownerTicket": "SF-148"
+      "ownerTicket": "SF-148",
+      "routeNote": "SF-157: the design's concept case is retired. This board's template now renders the approved project pages."
     },
     {
       "artboardId": "CasePageMobile-p2.dc.html",
@@ -6699,7 +6703,7 @@
       "designPage": "Work & case studies",
       "pageId": "work",
       "kind": "page",
-      "route": "/work/ledgerline",
+      "route": "/work/simplefit-boxing",
       "device": "mobile",
       "frame": {
         "width": 390,
@@ -6720,7 +6724,8 @@
         "of": 2
       },
       "cropOffsetY": 7991,
-      "ownerTicket": "SF-148"
+      "ownerTicket": "SF-148",
+      "routeNote": "SF-157: the design's concept case is retired. This board's template now renders the approved project pages."
     },
     {
       "artboardId": "HowWeWork.dc.html",

@@ -3,19 +3,19 @@ import type { IndustriesOverviewCopy } from "../types";
 /** From Industries.dc.html. Changes are listed in docs/content/industries-claims-register.md. */
 export const overview: IndustriesOverviewCopy = {
   meta: {
-    title: "Industries — SimpleX",
+    title: "Industries - SimpleX",
     description:
       "Regulation, peak load, patient safety, multi-tenancy, real-time operations. The engineering is familiar; the constraints are not.",
   },
   breadcrumb: { label: "Breadcrumb", home: "Home", current: "Industries" },
   hero: {
     lines: ["Context changes", "everything."],
-    lead: "Regulation, peak load, patient safety, multi-tenancy, real-time operations. The engineering is familiar; the constraints are not. We bring patterns suited to your sector — and the judgement to know when they don’t apply.",
+    lead: "Regulation, peak load, patient safety, multi-tenancy, real-time operations. The engineering is familiar; the constraints are not. We bring patterns suited to your sector - and the judgement to know when they don’t apply.",
   },
   rows: [
     {
       summary:
-        "Real-time, auditable systems for payments, lending, treasury and wealth — where correctness is not negotiable.",
+        "Real-time, auditable systems for payments, lending, treasury and wealth - where correctness is not negotiable.",
       chips: ["Ledgers", "Payments", "Risk & compliance"],
     },
     {
@@ -25,7 +25,7 @@ export const overview: IndustriesOverviewCopy = {
     },
     {
       summary:
-        "Commerce platforms that stay fast at peak and flexible between peaks — from storefront to fulfilment.",
+        "Commerce platforms that stay fast at peak and flexible between peaks - from storefront to fulfilment.",
       chips: ["Headless commerce", "Search", "Order management"],
     },
     {
@@ -46,7 +46,7 @@ export const overview: IndustriesOverviewCopy = {
   constants: {
     eyebrow: "Across every sector",
     title: "Four constants we design for.",
-    lead: "Whatever the industry, we aim to engineer these in from the first sprint — not audit them in before launch.",
+    lead: "Whatever the industry, we aim to engineer these in from the first sprint - not audit them in before launch.",
     items: [
       {
         title: "Security",
@@ -80,7 +80,7 @@ export const overview: IndustriesOverviewCopy = {
       { seal: "GDPR", name: "GDPR", note: "Privacy by design, data residency" },
       { seal: "WCAG", name: "WCAG 2.2 AA", note: "Accessible interfaces" },
     ],
-    note: "Standards we design and build for — not certifications SimpleX holds, and not a guarantee of compliance.",
+    note: "Standards we design and build for - not certifications SimpleX holds, and not a guarantee of compliance.",
   },
   cta: {
     title: "Don’t see your industry?",

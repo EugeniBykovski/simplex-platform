@@ -51,7 +51,7 @@ export default async function HomePage({ params }: Props) {
       <HomeAgent content={content.agent} />
       <HomePackages content={content.packages} />
       <HomeWhy content={content.why} />
-      <HomeWork content={content.work} />
+      <HomeWork content={content.work} locale={locale} />
       <HomeHow content={content.how} />
       <HomeIndustries content={content.industries} />
       <HomeTechnology content={content.technology} />

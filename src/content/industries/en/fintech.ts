@@ -3,13 +3,13 @@ import type { IndustryPageCopy } from "../types";
 /** From IndustryPage.dc.html, slug "fintech". Changes are listed in docs/content/industries-claims-register.md. */
 export const page: IndustryPageCopy = {
   meta: {
-    title: "FinTech software engineering — SimpleX",
+    title: "FinTech software engineering - SimpleX",
     description:
-      "Payments, lending, treasury and wealth platforms that are real-time, auditable and resilient — engineered for regulators as carefully as for users.",
+      "Payments, lending, treasury and wealth platforms that are real-time, auditable and resilient - engineered for regulators as carefully as for users.",
   },
   name: "FinTech",
   headline: "Software where every number has to be right.",
-  lead: "Payments, lending, treasury and wealth platforms that are real-time, auditable and resilient — engineered for regulators as carefully as for users.",
+  lead: "Payments, lending, treasury and wealth platforms that are real-time, auditable and resilient - engineered for regulators as carefully as for users.",
   facts: [
     {
       key: "Typical systems",
@@ -26,7 +26,7 @@ export const page: IndustryPageCopy = {
   ],
   challengesTitle: "What makes FinTech hard.",
   challengesIntro:
-    "Financial products are judged on trust. The engineering has to make correctness provable — under load, across partners and through audits.",
+    "Financial products are judged on trust. The engineering has to make correctness provable - under load, across partners and through audits.",
   challenges: [
     {
       title: "Real-time expectations on batch-era cores",
@@ -57,7 +57,7 @@ export const page: IndustryPageCopy = {
     },
     {
       title: "Intelligent operations",
-      body: "AI-assisted review of exceptions and documents — with human sign-off and audit trails.",
+      body: "AI-assisted review of exceptions and documents - with human sign-off and audit trails.",
     },
   ],
   scenarios: [
@@ -85,7 +85,7 @@ export const page: IndustryPageCopy = {
     },
     {
       title: "Payments orchestration",
-      body: "Routing across providers for cost, resilience and conversion — with a single view of every payment.",
+      body: "Routing across providers for cost, resilience and conversion - with a single view of every payment.",
       items: [
         "Provider abstraction layer",
         "Smart routing & retries",
@@ -104,7 +104,7 @@ export const page: IndustryPageCopy = {
     },
     {
       title: "Immutable audit trails",
-      body: "Who changed what, when and why — queryable by compliance.",
+      body: "Who changed what, when and why - queryable by compliance.",
     },
     {
       title: "Strong customer authentication",

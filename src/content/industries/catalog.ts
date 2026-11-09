@@ -12,20 +12,19 @@ export const industryCatalog: Record<IndustrySlug, IndustryStructure> = {
       "ai-engineering",
       "quality-engineering",
     ],
-    project: "ledgerline",
+    project: "financialpress",
   },
   healthcare: {
     icon: "health",
     viz: "healthcare",
     heroScrim: true,
     services: ["product-design", "mobile-development", "web-development", "ai-engineering"],
-    project: "carepath",
   },
   ecommerce: {
     icon: "commerce",
     viz: "ecommerce",
     services: ["web-development", "cloud-devops", "product-design", "quality-engineering"],
-    project: "routewise",
+    project: "simple-market",
   },
   saas: {
     icon: "saas",
@@ -36,7 +35,7 @@ export const industryCatalog: Record<IndustrySlug, IndustryStructure> = {
       "custom-software-development",
       "ai-engineering",
     ],
-    project: "ledgerline",
+    project: "simplefit-boxing",
   },
   enterprise: {
     icon: "building",
@@ -47,7 +46,7 @@ export const industryCatalog: Record<IndustrySlug, IndustryStructure> = {
       "architecture-consulting",
       "cloud-devops",
     ],
-    project: "routewise",
+    project: "simple-house",
   },
   logistics: {
     icon: "logistics",
@@ -58,6 +57,6 @@ export const industryCatalog: Record<IndustrySlug, IndustryStructure> = {
       "cloud-devops",
       "ai-engineering",
     ],
-    project: "routewise",
+    project: "wait",
   },
 };

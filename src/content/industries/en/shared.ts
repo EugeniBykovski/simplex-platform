@@ -23,9 +23,8 @@ export const shared: IndustrySharedCopy = {
   },
   capabilities: {
     eyebrow: "Relevant capabilities",
-    projects: "Relevant projects",
-    tag: "Demonstration project",
-    read: "Read case study",
+    projects: "Related project",
+    read: "View project",
   },
   services: {
     "custom-software-development": "Custom Software",
@@ -39,29 +38,13 @@ export const shared: IndustrySharedCopy = {
     "legacy-modernization": "Legacy Modernization",
     "quality-engineering": "Quality Engineering",
   },
-  cases: {
-    ledgerline: {
-      industry: "FinTech · Demonstration",
-      summary:
-        "A real-time treasury platform with continuous reconciliation, approvals and an auditor-readable trail.",
-    },
-    carepath: {
-      industry: "Healthcare · Demonstration",
-      summary:
-        "Unified patient intake and triage across clinic sites, integrated with existing records via FHIR.",
-    },
-    routewise: {
-      industry: "Logistics · Demonstration",
-      summary: "Route orchestration with live telematics and an offline-first driver app.",
-    },
-  },
   compliance: {
     tag: "Compliance-aware",
     lead: "Controls, audit trails and evidence are planned into the architecture from the first sprint, so compliance is less likely to block a release.",
-    note: "Standards we design for — not certifications SimpleX holds, and not a guarantee of compliance.",
+    note: "Standards we design for - not certifications SimpleX holds, and not a guarantee of compliance.",
   },
   cta: {
-    lead: "Talk to engineers about your constraints. No sales script — just a useful first conversation.",
+    lead: "Talk to engineers about your constraints. No sales script - just a useful first conversation.",
     primary: "Let’s Talk",
   },
 };

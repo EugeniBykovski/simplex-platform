@@ -3,7 +3,7 @@ import type { ServicePageCopy } from "../types";
 /** Copy from ServicePage.dc.html, slug enterprise-software, design 1793869596-167d. Changes are in docs/content/services-claims-register.md. */
 export const page: ServicePageCopy = {
   meta: {
-    title: "Enterprise Software — SimpleX",
+    title: "Enterprise Software - SimpleX",
     description:
       "Enterprise software has to integrate with everything, satisfy auditors and outlive reorganisations.",
   },
@@ -25,7 +25,7 @@ export const page: ServicePageCopy = {
   ],
   capsTitle: "What we bring to enterprise systems.",
   capsIntro:
-    "We work inside complex estates — respecting what already works and putting clear interfaces around what doesn’t.",
+    "We work inside complex estates - respecting what already works and putting clear interfaces around what doesn’t.",
   caps: [
     {
       title: "Integration architecture",

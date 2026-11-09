@@ -1,14 +1,14 @@
 /** From Careers.dc.html and Job.dc.html. Changes are listed in docs/content/careers-positions-register.md. */
 export const careers = {
   meta: {
-    title: "Careers — SimpleX",
+    title: "Careers - SimpleX",
     description:
       "How SimpleX thinks about work: hard problems, written decisions and the time to do things properly. No roles are listed right now.",
   },
   breadcrumb: { label: "Breadcrumb", home: "Home", current: "Careers" },
   hero: {
     lines: ["Do the best work", "of your career."],
-    lead: "Hard problems, written decisions and the time to do things properly. We care about engineers, designers and delivery leads who care about craft — and about the people who use what they build.",
+    lead: "Hard problems, written decisions and the time to do things properly. We care about engineers, designers and delivery leads who care about craft - and about the people who use what they build.",
     primary: "Open roles",
     secondary: "About SimpleX",
   },
@@ -53,7 +53,7 @@ export const careers = {
       },
       {
         title: "Practical conversation",
-        body: "Walk us through real work — or a short exercise if you prefer.",
+        body: "Walk us through real work - or a short exercise if you prefer.",
       },
       {
         title: "Team session",
@@ -68,7 +68,7 @@ export const careers = {
   onboarding: {
     tag: "Your first 90 days",
     title: "How we plan to bring people in.",
-    lead: "A buddy, a real first task and a written growth plan — so you know what good looks like.",
+    lead: "A buddy, a real first task and a written growth plan - so you know what good looks like.",
     steps: [
       { mark: "W1", title: "Buddy & setup", body: "Accounts, tools and a buddy from the start." },
       { mark: "M1", title: "First reviewed change", body: "A real, reviewed change, shipped." },

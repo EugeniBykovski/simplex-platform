@@ -1,24 +1,24 @@
 /** From About.dc.html. Changes are listed in docs/content/company-claims-register.md. */
 export const about = {
   meta: {
-    title: "About — SimpleX",
+    title: "About - SimpleX",
     description:
       "SimpleX is a software engineering and digital product company. We make complex systems feel simple for the people who use and maintain them.",
   },
   breadcrumb: { label: "Breadcrumb", home: "Home", current: "About" },
   hero: {
     lines: ["Simple to use.", "Simple to change."],
-    lead: "SimpleX is a software engineering and digital product company. We exist to make complex systems feel simple — for the people who use them and the people who maintain them.",
+    lead: "SimpleX is a software engineering and digital product company. We exist to make complex systems feel simple - for the people who use them and the people who maintain them.",
   },
   story: {
     eyebrow: "Our story",
     title: "The name is the brief.",
     logoLabel: "SimpleX",
     quote:
-      "“Simple” is what people should experience. “X” is everything it takes to get there — the integrations, edge cases, constraints and trade-offs nobody sees.",
+      "“Simple” is what people should experience. “X” is everything it takes to get there - the integrations, edge cases, constraints and trade-offs nobody sees.",
     paragraphs: [
-      "SimpleX starts from a simple observation: most software doesn’t fail because the problem was too hard. It fails because complexity was allowed to leak — into the interface, into the codebase, into the way teams work together.",
-      "So we are building a company around the opposite habit. We want to take on difficult systems — financial ledgers, clinical workflows, logistics platforms, decade-old enterprise cores — and refuse to let their complexity become the user’s problem, or the next team’s.",
+      "SimpleX starts from a simple observation: most software doesn’t fail because the problem was too hard. It fails because complexity was allowed to leak - into the interface, into the codebase, into the way teams work together.",
+      "So we are building a company around the opposite habit. We want to take on difficult systems - financial ledgers, clinical workflows, logistics platforms, decade-old enterprise cores - and refuse to let their complexity become the user’s problem, or the next team’s.",
       "Our logo carries that idea. Two strokes cross; one is deliberately interrupted where the other passes through. It’s the moment complexity is resolved into something clear.",
     ],
   },
@@ -40,7 +40,7 @@ export const about = {
       {
         label: "Philosophy 03",
         title: "Long term by default",
-        body: "We build as if we’ll maintain it for ten years — because someone will.",
+        body: "We build as if we’ll maintain it for ten years - because someone will.",
       },
     ],
   },

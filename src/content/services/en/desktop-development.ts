@@ -3,7 +3,7 @@ import type { ServicePageCopy } from "../types";
 /** Copy from ServicePage.dc.html, slug desktop-development, design 1793869596-167d. Changes are in docs/content/services-claims-register.md. */
 export const page: ServicePageCopy = {
   meta: {
-    title: "Desktop Applications & Programs — SimpleX",
+    title: "Desktop Applications & Programs - SimpleX",
     description:
       "Windows, macOS and Linux applications for operator consoles, point-of-sale, field tools and device control: offline-first, signed and auto-updating.",
   },
@@ -11,7 +11,7 @@ export const page: ServicePageCopy = {
   short: "Desktop Development",
   blurb: "Windows, macOS and Linux software.",
   headline: "Desktop software that belongs on the desk.",
-  lead: "Windows, macOS and Linux applications for the work that still happens at a keyboard: operator consoles, terminals, point-of-sale, field tools and device control — offline-first, signed and auto-updating.",
+  lead: "Windows, macOS and Linux applications for the work that still happens at a keyboard: operator consoles, terminals, point-of-sale, field tools and device control - offline-first, signed and auto-updating.",
   glance: [
     "Windows, macOS and Linux",
     "Offline-first with background sync",
@@ -25,7 +25,7 @@ export const page: ServicePageCopy = {
   ],
   capsTitle: "What we bring to desktop software.",
   capsIntro:
-    "We pick the runtime per product — native, .NET, Tauri, Electron or Qt — based on performance, platforms and the team that will maintain it.",
+    "We pick the runtime per product - native, .NET, Tauri, Electron or Qt - based on performance, platforms and the team that will maintain it.",
   caps: [
     {
       title: "Native & cross-platform desktop",

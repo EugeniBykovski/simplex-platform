@@ -9,7 +9,7 @@ import { getIndustriesOverview, getIndustryPage } from "@/content/industries";
 import { getInsightsCopy } from "@/content/insights";
 import { getPackagesContent } from "@/content/packages";
 import { getServicePage, getServicesOverview } from "@/content/services";
-import { getWorkCases, getWorkOverview } from "@/content/work";
+import { getProject, getWorkOverview, getWorkShared } from "@/content/work";
 import type { Locale } from "@/i18n/routing";
 
 export const ogCardKeys = ["home", ...ogCardPaths.map((path) => path.slice(1))];
@@ -21,7 +21,7 @@ const sections: Record<Locale, Record<string, string>> = {
     services: "Services",
     packages: "Build packages",
     industries: "Industries",
-    work: "Demonstration",
+    work: "Our Work",
     about: "Company",
     "how-we-work": "Company",
     technologies: "Company",
@@ -35,7 +35,7 @@ const sections: Record<Locale, Record<string, string>> = {
     services: "Услуги",
     packages: "Пакеты разработки",
     industries: "Отрасли",
-    work: "Демонстрация",
+    work: "Проекты",
     about: "Компания",
     "how-we-work": "Компания",
     technologies: "Компания",
@@ -51,7 +51,10 @@ function pageTitle(locale: Locale, key: string): string {
   if (slug && section === "industries") {
     return getIndustryPage(locale, slug as IndustrySlug).meta.title;
   }
-  if (slug && section === "work") return getWorkCases(locale)[slug as WorkSlug].meta.title;
+  if (slug && section === "work") {
+    const project = getProject(slug as WorkSlug);
+    return getWorkShared(locale).meta(project.name, project.words[locale].tagline).title;
+  }
   switch (section) {
     case "home":
       return getHomeContent(locale).meta.title;
@@ -84,7 +87,7 @@ function pageTitle(locale: Locale, key: string): string {
 export function getOgCard(locale: Locale, key: string) {
   const section = key.split("/")[0] ?? "home";
   const title = pageTitle(locale, key)
-    .replace(/ — SimpleX$/, "")
-    .replace(/^SimpleX — /, "");
+    .replace(/ [—-] SimpleX$/, "")
+    .replace(/^SimpleX [—-] /, "");
   return { eyebrow: sections[locale][section] ?? "SimpleX", title };
 }

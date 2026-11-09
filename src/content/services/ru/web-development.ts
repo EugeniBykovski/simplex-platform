@@ -3,7 +3,7 @@ import type { ServicePageCopy } from "../types";
 /** Draft that needs review by a native editor. It stays noindex until russianTranslationStatus approves it. */
 export const page: ServicePageCopy = {
   meta: {
-    title: "Веб-разработка — SimpleX",
+    title: "Веб-разработка - SimpleX",
     description:
       "Клиентские порталы и сложные SaaS-интерфейсы с бюджетами производительности, доступностью и поддерживаемой архитектурой компонентов с первого коммита.",
   },

@@ -1,6 +1,6 @@
 {
   "primaryLabel": "Primary",
-  "homeLabel": "SimpleX — home",
+  "homeLabel": "SimpleX - home",
   "skipToContent": "Skip to content",
   "services": "Services",
   "agent": "Agent",
@@ -52,6 +52,10 @@
       "title": "AI Engineering",
       "description": "Production-grade intelligent features"
     },
+    "telegramBots": {
+      "title": "Telegram Bots",
+      "description": "Bots and connected business workflows"
+    },
     "cloudDevops": {
       "title": "Cloud & DevOps",
       "description": "Infrastructure, pipelines, reliability"
@@ -89,7 +93,7 @@
       "description": "Clinical and patient platforms"
     },
     "ecommerce": {
-      "title": "E-commerce",
+      "title": "E-\u2060commerce",
       "description": "Commerce at peak load"
     },
     "saas": {

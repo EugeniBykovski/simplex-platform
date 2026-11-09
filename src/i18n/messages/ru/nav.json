@@ -1,6 +1,6 @@
 {
   "primaryLabel": "Основная навигация",
-  "homeLabel": "SimpleX — на главную",
+  "homeLabel": "SimpleX - на главную",
   "skipToContent": "Перейти к содержанию",
   "services": "Услуги",
   "agent": "Агент",
@@ -52,6 +52,10 @@
       "title": "Инженерия ИИ",
       "description": "Интеллектуальные функции для продакшена"
     },
+    "telegramBots": {
+      "title": "Telegram-боты",
+      "description": "Боты и автоматизация процессов"
+    },
     "cloudDevops": {
       "title": "Облако и DevOps",
       "description": "Инфраструктура, конвейеры, надёжность"
@@ -89,7 +93,7 @@
       "description": "Клинические и пациентские платформы"
     },
     "ecommerce": {
-      "title": "E-commerce",
+      "title": "E-\u2060commerce",
       "description": "Торговля в пиковые нагрузки"
     },
     "saas": {

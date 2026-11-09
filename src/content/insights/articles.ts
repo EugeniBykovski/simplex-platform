@@ -19,9 +19,9 @@ export const articles: readonly Article[] = [
         status: "draft",
         title: "The quiet cost of a distributed monolith",
         summary:
-          "Microservices that must be deployed together are a monolith with network latency. How to recognise one — and three ways out that don’t require a rewrite.",
+          "Microservices that must be deployed together are a monolith with network latency. How to recognise one - and three ways out that don’t require a rewrite.",
         seo: {
-          title: "The quiet cost of a distributed monolith — SimpleX Insights",
+          title: "The quiet cost of a distributed monolith - SimpleX Insights",
           description:
             "Microservices that must be deployed together are a monolith with network latency. How to recognise one, and three ways out that don’t require a rewrite.",
         },
@@ -49,7 +49,7 @@ export const articles: readonly Article[] = [
           { type: "heading", id: "s1", text: "How to recognise one", toc: "How to recognise one" },
           {
             type: "paragraph",
-            text: "A distributed monolith has the costs of distribution — network calls, partial failures, operational overhead — without the main benefit: independent change. The symptoms are rarely in the code. They show up in how teams work.",
+            text: "A distributed monolith has the costs of distribution - network calls, partial failures, operational overhead - without the main benefit: independent change. The symptoms are rarely in the code. They show up in how teams work.",
           },
           {
             type: "list",
@@ -62,7 +62,7 @@ export const articles: readonly Article[] = [
           },
           {
             type: "quote",
-            text: "If two services always change together, they are one service — whatever the deployment diagram says.",
+            text: "If two services always change together, they are one service - whatever the deployment diagram says.",
           },
           { type: "heading", id: "s2", text: "Why it happens", toc: "Why it happens" },
           {
@@ -72,7 +72,7 @@ export const articles: readonly Article[] = [
           {
             type: "heading",
             id: "s3",
-            text: "Three ways out — without a rewrite",
+            text: "Three ways out - without a rewrite",
             toc: "Three ways out",
           },
           { type: "subheading", text: "1. Make the coupling visible" },
@@ -88,7 +88,7 @@ export const articles: readonly Article[] = [
           { type: "subheading", text: "2. Introduce contracts at the seams" },
           {
             type: "paragraph",
-            text: "Consumer-driven contract tests let a team change its service with confidence that it hasn’t broken its consumers — without a shared end-to-end environment. Start with the pair of services that change together most often.",
+            text: "Consumer-driven contract tests let a team change its service with confidence that it hasn’t broken its consumers - without a shared end-to-end environment. Start with the pair of services that change together most often.",
           },
           { type: "subheading", text: "3. Merge before you split again" },
           {

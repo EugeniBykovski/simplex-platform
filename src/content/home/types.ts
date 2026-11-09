@@ -6,17 +6,6 @@ export type ServiceCard = {
   chips: string[];
 };
 
-export type ProjectCard = {
-  name: string;
-  industry: string;
-  href: string;
-  viz: "fintech" | "healthcare" | "logistics";
-  summary: string;
-  challenge: string;
-  solution: string;
-  tags: string[];
-};
-
 export type TechTab = {
   id: string;
   label: string;
@@ -122,13 +111,10 @@ export type HomeContent = {
     eyebrow: string;
     titleStart: string;
     titleTone: string;
-    demoNote: string;
     link: string;
-    demo: string;
-    challenge: string;
-    solution: string;
+    role: string;
+    built: string;
     cta: string;
-    projects: ProjectCard[];
   };
   how: {
     tag: string;

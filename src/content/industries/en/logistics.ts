@@ -3,7 +3,7 @@ import type { IndustryPageCopy } from "../types";
 /** From IndustryPage.dc.html, slug "logistics". Changes are listed in docs/content/industries-claims-register.md. */
 export const page: IndustryPageCopy = {
   meta: {
-    title: "Logistics software engineering — SimpleX",
+    title: "Logistics software engineering - SimpleX",
     description:
       "Routing, tracking and warehouse systems that turn constant movement into decisions dispatchers and drivers can act on.",
   },

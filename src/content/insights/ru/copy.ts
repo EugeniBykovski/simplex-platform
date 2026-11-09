@@ -3,7 +3,7 @@ import type { InsightsCopy } from "../types";
 /** Draft that needs review by a native editor. It stays noindex until russianTranslationStatus approves it. */
 export const copy: InsightsCopy = {
   meta: {
-    title: "Статьи — SimpleX",
+    title: "Статьи - SimpleX",
     description:
       "Практические материалы об архитектуре, поставке, дизайне и прикладном ИИ от SimpleX. Статьи пока не опубликованы.",
   },

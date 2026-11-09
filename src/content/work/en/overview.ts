@@ -1,77 +1,40 @@
 import type { WorkOverviewCopy } from "../types";
 
-/** From Work.dc.html. Changes are listed in docs/content/portfolio-attribution-register.md. */
+/** The Work index for the eight approved projects. See docs/content/portfolio-attribution-register.md. */
 export const overview: WorkOverviewCopy = {
   meta: {
-    title: "Our Work — demonstration projects — SimpleX",
+    title: "Our Work - SimpleX",
     description:
-      "Illustrative concepts that show how SimpleX approaches hard software problems across industries and services. These are demonstrations, not client work.",
+      "Products SimpleX has designed and engineered: sports, financial media, professional networking, PropTech, B2B commerce, training, mobility and pet travel.",
   },
   breadcrumb: { label: "Breadcrumb", home: "Home", current: "Our Work" },
   hero: {
-    lines: ["Hard problems,", "made simple to use."],
-    lead: "Illustrative concepts across industries and services. Each one starts with a messy, specific problem and shows how we would approach it.",
-    noticeTitle: "Demonstration content.",
+    lines: ["Real products,", "engineered end to end."],
+    lead: "Web, mobile and backend platforms we design and build. Each page says what is built today and what is still on the roadmap.",
+    noticeTitle: "What these pages cover.",
     notice:
-      "Projects on this page are illustrative concepts that show our case-study format. They are not client work.",
-    demoTag: "Demonstration",
+      "They describe the engineering. Most of these products are still in development, and we don’t publish usage or business figures.",
   },
-  featured: {
-    tag: "Featured",
-    tagline: "From overnight reconciliation to a live view of every position.",
-    chips: ["Custom Software", "Cloud & DevOps", "Kotlin · Kafka"],
-    read: "Read case study",
-    mock: {
-      title: "Ledgerline · Positions",
-      live: "Sample",
-      kpis: [
-        { label: "EUR", value: "—" },
-        { label: "USD", value: "—" },
-        { label: "GBP", value: "—" },
-      ],
-    },
-  },
+  featured: { tag: "Featured", read: "View project" },
   grid: {
     title: "All projects",
-    industryLabel: "Industry",
-    industryGroup: "Filter by industry",
-    serviceLabel: "Service",
-    serviceGroup: "Filter by service",
+    platformLabel: "Platform",
+    platformGroup: "Filter by platform",
+    focusLabel: "Focus",
+    focusGroup: "Filter by focus",
     all: "All",
-    industries: {
-      fintech: "FinTech",
-      healthcare: "Healthcare",
-      ecommerce: "E-commerce",
-      saas: "SaaS",
-      enterprise: "Enterprise",
-      logistics: "Logistics",
+    platforms: { mobile: "Mobile", web: "Web" },
+    capabilities: {
+      realtime: "Real-time",
+      payments: "Payments",
+      ai: "AI",
+      marketplace: "Marketplaces",
     },
-    services: {
-      custom: "Custom Software",
-      "web-mobile": "Web & Mobile",
-      ai: "AI Engineering",
-      cloud: "Cloud & DevOps",
-      design: "Product Design",
-      modernisation: "Modernisation",
-    },
-    count: {
-      one: "{count} project · demonstration content",
-      other: "{count} projects · demonstration content",
-    },
-    lines: {
-      ledgerline: "Real-time treasury platform with continuous reconciliation and approvals.",
-      carepath: "Unified patient intake and triage across clinic sites, integrated via FHIR.",
-      routewise: "Route orchestration with live telematics and an offline-first driver app.",
-      northbeam: "A usage-analytics product re-architected for multi-tenancy and enterprise SSO.",
-      "atlas-commerce": "Headless storefront and order management built for seasonal peaks.",
-      "meridian-works":
-        "Finance and procurement workflows moved from email to an auditable platform.",
-    },
-    read: "Read case study",
-    noCase: "Concept only · no full case study",
+    count: { one: "{count} project", other: "{count} projects" },
+    read: "View project",
     empty: {
       title: "No projects match these filters",
-      body: "Try a different combination — or ask us directly.",
+      body: "Try a different combination - or ask us directly.",
       clear: "Clear filters",
       ask: "Ask about relevant work",
     },

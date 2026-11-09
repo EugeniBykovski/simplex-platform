@@ -15,6 +15,7 @@ export type NavItemKey =
   | "architectureConsulting"
   | "productDesign"
   | "dedicatedTeams"
+  | "telegramBots"
   | "buildPackages"
   | "fintech"
   | "healthcare"
@@ -42,7 +43,8 @@ export type IconName =
   | "commerce"
   | "saas"
   | "building"
-  | "logistics";
+  | "logistics"
+  | "chat";
 
 export type MegaItem = { key: NavItemKey; href: string; icon: IconName };
 
@@ -64,6 +66,7 @@ export const serviceMenuGroups: readonly {
     key: "platforms",
     items: [
       { key: "aiEngineering", href: "/services/ai-engineering", icon: "ai" },
+      { key: "telegramBots", href: "/services/telegram-bots", icon: "chat" },
       { key: "cloudDevops", href: "/services/cloud-devops", icon: "cloud" },
       { key: "legacyModernization", href: "/services/legacy-modernization", icon: "legacy" },
       { key: "qualityEngineering", href: "/services/quality-engineering", icon: "quality" },

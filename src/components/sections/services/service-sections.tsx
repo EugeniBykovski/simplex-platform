@@ -7,8 +7,9 @@ import { Icon } from "@/components/ui/icon";
 import { ArrowLink, RouteLink, TextLink } from "@/components/ui/links";
 import { CardArrow, SectorGround } from "@/components/ui/surface";
 import type { ServiceSlug } from "@/config/routes";
+import { getProject } from "@/content/work";
+import type { Locale } from "@/i18n/routing";
 import {
-  caseStudies,
   serviceCatalog,
   type ServicePageCopy,
   type ServiceSharedCopy,
@@ -28,11 +29,13 @@ export function ServiceHero({
   shared,
   structure,
   path,
+  contactHref = "/contact",
 }: {
   page: ServicePageCopy;
   shared: ServiceSharedCopy;
   structure: ServiceStructure;
   path: string;
+  contactHref?: string;
 }) {
   const dark = structure.theme === "dark";
   const panel = dark
@@ -67,7 +70,7 @@ export function ServiceHero({
           </h1>
           <p className="t-lead">{page.lead}</p>
           <div className="wrap-row gap-3 stack-sm">
-            <LinkButton href="/contact" variant={dark ? "light" : "primary"} size="lg" arrow>
+            <LinkButton href={contactHref} variant={dark ? "light" : "primary"} size="lg" arrow>
               {shared.hero.primaryCta}
             </LinkButton>
             <AnchorButton href="#cases" variant="ghost" size="lg">
@@ -283,11 +286,13 @@ export function ServiceRelated({
   relatedPages,
   shared,
   industries,
+  locale,
 }: {
   structure: ServiceStructure;
   relatedPages: Record<ServiceSlug, ServicePageCopy>;
   shared: ServiceSharedCopy;
   industries: readonly { href: string; name: string }[];
+  locale: Locale;
 }) {
   return (
     <section className="bg-mist section scroll-mt-[90px]" id="cases" aria-labelledby="rel">
@@ -330,36 +335,41 @@ export function ServiceRelated({
             ))}
           </nav>
         ) : null}
-        <div className="wrap-row between gap-4 mt-[32px] items-end">
-          <h2 className="t-h3">{shared.cases.title}</h2>
-          <DemoTag>{shared.cases.tag}</DemoTag>
-        </div>
-        <div className="grid-2 [--gap:16px]">
-          {structure.cases.map((key) => {
-            const study = caseStudies[key];
-            const copy = shared.cases.items[key];
-            return (
-              <RouteLink
-                key={key}
-                href={study.href}
-                pendingLook="card"
-                className="solid card-hover overflow-hidden grid grid-cols-[repeat(auto-fit,minmax(min(240px,100%),1fr))]"
-              >
-                <SectorGround sector={study.viz} className="rounded-[0] min-h-[220px]">
-                  <span className="slice" />
-                </SectorGround>
-                <div className="stack gap-3 p-[28px] justify-between">
-                  <span className="t-mono text-text-3">{copy.industry}</span>
-                  <span className="t-h4">{study.name}</span>
-                  <span className="t-small">{copy.summary}</span>
-                  <span className="link-arrow">
-                    {shared.cases.read} <Icon name="arrow" />
-                  </span>
-                </div>
-              </RouteLink>
-            );
-          })}
-        </div>
+        {structure.cases.length > 0 ? (
+          <>
+            <h2 className="t-h3 mt-[32px]">{shared.cases.title}</h2>
+            <div className="grid-2 [--gap:16px]">
+              {structure.cases.map((slug) => {
+                const project = getProject(slug);
+                const words = project.words[locale];
+                return (
+                  <RouteLink
+                    key={slug}
+                    href={`/work/${slug}`}
+                    pendingLook="card"
+                    className="solid card-hover overflow-hidden grid grid-cols-[repeat(auto-fit,minmax(min(240px,100%),1fr))]"
+                  >
+                    <SectorGround
+                      sector={project.ground}
+                      className="rounded-[0] min-h-[220px] grid place-items-center"
+                    >
+                      <span className="slice" />
+                      <Icon name={project.icon} className="relative text-white [--icon:56px]" />
+                    </SectorGround>
+                    <div className="stack gap-3 p-[28px] justify-between">
+                      <span className="t-mono text-text-3">{words.category}</span>
+                      <span className="t-h4">{project.name}</span>
+                      <span className="t-small">{words.tagline}</span>
+                      <span className="link-arrow">
+                        {shared.cases.read} <Icon name="arrow" />
+                      </span>
+                    </div>
+                  </RouteLink>
+                );
+              })}
+            </div>
+          </>
+        ) : null}
       </div>
     </section>
   );
@@ -405,9 +415,11 @@ export function ServiceFirst30({ content }: { content: ServiceSharedCopy["first3
 export function ServiceCta({
   page,
   content,
+  contactHref = "/contact",
 }: {
   page: ServicePageCopy;
   content: ServiceSharedCopy["cta"];
+  contactHref?: string;
 }) {
   return (
     <section className="bg-cta dark p-[140px_0]" aria-labelledby="service-cta">
@@ -418,7 +430,7 @@ export function ServiceCta({
         <div className="stack gap-5">
           <p className="t-lead">{content.lead}</p>
           <div className="wrap-row gap-3">
-            <LinkButton href="/contact" size="lg" arrow>
+            <LinkButton href={contactHref} size="lg" arrow>
               {content.primary}
             </LinkButton>
           </div>

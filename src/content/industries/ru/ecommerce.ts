@@ -3,11 +3,11 @@ import type { IndustryPageCopy } from "../types";
 /** Draft that needs review by a native editor. It stays noindex until russianTranslationStatus approves it. */
 export const page: IndustryPageCopy = {
   meta: {
-    title: "Разработка ПО для e-commerce — SimpleX",
+    title: "Разработка ПО для e-commerce - SimpleX",
     description:
       "Витрины, поиск и платформы заказов, рассчитанные на пиковые дни и на постоянные изменения между ними.",
   },
-  name: "E-commerce",
+  name: "E-\u2060commerce",
   headline: "Коммерция, которая быстра, когда это важнее всего.",
   lead: "Витрины, поиск и платформы заказов, рассчитанные на пиковые дни и на постоянные изменения между ними.",
   facts: [
@@ -15,7 +15,7 @@ export const page: IndustryPageCopy = {
     { key: "Распространённые стандарты", value: "PCI DSS, GDPR, Европейский акт о доступности" },
     { key: "Инженерный фокус", value: "Производительность, масштаб, скорость изменений" },
   ],
-  challengesTitle: "Что делает e-commerce сложным.",
+  challengesTitle: "Что делает e-\u2060commerce сложным.",
   challengesIntro:
     "Коммерция дважды вознаграждает скорость: страницы, которые загружаются мгновенно, и команды, способные выпустить кампанию к пятнице. Монолитные платформы редко дают и то и другое.",
   challenges: [
@@ -36,7 +36,7 @@ export const page: IndustryPageCopy = {
       body: "Остатки, заказы и возвраты должны совпадать во всех каналах.",
     },
   ],
-  opportunitiesLead: "Три типичные для e-commerce возможности и то, как мы бы к ним подошли.",
+  opportunitiesLead: "Три типичные для e-\u2060commerce возможности и то, как мы бы к ним подошли.",
   opportunities: [
     {
       title: "Композитная коммерция",
@@ -87,7 +87,7 @@ export const page: IndustryPageCopy = {
     },
   ],
   considerationsLead:
-    "Приоритеты, на которые мы проектируем в e-commerce, с проверкой на протяжении всей поставки, а не один раз перед запуском.",
+    "Приоритеты, на которые мы проектируем в e-\u2060commerce, с проверкой на протяжении всей поставки, а не один раз перед запуском.",
   considerations: [
     {
       title: "Пиковые нагрузочные тесты",
@@ -114,8 +114,8 @@ export const page: IndustryPageCopy = {
       body: "С учётом законов о доступности на ваших рынках.",
     },
   ],
-  capabilitiesTitle: "Услуги, которые мы приносим в e-commerce.",
-  complianceTitle: "Стандарты, на которые мы строим e-commerce.",
+  capabilitiesTitle: "Услуги, которые мы приносим в e-\u2060commerce.",
+  complianceTitle: "Стандарты, на которые мы строим e-\u2060commerce.",
   compliance: [
     { seal: "PCI", name: "PCI DSS", note: "Платежи и оформление заказа" },
     { seal: "GDPR", name: "GDPR", note: "Данные клиентов и согласие" },

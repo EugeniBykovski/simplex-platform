@@ -1,15 +1,24 @@
 import { SeoBreadcrumbs } from "@/components/seo/seo-breadcrumbs";
 import { LinkButton } from "@/components/ui/button";
-import { cx } from "@/components/ui/cx";
-import { Alert, DemoTag, Tag } from "@/components/ui/feedback";
+import { Alert, Tag } from "@/components/ui/feedback";
 import { Icon } from "@/components/ui/icon";
 import { ArrowLink, RouteLink } from "@/components/ui/links";
-import { SectorGround } from "@/components/ui/surface";
+import {
+  projects,
+  type Project,
+  type ProjectCapability,
+  type WorkOverviewCopy,
+  type WorkSharedCopy,
+} from "@/content/work";
 import type { Locale } from "@/i18n/routing";
-import { workProjects, type WorkOverviewCopy, type WorkService } from "@/content/work";
+import { ProjectVisual } from "./project-visual";
 import { WorkGrid } from "./work-grid";
 
-/** The sections of Work.dc.html, in its order, without the withheld reference block (GAP-C02). */
+/** The platforms a project ships on, in one line. */
+export const platformLine = (project: Project, shared: WorkSharedCopy) =>
+  project.platforms.map((platform) => shared.platforms[platform]).join(" · ");
+
+/** The Work index: the hero, one featured project, the filterable grid and the CTA. */
 export function WorkHero({ content }: { content: WorkOverviewCopy }) {
   const { hero, breadcrumb } = content;
   return (
@@ -40,154 +49,118 @@ export function WorkHero({ content }: { content: WorkOverviewCopy }) {
   );
 }
 
-const BARS = [
-  "h-[50%]",
-  "h-[66%]",
-  "h-[44%]",
-  "h-[82%]",
-  "h-[60%]",
-  "h-[92%]",
-  "h-[74%]",
-  "h-[58%]",
-] as const;
-
-export function WorkFeatured({ content }: { content: WorkOverviewCopy }) {
-  const { featured, grid } = content;
+export function WorkFeatured({
+  content,
+  shared,
+  locale,
+}: {
+  content: WorkOverviewCopy;
+  shared: WorkSharedCopy;
+  locale: Locale;
+}) {
+  const [project] = projects;
+  if (!project) return null;
+  const words = project.words[locale];
   return (
-    <section className="p-[0_0_96px]" aria-label={featured.tag}>
+    <section className="p-[0_0_96px]" aria-label={content.featured.tag}>
       <div className="wrap">
         <RouteLink
-          href="/work/ledgerline"
-          className="solid card-hover panel-split overflow-hidden rounded-[34px] [box-shadow:var(--shadow-2)] border-0 min-h-[560px]"
+          href={`/work/${project.slug}`}
+          className="solid card-hover panel-split overflow-hidden rounded-[34px] [box-shadow:var(--shadow-2)] border-0 min-h-[520px]"
         >
           <div className="stack p-[clamp(28px,4cqi,56px)] justify-between gap-[32px] bg-[#EEF0F5]">
             <div className="stack gap-5">
               <div className="wrap-row gap-2">
-                <Tag>{featured.tag}</Tag>
-                <Tag>{grid.industries.fintech}</Tag>
-                <DemoTag>{content.hero.demoTag}</DemoTag>
+                <Tag>{content.featured.tag}</Tag>
+                <Tag>{words.category}</Tag>
               </div>
-              <span className="t-h1">Ledgerline</span>
-              <span className="t-lead text-text">{featured.tagline}</span>
+              <span className="t-h1">{project.name}</span>
+              <span className="t-lead text-text">{words.tagline}</span>
             </div>
             <div className="stack gap-4">
-              <div className="wrap-row gap-2">
-                {featured.chips.map((chip) => (
-                  <span className="chip chip-outline" key={chip}>
-                    {chip}
-                  </span>
-                ))}
-              </div>
+              <span className="t-mono text-text-3">{platformLine(project, shared)}</span>
               <span className="btn btn-primary self-start">
-                {featured.read}
-                <span className="sr-only">: Ledgerline</span>
+                {content.featured.read}
+                <span className="sr-only">: {project.name}</span>
                 <Icon name="arrow" />
               </span>
             </div>
           </div>
-          <SectorGround
-            sector="fintech"
-            className="reveal-scale rounded-[0] grid place-items-center p-[40px]"
-          >
-            <span className="slice" />
-            <div className="mock w-full max-w-[560px]" aria-hidden="true">
-              <div className="mock-bar">
-                <b>{featured.mock.title}</b>
-                <span className="row gap-2">
-                  <span className="dot" />
-                  <span className="t-xs">{featured.mock.live}</span>
-                </span>
-              </div>
-              <div className="mock-body">
-                <div className="grid-3 [--gap:10px]">
-                  {featured.mock.kpis.map((kpi) => (
-                    <div className="mock-kpi" key={kpi.label}>
-                      <span>{kpi.label}</span>
-                      <b>{kpi.value}</b>
-                    </div>
-                  ))}
-                </div>
-                <div className="bars">
-                  {BARS.map((height) => (
-                    <i className={height} key={height} />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </SectorGround>
+          <ProjectVisual
+            project={project}
+            caption={words.status}
+            stackCount={6}
+            className="reveal-scale min-h-[320px]"
+          />
         </RouteLink>
       </div>
     </section>
   );
 }
 
-const SERVICE_ORDER: readonly WorkService[] = [
-  "custom",
-  "web-mobile",
-  "ai",
-  "cloud",
-  "design",
-  "modernisation",
-];
-const INDUSTRY_ORDER = [
-  "fintech",
-  "healthcare",
-  "ecommerce",
-  "saas",
-  "enterprise",
-  "logistics",
-] as const;
+const FOCUS_ORDER: readonly ProjectCapability[] = ["realtime", "payments", "ai", "marketplace"];
 
-export function WorkProjects({ content, locale }: { content: WorkOverviewCopy; locale: Locale }) {
-  const { grid, hero } = content;
+export function WorkProjects({
+  content,
+  shared,
+  locale,
+}: {
+  content: WorkOverviewCopy;
+  shared: WorkSharedCopy;
+  locale: Locale;
+}) {
+  const { grid } = content;
   return (
     <section className="bg-mist section pt-[88px]" aria-labelledby="all">
       <WorkGrid
         copy={grid}
         locale={locale}
-        industries={INDUSTRY_ORDER.map((id) => ({ id, label: grid.industries[id] }))}
-        services={SERVICE_ORDER.map((id) => ({ id, label: grid.services[id] }))}
+        platforms={[
+          { id: "mobile", label: grid.platforms.mobile },
+          { id: "web", label: grid.platforms.web },
+        ]}
+        focuses={FOCUS_ORDER.map((id) => ({ id, label: grid.capabilities[id] }))}
         emptyAction={<LinkButton href="/contact">{grid.empty.ask}</LinkButton>}
-        projects={workProjects.map((project) => ({
-          id: project.id,
-          industry: project.industry,
-          services: project.services,
-          card: (
-            <article className={cx("solid stack overflow-hidden", project.slug && "card-hover")}>
-              <SectorGround
-                sector={project.industry}
-                className="rounded-[0] h-[240px] flex flex-wrap items-end content-end justify-between gap-[8px] p-[18px]"
-              >
-                <span className="slice" />
-                <Tag className="text-white border-[rgba(255,255,255,.3)] bg-[rgba(255,255,255,.06)]">
-                  {grid.industries[project.industry]}
-                </Tag>
-                <DemoTag>{hero.demoTag}</DemoTag>
-              </SectorGround>
-              <div className="stack gap-3 p-[26px] flex-1">
-                <h3 className="t-h4">{project.name}</h3>
-                <p className="t-small">{grid.lines[project.id]}</p>
-                <div className="wrap-row gap-2 mt-[4px]">
-                  {project.services.map((service) => (
-                    <span className="chip" key={service}>
-                      {grid.services[service]}
-                    </span>
-                  ))}
-                </div>
-                <div className="mt-auto pt-[14px]">
-                  {project.slug ? (
+        projects={projects.map((project) => {
+          const words = project.words[locale];
+          const mobile = project.platforms.some((p) => p === "ios" || p === "android");
+          return {
+            id: project.slug,
+            platforms: [
+              ...(mobile ? ["mobile"] : []),
+              ...(project.platforms.includes("web") ? ["web"] : []),
+            ],
+            focuses: project.capabilities,
+            card: (
+              <article className="solid card-hover stack overflow-hidden">
+                <ProjectVisual
+                  project={project}
+                  caption={platformLine(project, shared)}
+                  stackCount={3}
+                  className="h-[260px] p-[18px]"
+                />
+                <div className="stack gap-3 p-[26px] flex-1">
+                  <span className="t-mono text-text-3">{words.category}</span>
+                  <h3 className="t-h4">{project.name}</h3>
+                  <p className="t-small">{words.tagline}</p>
+                  <div className="wrap-row gap-2 mt-[4px]">
+                    {project.capabilities.map((capability) => (
+                      <span className="chip" key={capability}>
+                        {grid.capabilities[capability]}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-auto pt-[14px]">
                     <ArrowLink href={`/work/${project.slug}`}>
                       {grid.read}
                       <span className="sr-only">: {project.name}</span>
                     </ArrowLink>
-                  ) : (
-                    <span className="t-xs font-mono">{grid.noCase}</span>
-                  )}
+                  </div>
                 </div>
-              </div>
-            </article>
-          ),
-        }))}
+              </article>
+            ),
+          };
+        })}
       />
     </section>
   );

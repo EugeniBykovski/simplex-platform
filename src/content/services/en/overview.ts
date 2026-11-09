@@ -8,14 +8,14 @@ const svc = (slug: string) => `/services/${slug}`;
  */
 export const overview: ServicesOverviewCopy = {
   meta: {
-    title: "Services — SimpleX",
+    title: "Services - SimpleX",
     description:
-      "Design, engineering, data and operations under one roof — so the people who architect your system are the people who build it, and still there when it scales.",
+      "Design, engineering, data and operations under one roof - so the people who architect your system are the people who build it, and still there when it scales.",
   },
   breadcrumb: { label: "Breadcrumb", home: "Home", current: "Services" },
   hero: {
     lines: ["Every capability.", "One accountable team."],
-    lead: "Design, engineering, data and operations under one roof — so the people who architect your system are the people who build it, and still there when it scales.",
+    lead: "Design, engineering, data and operations under one roof - so the people who architect your system are the people who build it, and still there when it scales.",
     pickerTitle: "Where are you starting from?",
     picks: [
       {
@@ -67,21 +67,21 @@ export const overview: ServicesOverviewCopy = {
           icon: "mobile",
           href: svc("mobile-development"),
           title: "Mobile Development",
-          body: "Native iOS and Android or one React Native app — from a two-person pod upwards.",
+          body: "Native iOS and Android or one React Native app - from a two-person pod upwards.",
           tags: ["iOS", "Android", "React Native"],
         },
         {
           icon: "desktop",
           href: svc("desktop-development"),
           title: "Desktop Applications",
-          body: "Windows, macOS and Linux software — offline-first, signed and auto-updating.",
+          body: "Windows, macOS and Linux software - offline-first, signed and auto-updating.",
           tags: ["Tauri", ".NET", "SwiftUI"],
         },
         {
           icon: "package",
           href: "/packages",
           title: "Full-cycle Build Packages",
-          body: "Backend, web app, website, admin panel, iOS and Android — one squad, one backlog.",
+          body: "Backend, web app, website, admin panel, iOS and Android - one squad, one backlog.",
           tags: ["Full cycle", "Mobile pod", "MVP"],
         },
       ],
@@ -96,8 +96,15 @@ export const overview: ServicesOverviewCopy = {
           icon: "ai",
           href: svc("ai-engineering"),
           title: "AI Engineering",
-          body: "Retrieval, automation and intelligent features — evaluated, observable and cost-aware.",
+          body: "Retrieval, automation and intelligent features - evaluated, observable and cost-aware.",
           tags: ["LLM integration", "Agents", "Evaluation"],
+        },
+        {
+          icon: "chat",
+          href: svc("telegram-bots"),
+          title: "Telegram Bots & Business Automation",
+          body: "Custom Telegram bots and connected workflows that help businesses manage customer conversations, capture leads and automate everyday operations.",
+          tags: ["Telegram Bot API", "Integrations", "Automation"],
         },
         {
           icon: "cloud",
@@ -110,7 +117,7 @@ export const overview: ServicesOverviewCopy = {
           icon: "legacy",
           href: svc("legacy-modernization"),
           title: "Legacy Modernization",
-          body: "Evolve critical systems incrementally — without a risky big-bang rewrite.",
+          body: "Evolve critical systems incrementally - without a risky big-bang rewrite.",
           tags: ["Strangler pattern", "Migration", "Re-platforming"],
         },
         {
@@ -132,7 +139,7 @@ export const overview: ServicesOverviewCopy = {
           icon: "architecture",
           href: svc("architecture-consulting"),
           title: "Architecture & Consulting",
-          body: "Architecture reviews, technical due diligence and roadmaps — written by engineers who build.",
+          body: "Architecture reviews, technical due diligence and roadmaps - written by engineers who build.",
           tags: ["Reviews", "Due diligence", "Roadmaps"],
         },
         {
@@ -196,6 +203,7 @@ export const overview: ServicesOverviewCopy = {
         cells: ["O", "S", "S", "L", "S"],
       },
       { title: "AI Engineering", href: svc("ai-engineering"), cells: ["L", "L", "S", "L", "S"] },
+      { title: "Telegram Bots", href: svc("telegram-bots"), cells: ["S", "O", "S", "L", "S"] },
       { title: "Cloud & DevOps", href: svc("cloud-devops"), cells: ["O", "L", "O", "S", "L"] },
       {
         title: "Architecture & Consulting",
@@ -219,7 +227,7 @@ export const overview: ServicesOverviewCopy = {
   compare: {
     tag: "The honest comparison",
     title: "SimpleX vs. the usual options.",
-    lead: "Every option has a place. Here’s where each one is strong — and where it tends to cost you later.",
+    lead: "Every option has a place. Here’s where each one is strong - and where it tends to cost you later.",
     label: "SimpleX compared with freelancers, a large agency and hiring in-house",
     heads: ["Freelancers", "Large agency", "Hiring in-house", "SimpleX"],
     rows: [
@@ -257,7 +265,7 @@ export const overview: ServicesOverviewCopy = {
   },
   cta: {
     title: "Not sure which service you need?",
-    lead: "That’s normal. Tell us the problem — we’ll recommend the smallest useful first step, even if it isn’t us.",
+    lead: "That’s normal. Tell us the problem - we’ll recommend the smallest useful first step, even if it isn’t us.",
     primary: "Let’s Talk",
     secondary: "How we work",
   },

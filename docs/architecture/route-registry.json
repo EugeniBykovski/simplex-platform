@@ -28,7 +28,7 @@
     "/404"
   ],
   "patternCount": 22,
-  "concreteRouteCount": 40,
+  "concreteRouteCount": 45,
   "statusLegend": {
     "APPROVED": "URL label present on a design artboard",
     "PROPOSED": "No artboard; recommended, needs owner confirmation"
@@ -1402,12 +1402,12 @@
       "note": null
     },
     {
-      "route": "/work/ledgerline",
+      "route": "/work/simplefit-boxing",
       "family": "work",
       "type": "static (generateStaticParams)",
       "status": "APPROVED",
-      "template": "CasePage",
-      "slugProp": "ledgerline",
+      "template": "CasePage (project template, SF-157)",
+      "slugProp": "simplefit-boxing",
       "artboards": [
         "CasePage.dc.html",
         "CasePageMobile.dc.html",
@@ -1422,144 +1422,402 @@
         "desktop",
         "mobile"
       ],
-      "contentSource": "src/content/cases/",
-      "interactions": "Layouts A/B/C by slug, sticky TOC (layout B), before/after range slider, next-project nav",
+      "contentSource": "src/content/work/projects.ts",
+      "interactions": "Single project template, next-project nav",
       "assets": [
-        "viz-fintech",
-        "viz-healthcare",
-        "viz-light",
-        "viz-logistics"
+        "viz-*"
       ],
       "imagePlaceholders": 0,
       "seo": {
-        "title": "Ledgerline (demonstration) — SimpleX",
-        "description": "A demonstration case study: how SimpleX would replace overnight bank reconciliation with an event-driven ledger. An illustrative concept, not client work.",
-        "h1": "Ledgerline",
+        "title": "SimpleFit Boxing - Project - SimpleX",
+        "description": "SimpleFit Boxing: what SimpleX built, what is in progress, and the technology behind it.",
+        "h1": "SimpleFit Boxing",
         "intent": "Proof of capability",
-        "topic": "FinTech case study",
-        "canonical": "/work/ledgerline",
+        "topic": "Sports platform project",
+        "canonical": "/work/simplefit-boxing",
         "breadcrumb": true,
         "schema": [
           "BreadcrumbList"
         ],
-        "indexing": "noindex: demonstration, never a client success story",
+        "indexing": "noindex until the founder approves the project pages (GAP-C02)",
         "launchBlockers": [
-          "Stays labelled as a demonstration until a verified client exists (GAP-C02)"
+          "Founder sign-off of each project page's wording",
+          "Founder sign-off"
         ]
       },
       "i18n": {
-        "en": "/work/ledgerline",
-        "ru": "/ru/work/ledgerline",
+        "en": "/work/simplefit-boxing",
+        "ru": "/ru/work/simplefit-boxing",
         "ruStatus": "draft"
       },
-      "ownerTicket": "SF-148",
+      "ownerTicket": "SF-157",
       "implemented": true,
       "instanceNote": null,
-      "note": "Layout A"
+      "note": "Approved portfolio project. One template for all projects; the design's layouts A/B/C were retired with its concept cases"
     },
     {
-      "route": "/work/carepath",
+      "route": "/work/financialpress",
       "family": "work",
       "type": "static (generateStaticParams)",
       "status": "APPROVED",
-      "template": "CasePage",
-      "slugProp": "carepath",
+      "template": "CasePage (project template, SF-157)",
+      "slugProp": "financialpress",
       "artboards": [
         "case-carepath.dc.html"
       ],
       "layout": "SiteLayout (header-slot + main + footer)",
       "devices": {
-        "desktop": 6635
+        "desktop": 7764,
+        "mobile": 11288
       },
       "boardedDevices": [
-        "desktop"
+        "desktop",
+        "mobile"
       ],
-      "contentSource": "src/content/cases/",
-      "interactions": "Layouts A/B/C by slug, sticky TOC (layout B), before/after range slider, next-project nav",
+      "contentSource": "src/content/work/projects.ts",
+      "interactions": "Single project template, next-project nav",
       "assets": [
-        "viz-fintech",
-        "viz-healthcare",
-        "viz-light",
-        "viz-logistics"
+        "viz-*"
       ],
       "imagePlaceholders": 0,
       "seo": {
-        "title": "Carepath (demonstration) — SimpleX",
-        "description": "Demonstration case study: how SimpleX would unify patient intake and triage across clinics. An illustrative concept, not client work or a clinical product.",
-        "h1": "Carepath",
+        "title": "FinancialPress - Project - SimpleX",
+        "description": "FinancialPress: what SimpleX built, what is in progress, and the technology behind it.",
+        "h1": "FinancialPress",
         "intent": "Proof of capability",
-        "topic": "Healthcare case study",
-        "canonical": "/work/carepath",
+        "topic": "Financial media platform project",
+        "canonical": "/work/financialpress",
         "breadcrumb": true,
         "schema": [
           "BreadcrumbList"
         ],
-        "indexing": "noindex: demonstration, never a client success story",
+        "indexing": "noindex until the founder approves the project pages (GAP-C02)",
         "launchBlockers": [
-          "Stays labelled as a demonstration until a verified client exists (GAP-C02)"
+          "Founder sign-off of each project page's wording",
+          "FinancialPress: attribution wording reviewed with FinPress Communications Inc."
         ]
       },
       "i18n": {
-        "en": "/work/carepath",
-        "ru": "/ru/work/carepath",
+        "en": "/work/financialpress",
+        "ru": "/ru/work/financialpress",
         "ruStatus": "draft"
       },
-      "ownerTicket": "SF-148",
+      "ownerTicket": "SF-157",
       "implemented": true,
       "instanceNote": null,
-      "note": "Layout B"
+      "note": "Approved portfolio project. One template for all projects; the design's layouts A/B/C were retired with its concept cases"
     },
     {
-      "route": "/work/routewise",
+      "route": "/work/hobworks",
       "family": "work",
       "type": "static (generateStaticParams)",
       "status": "APPROVED",
-      "template": "CasePage",
-      "slugProp": "routewise",
+      "template": "CasePage (project template, SF-157)",
+      "slugProp": "hobworks",
       "artboards": [
         "case-routewise.dc.html"
       ],
       "layout": "SiteLayout (header-slot + main + footer)",
       "devices": {
-        "desktop": 6838
+        "desktop": 7764,
+        "mobile": 11288
       },
       "boardedDevices": [
-        "desktop"
+        "desktop",
+        "mobile"
       ],
-      "contentSource": "src/content/cases/",
-      "interactions": "Layouts A/B/C by slug, sticky TOC (layout B), before/after range slider, next-project nav",
+      "contentSource": "src/content/work/projects.ts",
+      "interactions": "Single project template, next-project nav",
       "assets": [
-        "viz-fintech",
-        "viz-healthcare",
-        "viz-light",
-        "viz-logistics"
+        "viz-*"
       ],
       "imagePlaceholders": 0,
       "seo": {
-        "title": "Routewise (demonstration) — SimpleX",
-        "description": "Demonstration case study: adaptive route planning with live telematics and an offline-first driver app. An illustrative concept, not client work.",
-        "h1": "Routewise",
+        "title": "Hobworks - Project - SimpleX",
+        "description": "Hobworks: what SimpleX built, what is in progress, and the technology behind it.",
+        "h1": "Hobworks",
         "intent": "Proof of capability",
-        "topic": "Logistics case study",
-        "canonical": "/work/routewise",
+        "topic": "Professional networking project",
+        "canonical": "/work/hobworks",
         "breadcrumb": true,
         "schema": [
           "BreadcrumbList"
         ],
-        "indexing": "noindex: demonstration, never a client success story",
+        "indexing": "noindex until the founder approves the project pages (GAP-C02)",
         "launchBlockers": [
-          "Stays labelled as a demonstration until a verified client exists (GAP-C02)"
+          "Founder sign-off of each project page's wording",
+          "Founder sign-off"
         ]
       },
       "i18n": {
-        "en": "/work/routewise",
-        "ru": "/ru/work/routewise",
+        "en": "/work/hobworks",
+        "ru": "/ru/work/hobworks",
         "ruStatus": "draft"
       },
-      "ownerTicket": "SF-148",
+      "ownerTicket": "SF-157",
       "implemented": true,
       "instanceNote": null,
-      "note": "Layout C"
+      "note": "Approved portfolio project. One template for all projects; the design's layouts A/B/C were retired with its concept cases"
+    },
+    {
+      "route": "/work/simple-house",
+      "family": "work",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "CasePage (project template, SF-157)",
+      "slugProp": "simple-house",
+      "artboards": [
+        "CasePage.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 7764,
+        "mobile": 11288
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/work/projects.ts",
+      "interactions": "Single project template, next-project nav",
+      "assets": [
+        "viz-*"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Simple House - Project - SimpleX",
+        "description": "Simple House: what SimpleX built, what is in progress, and the technology behind it.",
+        "h1": "Simple House",
+        "intent": "Proof of capability",
+        "topic": "PropTech project",
+        "canonical": "/work/simple-house",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList"
+        ],
+        "indexing": "noindex until the founder approves the project pages (GAP-C02)",
+        "launchBlockers": [
+          "Founder sign-off of each project page's wording",
+          "Founder sign-off"
+        ]
+      },
+      "i18n": {
+        "en": "/work/simple-house",
+        "ru": "/ru/work/simple-house",
+        "ruStatus": "draft"
+      },
+      "ownerTicket": "SF-157",
+      "implemented": true,
+      "instanceNote": null,
+      "note": "Approved portfolio project. One template for all projects; the design's layouts A/B/C were retired with its concept cases"
+    },
+    {
+      "route": "/work/simple-market",
+      "family": "work",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "CasePage (project template, SF-157)",
+      "slugProp": "simple-market",
+      "artboards": [
+        "CasePage.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 7764,
+        "mobile": 11288
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/work/projects.ts",
+      "interactions": "Single project template, next-project nav",
+      "assets": [
+        "viz-*"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Simple Market - Project - SimpleX",
+        "description": "Simple Market: what SimpleX built, what is in progress, and the technology behind it.",
+        "h1": "Simple Market",
+        "intent": "Proof of capability",
+        "topic": "B2B marketplace project",
+        "canonical": "/work/simple-market",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList"
+        ],
+        "indexing": "noindex until the founder approves the project pages (GAP-C02)",
+        "launchBlockers": [
+          "Founder sign-off of each project page's wording",
+          "Founder sign-off"
+        ]
+      },
+      "i18n": {
+        "en": "/work/simple-market",
+        "ru": "/ru/work/simple-market",
+        "ruStatus": "draft"
+      },
+      "ownerTicket": "SF-157",
+      "implemented": true,
+      "instanceNote": null,
+      "note": "Approved portfolio project. One template for all projects; the design's layouts A/B/C were retired with its concept cases"
+    },
+    {
+      "route": "/work/deeply",
+      "family": "work",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "CasePage (project template, SF-157)",
+      "slugProp": "deeply",
+      "artboards": [
+        "CasePage.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 7764,
+        "mobile": 11288
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/work/projects.ts",
+      "interactions": "Single project template, next-project nav",
+      "assets": [
+        "viz-*"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Deeply - Project - SimpleX",
+        "description": "Deeply: what SimpleX built, what is in progress, and the technology behind it.",
+        "h1": "Deeply",
+        "intent": "Proof of capability",
+        "topic": "Mobile training app project",
+        "canonical": "/work/deeply",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList"
+        ],
+        "indexing": "noindex until the founder approves the project pages (GAP-C02)",
+        "launchBlockers": [
+          "Founder sign-off of each project page's wording",
+          "Founder sign-off"
+        ]
+      },
+      "i18n": {
+        "en": "/work/deeply",
+        "ru": "/ru/work/deeply",
+        "ruStatus": "draft"
+      },
+      "ownerTicket": "SF-157",
+      "implemented": true,
+      "instanceNote": null,
+      "note": "Approved portfolio project. One template for all projects; the design's layouts A/B/C were retired with its concept cases"
+    },
+    {
+      "route": "/work/wait",
+      "family": "work",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "CasePage (project template, SF-157)",
+      "slugProp": "wait",
+      "artboards": [
+        "CasePage.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 7764,
+        "mobile": 11288
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/work/projects.ts",
+      "interactions": "Single project template, next-project nav",
+      "assets": [
+        "viz-*"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "Wait - Project - SimpleX",
+        "description": "Wait: what SimpleX built, what is in progress, and the technology behind it.",
+        "h1": "Wait",
+        "intent": "Proof of capability",
+        "topic": "Mobility project",
+        "canonical": "/work/wait",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList"
+        ],
+        "indexing": "noindex until the founder approves the project pages (GAP-C02)",
+        "launchBlockers": [
+          "Founder sign-off of each project page's wording",
+          "Founder sign-off"
+        ]
+      },
+      "i18n": {
+        "en": "/work/wait",
+        "ru": "/ru/work/wait",
+        "ruStatus": "draft"
+      },
+      "ownerTicket": "SF-157",
+      "implemented": true,
+      "instanceNote": null,
+      "note": "Approved portfolio project. One template for all projects; the design's layouts A/B/C were retired with its concept cases"
+    },
+    {
+      "route": "/work/anyway",
+      "family": "work",
+      "type": "static (generateStaticParams)",
+      "status": "APPROVED",
+      "template": "CasePage (project template, SF-157)",
+      "slugProp": "anyway",
+      "artboards": [
+        "CasePage.dc.html"
+      ],
+      "layout": "SiteLayout (header-slot + main + footer)",
+      "devices": {
+        "desktop": 7764,
+        "mobile": 11288
+      },
+      "boardedDevices": [
+        "desktop",
+        "mobile"
+      ],
+      "contentSource": "src/content/work/projects.ts",
+      "interactions": "Single project template, next-project nav",
+      "assets": [
+        "viz-*"
+      ],
+      "imagePlaceholders": 0,
+      "seo": {
+        "title": "AnyWay - Project - SimpleX",
+        "description": "AnyWay: what SimpleX built, what is in progress, and the technology behind it.",
+        "h1": "AnyWay",
+        "intent": "Proof of capability",
+        "topic": "PetTech project",
+        "canonical": "/work/anyway",
+        "breadcrumb": true,
+        "schema": [
+          "BreadcrumbList"
+        ],
+        "indexing": "noindex until the founder approves the project pages (GAP-C02)",
+        "launchBlockers": [
+          "Founder sign-off of each project page's wording",
+          "Founder sign-off"
+        ]
+      },
+      "i18n": {
+        "en": "/work/anyway",
+        "ru": "/ru/work/anyway",
+        "ruStatus": "draft"
+      },
+      "ownerTicket": "SF-157",
+      "implemented": true,
+      "instanceNote": null,
+      "note": "Approved portfolio project. One template for all projects; the design's layouts A/B/C were retired with its concept cases"
     },
     {
       "route": "/how-we-work",

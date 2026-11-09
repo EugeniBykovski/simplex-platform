@@ -11,6 +11,7 @@ const SERVICE_LABELS: Record<string, string> = {
   "product-design": "Product Design",
   architecture: "Architecture",
   "dedicated-team": "Dedicated Team",
+  "telegram-bots": "Telegram Bot & Business Automation",
   "not-sure": "Not sure yet",
 };
 const BUDGET_LABELS: Record<string, string> = {

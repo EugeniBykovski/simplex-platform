@@ -43,9 +43,14 @@ To index a route: close its blocker, then add it to `indexableRoutes` in `src/co
 | `/insights` | 200 | noindex | Insights — SimpleX | 112 | `/insights` | `/og/insights` | None | No | 2 | No published articles |
 | `/careers` | 200 | noindex | Careers — SimpleX | 130 | `/careers` | `/og/careers` | None | No | 2 | No live roles |
 | `/contact` | 200 | noindex | Contact — SimpleX | 130 | `/contact` | `/og/contact` | None | No | 33 | Delivery not live |
-| `/work/ledgerline` | 200 | noindex | Ledgerline (demonstration) — SimpleX | 154 | `/work/ledgerline` | `/og/work/ledgerline` | None | No | 14 | Demonstrations, never indexed as client work (GAP-C02) |
-| `/work/carepath` | 200 | noindex | Carepath (demonstration) — SimpleX | 155 | `/work/carepath` | `/og/work/carepath` | None | No | 10 | Demonstrations, never indexed as client work (GAP-C02) |
-| `/work/routewise` | 200 | noindex | Routewise (demonstration) — SimpleX | 145 | `/work/routewise` | `/og/work/routewise` | None | No | 15 | Demonstrations, never indexed as client work (GAP-C02) |
+| `/work/simplefit-boxing` | 200 | noindex | SimpleFit Boxing - Project - SimpleX | varies | `/work/simplefit-boxing` | `/og/work/simplefit-boxing` | None | No | n/a | Approved project, not yet approved for indexing (GAP-C02) |
+| `/work/financialpress` | 200 | noindex | FinancialPress - Project - SimpleX | varies | `/work/financialpress` | `/og/work/financialpress` | None | No | n/a | Approved project, not yet approved for indexing (GAP-C02) |
+| `/work/hobworks` | 200 | noindex | Hobworks - Project - SimpleX | varies | `/work/hobworks` | `/og/work/hobworks` | None | No | n/a | Approved project, not yet approved for indexing (GAP-C02) |
+| `/work/simple-house` | 200 | noindex | Simple House - Project - SimpleX | varies | `/work/simple-house` | `/og/work/simple-house` | None | No | n/a | Approved project, not yet approved for indexing (GAP-C02) |
+| `/work/simple-market` | 200 | noindex | Simple Market - Project - SimpleX | varies | `/work/simple-market` | `/og/work/simple-market` | None | No | n/a | Approved project, not yet approved for indexing (GAP-C02) |
+| `/work/deeply` | 200 | noindex | Deeply - Project - SimpleX | varies | `/work/deeply` | `/og/work/deeply` | None | No | n/a | Approved project, not yet approved for indexing (GAP-C02) |
+| `/work/wait` | 200 | noindex | Wait - Project - SimpleX | varies | `/work/wait` | `/og/work/wait` | None | No | n/a | Approved project, not yet approved for indexing (GAP-C02) |
+| `/work/anyway` | 200 | noindex | AnyWay - Project - SimpleX | varies | `/work/anyway` | `/og/work/anyway` | None | No | n/a | Approved project, not yet approved for indexing (GAP-C02) |
 | `/technologies` | 200 | noindex | Technologies — SimpleX | 150 | `/technologies` | `/og/technologies` | None | No | 13 | Company claims unconfirmed (GAP-C10) |
 
 ## Russian
@@ -84,9 +89,14 @@ All draft, so all `noindex`, with a self-referencing canonical and no hreflang u
 | `/ru/insights` | 200 | noindex | Статьи — SimpleX | 113 | `/ru/insights` | `/ru/og/insights` | None | No | n/a | Russian draft. No published articles |
 | `/ru/careers` | 200 | noindex | Карьера — SimpleX | 125 | `/ru/careers` | `/ru/og/careers` | None | No | n/a | Russian draft. No live roles |
 | `/ru/contact` | 200 | noindex | Контакты — SimpleX | 130 | `/ru/contact` | `/ru/og/contact` | None | No | n/a | Russian draft. Delivery not live |
-| `/ru/work/ledgerline` | 200 | noindex | Ledgerline (демонстрация) — SimpleX | 143 | `/ru/work/ledgerline` | `/ru/og/work/ledgerline` | None | No | n/a | Russian draft. Demonstrations, never indexed as client work (GAP-C02) |
-| `/ru/work/carepath` | 200 | noindex | Carepath (демонстрация) — SimpleX | 147 | `/ru/work/carepath` | `/ru/og/work/carepath` | None | No | n/a | Russian draft. Demonstrations, never indexed as client work (GAP-C02) |
-| `/ru/work/routewise` | 200 | noindex | Routewise (демонстрация) — SimpleX | 139 | `/ru/work/routewise` | `/ru/og/work/routewise` | None | No | n/a | Russian draft. Demonstrations, never indexed as client work (GAP-C02) |
+| `/ru/work/simplefit-boxing` | 200 | noindex | SimpleFit Boxing - Проект - SimpleX | varies | `/ru/work/simplefit-boxing` | `/ru/og/work/simplefit-boxing` | None | No | n/a | Russian draft. Not yet approved for indexing (GAP-C02) |
+| `/ru/work/financialpress` | 200 | noindex | FinancialPress - Проект - SimpleX | varies | `/ru/work/financialpress` | `/ru/og/work/financialpress` | None | No | n/a | Russian draft. Not yet approved for indexing (GAP-C02) |
+| `/ru/work/hobworks` | 200 | noindex | Hobworks - Проект - SimpleX | varies | `/ru/work/hobworks` | `/ru/og/work/hobworks` | None | No | n/a | Russian draft. Not yet approved for indexing (GAP-C02) |
+| `/ru/work/simple-house` | 200 | noindex | Simple House - Проект - SimpleX | varies | `/ru/work/simple-house` | `/ru/og/work/simple-house` | None | No | n/a | Russian draft. Not yet approved for indexing (GAP-C02) |
+| `/ru/work/simple-market` | 200 | noindex | Simple Market - Проект - SimpleX | varies | `/ru/work/simple-market` | `/ru/og/work/simple-market` | None | No | n/a | Russian draft. Not yet approved for indexing (GAP-C02) |
+| `/ru/work/deeply` | 200 | noindex | Deeply - Проект - SimpleX | varies | `/ru/work/deeply` | `/ru/og/work/deeply` | None | No | n/a | Russian draft. Not yet approved for indexing (GAP-C02) |
+| `/ru/work/wait` | 200 | noindex | Wait - Проект - SimpleX | varies | `/ru/work/wait` | `/ru/og/work/wait` | None | No | n/a | Russian draft. Not yet approved for indexing (GAP-C02) |
+| `/ru/work/anyway` | 200 | noindex | AnyWay - Проект - SimpleX | varies | `/ru/work/anyway` | `/ru/og/work/anyway` | None | No | n/a | Russian draft. Not yet approved for indexing (GAP-C02) |
 | `/ru/technologies` | 200 | noindex | Технологии — SimpleX | 157 | `/ru/technologies` | `/ru/og/technologies` | None | No | n/a | Russian draft. Company claims unconfirmed (GAP-C10) |
 | `/ru/privacy-policy` | 200 | noindex | Политика конфиденциальности — SimpleX | 56 | `/ru/privacy-policy` | `/ru/og/home` | None | No | n/a | Russian draft. Legal draft (GAP-C09) |
 | `/ru/cookie-policy` | 200 | noindex | Политика использования cookie — SimpleX | 84 | `/ru/cookie-policy` | `/ru/og/home` | None | No | n/a | Russian draft. Legal draft (GAP-C09) |

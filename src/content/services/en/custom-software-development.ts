@@ -3,15 +3,15 @@ import type { ServicePageCopy } from "../types";
 /** Copy from ServicePage.dc.html, slug custom-software-development, design 1793869596-167d. Changes are in docs/content/services-claims-register.md. */
 export const page: ServicePageCopy = {
   meta: {
-    title: "Custom Software Development — SimpleX",
+    title: "Custom Software Development - SimpleX",
     description:
       "When off-the-shelf tools force workarounds, custom software turns the way you work into an advantage.",
   },
   title: "Custom Software Development",
   short: "Custom Software",
   blurb: "Bespoke platforms and internal tools, built to last.",
-  headline: "Software shaped around your business — not the other way round.",
-  lead: "When off-the-shelf tools force workarounds, custom software turns the way you work into an advantage. We design and build platforms, internal tools and APIs that fit — and stay maintainable for years.",
+  headline: "Software shaped around your business - not the other way round.",
+  lead: "When off-the-shelf tools force workarounds, custom software turns the way you work into an advantage. We design and build platforms, internal tools and APIs that fit - and stay maintainable for years.",
   glance: [
     "Platforms, portals and internal tools",
     "Clean, documented, tested code",
@@ -20,7 +20,7 @@ export const page: ServicePageCopy = {
   problem: "Generic tools create specific problems.",
   pains: [
     "Teams bridge gaps between SaaS tools with spreadsheets and manual exports.",
-    "Critical logic lives in one person’s head — or in an unsupported plugin.",
+    "Critical logic lives in one person’s head - or in an unsupported plugin.",
     "Every new requirement means another workaround, or another vendor.",
   ],
   capsTitle: "What we bring to custom software.",
@@ -92,7 +92,7 @@ export const page: ServicePageCopy = {
   uses: [
     {
       title: "An operations platform that replaces spreadsheets",
-      body: "One system of record for orders, approvals and reporting — with an audit trail and integrations to finance and CRM.",
+      body: "One system of record for orders, approvals and reporting - with an audit trail and integrations to finance and CRM.",
     },
     {
       title: "A partner portal with role-based access",

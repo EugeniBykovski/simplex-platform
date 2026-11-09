@@ -9,11 +9,21 @@ import { getContact } from "@/content/contact";
 import { isLegalPublished } from "@/content/legal/registry";
 import { routing } from "@/i18n/routing";
 import { isLocaleAvailable } from "@/i18n/translation-status";
+import { SERVICE_IDS } from "@/lib/contact/fields";
 import { resolveDelivery } from "@/lib/email/delivery";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { submitContact } from "./actions";
 
-type Props = { params: Promise<{ locale: string }> };
+type Props = {
+  params: Promise<{ locale: string }>;
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
+};
+
+/** Only a known service id is accepted from the link, so the query cannot inject anything else. */
+function preselected(raw: string | string[] | undefined): string[] {
+  const value = Array.isArray(raw) ? raw[0] : raw;
+  return value && (SERVICE_IDS as readonly string[]).includes(value) ? [value] : [];
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -31,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 /** Rendered per request: whether the form can send depends on the server's runtime environment. */
-export default async function ContactRoute({ params }: Props) {
+export default async function ContactRoute({ params, searchParams }: Props) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale) || !isLocaleAvailable("contact", locale)) notFound();
   setRequestLocale(locale);
@@ -42,6 +52,7 @@ export default async function ContactRoute({ params }: Props) {
     locale,
   );
   const content = getContact(locale);
+  const initialServices = preselected((await searchParams)?.service);
 
   return (
     <main className="bg-horizon is-live p-[200px_0_140px] overflow-hidden">
@@ -54,6 +65,7 @@ export default async function ContactRoute({ params }: Props) {
             privacyPublished={isLegalPublished("privacy", locale)}
             locale={locale}
             copy={content.form}
+            initialServices={initialServices}
           />
         </div>
       </div>

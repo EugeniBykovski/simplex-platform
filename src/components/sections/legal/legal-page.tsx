@@ -29,7 +29,7 @@ export function legalMetadata(id: LegalDocumentId, locale: Locale): Metadata {
     locale,
     family: "legal",
     path: legalPaths[id],
-    title: `${title} — SimpleX`,
+    title: `${title} - SimpleX`,
     description: metaDescription,
     approved: isLegalPublished(id, locale),
   });

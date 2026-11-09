@@ -35,6 +35,7 @@ export const serviceSlugs = [
   "legacy-modernization",
   "quality-engineering",
   "dedicated-teams",
+  "telegram-bots",
 ] as const;
 
 export type ServiceSlug = (typeof serviceSlugs)[number];
@@ -51,8 +52,17 @@ export const industrySlugs = [
 
 export type IndustrySlug = (typeof industrySlugs)[number];
 
-/** The three case studies in the design. All are demonstrations, not client work (GAP-C02). */
-export const workSlugs = ["ledgerline", "carepath", "routewise"] as const;
+/** The eight founder-approved projects (SF-157), in portfolio order. */
+export const workSlugs = [
+  "simplefit-boxing",
+  "financialpress",
+  "hobworks",
+  "simple-house",
+  "simple-market",
+  "deeply",
+  "wait",
+  "anyway",
+] as const;
 
 export type WorkSlug = (typeof workSlugs)[number];
 
@@ -84,7 +94,8 @@ export const implementedRoutes: readonly string[] = [
 ];
 
 export function isImplementedRoute(href: string): boolean {
-  return implementedRoutes.includes(href);
+  // A query or fragment never changes which page a link reaches.
+  return implementedRoutes.includes(href.split(/[?#]/)[0] ?? href);
 }
 
 /**

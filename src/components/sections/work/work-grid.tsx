@@ -15,30 +15,30 @@ type Option = { id: string; label: string };
 export function WorkGrid({
   copy,
   locale,
-  industries,
-  services,
+  platforms,
+  focuses,
   projects,
   emptyAction,
 }: {
   copy: WorkOverviewCopy["grid"];
   locale: string;
-  industries: readonly Option[];
-  services: readonly Option[];
+  platforms: readonly Option[];
+  focuses: readonly Option[];
   projects: readonly {
     id: string;
-    industry: string;
-    services: readonly string[];
+    platforms: readonly string[];
+    focuses: readonly string[];
     card: ReactNode;
   }[];
   emptyAction: ReactNode;
 }) {
-  const [industry, setIndustry] = useState("all");
-  const [service, setService] = useState("all");
+  const [platform, setPlatform] = useState("all");
+  const [focus, setFocus] = useState("all");
 
   const shown = projects.filter(
     (project) =>
-      (industry === "all" || project.industry === industry) &&
-      (service === "all" || project.services.includes(service)),
+      (platform === "all" || project.platforms.includes(platform)) &&
+      (focus === "all" || project.focuses.includes(focus)),
   );
 
   const category = new Intl.PluralRules(locale).select(shown.length);
@@ -82,8 +82,8 @@ export function WorkGrid({
         </p>
       </div>
       <div className="stack gap-4">
-        {filterRow(copy.industryLabel, copy.industryGroup, industries, industry, setIndustry)}
-        {filterRow(copy.serviceLabel, copy.serviceGroup, services, service, setService)}
+        {filterRow(copy.platformLabel, copy.platformGroup, platforms, platform, setPlatform)}
+        {filterRow(copy.focusLabel, copy.focusGroup, focuses, focus, setFocus)}
       </div>
       {shown.length > 0 ? (
         <div className="grid-3 [--gap:16px]">
@@ -102,8 +102,8 @@ export function WorkGrid({
             <Button
               variant="ghost"
               onClick={() => {
-                setIndustry("all");
-                setService("all");
+                setPlatform("all");
+                setFocus("all");
               }}
             >
               {copy.empty.clear}

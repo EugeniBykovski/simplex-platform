@@ -6,7 +6,7 @@ import type { PackagesContent } from "./types";
  */
 export const content: PackagesContent = {
   meta: {
-    title: "Build packages — SimpleX",
+    title: "Build packages - SimpleX",
     description:
       "Three ways to build with SimpleX: a mobile pod for iOS, Android or React Native, desktop apps for Windows, macOS and Linux, or the full cycle from one team.",
   },
@@ -20,7 +20,7 @@ export const content: PackagesContent = {
     isNew: "New",
     chip: "Build packages",
     title: "From a two-person app team to your whole product.",
-    lead: "Three clear ways to build with us: a compact mobile pod for iOS, Android or React Native; desktop applications for Windows, macOS and Linux; or the full cycle — backend, web, website, admin panel and both mobile apps from one team.",
+    lead: "Three clear ways to build with us: a compact mobile pod for iOS, Android or React Native; desktop applications for Windows, macOS and Linux; or the full cycle - backend, web, website, admin panel and both mobile apps from one team.",
     primary: "Scope my build",
     secondary: "Compare packages",
   },
@@ -33,21 +33,21 @@ export const content: PackagesContent = {
         label: "01 · Mobile pod",
         team: "2 people",
         title: "A complete app, from two engineers.",
-        body: "Native iOS, native Android or one React Native app for both stores — designed, built, released and supported.",
+        body: "Native iOS, native Android or one React Native app for both stores - designed, built, released and supported.",
         link: "See the pod",
       },
       desktop: {
         label: "02 · Desktop apps",
         team: "2–3 people",
         title: "Software that belongs on the desk.",
-        body: "Windows, macOS and Linux applications — offline-first, hardware-aware, signed and auto-updating.",
+        body: "Windows, macOS and Linux applications - offline-first, hardware-aware, signed and auto-updating.",
         link: "See desktop",
       },
       "full-cycle": {
         label: "03 · Full cycle",
         team: "One squad",
         title: "The whole product, one team.",
-        body: "Backend, web app, website, admin panel, iOS and Android — designed and shipped as one system.",
+        body: "Backend, web app, website, admin panel, iOS and Android - designed and shipped as one system.",
         link: "See full cycle",
       },
     },
@@ -63,7 +63,7 @@ export const content: PackagesContent = {
         title: "Native iOS",
         stores: "App Store",
         description:
-          "Swift and SwiftUI for apps that feel truly native — with widgets, Live Activities, Apple Pay and Face ID where the product needs them.",
+          "Swift and SwiftUI for apps that feel truly native - with widgets, Live Activities, Apple Pay and Face ID where the product needs them.",
         stack: ["Swift", "SwiftUI", "Combine", "Core Data", "Xcode Cloud"],
         lead: {
           initials: "iOS",
@@ -82,7 +82,7 @@ export const content: PackagesContent = {
         title: "Native Android",
         stores: "Google Play",
         description:
-          "Kotlin and Jetpack Compose with Material You, widgets and Google Pay — tested across a device matrix.",
+          "Kotlin and Jetpack Compose with Material You, widgets and Google Pay - tested across a device matrix.",
         stack: ["Kotlin", "Jetpack Compose", "Coroutines", "Room", "Firebase"],
         lead: {
           initials: "AND",
@@ -98,10 +98,10 @@ export const content: PackagesContent = {
       },
       rn: {
         label: "React Native · both",
-        title: "React Native — iOS + Android",
+        title: "React Native - iOS + Android",
         stores: "Both stores",
         description:
-          "One TypeScript codebase for both stores, with native modules where they matter — a practical way to ship on both platforms with two people.",
+          "One TypeScript codebase for both stores, with native modules where they matter - a practical way to ship on both platforms with two people.",
         stack: ["React Native", "TypeScript", "Expo", "Reanimated", "Detox"],
         lead: {
           initials: "RN",
@@ -127,10 +127,10 @@ export const content: PackagesContent = {
   desktop: {
     eyebrow: "02 · Desktop applications & programs",
     title: "Desktop software that belongs on the desk.",
-    lead: "Operator consoles, trading and finance terminals, point-of-sale, field tools, device control and creative utilities — built for keyboards, multiple monitors, local files and unreliable networks.",
+    lead: "Operator consoles, trading and finance terminals, point-of-sale, field tools, device control and creative utilities - built for keyboards, multiple monitors, local files and unreliable networks.",
     platformsTitle: "Platforms",
     platforms: ["Windows", "macOS", "Linux", "Kiosk / embedded"],
-    technologyTitle: "Technology — chosen per product",
+    technologyTitle: "Technology - chosen per product",
     technology: [
       "Tauri + Rust",
       "Electron",
@@ -163,7 +163,7 @@ export const content: PackagesContent = {
   fullCycle: {
     eyebrow: "03 · Full cycle · one squad",
     title: "The whole product. One team. One backlog.",
-    lead: "When the backend, the web app, the website, the admin panel and both mobile apps are designed together, they share one API, one design system and one release train — and nothing falls between vendors.",
+    lead: "When the backend, the web app, the website, the admin panel and both mobile apps are designed together, they share one API, one design system and one release train - and nothing falls between vendors.",
     nodes: [
       {
         title: "Backend & API",
@@ -213,7 +213,7 @@ export const content: PackagesContent = {
       {
         initials: "PM",
         name: "Product lead",
-        note: "Scope, priorities, demos — your single contact",
+        note: "Scope, priorities, demos - your single contact",
       },
       {
         initials: "UX",
@@ -342,7 +342,7 @@ export const content: PackagesContent = {
   cta: {
     eyebrow: "Start",
     title: "Tell us what you’re building.",
-    lead: "We’ll suggest the right package — and the smallest team that can ship it well.",
+    lead: "We’ll suggest the right package - and the smallest team that can ship it well.",
     primary: "Let’s Talk",
     secondary: "Meet the agent",
   },
@@ -390,7 +390,7 @@ export const content: PackagesContent = {
     biometric: "Face / fingerprint login",
     notifications: "Notifications",
     offline: "Offline mode",
-    fieldOps: "Field Ops — Desktop · sample",
+    fieldOps: "Field Ops - Desktop · sample",
     offlineBadge: "Offline",
     nav: ["Overview", "Dispatch", "Devices", "Inspections", "Sync"],
     settings: "Settings",

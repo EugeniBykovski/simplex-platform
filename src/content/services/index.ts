@@ -5,6 +5,7 @@ import { page as enArchitecture } from "./en/architecture-consulting";
 import { page as enCloud } from "./en/cloud-devops";
 import { page as enCustom } from "./en/custom-software-development";
 import { page as enTeams } from "./en/dedicated-teams";
+import { page as enTelegram } from "./en/telegram-bots";
 import { page as enDesktop } from "./en/desktop-development";
 import { page as enEnterprise } from "./en/enterprise-software";
 import { page as enLegacy } from "./en/legacy-modernization";
@@ -19,6 +20,7 @@ import { page as ruArchitecture } from "./ru/architecture-consulting";
 import { page as ruCloud } from "./ru/cloud-devops";
 import { page as ruCustom } from "./ru/custom-software-development";
 import { page as ruTeams } from "./ru/dedicated-teams";
+import { page as ruTelegram } from "./ru/telegram-bots";
 import { page as ruDesktop } from "./ru/desktop-development";
 import { page as ruEnterprise } from "./ru/enterprise-software";
 import { page as ruLegacy } from "./ru/legacy-modernization";
@@ -44,6 +46,7 @@ const pages: Record<Locale, Record<ServiceSlug, ServicePageCopy>> = {
     "legacy-modernization": enLegacy,
     "quality-engineering": enQuality,
     "dedicated-teams": enTeams,
+    "telegram-bots": enTelegram,
   },
   ru: {
     "custom-software-development": ruCustom,
@@ -58,6 +61,7 @@ const pages: Record<Locale, Record<ServiceSlug, ServicePageCopy>> = {
     "legacy-modernization": ruLegacy,
     "quality-engineering": ruQuality,
     "dedicated-teams": ruTeams,
+    "telegram-bots": ruTelegram,
   },
 };
 
@@ -76,5 +80,5 @@ export function getServiceShared(locale: Locale): ServiceSharedCopy {
   return sharedCopy[locale];
 }
 
-export { caseStudies, serviceCatalog } from "./catalog";
+export { serviceCatalog } from "./catalog";
 export type * from "./types";

@@ -3,7 +3,7 @@ import type { InsightsCopy } from "../types";
 /** From Insights.dc.html and Article.dc.html. See docs/content/insights-editorial-register.md. */
 export const copy: InsightsCopy = {
   meta: {
-    title: "Insights — SimpleX",
+    title: "Insights - SimpleX",
     description:
       "Practical writing on architecture, delivery, design and applied AI, from SimpleX. No articles are published yet.",
   },
@@ -43,7 +43,7 @@ export const copy: InsightsCopy = {
   },
   minutes: "{count} min read",
   cta: {
-    title: "Have a problem you’d like us to write about — or solve?",
+    title: "Have a problem you’d like us to write about - or solve?",
     lead: "Tell us what you’re trying to understand.",
     primary: "Let’s Talk",
   },

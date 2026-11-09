@@ -3,14 +3,14 @@ import type { ServicePageCopy } from "../types";
 /** Copy from ServicePage.dc.html, slug quality-engineering, design 1793869596-167d. Changes are in docs/content/services-claims-register.md. */
 export const page: ServicePageCopy = {
   meta: {
-    title: "Quality Engineering & Test Automation — SimpleX",
+    title: "Quality Engineering & Test Automation - SimpleX",
     description:
       "We build quality into delivery: test strategy, automation and performance engineering that let teams release often without crossing their fingers.",
   },
   title: "Quality Engineering & Test Automation",
   short: "Quality Engineering",
   blurb: "Release confidence on every change.",
-  headline: "Confidence, measured — on every release.",
+  headline: "Confidence, measured - on every release.",
   lead: "We build quality into delivery: test strategy, automation and performance engineering that let teams release often without crossing their fingers.",
   glance: [
     "Risk-based test strategy",
@@ -25,7 +25,7 @@ export const page: ServicePageCopy = {
   ],
   capsTitle: "What we bring to quality.",
   capsIntro:
-    "Quality engineering as part of the team, not a phase at the end — shifting checks left and keeping them fast.",
+    "Quality engineering as part of the team, not a phase at the end - shifting checks left and keeping them fast.",
   caps: [
     {
       title: "Test strategy",

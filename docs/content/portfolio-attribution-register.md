@@ -1,72 +1,46 @@
 # Portfolio attribution register
 
-Every project on `/work`, for SF-148. Source: `Work.dc.html` and `CasePage.dc.html`, design version `1793953114-553b`. Claude Design was not modified.
+Every project on `/work`. **SF-157 replaced the design's fictional portfolio** (Ledgerline, Carepath, Routewise, Northbeam, Atlas Commerce, Meridian Works) with eight projects the founder approved. The concept cases, their three bespoke layouts and their interface mock-ups were removed from the site, not relabelled.
 
-**No verified client or internal project exists.** No client, permission, contract, screenshot or result has been supplied. All four Work routes are `noindex`, set by the pages.
+Facts were taken read-only from each project's own local repository and documentation. No project repository was modified. Content lives in `src/content/work/projects.ts`; one template renders every project page.
 
-## Classification
+## Rules applied to every project
 
-| Project | Source | Classification | Evidence | Published attribution | Asset rights | Founder approval required |
-|---|---|---|---|---|---|---|
-| Ledgerline | `Work`, `CasePage` Layout A | CONCEPT_PROJECT | Page note: "illustrative concepts". Tag: "Demonstration case study · illustrative". Text: "A demonstration of how we would…" | "Demonstration", on the card, the case hero and the next-project link | No client asset. Drawn in code | Confirm it is not based on a real client |
-| Carepath | `Work`, `CasePage` Layout B | CONCEPT_PROJECT | As above. "Demonstration · illustrative" | As above | As above | As above. Also: is showing a clinical concept acceptable (see below)? |
-| Routewise | `Work`, `CasePage` Layout C | CONCEPT_PROJECT, **with one correction** | Page note and tag as above. **But its overview read as real:** "Route planning that once took an evening now takes minutes" | As above. The overview now reads "A demonstration of route planning that takes minutes…" | As above | As above |
-| Northbeam | `Work` card | CONCEPT_PROJECT, **lower confidence** | The page note and a "Demo" tag. **But the card said "full write-up pending approval"**, which implies a real client. GAP-C02 records "six projects… none real" | "Demonstration", "Concept only · no full case study" | No asset. Gradient only | **Confirm it is fictional** |
-| Atlas Commerce | `Work` card | CONCEPT_PROJECT, **lower confidence** | As Northbeam | As Northbeam | As Northbeam | **Confirm it is fictional** |
-| Meridian Works | `Work` card | CONCEPT_PROJECT, **lower confidence** | As Northbeam | As Northbeam | As Northbeam | **Confirm it is fictional** |
+- "What is built" lists only what the code implements. Partial, stubbed or planned work is listed separately as "In progress and planned".
+- No user, revenue, launch, store availability, outcome or partnership claim. None is verified for any project.
+- No testimonial, quote or client figure.
+- No screenshot or logo. Each project is shown with the site's sector ground, a glyph and part of its stack. Nothing imitates a product interface.
+- All Work routes stay `noindex` until the founder approves the pages (GAP-C02).
 
-**Name risk.** These names were not checked against real companies or trademarks. Northbeam, Atlas Commerce, Meridian Works and the others may belong to someone, so check them before anything is indexed.
+## Projects
 
-## Withheld
+| Project | Category | SimpleX role, as published | Status, as published | Attribution and limits | Founder approval required |
+|---|---|---|---|---|---|
+| SimpleFit Boxing | Sports platform | Product design and full-stack engineering | In development | Sponsor domain, operator bootstrap and marketplace are planned, not built. Stripe billing tested in test mode only | Page wording |
+| FinancialPress | Financial media platform | Engineering leadership and product development engagement | Pre-beta | **Owned by FinPress Communications Inc.** The page says so and that it implies no endorsement. Its brand and logos are not shown. TradingView's charting library is named as licensed, not as SimpleX work | Page wording, and whether FinPress should review the attribution |
+| Hobworks | Professional networking | MVP backend and mobile app development | MVP in development | Client work. Match scoring is described as rule-based, not AI. **A scope-clarification document exists for this engagement**, so the page claims no completed MVP | Page wording, and confirm publication is permitted under the agreement |
+| Simple House | PropTech | Product design and full-stack engineering | In development | No mobile apps, maintenance requests or e-signing are claimed. Gemini document checks are described as implemented | Page wording |
+| Simple Market | B2B marketplace | Product design and full-stack engineering | In development | Quotes, approvals, contracts, analytics and integrations are listed as planned. No payments claim | Page wording |
+| Deeply | Mobile training app | Product design and full-stack engineering | In development | **No health or medical claim.** Described as breath-hold and freediving training only. No App Store availability claimed | Page wording |
+| Wait | Mobility | Product design and full-stack engineering | In development | No store availability claimed. Payment provider not named | Page wording |
+| AnyWay | PetTech | Product design and full-stack engineering | Early stage | Spelled AnyWay, never "Pawway". AI checklists, PDF packs and subscriptions are listed as planned, since the code holds only mocks | Page wording |
 
-| Element in the design | Why | To restore |
-|---|---|---|
-| **Reference calls section:** "Don't take our word for it. Take theirs.", "we'll connect you with a CTO or product lead", "Request a reference call", client quote slot, name and role, `[NPS]`, `[x] yrs`, `[x]%` repeat clients | GAP-C02 decided these stay hidden until real clients exist. No reference, quote or figure exists | Real references, permission, and real figures |
-| Page note: "They will be replaced with approved client work before launch." | A promise about the future. Replaced with "They are not client work." | Your decision |
-| "Much of our work is under NDA and never appears here." | No evidence | Confirm it is true |
-| "including the work we can't publish" | No evidence | Confirm it is true |
+## Where projects appear
 
-## Claims changed
+| Place | What it shows |
+|---|---|
+| `/work` | All eight, with platform and focus filters. SimpleFit Boxing featured |
+| `/work/<slug>` | Category, role, status, platforms, built, in progress, engineering, stack, attribution note |
+| Home | SimpleFit Boxing, FinancialPress, Hobworks |
+| Service pages | Up to two related projects per service, from `serviceCatalog`. Desktop, Legacy Modernization, Dedicated Teams and Telegram Bots have none, so the block is hidden |
+| Industry pages | One related project where the sector fits: FinTech (FinancialPress), E-commerce (Simple Market), SaaS (SimpleFit Boxing), Enterprise (Simple House), Logistics (Wait). Healthcare has none: Deeply is not a health product |
 
-| Where | In the design | Status | Published |
-|---|---|---|---|
-| Overview lead | "A selection of engagements… ended with software people rely on." | Implies real delivery | "Illustrative concepts… shows how we would approach it." |
-| Cards | "Demo" | Too easy to miss | "Demonstration" |
-| Overview CTA | "Your project could be next." | Implies a client list | "Tell us about your project." |
-| Cases, facts | "Client: [Demonstration] …" | A fictional client | "Scenario: Fictional …" |
-| Cases, facts | "[Illustrative] 9 months", "[Illustrative] 7 people" | Placeholder | "Illustrative · 9 months", "Illustrative · 7 people" |
-| Cases, context and challenges | Past tense, as events that happened | Reads as a real project | Present tense, starting "In this scenario…" |
-| Cases, approach | "Shadowed the team", "Rode along with drivers" | Reads as work done | "Shadow the team", "Ride along with drivers" |
-| Mock-ups | `[98%]`, `[9m]`, EUR, USD and GBP figures, patient conditions | Fictional figures | "—", "Sample". "Chest pain" became "new symptoms" |
-| Mock-up status | "Live" | Implies a running system | "Sample" |
+## Still withheld
 
-### Results
+The design's reference-call block, client quote slot, NPS and repeat-client figures stay hidden (GAP-C02). No reference or figure exists.
 
-**Every number is removed.** The design labelled these "Illustrative metrics — not client results", but they still read as results.
+## Open
 
-| Case | In the design | Published, as a design goal |
-|---|---|---|
-| Ledgerline | `[Same day]`, `[−80%]`, `[100%]`, `[Minutes]` | Continuous, Less, In-system, Faster |
-| Carepath | `[−40%]`, `[1×]`, `[Minutes]`, AA | Less, Once, Faster, AA |
-| Routewise | `[Minutes]`, `[−12%]`, Live, Offline | Faster, Less, Live, Offline |
-
-The section's heading is now "What it aims to change", tagged "Design goals — not client results".
-
-| Other figure | In the design | Published |
-|---|---|---|
-| Routewise solver benchmark | Bars at `[100%]`, `[92%]`, `[88%]`, "historical week" | "What we would measure": empty tracks, "Baseline", "To measure", "No benchmark has been run." |
-| Before and after | "the week before and the quarter after go-live", "replace with the client's approved figures", `[x] hours` | "The intended shift": "Starting point" and "Intended", with "Nothing here is a measured result." |
-
-**The before-and-after copy is the same on all three pages in the design**, and mentions reconciliation on pages that have none. It is reworded, not rewritten per project.
-
-## Healthcare concept
-
-Carepath shows triage rules, an LLM summary service and a sample triage queue. It is labelled a demonstration and "clinicians always make the decision". **Software of this kind may be a regulated medical device**, so legal should review it with the [Healthcare scenarios](industries-claims-register.md#healthcare).
-
-## Other pages that show these projects
-
-Home, Services and Industries already carry demonstration labels. With `/work` live, their case links are now active. The Home copy still describes them in the present tense as "a real-time treasury platform for a mid-market finance team", with a demo tag beside it. Not changed by this ticket.
-
-## To publish real work
-
-For each verified project, a founder supplies: the client's written permission, the factual attribution, real figures with their source, and approved assets. Its record here then changes to VERIFIED_CLIENT_PROJECT or VERIFIED_INTERNAL_PROJECT.
+- Founder sign-off of each page's wording, then a decision on indexing `/work`.
+- Native Russian review of the project copy.
+- FinancialPress and Hobworks: confirm publication with the client where the agreement requires it.

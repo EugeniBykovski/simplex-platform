@@ -135,13 +135,26 @@ a.text-link.is-pending {
   border-color: rgba(255, 255, 255, 0.34);
 }
 
-/* Adaptation: live button states the source leaves out or leaves below AA. See GAP-D14. */
+/*
+ * Adaptation: live button states the source leaves out or leaves below AA. See GAP-D14. The hover
+ * fill is a deep sapphire to indigo sweep (SF-157): every stop keeps white text above 7:1.
+ */
+:root {
+  --sapphire-950: #0e1a4f;
+  --sapphire-800: #16257a;
+  --sapphire-600: #2541c4;
+}
 .btn-primary::before {
-  background: linear-gradient(100deg, var(--graphite-700), var(--cobalt) 62%, #2b6be6);
+  background: linear-gradient(
+    100deg,
+    var(--sapphire-950),
+    var(--sapphire-800) 55%,
+    var(--sapphire-600)
+  );
 }
 .bg-cta .btn-primary::before,
 .bg-ink .btn-primary::before {
-  background: linear-gradient(100deg, #2f57f5, #2b6be6);
+  background: linear-gradient(100deg, var(--sapphire-800), var(--sapphire-600));
 }
 .bg-ink .btn-primary {
   background: #fff;

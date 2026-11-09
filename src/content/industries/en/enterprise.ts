@@ -3,13 +3,13 @@ import type { IndustryPageCopy } from "../types";
 /** From IndustryPage.dc.html, slug "enterprise". Changes are listed in docs/content/industries-claims-register.md. */
 export const page: IndustryPageCopy = {
   meta: {
-    title: "Enterprise software engineering — SimpleX",
+    title: "Enterprise software engineering - SimpleX",
     description:
-      "Core systems, integration and modernisation across large, long-lived estates — delivered incrementally and governed properly.",
+      "Core systems, integration and modernisation across large, long-lived estates - delivered incrementally and governed properly.",
   },
   name: "Enterprise",
   headline: "Change at scale, without breaking what works.",
-  lead: "Core systems, integration and modernisation across large, long-lived estates — delivered incrementally and governed properly.",
+  lead: "Core systems, integration and modernisation across large, long-lived estates - delivered incrementally and governed properly.",
   facts: [
     {
       key: "Typical systems",

@@ -10,8 +10,11 @@ export const SERVICE_IDS = [
   "product-design",
   "architecture",
   "dedicated-team",
+  "telegram-bots",
   "not-sure",
 ] as const;
+
+export type ServiceId = (typeof SERVICE_IDS)[number];
 
 export const BUDGET_IDS = [
   "prefer-not-to-say",

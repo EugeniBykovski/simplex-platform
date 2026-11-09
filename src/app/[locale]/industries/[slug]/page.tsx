@@ -74,7 +74,7 @@ export default async function IndustryDetailPage({ params }: Props) {
       <IndustryOpportunities page={page} shared={shared} />
       <IndustryScenarios page={page} shared={shared} />
       <IndustryConsiderations page={page} shared={shared} />
-      <IndustryCapabilities page={page} shared={shared} structure={structure} />
+      <IndustryCapabilities page={page} shared={shared} structure={structure} locale={locale} />
       <IndustryCompliance page={page} shared={shared} />
       <IndustryCta page={page} shared={shared} />
     </main>
